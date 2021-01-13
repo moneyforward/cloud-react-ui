@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.insertFinalNewline": true,
+  // ESLint
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "parserOptions": {
+      "project": [
+        "${workspaceFolder}/tsconfig.json"
+      ],
+    }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.markdownlint": true
+  },
+}
