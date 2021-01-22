@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { defaultProps } from "../../theme";
 
 import type { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import type { IconProps, IconTypes } from "./IconContainer";
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  color: inherit;
+  color: ${(props) => props.theme.icon.color};
   &:hover {
-    color: inherit;
+    color: ${(props) => props.theme.icon.hover.color};
   }
 `;
+StyledFontAwesomeIcon.defaultProps = defaultProps;
 
 const FontAwesomeConverter: {
   [key in IconTypes]: FontAwesomeIconProps["icon"];

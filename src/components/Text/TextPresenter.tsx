@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { defaultProps } from "../../theme";
 
 import type { TextProps } from "./TextContainer";
 
-const StyledText = styled.span<TextProps>``;
+const StyledText = styled.span<TextProps>`
+  font-size: ${({ theme, size }) => theme.text.size[size || "default"]};
+  color: ${({ theme, color }) => theme.text.color[color || "default"]};
+`;
+StyledText.defaultProps = defaultProps;
 
 export function TextPresenter({
   tag = "span",
