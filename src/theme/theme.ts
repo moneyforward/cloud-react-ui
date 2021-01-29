@@ -91,6 +91,37 @@ export const theme = {
       color: values.text.color.default,
     },
   },
+  // Link
+  link: {
+    display: undefined,
+    alignItems: undefined,
+    width: undefined,
+    minHeight: undefined,
+    padding: undefined,
+    backgroundColor: undefined,
+    color: color.royalBlue,
+    fontSize: values.text.size.middle,
+    textDecoration: "none",
+    hover: {
+      color: color.royalBlue,
+      textDecoration: "underline",
+    },
+    active: {
+      color: color.royalBlue,
+      textDecoration: "none",
+    },
+    focus: {
+      color: color.royalBlue,
+      textDecoration: "none",
+    },
+    visited: {
+      color: color.royalBlue,
+      textDecoration: "none",
+    },
+    disabled: {
+      color: color.nobel,
+    },
+  },
   // Text
   text: values.text,
 };
