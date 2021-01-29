@@ -1,9 +1,8 @@
 import { values } from "./values";
-import { semantics } from "./semantics";
-import { media } from "./media";
+import { theme } from "./theme";
 
-export const theme = { values, semantics, media };
-export const defaultProps = { theme: media };
+export { values, theme };
+export const defaultProps = { theme };
 
-type TTheme = typeof media;
+type TTheme = typeof theme;
 export type { TTheme };

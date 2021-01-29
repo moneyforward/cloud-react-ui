@@ -13,12 +13,12 @@ const tagOption = {
   div: "div",
 };
 
-const sizeOption = Object.keys(theme.media.text.size).reduce((obj, key) => {
+const sizeOption = Object.keys(theme.text.size).reduce((obj, key) => {
   obj[key] = key;
   return obj;
 }, {} as { [key: string]: string });
 
-const colorOption = Object.keys(theme.media.text.color).reduce((obj, key) => {
+const colorOption = Object.keys(theme.text.color).reduce((obj, key) => {
   obj[key] = key;
   return obj;
 }, {} as { [key: string]: string });
@@ -26,7 +26,7 @@ const colorOption = Object.keys(theme.media.text.color).reduce((obj, key) => {
 export const Text = (): React.ReactElement => (
   <TextContainer
     tag={radios("Tag", tagOption, "span") as keyof JSX.IntrinsicElements}
-    size={radios("Size", sizeOption, "default") as TextProps["size"]}
+    size={radios("Size", sizeOption, "middle") as TextProps["size"]}
     color={radios("Color", colorOption, "default") as TextProps["color"]}
   >
     {text("Text", "text")}

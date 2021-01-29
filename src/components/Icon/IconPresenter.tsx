@@ -6,14 +6,6 @@ import { defaultProps } from "../../theme";
 import type { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import type { IconProps, IconTypes } from "./IconContainer";
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  color: ${(props) => props.theme.icon.color};
-  &:hover {
-    color: ${(props) => props.theme.icon.hover.color};
-  }
-`;
-StyledFontAwesomeIcon.defaultProps = defaultProps;
-
 const FontAwesomeConverter: {
   [key in IconTypes]: FontAwesomeIconProps["icon"];
 } = {
@@ -25,6 +17,15 @@ const FontAwesomeConverter: {
   question: "question-circle",
   envelope: "envelope",
 };
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  font-size: ${(props) => props.theme.icon.fontSize};
+  color: ${(props) => props.theme.icon.color};
+  &:hover {
+    color: ${(props) => props.theme.icon.hover.color};
+  }
+`;
+StyledFontAwesomeIcon.defaultProps = defaultProps;
 
 export function IconPresenter({
   width,
