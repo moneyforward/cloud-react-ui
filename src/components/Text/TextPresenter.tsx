@@ -5,7 +5,7 @@ import { defaultProps } from "../../theme";
 import type { TextProps } from "./TextContainer";
 
 const StyledText = styled.span<TextProps>`
-  font-size: ${({ theme, size }) => theme.text.size[size || "default"]};
+  font-size: ${({ theme, size }) => theme.text.size[size || "middle"]};
   color: ${({ theme, color }) => theme.text.color[color || "default"]};
 `;
 StyledText.defaultProps = defaultProps;

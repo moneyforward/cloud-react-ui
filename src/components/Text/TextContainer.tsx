@@ -1,8 +1,8 @@
 import { TextPresenter } from "./TextPresenter";
 import { theme } from "../../theme";
 
-type Size = keyof typeof theme.media.text.size;
-type Color = keyof typeof theme.media.text.color;
+type Size = keyof typeof theme.text.size;
+type Color = keyof typeof theme.text.color;
 
 export type TextProps = {
   tag?: keyof JSX.IntrinsicElements;

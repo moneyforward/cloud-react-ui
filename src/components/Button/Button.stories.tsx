@@ -1,7 +1,5 @@
 import { text, radios, boolean } from "@storybook/addon-knobs";
-import styled from "styled-components";
 import { ButtonContainer } from "./ButtonContainer";
-import { Icon } from "../Icon";
 
 import type { ButtonProps } from "./ButtonContainer";
 
@@ -23,31 +21,30 @@ const colorOptions: { [key: string]: ButtonProps["color"] } = {
   settings: "settings",
 };
 
+const iconOptions: { [key: string]: ButtonProps["icon"] } = {
+  none: undefined,
+  plus: "plus",
+};
+
+const iconPlacementOptions: { [key: string]: ButtonProps["iconPlacement"] } = {
+  start: "start",
+  end: "end",
+};
+
 export const Button = (): React.ReactElement => (
   <ButtonContainer
     size={radios("Size", sizeOptions, "small") as ButtonProps["size"]}
     color={radios("Color", colorOptions, "default") as ButtonProps["color"]}
     disabled={boolean("Disabled", false)}
+    icon={radios("Icon", iconOptions, undefined) as ButtonProps["icon"]}
+    iconPlacement={
+      radios(
+        "IconPlacement",
+        iconPlacementOptions,
+        undefined
+      ) as ButtonProps["iconPlacement"]
+    }
   >
-    {text("Button Text", "Text")}
-  </ButtonContainer>
-);
-
-const StyledIcon = styled(Icon)`
-  && {
-    padding-right: 4px;
-    font-size: 12px;
-    width: 14px;
-  }
-`;
-
-export const ButtonWithIcon = (): React.ReactElement => (
-  <ButtonContainer
-    size={radios("Size", sizeOptions, "small") as ButtonProps["size"]}
-    color={radios("Color", colorOptions, "default") as ButtonProps["color"]}
-    disabled={boolean("Disabled", false)}
-  >
-    <StyledIcon icon="plus" />
     {text("Button Text", "Text")}
   </ButtonContainer>
 );

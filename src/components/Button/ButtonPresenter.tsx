@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 import { ButtonProps } from "./ButtonContainer";
+import { Icon } from "../Icon";
 
 const StyledButton = styled.button<ButtonProps>`
   ${({ theme, size = "medium", color = "default", disabled }) => {
@@ -10,7 +11,9 @@ const StyledButton = styled.button<ButtonProps>`
 
     return css`
       && {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: ${buttonSize.height};
         padding: ${buttonSize.padding};
         line-height: ${buttonSize.height};
@@ -60,6 +63,36 @@ const StyledButton = styled.button<ButtonProps>`
 `;
 StyledButton.defaultProps = defaultProps;
 
-export function ButtonPresenter(props: ButtonProps): React.ReactElement {
-  return <StyledButton {...props} />;
+const StyledIcon = styled((props) => <Icon {...props} />)`
+  ${({ theme, iconPlacement = "start", color = "default", disabled }) => {
+    return css`
+      && {
+        padding-${iconPlacement === "start" ? "right" : "left"}: 4px;
+        width: 10px;
+        color: ${theme.button[disabled ? "disabled" : color].iconColor};
+      }
+    `;
+  }}
+`;
+StyledIcon.defaultProps = defaultProps;
+
+export function ButtonPresenter({
+  size,
+  type,
+  icon,
+  iconPlacement,
+  children,
+  ...rest
+}: ButtonProps): React.ReactElement {
+  const ButtonIcon = (
+    <StyledIcon icon={icon} iconPlacement={iconPlacement} {...rest} />
+  );
+
+  return (
+    <StyledButton size={size} type={type} {...rest}>
+      {icon && iconPlacement === "start" && ButtonIcon}
+      {children}
+      {icon && iconPlacement === "end" && ButtonIcon}
+    </StyledButton>
+  );
 }
