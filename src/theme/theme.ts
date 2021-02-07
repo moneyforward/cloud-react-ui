@@ -2,6 +2,16 @@ import { color } from "./color";
 import { values } from "./values";
 
 export const theme = {
+  // Box
+  box: {
+    width: undefined,
+    margin: undefined,
+    padding: undefined,
+    background: color.white,
+    borderRadius: "4px",
+    border: `solid 1px ${color.linkWater}`,
+    textAlign: undefined,
+  },
   // Button
   button: {
     borderRadius: "4px",
