@@ -11,9 +11,7 @@ const StyledButton = styled.button<ButtonProps>`
 
     return css`
       && {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
         height: ${buttonSize.height};
         padding: ${buttonSize.padding};
         line-height: ${buttonSize.height};

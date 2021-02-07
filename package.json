@@ -22,12 +22,14 @@
     "build": "tsc",
     "prepare": "tsc",
     "lint": "eslint src/** --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
     "storybook": "start-storybook -c .storybook/ --quiet"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "deepmerge": "^4.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.1",
