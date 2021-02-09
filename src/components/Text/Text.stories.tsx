@@ -3,8 +3,8 @@ import { TextContainer, TextProps } from "./TextContainer";
 import { theme } from "../../theme";
 
 export default {
-  component: "Text",
-  title: "Text",
+  component: TextContainer,
+  title: "components/Text",
 };
 
 const tagOption = {

@@ -1,7 +1,7 @@
 import { color } from "./color";
 import { values } from "./values";
 
-export const theme = {
+export const componentsTheme = {
   // Box
   box: {
     width: undefined,
@@ -134,4 +134,14 @@ export const theme = {
   },
   // Text
   text: values.text,
+};
+
+export const uiTheme = {
+  // Header
+  header: {
+    height: "40px",
+    padding: "10px 20px 10px 10px",
+    backgroundColor: color.white,
+    borderBottom: `1px solid ${color.linkWater}`,
+  },
 };

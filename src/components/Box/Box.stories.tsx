@@ -3,7 +3,7 @@ import { Text } from "../../components";
 
 export default {
   component: BoxContainer,
-  title: "Box",
+  title: "components/Box",
 };
 
 export const Box = (): React.ReactElement => (
