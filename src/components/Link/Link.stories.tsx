@@ -3,7 +3,7 @@ import { LinkContainer } from "./LinkContainer";
 
 export default {
   component: LinkContainer,
-  title: "Link",
+  title: "components/Link",
 };
 
 export const Link = (): React.ReactElement => (

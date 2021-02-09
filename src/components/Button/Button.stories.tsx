@@ -5,7 +5,7 @@ import type { ButtonProps } from "./ButtonContainer";
 
 export default {
   component: ButtonContainer,
-  title: "Button",
+  title: "components/Button",
 };
 
 const sizeOptions: { [key: string]: ButtonProps["size"] } = {

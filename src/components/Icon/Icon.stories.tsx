@@ -3,8 +3,8 @@ import { IconContainer, Icons } from "./IconContainer";
 import type { IconTypes, IconRotation, IconProps } from "./IconContainer";
 
 export default {
-  component: "Icon",
-  title: "Icon",
+  component: IconContainer,
+  title: "components/Icon",
 };
 
 const iconOptions = Icons.reduce((obj, icon) => {
