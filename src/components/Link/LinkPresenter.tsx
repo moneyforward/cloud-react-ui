@@ -25,7 +25,6 @@ const StyledLink = styled(({ tag: Tag, theme, ...rest }) => (
       padding: ${theme.link.padding};
       background-color: ${theme.link.backgroundColor};
       color: ${theme.link.color};
-      font-size: ${theme.link.fontSize};
       text-decoration: ${theme.link.textDecoration};
 
       &:visited {
