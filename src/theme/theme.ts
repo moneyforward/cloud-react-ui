@@ -137,6 +137,13 @@ export const componentsTheme = {
 };
 
 export const uiTheme = {
+  // Footer
+  footer: {
+    height: "35px",
+    padding: "9px 20px 10px",
+    backgroundColor: color.whisper,
+    borderTop: `1px solid ${color.linkWater}`,
+  },
   // Header
   header: {
     height: "40px",
