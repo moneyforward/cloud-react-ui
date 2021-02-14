@@ -4,13 +4,13 @@ import { values } from "./values";
 export const componentsTheme = {
   // Box
   box: {
-    width: undefined,
-    margin: undefined,
-    padding: undefined,
+    width: "",
+    margin: "",
+    padding: "",
     background: color.white,
     borderRadius: "4px",
     border: `solid 1px ${color.linkWater}`,
-    textAlign: undefined,
+    textAlign: "",
   },
   // Button
   button: {
@@ -103,12 +103,12 @@ export const componentsTheme = {
   },
   // Link
   link: {
-    display: undefined,
-    alignItems: undefined,
-    width: undefined,
-    minHeight: undefined,
-    padding: undefined,
-    backgroundColor: undefined,
+    display: "",
+    alignItems: "",
+    width: "",
+    minHeight: "",
+    padding: "",
+    backgroundColor: "",
     color: color.royalBlue,
     fontSize: values.text.size.middle,
     textDecoration: "none",
