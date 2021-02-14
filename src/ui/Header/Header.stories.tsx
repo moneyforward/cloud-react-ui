@@ -26,7 +26,7 @@ export const Header = (): React.ReactElement => {
 
   const right = (
     <>
-      <Text size="small">ユーザー</Text>
+      <Text size="small">Header</Text>
       <Icon icon="caretUp" rotation={180} />
     </>
   );

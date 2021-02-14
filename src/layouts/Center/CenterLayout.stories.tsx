@@ -24,12 +24,12 @@ export const Center = (): React.ReactElement => (
   <ThemeProvider theme={centerBoxTheme}>
     <CenterLayout>
       <Box>
-        <Text tag="p">Text</Text>
-        <Button color="primary">Button</Button>
+        <Text tag="p">Center Layout</Text>
+        <Button color="primary">Center Layout</Button>
       </Box>
       <Box>
-        <Text tag="p">Text</Text>
-        <Button color="primary">Button</Button>
+        <Text tag="p">Center Layout</Text>
+        <Button color="primary">Center Layout</Button>
       </Box>
     </CenterLayout>
   </ThemeProvider>

@@ -8,6 +8,6 @@ export default {
 
 export const Box = (): React.ReactElement => (
   <BoxContainer>
-    <Text>ダミーテキスト</Text>
+    <Text>Box</Text>
   </BoxContainer>
 );
