@@ -29,6 +29,6 @@ export const Text = (): React.ReactElement => (
     size={radios("Size", sizeOption, "middle") as TextProps["size"]}
     color={radios("Color", colorOption, "default") as TextProps["color"]}
   >
-    {text("Text", "text")}
+    {text("Text", "Text")}
   </TextContainer>
 );

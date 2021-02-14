@@ -41,6 +41,6 @@ export const Heading = (): React.ReactElement => (
     weight={radios("weight", weightOption, "default") as HeadingProps["weight"]}
     color={radios("color", colorOption, "title") as HeadingProps["color"]}
   >
-    {text("Text", "Title")}
+    {text("Text", "Heading")}
   </HeadingContainer>
 );

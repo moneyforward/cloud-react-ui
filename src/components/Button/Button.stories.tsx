@@ -43,6 +43,6 @@ export const Button = (): React.ReactElement => (
       ) as ButtonProps["iconPlacement"]
     }
   >
-    {text("Button Text", "Text")}
+    {text("Button Text", "Button")}
   </ButtonContainer>
 );
