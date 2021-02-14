@@ -11,6 +11,9 @@ export default {
 };
 
 const centerBoxTheme = merge(theme, {
+  centerLayout: {
+    width: "300px",
+  },
   box: {
     width: "300px",
     margin: "195px 0 100px 0",
