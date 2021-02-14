@@ -14,6 +14,17 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components"],
+      "@layouts/*": ["src/layouts/*"],
+      "@layouts": ["src/layouts"],
+      "@theme/*": ["src/theme/*"],
+      "@theme": ["src/theme"],
+      "@ui/*": ["src/ui/*"],
+      "@ui": ["src/ui"],
+    },
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*"]
