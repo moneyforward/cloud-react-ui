@@ -1,5 +1,5 @@
 import { HeaderContainer } from "./HeaderContainer";
-import { Icon, Text } from "../../components";
+import { Icon, Text } from "@components";
 
 export default {
   component: HeaderContainer,

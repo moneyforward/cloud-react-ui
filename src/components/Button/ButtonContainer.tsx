@@ -1,5 +1,5 @@
 import { ButtonPresenter } from "./ButtonPresenter";
-import { IconTypes } from "../Icon/IconContainer";
+import { IconTypes } from "@components/Icon";
 
 export type ButtonProps = {
   size?: "small" | "medium" | "large";

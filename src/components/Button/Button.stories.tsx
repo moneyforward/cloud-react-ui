@@ -1,7 +1,5 @@
 import { text, radios, boolean } from "@storybook/addon-knobs";
-import { ButtonContainer } from "./ButtonContainer";
-
-import type { ButtonProps } from "./ButtonContainer";
+import { ButtonContainer, ButtonProps } from "./ButtonContainer";
 
 export default {
   component: ButtonContainer,

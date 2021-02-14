@@ -1,5 +1,3 @@
-import { IconPresenter } from "./IconPresenter";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBell } from "@fortawesome/free-solid-svg-icons/faBell";
 import { faBullhorn } from "@fortawesome/free-solid-svg-icons/faBullhorn";
@@ -9,6 +7,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons/faChevronUp";
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons/faQuestionCircle";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import { IconPresenter } from "./IconPresenter";
 
 library.add(
   faBell,

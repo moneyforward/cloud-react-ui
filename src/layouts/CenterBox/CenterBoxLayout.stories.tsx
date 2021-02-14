@@ -1,8 +1,7 @@
 import { ThemeProvider } from "styled-components";
-
-import { createTheme } from "../../theme";
 import { CenterBoxLayout } from "./CenterBoxLayout";
-import { Text, Button } from "../../components";
+import { Text, Button } from "@components";
+import { createTheme } from "@theme";
 
 export default {
   component: CenterBoxLayout,

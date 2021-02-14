@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
 import { LinkProps } from "./LinkContainer";
+import { defaultProps } from "@theme";
 
 type LinkPresenterProps = Omit<
   LinkProps,
