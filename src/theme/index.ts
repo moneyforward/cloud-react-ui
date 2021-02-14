@@ -1,8 +1,8 @@
 import { color } from "./color";
 import { values } from "./values";
-import { componentsTheme, uiTheme } from "./theme";
+import { componentsTheme, uiTheme, layoutTheme } from "./theme";
 
-const theme = { ...componentsTheme, ...uiTheme };
+const theme = { ...componentsTheme, ...uiTheme, ...layoutTheme };
 export { color, values, theme };
 export const defaultProps = { theme };
 

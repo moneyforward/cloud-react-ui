@@ -152,3 +152,10 @@ export const uiTheme = {
     borderBottom: `1px solid ${color.linkWater}`,
   },
 };
+
+export const layoutTheme = {
+  // Center
+  centerLayout: {
+    width: "600px",
+  },
+};
