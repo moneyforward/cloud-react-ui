@@ -1,7 +1,6 @@
 import { ThemeProvider } from "styled-components";
-import merge from "deepmerge";
 
-import { theme } from "../../theme";
+import { createTheme } from "../../theme";
 import { CenterBoxLayout } from "./CenterBoxLayout";
 import { Text, Button } from "../../components";
 
@@ -10,7 +9,7 @@ export default {
   title: "Layouts/Center Box",
 };
 
-const centerBoxTheme = merge(theme, {
+const centerBoxTheme = createTheme({
   centerLayout: {
     width: "300px",
   },
