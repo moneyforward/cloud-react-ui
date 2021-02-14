@@ -101,6 +101,19 @@ export const componentsTheme = {
       color: values.text.color.default,
     },
   },
+  // Heading
+  heading: {
+    color: {
+      black: color.black,
+      title: color.nightRider,
+      blockTitle: color.dimGray,
+    },
+    fontSize: values.text.size,
+    fontWeight: {
+      light: "normal",
+      default: "bold",
+    },
+  },
   // Link
   link: {
     display: "",
