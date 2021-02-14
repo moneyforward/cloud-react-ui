@@ -1,6 +1,11 @@
 import { number, radios, select } from "@storybook/addon-knobs";
-import { IconContainer, Icons } from "./IconContainer";
-import type { IconTypes, IconRotation, IconProps } from "./IconContainer";
+import {
+  IconContainer,
+  Icons,
+  IconTypes,
+  IconRotation,
+  IconProps,
+} from "./IconContainer";
 
 export default {
   component: IconContainer,
