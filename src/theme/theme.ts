@@ -145,6 +145,32 @@ export const componentsTheme = {
       color: color.nobel,
     },
   },
+  // ProgressLabel
+  progressLabel: {
+    display: "inline-block",
+    width: "80px",
+    padding: "5px 9px 6px",
+    backgroundColor: {
+      waiting: color.white,
+      inProgress: color.royalBlue,
+      completed: color.lightSlateGrey,
+    },
+    borderWidth: values.border.width.bold,
+    borderStyle: values.border.style.solid,
+    borderColor: {
+      waiting: color.lightSlateGrey,
+      inProgress: color.royalBlue,
+      completed: color.lightSlateGrey,
+    },
+    borderRadius: "20px",
+    fontSize: values.text.size.small,
+    color: {
+      waiting: color.lightSlateGrey,
+      inProgress: color.white,
+      completed: color.white,
+    },
+    letterSpacing: "0.18px",
+  },
   // Text
   text: values.text,
 };
