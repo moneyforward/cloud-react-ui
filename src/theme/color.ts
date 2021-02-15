@@ -26,7 +26,7 @@ export const color = {
   nobel: "#999999",
   redSnow: "#FFF4F4",
   rhino: "#424954",
-  royalBlue: "#3D79D0",
+  royalBlue: "#3B7DE9",
   orangeWhite: "#E5E2CF",
   paleChestnut: "#E7A9AA",
   sanMarino: "#5176AE",

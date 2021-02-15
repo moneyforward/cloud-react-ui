@@ -29,6 +29,10 @@ export const values = {
   border: {
     width: {
       thin: "1px",
+      bold: "2px",
+    },
+    style: {
+      solid: "solid",
     },
   },
 };
