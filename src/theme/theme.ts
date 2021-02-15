@@ -173,6 +173,15 @@ export const componentsTheme = {
   },
   // Text
   text: values.text,
+  // Tooltip
+  tooltip: {
+    height: "",
+    padding: "8px 11px 6px 10px",
+    backgroundColor: "rgba(51, 51, 51, 0.9)",
+    borderRadius: "4px",
+    fontSize: values.text.size.small,
+    color: color.white,
+  },
 };
 
 export const uiTheme = {
