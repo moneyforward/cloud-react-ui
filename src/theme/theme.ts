@@ -171,6 +171,34 @@ export const componentsTheme = {
     },
     letterSpacing: "0.18px",
   },
+  // Table
+  table: {
+    width: "100%",
+    borderCollapse: "separate",
+    borderSpacing: 0,
+    borderRadius: "4px",
+    borderWidth: values.border.width.thin,
+    borderStyle: values.border.style.solid,
+    borderColor: color.linkWater,
+    nonBorder: "0",
+    th: {
+      padding: "10px 15px",
+      backgroundColor: color.solitude,
+      textAlign: "left",
+      fontSize: values.text.size.middle,
+      fontWeight: values.font.waight.bold,
+    },
+    td: {
+      padding: "10px 17px",
+      backgroundColor: color.white,
+      textAlign: "left",
+      fontSize: values.text.size.middle,
+      fontWeight: {
+        normal: values.font.waight.normal,
+        bold: values.font.waight.bold,
+      },
+    },
+  },
   // Text
   text: values.text,
   // Tooltip
@@ -205,5 +233,10 @@ export const layoutTheme = {
   // Center
   centerLayout: {
     width: "600px",
+  },
+  // Left
+  leftLayout: {
+    width: "600px",
+    margin: "20px",
   },
 };

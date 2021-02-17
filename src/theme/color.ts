@@ -31,7 +31,7 @@ export const color = {
   paleChestnut: "#E7A9AA",
   sanMarino: "#5176AE",
   silver: "#BEBEBE",
-  solitude: "#EFF1F4",
+  solitude: "#E6EAED",
   steelBlue: "#4772B3",
   stormGrey: "#787E8D",
   sunsetOrange: "#EC4949",
