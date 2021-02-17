@@ -206,4 +206,9 @@ export const layoutTheme = {
   centerLayout: {
     width: "600px",
   },
+  // Left
+  leftLayout: {
+    width: "600px",
+    margin: "20px",
+  },
 };
