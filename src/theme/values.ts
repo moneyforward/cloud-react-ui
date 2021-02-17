@@ -3,14 +3,19 @@ import { color } from "./color";
 export const values = {
   font: {
     noto: "Noto Sans JP",
+    waight: {
+      normal: "normal",
+      bold: "bold",
+    },
   },
   text: {
     size: {
       xSmall: "10px",
       small: "12px",
-      middle: "14px",
-      large: "16px",
-      xLarge: "20px",
+      middle: "13px",
+      large: "14px",
+      xlarge: "16px",
+      xxLarge: "20px",
     },
     color: {
       // FIXME: titleカラーが本当はdefault

@@ -4,4 +4,5 @@ export * from "./Icon";
 export * from "./Link";
 export * from "./ProgressLabel";
 export * from "./Text";
+export * from "./Table";
 export * from "./Tooltip";
