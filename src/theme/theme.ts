@@ -93,6 +93,34 @@ export const componentsTheme = {
       },
     },
   },
+  // Checkbox
+  checkbox: {
+    width: "16px",
+    height: "16px",
+    backgroundColor: {
+      unchecked: color.white,
+      checked: color.royalBlue,
+      disabled: color.linkWater,
+    },
+    backgroundSize: "10px 8px",
+    borderWidth: {
+      unchecked: values.border.width.thin,
+      checked: values.border.width.thin,
+      disabled: values.border.width.thin,
+    },
+    borderStyle: {
+      unchecked: values.border.style.solid,
+      checked: values.border.style.solid,
+      disabled: values.border.style.solid,
+    },
+    borderColor: {
+      unchecked: color.linkWater,
+      checked: "rgba(0, 0, 0, 0.15)",
+      disabled: color.linkWater,
+    },
+    borderRadius: "4px",
+    fontSize: values.text.size.middle,
+  },
   // Icon
   icon: {
     fontSize: values.text.size.middle,

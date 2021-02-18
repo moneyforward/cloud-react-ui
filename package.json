@@ -21,7 +21,7 @@
     "clean": "rm -rf lib/",
     "build": "tsc",
     "prepare": "tsc",
-    "lint": "eslint src/** --ext .ts,.tsx",
+    "lint": "eslint src/ --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "storybook": "start-storybook -c .storybook/ --quiet",
     "deploy-storybook": "storybook-to-ghpages"
