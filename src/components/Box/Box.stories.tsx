@@ -1,5 +1,5 @@
 import { BoxContainer } from "./BoxContainer";
-import { Text } from "@components";
+import { Text } from "../Text";
 
 export default {
   component: BoxContainer,

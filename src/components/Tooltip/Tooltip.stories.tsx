@@ -1,6 +1,6 @@
 import { text, radios, boolean } from "@storybook/addon-knobs";
 import { TooltipContainer, TooltipProps } from "./TooltipContainer";
-import { Icon } from "@components";
+import { Icon } from "../Icon";
 
 export default {
   component: TooltipContainer,

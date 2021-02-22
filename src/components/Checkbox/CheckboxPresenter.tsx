@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { defaultProps } from "@theme";
-import imageCheck from "@assets/images/check.svg";
+import { defaultProps } from "../../theme";
+import imageCheck from "../../assets/images/check.svg";
 import { CheckboxProps } from "./CheckboxContainer";
 
 const StyledCheckbox = styled.input`

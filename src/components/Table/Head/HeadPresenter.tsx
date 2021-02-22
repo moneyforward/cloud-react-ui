@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { HeadProps } from "./HeadContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../../theme";
 
 const StyledTableHead = styled.thead`
   ${({ theme }) => css`

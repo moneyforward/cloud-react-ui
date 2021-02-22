@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { LeftLayout } from "./LeftLayout";
-import { Box, Text, Button } from "@components";
-import { createTheme } from "@theme";
+import { Box, Text, Button } from "../../components";
+import { createTheme } from "../../theme";
 
 export default {
   component: LeftLayout,

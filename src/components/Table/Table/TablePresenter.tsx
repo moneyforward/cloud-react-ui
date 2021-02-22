@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { TableProps } from "./TableContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../../theme";
 
 const StyledTable = styled.table`
   ${({ theme }) => css`

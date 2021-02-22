@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 export type LeftLayoutProps = {
   children: React.ReactNode;

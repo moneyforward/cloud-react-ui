@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { HeadingProps } from "./HeadingContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 type HeadingPresenterProps = Omit<HeadingProps, "level"> & {
   tag: string;

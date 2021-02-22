@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { CenterLayout } from "./CenterLayout";
-import { Box, Text, Button } from "@components";
-import { createTheme } from "@theme";
+import { Box, Text, Button } from "../../components";
+import { createTheme } from "../../theme";
 
 export default {
   component: CenterLayout,

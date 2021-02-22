@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Group, BorderType } from "../Table/TableContainer";
 import { CellProps } from "./CellContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../../theme";
 
 type CellPresenterProps = CellProps & { group: Group; borderType: BorderType };
 

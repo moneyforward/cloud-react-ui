@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import type { TextProps } from "./TextContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 const StyledText = styled.span<TextProps>`
   font-size: ${({ theme, size }) => theme.text.size[size || "middle"]};

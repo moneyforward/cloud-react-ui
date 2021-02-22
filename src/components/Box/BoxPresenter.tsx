@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { BoxProps } from "./BoxContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 const StyledBox = styled.div`
   ${({ theme }) => {
