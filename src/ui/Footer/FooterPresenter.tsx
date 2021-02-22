@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FooterProps } from "./FooterContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 const StyledFooter = styled.footer`
   display: flex;

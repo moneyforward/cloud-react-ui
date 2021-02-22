@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { ButtonProps } from "./ButtonContainer";
-import { Icon } from "@components/Icon";
-import { defaultProps } from "@theme";
+import { Icon } from "../Icon";
+import { defaultProps } from "../../theme";
 
 const StyledButton = styled.button<ButtonProps>`
   ${({ theme, size = "medium", color = "default", disabled }) => {

@@ -5,7 +5,7 @@ import {
   FontAwesomeIconProps,
 } from "@fortawesome/react-fontawesome";
 import { IconProps, IconTypes } from "./IconContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 const FontAwesomeConverter: {
   [key in IconTypes]: FontAwesomeIconProps["icon"];

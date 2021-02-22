@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import MuiTooltip from "@material-ui/core/Tooltip";
 import { TooltipProps } from "./TooltipContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 const StyledTooltip = styled(({ theme, className, ...rest }) => (
   <MuiTooltip

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FooterContainer } from "./FooterContainer";
-import { Link, Text } from "@components";
+import { Link, Text } from "../../components";
 
 export default {
   component: FooterContainer,

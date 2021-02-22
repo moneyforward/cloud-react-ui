@@ -1,6 +1,6 @@
 import { text, radios } from "@storybook/addon-knobs";
 import { TextContainer, TextProps } from "./TextContainer";
-import { theme } from "@theme";
+import { theme } from "../../theme";
 
 export default {
   component: TextContainer,

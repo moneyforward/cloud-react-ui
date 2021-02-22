@@ -1,6 +1,6 @@
 import { text, radios } from "@storybook/addon-knobs";
 import { HeadingContainer, HeadingProps } from "./HeadingContainer";
-import { theme } from "@theme";
+import { theme } from "../../theme";
 
 export default {
   component: HeadingContainer,

@@ -1,5 +1,5 @@
 import { HeadingPresenter } from "./HeadingPresenter";
-import { theme } from "@theme";
+import { theme } from "../../theme";
 
 type Size = keyof typeof theme.heading.fontSize;
 type Weight = keyof typeof theme.heading.fontWeight;

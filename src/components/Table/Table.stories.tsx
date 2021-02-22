@@ -4,7 +4,7 @@ import { HeadContainer as Head } from "./Head/HeadContainer";
 import { BodyContainer as Body } from "./Body/BodyContainer";
 import { RowContainer as Row } from "./Row/RowContainer";
 import { CellContainer as Cell } from "./Cell/CellContainer";
-import { LeftLayout } from "@layouts";
+import { LeftLayout } from "../../layouts";
 
 export default {
   component: TableContainer,

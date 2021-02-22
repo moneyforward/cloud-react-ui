@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HeaderProps } from "./HeaderContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../theme";
 
 const StyledHeader = styled.header`
   display: flex;

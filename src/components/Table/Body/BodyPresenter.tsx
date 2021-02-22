@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { BodyProps } from "./BodyContainer";
-import { defaultProps } from "@theme";
+import { defaultProps } from "../../../theme";
 
 const StyledTableBody = styled.tbody`
   ${({ theme }) => css`
