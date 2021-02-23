@@ -1,3 +1,4 @@
+import { boolean } from "@storybook/addon-knobs";
 import { HeaderContainer } from "./HeaderContainer";
 import { Icon, Text } from "../../components";
 
@@ -7,7 +8,7 @@ export default {
 };
 
 export const Header = (): React.ReactElement => {
-  const left = (
+  const Left = () => (
     <svg
       width="140"
       height="20"
@@ -24,12 +25,23 @@ export const Header = (): React.ReactElement => {
     </svg>
   );
 
-  const right = (
+  const Right = () => (
     <>
       <Text size="small">Header</Text>
       <Icon icon="caretUp" rotation={180} />
     </>
   );
 
-  return <HeaderContainer left={left} right={right} />;
+  const Content = () => <div style={{ height: "1000px" }} />;
+
+  return (
+    <>
+      <HeaderContainer
+        fixed={boolean("fixed", false)}
+        left={<Left />}
+        right={<Right />}
+      />
+      <Content />
+    </>
+  );
 };

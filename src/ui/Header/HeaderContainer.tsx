@@ -1,6 +1,7 @@
 import { HeaderPresenter } from "./HeaderPresenter";
 
 export type HeaderProps = {
+  fixed?: boolean;
   left: React.ReactNode;
   right: React.ReactNode;
   className?: string;
