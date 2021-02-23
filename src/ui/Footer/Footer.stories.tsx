@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { boolean } from "@storybook/addon-knobs";
 import { FooterContainer } from "./FooterContainer";
 import { Link, Text } from "../../components";
 
@@ -14,7 +15,7 @@ const StyledText = styled(Text)`
 
 export const Footer = (): React.ReactElement => {
   return (
-    <FooterContainer>
+    <FooterContainer fixed={boolean("fixed", false)}>
       <StyledText size="small">
         <Link href="#">利用規約</Link>
       </StyledText>
