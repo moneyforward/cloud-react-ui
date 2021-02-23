@@ -247,6 +247,7 @@ export const uiTheme = {
     padding: "9px 20px 10px",
     backgroundColor: color.whisper,
     borderTop: `1px solid ${color.linkWater}`,
+    zIndex: 100,
   },
   // Header
   header: {
@@ -254,6 +255,7 @@ export const uiTheme = {
     padding: "10px 20px 10px 10px",
     backgroundColor: color.white,
     borderBottom: `1px solid ${color.linkWater}`,
+    zIndex: 100,
   },
 };
 

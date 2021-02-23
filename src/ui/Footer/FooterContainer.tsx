@@ -1,6 +1,7 @@
 import { FooterPresenter } from "./FooterPresenter";
 
 export type FooterProps = {
+  fixed?: boolean;
   children: React.ReactNode;
 };
 
