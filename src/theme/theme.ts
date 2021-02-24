@@ -199,6 +199,26 @@ export const componentsTheme = {
     },
     letterSpacing: "0.18px",
   },
+  // Radio
+  radio: {
+    width: "16px",
+    height: "16px",
+    backgroundSize: "6px 6px",
+    backgroundColor: {
+      unchecked: color.white,
+      checked: color.royalBlue,
+      disabled: color.linkWater,
+    },
+    borderRadius: "8px",
+    borderWidth: values.border.width.thin,
+    borderStyle: values.border.style.solid,
+    borderColor: {
+      unchecked: color.linkWater,
+      checked: "rgba(0, 0, 0, 0.15)",
+      disabled: color.linkWater,
+    },
+    fontSize: values.text.size.middle,
+  },
   // Table
   table: {
     width: "100%",
