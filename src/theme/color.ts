@@ -29,6 +29,7 @@ export const color = {
   royalBlue: "#3B7DE9",
   orangeWhite: "#E5E2CF",
   paleChestnut: "#E7A9AA",
+  salmon: "#F57575",
   sanMarino: "#5176AE",
   silver: "#BEBEBE",
   solitude: "#E6EAED",

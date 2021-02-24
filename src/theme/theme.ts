@@ -257,7 +257,6 @@ export const componentsTheme = {
       },
     },
   },
-
   // Table
   table: {
     width: "100%",
@@ -288,6 +287,26 @@ export const componentsTheme = {
   },
   // Text
   text: values.text,
+  // TextField
+  textField: {
+    width: "100%",
+    height: "34px",
+    padding: "10px 5px",
+    backgroundColor: {
+      default: color.white,
+      error: color.mistyRose,
+    },
+    borderRadius: "4px",
+    borderWidth: values.border.width.thin,
+    borderStyle: values.border.style.solid,
+    borderColor: {
+      default: color.linkWater,
+      error: color.salmon,
+    },
+    color: values.text.color.title,
+    fontSize: values.text.size.middle,
+    placeholderColor: values.text.color.notes,
+  },
   // Tooltip
   tooltip: {
     height: "",
