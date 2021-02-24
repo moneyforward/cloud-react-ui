@@ -219,6 +219,45 @@ export const componentsTheme = {
     },
     fontSize: values.text.size.middle,
   },
+  // Select
+  select: {
+    width: "100%",
+    height: "34px",
+    backgroundColor: {
+      default: color.white,
+      error: color.redSnow,
+      disabled: color.whisper,
+    },
+    borderWidth: values.border.width.thin,
+    borderStyle: values.border.style.solid,
+    borderColor: {
+      default: color.veryRightGray,
+      error: color.froly,
+    },
+    placeholderColor: color.nobel,
+    textColor: values.text.color.title,
+    fontSize: values.text.size.middle,
+    option: {
+      backgroundColor: {
+        selected: color.aliceBlue,
+        focused: color.darkenAliceBlue,
+      },
+      textColor: {
+        selected: values.text.color.title,
+        focused: values.text.color.title,
+        disabled: color.veryRightGray,
+      },
+      focused: {},
+    },
+    indicator: {
+      clear: {
+        hover: {
+          color: color.venetianRed,
+        },
+      },
+    },
+  },
+
   // Table
   table: {
     width: "100%",
