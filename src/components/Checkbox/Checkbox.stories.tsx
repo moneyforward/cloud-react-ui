@@ -6,8 +6,22 @@ export default {
   title: "components/Checkbox",
 };
 
-export const Checkbox = (): React.ReactElement => (
-  <CheckboxContainer disabled={boolean("Disabled", false)}>
-    {text("Text", "Checkbox")}
-  </CheckboxContainer>
-);
+export const Checkbox = (): React.ReactElement => {
+  const disabled = boolean("Disabled", false);
+  const label = text("Text", "Checkbox");
+
+  return (
+    <>
+      <div>
+        <CheckboxContainer name="checkbox" disabled={disabled}>
+          {label}
+        </CheckboxContainer>
+      </div>
+      <div>
+        <CheckboxContainer name="checkbox" disabled={disabled}>
+          {label}
+        </CheckboxContainer>
+      </div>
+    </>
+  );
+};
