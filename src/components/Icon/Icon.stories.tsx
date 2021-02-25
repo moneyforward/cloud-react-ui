@@ -31,7 +31,7 @@ const flipOption = {
   both: "both",
 };
 
-export const Icon = (): React.ReactElement => (
+export const Icon: React.FC = () => (
   <IconContainer
     icon={select("Icon", iconOptions, "bell")}
     rotation={number("Rotation", 0, rotationOption) as IconRotation}

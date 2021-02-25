@@ -24,6 +24,6 @@ export type SelectProps = {
   className?: string;
 };
 
-export function SelectContainer(props: SelectProps): React.ReactElement {
+export const SelectContainer: React.FC<SelectProps> = (props) => {
   return <SelectPresenter {...props} />;
-}
+};

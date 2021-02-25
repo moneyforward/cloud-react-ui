@@ -2,9 +2,8 @@ import { BoxPresenter } from "./BoxPresenter";
 
 export type BoxProps = {
   className?: string;
-  children: React.ReactNode;
 };
 
-export function BoxContainer(props: BoxProps): React.ReactElement {
+export const BoxContainer: React.FC<BoxProps> = (props) => {
   return <BoxPresenter {...props} />;
-}
+};

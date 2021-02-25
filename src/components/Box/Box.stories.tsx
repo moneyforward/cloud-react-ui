@@ -6,7 +6,7 @@ export default {
   title: "components/Box",
 };
 
-export const Box = (): React.ReactElement => (
+export const Box: React.FC = () => (
   <BoxContainer>
     <Text>Box</Text>
   </BoxContainer>

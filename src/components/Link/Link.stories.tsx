@@ -6,7 +6,7 @@ export default {
   title: "components/Link",
 };
 
-export const Link = (): React.ReactElement => (
+export const Link: React.FC = () => (
   <LinkContainer
     href="#"
     target="_self"

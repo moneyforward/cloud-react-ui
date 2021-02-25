@@ -5,10 +5,9 @@ export type TooltipProps = {
   message: string;
   placement?: MuiTootipProps["placement"];
   arrow?: boolean;
-  children: React.ReactNode;
   className?: string;
 };
 
-export function TooltipContainer(props: TooltipProps): React.ReactElement {
+export const TooltipContainer: React.FC<TooltipProps> = (props) => {
   return <TooltipPresenter {...props} />;
-}
+};

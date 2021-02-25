@@ -29,7 +29,7 @@ const iconPlacementOptions: { [key: string]: ButtonProps["iconPlacement"] } = {
   end: "end",
 };
 
-export const Button = (): React.ReactElement => (
+export const Button: React.FC = () => (
   <ButtonContainer
     size={radios("Size", sizeOptions, "small") as ButtonProps["size"]}
     color={radios("Color", colorOptions, "default") as ButtonProps["color"]}

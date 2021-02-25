@@ -16,51 +16,49 @@ type LinkPresenterProps = Omit<
 const StyledLink = styled(({ tag: Tag, theme, ...rest }) => (
   <Tag {...rest} />
 ))<LinkProps>`
-  ${({ theme }) => {
-    return css`
-      display: ${theme.link.display};
-      align-items: ${theme.link.alignItems};
-      width: ${theme.link.width};
-      min-height: ${theme.link.minHeight};
-      padding: ${theme.link.padding};
-      background-color: ${theme.link.backgroundColor};
-      color: ${theme.link.color};
-      text-decoration: ${theme.link.textDecoration};
+  ${({ theme: { link } }) => css`
+    display: ${link.display};
+    align-items: ${link.alignItems};
+    width: ${link.width};
+    min-height: ${link.minHeight};
+    padding: ${link.padding};
+    background-color: ${link.backgroundColor};
+    color: ${link.color};
+    text-decoration: ${link.textDecoration};
 
-      &:visited {
-        color: ${theme.link.visited.color};
-        text-decoration: ${theme.link.visited.textDecoration};
-      }
-      &:focus {
-        color: ${theme.link.focus.color};
-        text-decoration: ${theme.link.focus.textDecoration};
-      }
-      &:active {
-        color: ${theme.link.active.color};
-        text-decoration: ${theme.link.active.textDecoration};
-      }
-      &:hover {
-        cursor: pointer;
-        color: ${theme.link.hover.color};
-        text-decoration: ${theme.link.hover.textDecoration};
-      }
-      &.disabled {
-        cursor: not-allowed;
-        color: ${theme.link.disabled.color};
-      }
-    `;
-  }}
+    &:visited {
+      color: ${link.visited.color};
+      text-decoration: ${link.visited.textDecoration};
+    }
+    &:focus {
+      color: ${link.focus.color};
+      text-decoration: ${link.focus.textDecoration};
+    }
+    &:active {
+      color: ${link.active.color};
+      text-decoration: ${link.active.textDecoration};
+    }
+    &:hover {
+      cursor: pointer;
+      color: ${link.hover.color};
+      text-decoration: ${link.hover.textDecoration};
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: ${link.disabled.color};
+    }
+  `}
 `;
 StyledLink.defaultProps = defaultProps;
 
-export function LinkPresenter({
+export const LinkPresenter: React.FC<LinkPresenterProps> = ({
   href,
   target,
   disabled,
   children,
   className,
   ...rest
-}: LinkPresenterProps): React.ReactElement {
+}) => {
   if (disabled) {
     return (
       <StyledLink tag="span" className={`${className} disabled`}>
@@ -80,4 +78,4 @@ export function LinkPresenter({
       {children}
     </StyledLink>
   );
-}
+};

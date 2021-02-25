@@ -8,10 +8,9 @@ export type ButtonProps = {
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
   icon?: IconTypes;
   iconPlacement?: "start" | "end";
-  children?: React.ReactNode;
   className?: string;
 };
 
-export function ButtonContainer(props: ButtonProps): React.ReactElement {
+export const ButtonContainer: React.FC<ButtonProps> = (props) => {
   return <ButtonPresenter {...props} />;
-}
+};

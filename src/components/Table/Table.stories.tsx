@@ -11,7 +11,7 @@ export default {
   title: "components/Table",
 };
 
-export const Table = (): React.ReactElement => {
+export const Table: React.FC = () => {
   const border = radios(
     "border",
     { none: undefined, border: "border", rowBorder: "rowBorder" },

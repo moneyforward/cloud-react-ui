@@ -19,7 +19,7 @@ const centerBoxTheme = createTheme({
   },
 });
 
-export const CenterBox = (): React.ReactElement => (
+export const CenterBox: React.FC = () => (
   <ThemeProvider theme={centerBoxTheme}>
     <CenterBoxLayout>
       <Text tag="p">Center Box Layout</Text>

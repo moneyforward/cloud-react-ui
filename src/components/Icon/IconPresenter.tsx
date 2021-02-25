@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
@@ -20,20 +19,23 @@ const FontAwesomeConverter: {
 };
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  font-size: ${(props) => props.theme.icon.fontSize};
-  color: ${(props) => props.theme.icon.color};
-  &:hover {
-    color: ${(props) => props.theme.icon.hover.color};
-  }
+  ${({ theme: { icon } }) => css`
+    font-size: ${icon.fontSize};
+    color: ${icon.color};
+
+    &:hover {
+      color: ${icon.hover.color};
+    }
+  `}
 `;
 StyledFontAwesomeIcon.defaultProps = defaultProps;
 
-export function IconPresenter({
+export const IconPresenter: React.FC<IconProps> = ({
   width,
   height,
   icon,
   ...rest
-}: IconProps): React.ReactElement {
+}) => {
   return (
     <StyledFontAwesomeIcon
       style={{ width, height }}
@@ -41,4 +43,4 @@ export function IconPresenter({
       {...rest}
     />
   );
-}
+};

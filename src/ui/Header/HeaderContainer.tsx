@@ -7,6 +7,6 @@ export type HeaderProps = {
   className?: string;
 };
 
-export function HeaderContainer(props: HeaderProps): React.ReactElement {
+export const HeaderContainer: React.FC<HeaderProps> = (props) => {
   return <HeaderPresenter {...props} />;
-}
+};

@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext } from "react";
 import { TablePresenter } from "./TablePresenter";
 
 export type Group = "head" | "body";
@@ -14,16 +14,15 @@ export const TableBorderContext = createContext<{ borderType: BorderType }>({
 export type TableProps = {
   borderType?: BorderType;
   className?: string;
-  children: React.ReactNode;
 };
 
-export function TableContainer({
+export const TableContainer: React.FC<TableProps> = ({
   borderType,
   ...rest
-}: TableProps): React.ReactElement {
+}) => {
   return (
     <TableBorderContext.Provider value={{ borderType }}>
       <TablePresenter {...rest} />
     </TableBorderContext.Provider>
   );
-}
+};

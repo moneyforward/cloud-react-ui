@@ -3,17 +3,17 @@ import { HeadProps } from "./HeadContainer";
 import { defaultProps } from "../../../theme";
 
 const StyledTableHead = styled.thead`
-  ${({ theme }) => css`
+  ${({ theme: { table } }) => css`
     & > tr:first-child {
       th,
       td {
-        border-top: ${theme.table.nonBorder};
+        border-top: ${table.nonBorder};
 
         :first-child {
-          border-top-left-radius: ${theme.table.borderRadius};
+          border-top-left-radius: ${table.borderRadius};
         }
         :last-child {
-          border-top-right-radius: ${theme.table.borderRadius};
+          border-top-right-radius: ${table.borderRadius};
         }
       }
     }
@@ -21,6 +21,6 @@ const StyledTableHead = styled.thead`
 `;
 StyledTableHead.defaultProps = defaultProps;
 
-export function HeadPresenter(props: HeadProps): React.ReactElement {
+export const HeadPresenter: React.FC<HeadProps> = (props) => {
   return <StyledTableHead {...props} />;
-}
+};

@@ -2,9 +2,8 @@ import { FooterPresenter } from "./FooterPresenter";
 
 export type FooterProps = {
   fixed?: boolean;
-  children: React.ReactNode;
 };
 
-export function FooterContainer(props: FooterProps): React.ReactElement {
+export const FooterContainer: React.FC<FooterProps> = (props) => {
   return <FooterPresenter {...props} />;
-}
+};

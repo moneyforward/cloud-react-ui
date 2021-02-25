@@ -100,13 +100,13 @@ export const StyledSelect = styled(ReactSelect)<SelectProps>`
 `;
 StyledSelect.defaultProps = defaultProps;
 
-export function SelectPresenter({
+export const SelectPresenter: React.FC<SelectProps> = ({
   clearable = true,
   disabled = false,
   searchable = true,
   error = false,
   ...rest
-}: SelectProps): React.ReactElement {
+}) => {
   // TODO: icon indicator
   return (
     <StyledSelect
@@ -118,4 +118,4 @@ export function SelectPresenter({
       {...rest}
     />
   );
-}
+};

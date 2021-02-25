@@ -10,13 +10,12 @@ export type HeadingProps = {
   size?: Size;
   weight?: Weight;
   color?: Color;
-  children: React.ReactNode;
   className?: string;
 };
 
-export function HeadingContainer({
+export const HeadingContainer: React.FC<HeadingProps> = ({
   level,
   ...rest
-}: HeadingProps): React.ReactElement {
+}) => {
   return <HeadingPresenter tag={`h${level}`} {...rest} />;
-}
+};

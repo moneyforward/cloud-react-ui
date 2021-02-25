@@ -1,16 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 
-export type LeftLayoutProps = {
-  children: React.ReactNode;
-};
-
 const Wrapper = styled.div`
-  width: ${(props) => props.theme.leftLayout.width};
-  margin: ${(props) => props.theme.leftLayout.margin};
+  ${({ theme: { leftLayout } }) => css`
+    width: ${leftLayout.width};
+    margin: ${leftLayout.margin};
+  `}
 `;
 Wrapper.defaultProps = defaultProps;
 
-export function LeftLayout({ children }: LeftLayoutProps): React.ReactElement {
-  return <Wrapper>{children}</Wrapper>;
-}
+export const LeftLayout: React.FC = (props) => {
+  return <Wrapper {...props} />;
+};

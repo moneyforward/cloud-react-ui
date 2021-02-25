@@ -44,6 +44,6 @@ export type IconProps = {
   className?: string;
 };
 
-export function IconContainer(props: IconProps): React.ReactElement {
+export const IconContainer: React.FC<IconProps> = (props) => {
   return <IconPresenter {...props} />;
-}
+};

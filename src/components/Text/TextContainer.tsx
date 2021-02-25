@@ -8,10 +8,9 @@ export type TextProps = {
   tag?: keyof JSX.IntrinsicElements;
   size?: Size;
   color?: Color;
-  children: React.ReactNode;
   className?: string;
 };
 
-export function TextContainer(props: TextProps): React.ReactElement {
+export const TextContainer: React.FC<TextProps> = (props) => {
   return <TextPresenter {...props} />;
-}
+};

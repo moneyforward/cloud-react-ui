@@ -9,32 +9,30 @@ const StyledTooltip = styled(({ theme, className, ...rest }) => (
     {...rest}
   />
 ))<TooltipProps>`
-  ${({ theme }) => {
-    return css`
-      .tooltip {
-        height: ${theme.tooltip.height};
-        padding: ${theme.tooltip.padding};
-        background-color: ${theme.tooltip.backgroundColor};
-        border-radius: ${theme.tooltip.borderRadius};
-        font-size: ${theme.tooltip.fontSize};
-        color: ${theme.tooltip.color};
-      }
+  ${({ theme: { tooltip } }) => css`
+    .tooltip {
+      height: ${tooltip.height};
+      padding: ${tooltip.padding};
+      background-color: ${tooltip.backgroundColor};
+      border-radius: ${tooltip.borderRadius};
+      font-size: ${tooltip.fontSize};
+      color: ${tooltip.color};
+    }
 
-      .arrow {
-        color: ${theme.tooltip.backgroundColor};
-      }
-    `;
-  }}
+    .arrow {
+      color: ${tooltip.backgroundColor};
+    }
+  `}
 `;
 StyledTooltip.defaultProps = defaultProps;
 
-export function TooltipPresenter({
+export const TooltipPresenter: React.FC<TooltipProps> = ({
   message,
   placement = "bottom",
   arrow = true,
   children,
   className,
-}: TooltipProps): React.ReactElement {
+}) => {
   return (
     <StyledTooltip arrow={arrow} title={message} placement={placement}>
       <div style={{ display: "inline-block" }} className={className}>
@@ -42,4 +40,4 @@ export function TooltipPresenter({
       </div>
     </StyledTooltip>
   );
-}
+};

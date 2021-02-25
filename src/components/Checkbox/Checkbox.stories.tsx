@@ -6,7 +6,7 @@ export default {
   title: "components/Checkbox",
 };
 
-export const Checkbox = (): React.ReactElement => {
+export const Checkbox: React.FC = () => {
   const disabled = boolean("Disabled", false);
   const label = text("Text", "Checkbox");
 

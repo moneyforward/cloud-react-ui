@@ -3,15 +3,15 @@ import { BodyProps } from "./BodyContainer";
 import { defaultProps } from "../../../theme";
 
 const StyledTableBody = styled.tbody`
-  ${({ theme }) => css`
+  ${({ theme: { table } }) => css`
     & > tr:last-child {
       th,
       td {
         :first-child {
-          border-bottom-left-radius: ${theme.table.borderRadius};
+          border-bottom-left-radius: ${table.borderRadius};
         }
         :last-child {
-          border-bottom-right-radius: ${theme.table.borderRadius};
+          border-bottom-right-radius: ${table.borderRadius};
         }
       }
     }
@@ -19,6 +19,6 @@ const StyledTableBody = styled.tbody`
 `;
 StyledTableBody.defaultProps = defaultProps;
 
-export function BodyPresenter(props: BodyProps): React.ReactElement {
+export const BodyPresenter: React.FC<BodyProps> = (props) => {
   return <StyledTableBody {...props} />;
-}
+};
