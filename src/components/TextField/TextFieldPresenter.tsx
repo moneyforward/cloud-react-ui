@@ -18,6 +18,7 @@ const StyledInput = styled.input<TextFieldProps>`
       border-color: ${textField.borderColor[colorType]};
       color: ${textField.color};
       font-size: ${textField.fontSize};
+      box-sizing: border-box;
 
       ::placeholder {
         color: ${textField.placeholderColor};

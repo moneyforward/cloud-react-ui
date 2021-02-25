@@ -11,6 +11,7 @@ const StyledBox = styled.div`
     border-radius: ${box.borderRadius};
     border: ${box.border};
     text-align: ${box.textAlign};
+    box-sizing: border-box;
   `}
 `;
 StyledBox.defaultProps = defaultProps;

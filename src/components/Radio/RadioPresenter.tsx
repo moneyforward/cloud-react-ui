@@ -52,6 +52,7 @@ const Box = styled.span`
     border-style: ${radio.borderStyle.unchecked};
     border-color: ${radio.borderColor.unchecked};
     pointer-events: none;
+    box-sizing: border-box;
   `}
 `;
 Box.defaultProps = defaultProps;

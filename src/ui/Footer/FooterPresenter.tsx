@@ -24,6 +24,7 @@ const StyledFooter = styled.footer`
     padding: ${footer.padding};
     border-top: ${footer.borderTop};
     background-color: ${footer.backgroundColor};
+    box-sizing: border-box;
   `}
 `;
 StyledFooter.defaultProps = defaultProps;
