@@ -15,6 +15,7 @@ const StyledProgressLabel = styled.div<ProgressLabelProps>`
     font-size: ${progressLabel.fontSize};
     color: ${progressLabel.color[status]};
     letter-spacing: ${progressLabel.letterSpacing};
+    box-sizing: border-box;
   `}
 `;
 StyledProgressLabel.defaultProps = defaultProps;

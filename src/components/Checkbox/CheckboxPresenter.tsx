@@ -52,6 +52,7 @@ const Box = styled.span`
     border-style: ${checkbox.borderStyle.unchecked};
     border-color: ${checkbox.borderColor.unchecked};
     pointer-events: none;
+    box-sizing: border-box;
   `}
 `;
 Box.defaultProps = defaultProps;

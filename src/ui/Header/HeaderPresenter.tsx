@@ -24,6 +24,7 @@ const StyledHeader = styled.header`
     padding: ${header.padding};
     border-bottom: ${header.borderBottom};
     background-color: ${header.backgroundColor};
+    box-sizing: border-box;
   `}
 `;
 StyledHeader.defaultProps = defaultProps;
