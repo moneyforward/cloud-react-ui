@@ -102,7 +102,7 @@ export const componentsTheme = {
       checked: color.royalBlue,
       disabled: color.linkWater,
     },
-    backgroundSize: "10px 8px",
+    borderRadius: "4px",
     borderWidth: {
       unchecked: values.border.width.thin,
       checked: values.border.width.thin,
@@ -118,8 +118,11 @@ export const componentsTheme = {
       checked: "rgba(0, 0, 0, 0.15)",
       disabled: color.linkWater,
     },
-    borderRadius: "4px",
-    fontSize: values.text.size.middle,
+    icon: {
+      width: "10px",
+      height: "8px",
+      color: color.white,
+    },
   },
   // Icon
   icon: {
