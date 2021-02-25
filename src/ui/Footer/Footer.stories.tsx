@@ -13,7 +13,7 @@ const StyledText = styled(Text)`
   letter-spacing: 0.4px;
 `;
 
-export const Footer = (): React.ReactElement => {
+export const Footer: React.FC = () => {
   return (
     <FooterContainer fixed={boolean("fixed", false)}>
       <StyledText size="small">

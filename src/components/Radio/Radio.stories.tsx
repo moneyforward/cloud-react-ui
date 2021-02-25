@@ -6,7 +6,7 @@ export default {
   title: "components/Radio",
 };
 
-export const Radio = (): React.ReactElement => {
+export const Radio: React.FC = () => {
   const disabled = boolean("Disabled", false);
   const label = text("Text", "Radio");
 

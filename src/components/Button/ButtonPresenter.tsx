@@ -5,9 +5,9 @@ import { Icon } from "../Icon";
 import { defaultProps } from "../../theme";
 
 const StyledButton = styled.button<ButtonProps>`
-  ${({ theme, size = "medium", color = "default", disabled }) => {
-    const buttonSize = theme.button.size[size];
-    const buttonColor = theme.button[disabled ? "disabled" : color];
+  ${({ theme: { button }, size = "medium", color = "default", disabled }) => {
+    const buttonSize = button.size[size];
+    const buttonColor = button[disabled ? "disabled" : color];
 
     return css`
       && {
@@ -16,7 +16,7 @@ const StyledButton = styled.button<ButtonProps>`
         padding: ${buttonSize.padding};
         line-height: ${buttonSize.height};
         font-size: ${buttonSize.fontSize};
-        border-radius: ${theme.button.borderRadius};
+        border-radius: ${button.borderRadius};
         border: ${buttonColor.border};
         color: ${buttonColor.textColor};
         background: transparent;
@@ -32,7 +32,7 @@ const StyledButton = styled.button<ButtonProps>`
         height: 100%;
         position: absolute;
         left: 0;
-        border-radius: ${theme.button.borderRadius};
+        border-radius: ${button.borderRadius};
       }
       &&:before {
         z-index: -1;
@@ -43,7 +43,7 @@ const StyledButton = styled.button<ButtonProps>`
         content: "";
         z-index: -2;
         background: ${buttonColor.hover.background};
-        border-radius: ${theme.button.borderRadius};
+        border-radius: ${button.borderRadius};
       }
       &&:hover {
         &:before {
@@ -62,26 +62,29 @@ const StyledButton = styled.button<ButtonProps>`
 StyledButton.defaultProps = defaultProps;
 
 const StyledIcon = styled((props) => <Icon {...props} />)`
-  ${({ theme, iconPlacement = "start", color = "default", disabled }) => {
-    return css`
+  ${({
+    theme: { button },
+    iconPlacement = "start",
+    color = "default",
+    disabled,
+  }) => css`
       && {
         padding-${iconPlacement === "start" ? "right" : "left"}: 4px;
         width: 10px;
-        color: ${theme.button[disabled ? "disabled" : color].iconColor};
+        color: ${button[disabled ? "disabled" : color].iconColor};
       }
-    `;
-  }}
+    `}
 `;
 StyledIcon.defaultProps = defaultProps;
 
-export function ButtonPresenter({
+export const ButtonPresenter: React.FC<ButtonProps> = ({
   size,
   type,
   icon,
   iconPlacement,
   children,
   ...rest
-}: ButtonProps): React.ReactElement {
+}) => {
   const ButtonIcon = (
     <StyledIcon icon={icon} iconPlacement={iconPlacement} {...rest} />
   );
@@ -93,4 +96,4 @@ export function ButtonPresenter({
       {icon && iconPlacement === "end" && ButtonIcon}
     </StyledButton>
   );
-}
+};

@@ -15,7 +15,7 @@ const statusOption = {
   completed: "completed",
 };
 
-export const ProgressLabel = (): React.ReactElement => (
+export const ProgressLabel: React.FC = () => (
   <ProgressLabelContainer
     status={
       radios(

@@ -23,7 +23,7 @@ const colorOption = Object.keys(theme.text.color).reduce((obj, key) => {
   return obj;
 }, {} as { [key: string]: string });
 
-export const Text = (): React.ReactElement => (
+export const Text: React.FC = () => (
   <TextContainer
     tag={radios("Tag", tagOption, "span") as keyof JSX.IntrinsicElements}
     size={radios("Size", sizeOption, "middle") as TextProps["size"]}

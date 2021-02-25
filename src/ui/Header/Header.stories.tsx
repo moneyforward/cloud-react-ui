@@ -7,7 +7,7 @@ export default {
   title: "ui/Header",
 };
 
-export const Header = (): React.ReactElement => {
+export const Header: React.FC = () => {
   const Left = () => (
     <svg
       width="140"

@@ -1,16 +1,10 @@
 import { CenterLayout } from "../Center";
 import { Box } from "../../components";
 
-export type CenterBoxLayoutProps = {
-  children: React.ReactNode;
-};
-
-export function CenterBoxLayout({
-  children,
-}: CenterBoxLayoutProps): React.ReactElement {
+export const CenterBoxLayout: React.FC = ({ children }) => {
   return (
     <CenterLayout>
       <Box>{children}</Box>
     </CenterLayout>
   );
-}
+};

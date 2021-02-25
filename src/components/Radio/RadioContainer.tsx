@@ -7,10 +7,9 @@ export type RadioProps = {
   disabled?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
-  children?: React.ReactNode;
   className?: string;
 };
 
-export function RadioContainer(props: RadioProps): React.ReactElement {
+export const RadioContainer: React.FC<RadioProps> = (props) => {
   return <RadioPresenter {...props} />;
-}
+};

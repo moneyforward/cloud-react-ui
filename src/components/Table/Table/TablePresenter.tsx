@@ -3,18 +3,18 @@ import { TableProps } from "./TableContainer";
 import { defaultProps } from "../../../theme";
 
 const StyledTable = styled.table`
-  ${({ theme }) => css`
-    width: ${theme.table.width};
-    border-collapse: ${theme.table.borderCollapse};
-    border-spacing: ${theme.table.borderSpacing};
-    border-radius: ${theme.table.borderRadius};
-    border-width: ${theme.table.borderWidth};
-    border-style: ${theme.table.borderStyle};
-    border-color: ${theme.table.borderColor};
+  ${({ theme: { table } }) => css`
+    width: ${table.width};
+    border-collapse: ${table.borderCollapse};
+    border-spacing: ${table.borderSpacing};
+    border-radius: ${table.borderRadius};
+    border-width: ${table.borderWidth};
+    border-style: ${table.borderStyle};
+    border-color: ${table.borderColor};
   `}
 `;
 StyledTable.defaultProps = defaultProps;
 
-export function TablePresenter(props: TableProps): React.ReactElement {
+export const TablePresenter: React.FC<TableProps> = (props) => {
   return <StyledTable {...props} />;
-}
+};

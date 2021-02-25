@@ -7,14 +7,13 @@ export type LinkProps = {
   disabled?: boolean;
   isEnabledOnlyOnceClick?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
-  children?: React.ReactNode;
   className?: string;
   // for Rails
   remoteModal?: boolean;
   method?: "get" | "post" | "put" | "patch" | "delete";
 };
 
-export function LinkContainer({
+export const LinkContainer: React.FC<LinkProps> = ({
   href,
   target,
   disabled: defaultDisabled = false,
@@ -24,7 +23,7 @@ export function LinkContainer({
   remoteModal,
   method,
   ...rest
-}: LinkProps): React.ReactElement {
+}) => {
   const classNames = className ? className.split(" ") : [];
   if (remoteModal) {
     classNames.push("js-show-remote-modal");
@@ -63,4 +62,4 @@ export function LinkContainer({
       {...rest}
     />
   );
-}
+};

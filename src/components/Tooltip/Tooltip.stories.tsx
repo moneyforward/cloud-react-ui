@@ -16,7 +16,7 @@ const placementOptions = {
   bottomEnd: "bottom-end",
 };
 
-export const Tooltip = (): React.ReactElement => (
+export const Tooltip: React.FC = () => (
   <div style={{ marginTop: "50px", marginLeft: "50px" }}>
     <TooltipContainer
       message={text("Message", "Tooltip")}

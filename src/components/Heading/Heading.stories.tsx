@@ -34,7 +34,7 @@ const colorOption = Object.keys(theme.heading.color).reduce((obj, key) => {
   return obj;
 }, {} as { [key: string]: string });
 
-export const Heading = (): React.ReactElement => (
+export const Heading: React.FC = () => (
   <HeadingContainer
     level={radios("level", levelOption, 1) as HeadingProps["level"]}
     size={radios("size", sizeOption, "middle") as HeadingProps["size"]}

@@ -2,9 +2,8 @@ import { RowPresenter } from "./RowPresenter";
 
 export type RowProps = {
   className?: string;
-  children: React.ReactNode;
 };
 
-export function RowContainer(props: RowProps): React.ReactElement {
+export const RowContainer: React.FC<RowProps> = (props) => {
   return <RowPresenter {...props} />;
-}
+};

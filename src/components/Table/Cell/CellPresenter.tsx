@@ -6,91 +6,87 @@ import { defaultProps } from "../../../theme";
 type CellPresenterProps = CellProps & { group: Group; borderType: BorderType };
 
 const StyledTh = styled.th<Omit<CellPresenterProps, "group">>`
-  ${({ theme, borderType }) => {
-    return css`
-      padding: ${theme.table.th.padding};
-      background-color: ${theme.table.th.backgroundColor};
+  ${({ theme: { table }, borderType }) => css`
+    padding: ${table.th.padding};
+    background-color: ${table.th.backgroundColor};
 
-      // border-right
-      ${borderType === "border"
-        ? css`
-            border-right-width: ${theme.table.borderWidth};
-            border-right-style: ${theme.table.borderStyle};
-            border-right-color: ${theme.table.borderColor};
-          `
-        : css`
-            border-right: ${theme.table.nonBorder};
-          `}
-      // border-bottom
+    // border-right
+    ${borderType === "border"
+      ? css`
+          border-right-width: ${table.borderWidth};
+          border-right-style: ${table.borderStyle};
+          border-right-color: ${table.borderColor};
+        `
+      : css`
+          border-right: ${table.nonBorder};
+        `}
+    // border-bottom
       ${!borderType
-        ? css`
-            border-bottom-width: ${theme.table.borderWidth};
-            border-bottom-style: ${theme.table.borderStyle};
-            border-bottom-color: ${theme.table.borderColor};
-          `
-        : css`
-            border-bottom: ${theme.table.nonBorder};
-          `}
+      ? css`
+          border-bottom-width: ${table.borderWidth};
+          border-bottom-style: ${table.borderStyle};
+          border-bottom-color: ${table.borderColor};
+        `
+      : css`
+          border-bottom: ${table.nonBorder};
+        `}
 
-      text-align: ${theme.table.th.textAlign};
-      font-size: ${theme.table.th.fontSize};
-      font-weight: ${theme.table.th.fontWeight};
+      text-align: ${table.th.textAlign};
+    font-size: ${table.th.fontSize};
+    font-weight: ${table.th.fontWeight};
 
-      :last-child {
-        border-right: ${theme.table.nonBorder};
-      }
-    `;
-  }}
+    :last-child {
+      border-right: ${table.nonBorder};
+    }
+  `}
 `;
 StyledTh.defaultProps = defaultProps;
 
 const StyledTd = styled.td<Omit<CellPresenterProps, "group">>`
-  ${({ theme, bold, borderType }) => {
-    return css`
-      padding: ${theme.table.td.padding};
-      background-color: ${theme.table.td.backgroundColor};
+  ${({ theme: { table }, bold, borderType }) => css`
+    padding: ${table.td.padding};
+    background-color: ${table.td.backgroundColor};
 
-      // border-top
-      ${borderType === "border" || borderType === "rowBorder"
-        ? css`
-            border-top-width: ${theme.table.borderWidth};
-            border-top-style: ${theme.table.borderStyle};
-            border-top-color: ${theme.table.borderColor};
-          `
-        : css`
-            border-top: ${theme.table.nonBorder};
-          `}
-      // border-right
+    // border-top
+    ${borderType === "border" || borderType === "rowBorder"
+      ? css`
+          border-top-width: ${table.borderWidth};
+          border-top-style: ${table.borderStyle};
+          border-top-color: ${table.borderColor};
+        `
+      : css`
+          border-top: ${table.nonBorder};
+        `}
+    // border-right
       ${borderType === "border"
-        ? css`
-            border-right-width: ${theme.table.borderWidth};
-            border-right-style: ${theme.table.borderStyle};
-            border-right-color: ${theme.table.borderColor};
-          `
-        : css`
-            border-right: ${theme.table.nonBorder};
-          `}
+      ? css`
+          border-right-width: ${table.borderWidth};
+          border-right-style: ${table.borderStyle};
+          border-right-color: ${table.borderColor};
+        `
+      : css`
+          border-right: ${table.nonBorder};
+        `}
 
-      text-align: ${theme.table.td.textAlign};
-      font-size: ${theme.table.td.fontSize};
-      font-weight: ${theme.table.td.fontWeight[bold ? "bold" : "normal"]};
+      text-align: ${table.td.textAlign};
+    font-size: ${table.td.fontSize};
+    font-weight: ${table.td.fontWeight[bold ? "bold" : "normal"]};
 
-      :last-child {
-        border-right: none;
-      }
-    `;
-  }}
+    :last-child {
+      border-right: none;
+    }
+  `}
 `;
 StyledTd.defaultProps = defaultProps;
 
-export function CellPresenter({
+export const CellPresenter: React.FC<CellPresenterProps> = ({
   group = "body",
   bold = false,
   ...rest
-}: CellPresenterProps): React.ReactElement {
+}) => {
   return group === "head" ? (
     <StyledTh {...rest} />
   ) : (
     <StyledTd bold={bold} {...rest} />
   );
-}
+};

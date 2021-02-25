@@ -3,14 +3,14 @@ import { RowProps } from "./RowContainer";
 import { defaultProps } from "../../../theme";
 
 const StyledTableRow = styled.tr`
-  ${({ theme }) => css`
+  ${({ theme: { table } }) => css`
     &:last-child {
       td {
         :first-child {
-          border-bottom-left-radius: ${theme.table.borderRadius};
+          border-bottom-left-radius: ${table.borderRadius};
         }
         :last-child {
-          border-bottom-right-radius: ${theme.table.borderRadius};
+          border-bottom-right-radius: ${table.borderRadius};
         }
       }
     }
@@ -18,6 +18,6 @@ const StyledTableRow = styled.tr`
 `;
 StyledTableRow.defaultProps = defaultProps;
 
-export function RowPresenter(props: RowProps): React.ReactElement {
+export const RowPresenter: React.FC<RowProps> = (props) => {
   return <StyledTableRow {...props} />;
-}
+};

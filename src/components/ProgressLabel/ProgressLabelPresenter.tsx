@@ -3,28 +3,22 @@ import { ProgressLabelProps } from "./ProgressLabelContainer";
 import { defaultProps } from "../../theme";
 
 const StyledProgressLabel = styled.div<ProgressLabelProps>`
-  ${({ theme, status = "inProgress" }) => {
-    const progressLabelTheme = theme.progressLabel;
-
-    return css`
-      display: ${progressLabelTheme.display};
-      width: ${progressLabelTheme.width};
-      padding: ${progressLabelTheme.padding};
-      background-color: ${progressLabelTheme.backgroundColor[status]};
-      border-width: ${progressLabelTheme.borderWidth};
-      border-style: ${progressLabelTheme.borderStyle};
-      border-color: ${progressLabelTheme.borderColor[status]};
-      border-radius: ${progressLabelTheme.borderRadius};
-      font-size: ${progressLabelTheme.fontSize};
-      color: ${progressLabelTheme.color[status]};
-      letter-spacing: ${progressLabelTheme.letterSpacing};
-    `;
-  }}
+  ${({ theme: { progressLabel }, status = "inProgress" }) => css`
+    display: ${progressLabel.display};
+    width: ${progressLabel.width};
+    padding: ${progressLabel.padding};
+    background-color: ${progressLabel.backgroundColor[status]};
+    border-width: ${progressLabel.borderWidth};
+    border-style: ${progressLabel.borderStyle};
+    border-color: ${progressLabel.borderColor[status]};
+    border-radius: ${progressLabel.borderRadius};
+    font-size: ${progressLabel.fontSize};
+    color: ${progressLabel.color[status]};
+    letter-spacing: ${progressLabel.letterSpacing};
+  `}
 `;
 StyledProgressLabel.defaultProps = defaultProps;
 
-export function ProgressLabelPresenter(
-  props: ProgressLabelProps
-): React.ReactElement {
+export const ProgressLabelPresenter: React.FC<ProgressLabelProps> = (props) => {
   return <StyledProgressLabel {...props} />;
-}
+};

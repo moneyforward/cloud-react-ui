@@ -9,20 +9,14 @@ type HeadingPresenterProps = Omit<HeadingProps, "level"> & {
 const StyledHeading = styled(({ tag: Tag, ...rest }) => (
   <Tag {...rest} />
 ))<HeadingPresenterProps>`
-  ${({ theme, size, weight, color }) => {
-    const headingTheme = theme.heading;
-
-    return css`
-      font-size: ${headingTheme.fontSize[size || "middle"]};
-      font-weight: ${headingTheme.fontWeight[weight || "default"]};
-      color: ${headingTheme.color[color || "title"]};
-    `;
-  }}
+  ${({ theme: { heading }, size, weight, color }) => css`
+    font-size: ${heading.fontSize[size || "middle"]};
+    font-weight: ${heading.fontWeight[weight || "default"]};
+    color: ${heading.color[color || "title"]};
+  `}
 `;
 StyledHeading.defaultProps = defaultProps;
 
-export function HeadingPresenter(
-  props: HeadingPresenterProps
-): React.ReactElement {
+export const HeadingPresenter: React.FC<HeadingPresenterProps> = (props) => {
   return <StyledHeading {...props} />;
-}
+};

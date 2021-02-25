@@ -7,12 +7,11 @@ export type CellProps = {
   colSpan?: number;
   bold?: boolean;
   className?: string;
-  children: React.ReactNode;
 };
 
-export function CellContainer(props: CellProps): React.ReactElement {
+export const CellContainer: React.FC<CellProps> = (props) => {
   const { group } = useContext(TableGroupContext);
   const { borderType } = useContext(TableBorderContext);
 
   return <CellPresenter group={group} borderType={borderType} {...props} />;
-}
+};

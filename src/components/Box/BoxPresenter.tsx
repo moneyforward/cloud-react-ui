@@ -3,20 +3,18 @@ import { BoxProps } from "./BoxContainer";
 import { defaultProps } from "../../theme";
 
 const StyledBox = styled.div`
-  ${({ theme }) => {
-    return css`
-      width: ${theme.box.width};
-      margin: ${theme.box.margin};
-      padding: ${theme.box.padding};
-      background: ${theme.box.background};
-      border-radius: ${theme.box.borderRadius};
-      border: ${theme.box.border};
-      text-align: ${theme.box.textAlign};
-    `;
-  }}
+  ${({ theme: { box } }) => css`
+    width: ${box.width};
+    margin: ${box.margin};
+    padding: ${box.padding};
+    background: ${box.background};
+    border-radius: ${box.borderRadius};
+    border: ${box.border};
+    text-align: ${box.textAlign};
+  `}
 `;
 StyledBox.defaultProps = defaultProps;
 
-export function BoxPresenter(props: BoxProps): React.ReactElement {
+export const BoxPresenter: React.FC<BoxProps> = (props) => {
   return <StyledBox {...props} />;
-}
+};
