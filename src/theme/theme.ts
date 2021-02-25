@@ -249,7 +249,7 @@ export const componentsTheme = {
       error: color.froly,
     },
     placeholderColor: color.nobel,
-    textColor: values.text.color.title,
+    textColor: values.text.color.default,
     fontSize: values.text.size.middle,
     option: {
       backgroundColor: {
@@ -257,8 +257,8 @@ export const componentsTheme = {
         focused: color.darkenAliceBlue,
       },
       textColor: {
-        selected: values.text.color.title,
-        focused: values.text.color.title,
+        selected: values.text.color.default,
+        focused: values.text.color.default,
         disabled: color.veryRightGray,
       },
       focused: {},
@@ -317,7 +317,7 @@ export const componentsTheme = {
       default: color.linkWater,
       error: color.salmon,
     },
-    color: values.text.color.title,
+    color: values.text.color.default,
     fontSize: values.text.size.middle,
     placeholderColor: values.text.color.notes,
   },

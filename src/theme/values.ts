@@ -18,9 +18,7 @@ export const values = {
       xxLarge: "20px",
     },
     color: {
-      // FIXME: titleカラーが本当はdefault
-      title: color.nightRider,
-      default: color.dimGray,
+      default: color.nightRider,
       notes: color.nobel,
       inherit: "inherit",
     },
