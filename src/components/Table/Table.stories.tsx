@@ -1,4 +1,4 @@
-import { text, radios } from "@storybook/addon-knobs";
+import { radios } from "@storybook/addon-knobs";
 import { TableContainer } from "./Table/TableContainer";
 import { HeadContainer as Head } from "./Head/HeadContainer";
 import { BodyContainer as Body } from "./Body/BodyContainer";
@@ -12,8 +12,6 @@ export default {
 };
 
 export const Table: React.FC = () => {
-  const width = text("width", "66%");
-
   const border = radios(
     "border",
     { none: undefined, border: "border", rowBorder: "rowBorder" },
@@ -32,7 +30,7 @@ export const Table: React.FC = () => {
         <TableContainer borderType={border}>
           <Head>
             <Row>
-              <Cell width={width}>head(width:{width})</Cell>
+              <Cell>head</Cell>
               <Cell>head</Cell>
             </Row>
           </Head>
@@ -59,8 +57,8 @@ export const Table: React.FC = () => {
         <TableContainer borderType={border}>
           <Head>
             <Row>
-              <Cell width={width}>head(width:{width})</Cell>
               <Cell colSpan={2}>head(colSpan:2)</Cell>
+              <Cell>head</Cell>
             </Row>
           </Head>
           <Body>
@@ -90,7 +88,7 @@ export const Table: React.FC = () => {
         <TableContainer borderType={border}>
           <Head>
             <Row>
-              <Cell width={width}>head(width:{width})</Cell>
+              <Cell>head</Cell>
               <Cell>head</Cell>
               <Cell>head</Cell>
             </Row>

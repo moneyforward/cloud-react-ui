@@ -6,8 +6,7 @@ import { defaultProps } from "../../../theme";
 type CellPresenterProps = CellProps & { group: Group; borderType: BorderType };
 
 const StyledTh = styled.th<Omit<CellPresenterProps, "group">>`
-  ${({ theme: { table }, width, borderType }) => css`
-    width: ${width ? width : ""};
+  ${({ theme: { table }, borderType }) => css`
     padding: ${table.th.padding};
     background-color: ${table.th.backgroundColor};
 
@@ -44,8 +43,7 @@ const StyledTh = styled.th<Omit<CellPresenterProps, "group">>`
 StyledTh.defaultProps = defaultProps;
 
 const StyledTd = styled.td<Omit<CellPresenterProps, "group">>`
-  ${({ theme: { table }, width, bold, borderType }) => css`
-    width: ${width ? width : ""};
+  ${({ theme: { table }, bold, borderType }) => css`
     padding: ${table.td.padding};
     background-color: ${table.td.backgroundColor};
 

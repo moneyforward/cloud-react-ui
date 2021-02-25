@@ -3,7 +3,6 @@ import { CellPresenter } from "./CellPresenter";
 import { TableGroupContext, TableBorderContext } from "../Table/TableContainer";
 
 export type CellProps = {
-  width?: string;
   rowSpan?: number;
   colSpan?: number;
   bold?: boolean;
