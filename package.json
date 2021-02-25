@@ -19,8 +19,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "clean": "rm -rf lib/",
-    "build": "tsc",
-    "prepare": "tsc",
+    "build": "tsc && cp -r src/assets lib/",
+    "prepare": "tsc && cp -r src/assets lib/",
     "lint": "eslint src/ --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "storybook": "start-storybook -c .storybook/ --quiet",
