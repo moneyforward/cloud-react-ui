@@ -102,7 +102,7 @@ export const componentsTheme = {
       checked: color.royalBlue,
       disabled: color.linkWater,
     },
-    backgroundSize: "10px 8px",
+    borderRadius: "4px",
     borderWidth: {
       unchecked: values.border.width.thin,
       checked: values.border.width.thin,
@@ -118,8 +118,11 @@ export const componentsTheme = {
       checked: "rgba(0, 0, 0, 0.15)",
       disabled: color.linkWater,
     },
-    borderRadius: "4px",
-    fontSize: values.text.size.middle,
+    icon: {
+      width: "10px",
+      height: "8px",
+      color: color.white,
+    },
   },
   // Icon
   icon: {
@@ -203,21 +206,32 @@ export const componentsTheme = {
   radio: {
     width: "16px",
     height: "16px",
-    backgroundSize: "6px 6px",
     backgroundColor: {
       unchecked: color.white,
       checked: color.royalBlue,
       disabled: color.linkWater,
     },
     borderRadius: "8px",
-    borderWidth: values.border.width.thin,
-    borderStyle: values.border.style.solid,
+    borderWidth: {
+      unchecked: values.border.width.thin,
+      checked: values.border.width.thin,
+      disabled: values.border.width.thin,
+    },
+    borderStyle: {
+      unchecked: values.border.style.solid,
+      checked: values.border.style.solid,
+      disabled: values.border.style.solid,
+    },
     borderColor: {
       unchecked: color.linkWater,
       checked: "rgba(0, 0, 0, 0.15)",
       disabled: color.linkWater,
     },
-    fontSize: values.text.size.middle,
+    icon: {
+      width: "6px",
+      height: "6px",
+      color: color.white,
+    },
   },
   // Select
   select: {
