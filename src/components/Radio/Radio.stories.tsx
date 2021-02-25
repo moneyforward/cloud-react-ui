@@ -20,10 +20,10 @@ export const Radio: React.FC = () => {
   return (
     <>
       <RadioContainer name="radio" disabled={disabled}>
-        <Text color="title">{label}</Text>
+        <Text>{label}</Text>
       </RadioContainer>
       <RadioContainer name="radio" disabled={disabled}>
-        <Text color="title">{label}</Text>
+        <Text>{label}</Text>
       </RadioContainer>
     </>
   );

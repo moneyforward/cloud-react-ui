@@ -20,10 +20,10 @@ export const Checkbox: React.FC = () => {
   return (
     <>
       <CheckboxContainer name="checkbox" disabled={disabled}>
-        <Text color="title">{label}</Text>
+        <Text>{label}</Text>
       </CheckboxContainer>
       <CheckboxContainer name="checkbox" disabled={disabled}>
-        <Text color="title">{label}</Text>
+        <Text>{label}</Text>
       </CheckboxContainer>
     </>
   );
