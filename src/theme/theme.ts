@@ -235,6 +235,7 @@ export const componentsTheme = {
   },
   // Select
   select: {
+    display: "inline-block",
     width: "100%",
     height: "34px",
     backgroundColor: {
