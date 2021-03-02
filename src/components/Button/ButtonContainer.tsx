@@ -8,6 +8,7 @@ export type ButtonProps = {
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
   icon?: IconTypes;
   iconPlacement?: "start" | "end";
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   className?: string;
 };
 

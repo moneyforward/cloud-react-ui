@@ -82,6 +82,7 @@ export const ButtonPresenter: React.FC<ButtonProps> = ({
   type,
   icon,
   iconPlacement,
+  onClick,
   children,
   ...rest
 }) => {
@@ -90,7 +91,7 @@ export const ButtonPresenter: React.FC<ButtonProps> = ({
   );
 
   return (
-    <StyledButton size={size} type={type} {...rest}>
+    <StyledButton size={size} type={type} onClick={onClick} {...rest}>
       {icon && iconPlacement === "start" && ButtonIcon}
       {children}
       {icon && iconPlacement === "end" && ButtonIcon}
