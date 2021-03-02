@@ -42,6 +42,7 @@ export const Button: React.FC = () => (
         undefined
       ) as ButtonProps["iconPlacement"]
     }
+    onClick={() => console.log("button clicked")}
   >
     {text("Button Text", "Button")}
   </ButtonContainer>
