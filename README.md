@@ -4,10 +4,6 @@ UI components for Money Forward Cloud built with React.
 
 ![CI with GitHub Actions](https://github.com/moneyforward/cloud-react-ui/workflows/test/badge.svg)
 
-## Component Catalog(Storybook)
-
-<https://moneyforward.github.io/cloud-react-ui/>
-
 ## Contributing
 
 ```console
