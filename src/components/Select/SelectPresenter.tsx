@@ -8,6 +8,9 @@ export const StyledSelect = styled(ReactSelect)<SelectProps>`
     const colorType = isError ? "error" : "default";
 
     return css`
+      display: ${select.display};
+      width: ${select.width};
+
       .react-select {
         &__control {
           width: ${select.width};
