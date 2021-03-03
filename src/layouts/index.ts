@@ -1,3 +1,3 @@
 export * from "./Center";
-export * from "./CenterBox";
+export * from "./CenterBlock";
 export * from "./Left";

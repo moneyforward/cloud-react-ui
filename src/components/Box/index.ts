@@ -1,2 +1,2 @@
-export { BoxContainer as Box } from "./BoxContainer";
-export type { BoxProps } from "./BoxContainer";
+export { Box } from "./Box";
+export type { BoxProps } from "./Box";
