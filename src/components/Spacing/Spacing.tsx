@@ -1,9 +1,9 @@
-import { Box } from "@material-ui/core";
-import { SpacingProps } from "@material-ui/system";
+import Box, { BoxProps } from "@material-ui/core/Box";
+import { SpacingProps as MuiSpacingProps } from "@material-ui/system";
 
-export { SpacingProps };
+export type SpacingProps = MuiSpacingProps & { as?: BoxProps["component"] };
 
 // see: https://material-ui.com/system/spacing/
-export const Spacing: React.FC<SpacingProps> = (props) => {
-  return <Box {...props} />;
+export const Spacing: React.FC<SpacingProps> = ({ as = "div", ...rest }) => {
+  return <Box component={as} {...rest} />;
 };
