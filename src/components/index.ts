@@ -1,4 +1,4 @@
-export * from "./Box";
+export * from "./Block";
 export * from "./Button";
 export * from "./Checkbox";
 export * from "./Heading";

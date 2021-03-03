@@ -1,5 +1,5 @@
 import { LeftLayout } from "./LeftLayout";
-import { Box, Text, Button } from "../../components";
+import { Block, Text, Button } from "../../components";
 import { ThemeProvider, createTheme } from "../../theme";
 
 export default {
@@ -12,7 +12,7 @@ const centerBoxTheme = createTheme({
     width: "500px",
     margin: "20px",
   },
-  box: {
+  block: {
     width: "100%",
     margin: "20px 0",
     padding: "30px",
@@ -23,14 +23,14 @@ const centerBoxTheme = createTheme({
 export const Left: React.FC = () => (
   <ThemeProvider theme={centerBoxTheme}>
     <LeftLayout>
-      <Box>
+      <Block>
         <Text tag="p">Left Layout</Text>
         <Button color="primary">Left Layout</Button>
-      </Box>
-      <Box>
+      </Block>
+      <Block>
         <Text tag="p">Left Layout</Text>
         <Button color="primary">Left Layout</Button>
-      </Box>
+      </Block>
     </LeftLayout>
   </ThemeProvider>
 );

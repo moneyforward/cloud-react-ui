@@ -2,8 +2,8 @@ import { color } from "./color";
 import { values } from "./values";
 
 export const componentsTheme = {
-  // Box
-  box: {
+  // Block
+  block: {
     width: "",
     margin: "",
     padding: "",

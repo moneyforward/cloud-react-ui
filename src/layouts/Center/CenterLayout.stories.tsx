@@ -1,5 +1,5 @@
 import { CenterLayout } from "./CenterLayout";
-import { Box, Text, Button } from "../../components";
+import { Block, Text, Button } from "../../components";
 import { ThemeProvider, createTheme } from "../../theme";
 
 export default {
@@ -11,7 +11,7 @@ const centerBoxTheme = createTheme({
   centerLayout: {
     width: "500px",
   },
-  box: {
+  block: {
     width: "500px",
     margin: "20px 0",
     padding: "30px",
@@ -22,14 +22,14 @@ const centerBoxTheme = createTheme({
 export const Center: React.FC = () => (
   <ThemeProvider theme={centerBoxTheme}>
     <CenterLayout>
-      <Box>
+      <Block>
         <Text tag="p">Center Layout</Text>
         <Button color="primary">Center Layout</Button>
-      </Box>
-      <Box>
+      </Block>
+      <Block>
         <Text tag="p">Center Layout</Text>
         <Button color="primary">Center Layout</Button>
-      </Box>
+      </Block>
     </CenterLayout>
   </ThemeProvider>
 );
