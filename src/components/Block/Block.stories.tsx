@@ -1,14 +1,14 @@
 import { boolean } from "@storybook/addon-knobs";
-import { BlockContainer } from "./BlockContainer";
+import { Block as BlockComponent } from "./Block";
 import { Text } from "../Text";
 
 export default {
-  component: BlockContainer,
+  component: BlockComponent,
   title: "components/Block",
 };
 
-export const Block: React.FC = () => (
-  <BlockContainer border={boolean("border", true)}>
+export const Block = (): JSX.Element => (
+  <BlockComponent border={boolean("border", false)}>
     <Text>Block</Text>
-  </BlockContainer>
+  </BlockComponent>
 );
