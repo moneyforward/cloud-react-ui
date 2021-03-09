@@ -1,0 +1,12 @@
+{
+  "verbose": true,
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTest.ts"
+  ],
+  "testPathIgnorePatterns": [
+    "<rootDir>/lib/"
+  ]
+}

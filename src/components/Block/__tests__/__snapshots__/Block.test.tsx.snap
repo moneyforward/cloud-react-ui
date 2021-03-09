@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block snapshot test 1`] = `
+<DocumentFragment>
+  .c0 {
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+<div
+    class="c0"
+  >
+    block
+  </div>
+</DocumentFragment>
+`;
