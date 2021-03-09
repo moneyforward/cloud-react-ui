@@ -1,9 +1,14 @@
 import styled, { css } from "styled-components";
-import { BlockProps } from "./BlockContainer";
 import { defaultProps } from "../../theme";
 
-const StyledBlock = styled.div<BlockProps>`
-  ${({ theme: { block }, border = true }) => css`
+export type Props = {
+  border?: boolean;
+  children: React.ReactNode;
+  className?: string;
+};
+
+const StyledBlock = styled.div<Props>`
+  ${({ theme: { block }, border = false }) => css`
     width: ${block.width};
     margin: ${block.margin};
     padding: ${block.padding};
@@ -16,6 +21,4 @@ const StyledBlock = styled.div<BlockProps>`
 `;
 StyledBlock.defaultProps = defaultProps;
 
-export const BlockPresenter: React.FC<BlockProps> = (props) => {
-  return <StyledBlock {...props} />;
-};
+export const Block = (props: Props): JSX.Element => <StyledBlock {...props} />;
