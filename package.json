@@ -23,6 +23,9 @@
     "prepare": "tsc",
     "lint": "eslint src/ --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "jest --updateSnapshot",
     "storybook": "start-storybook -c .storybook/ --quiet",
     "deploy-storybook": "storybook-to-ghpages"
   },
