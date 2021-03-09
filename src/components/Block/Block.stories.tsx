@@ -1,3 +1,4 @@
+import { boolean } from "@storybook/addon-knobs";
 import { BlockContainer } from "./BlockContainer";
 import { Text } from "../Text";
 
@@ -7,7 +8,7 @@ export default {
 };
 
 export const Block: React.FC = () => (
-  <BlockContainer>
+  <BlockContainer border={boolean("border", true)}>
     <Text>Block</Text>
   </BlockContainer>
 );
