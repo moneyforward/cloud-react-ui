@@ -1,6 +1,7 @@
 import { BlockPresenter } from "./BlockPresenter";
 
 export type BlockProps = {
+  border?: boolean;
   className?: string;
 };
 
