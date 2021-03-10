@@ -1,6 +1,16 @@
+import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
-import { CheckboxProps } from "./CheckboxContainer";
+
+export type Props = {
+  name?: string;
+  defaultChecked?: boolean;
+  disabled?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
+  children?: React.ReactNode;
+  className?: string;
+};
 
 const CheckboxWrapper = styled.span`
   ${({ theme: { checkbox } }) => css`
@@ -103,15 +113,11 @@ const Label = styled.label`
   vertical-align: middle;
 `;
 
-export const CheckboxPresenter: React.FC<CheckboxProps> = ({
-  children,
-  className,
-  ...rest
-}) => {
-  return (
+const Checkbox = forwardRef<HTMLInputElement, Props>(
+  ({ children, className, ...rest }, ref) => (
     <Label>
       <CheckboxWrapper className={className}>
-        <Input type="checkbox" {...rest} />
+        <Input type="checkbox" ref={ref} {...rest} />
         <Box />
         <IconWrapper>
           <Icon />
@@ -120,5 +126,9 @@ export const CheckboxPresenter: React.FC<CheckboxProps> = ({
 
       {children}
     </Label>
-  );
-};
+  )
+);
+
+Checkbox.displayName = "Checkbox";
+
+export { Checkbox };
