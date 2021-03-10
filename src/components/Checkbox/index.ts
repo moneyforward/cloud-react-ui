@@ -1,2 +1,2 @@
-export { CheckboxContainer as Checkbox } from "./CheckboxContainer";
-export type { CheckboxProps } from "./CheckboxContainer";
+export { Checkbox } from "./Checkbox";
+export type { Props as CheckboxProps } from "./Checkbox";

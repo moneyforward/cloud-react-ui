@@ -1,2 +1,2 @@
-export { RadioContainer as Radio } from "./RadioContainer";
-export type { RadioProps } from "./RadioContainer";
+export { Radio } from "./Radio";
+export type { Props as RadioProps } from "./Radio";

@@ -1,2 +1,2 @@
-export { SelectContainer as Select } from "./SelectContainer";
-export type { SelectProps } from "./SelectContainer";
+export { Select } from "./Select";
+export type { Props as SelectProps } from "./Select";

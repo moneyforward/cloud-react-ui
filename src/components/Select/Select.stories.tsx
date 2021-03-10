@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { SelectContainer, Option, GroupOption } from "./SelectContainer";
+import { Select as SelectComponent, Option, GroupOption } from "./Select";
 import { boolean, text } from "@storybook/addon-knobs";
 
 export default {
-  component: SelectContainer,
+  component: SelectComponent,
   title: "components/Select",
 };
 
@@ -47,11 +47,11 @@ const groupOptions: GroupOption[] = [
   },
 ];
 
-export const Select: React.FC = () => {
+export const Select = (): JSX.Element => {
   const [selected, setSelected] = useState<Option | GroupOption>();
 
   return (
-    <SelectContainer
+    <SelectComponent
       options={boolean("GroupOption", false) ? groupOptions : defaultOptions}
       value={selected}
       placeholder={text("Placeholder", "")}

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { text, boolean } from "@storybook/addon-knobs";
-import { RadioContainer } from "./RadioContainer";
+import { Radio as RadioComponent } from "./Radio";
 import { Text as TextComponent } from "../../components";
 
 export default {
-  component: RadioContainer,
+  component: RadioComponent,
   title: "components/Radio",
 };
 
@@ -13,18 +13,18 @@ const Text = styled(TextComponent)`
   margin-right: 10px;
 `;
 
-export const Radio: React.FC = () => {
+export const Radio = (): JSX.Element => {
   const disabled = boolean("Disabled", false);
   const label = text("Text", "Radio");
 
   return (
     <>
-      <RadioContainer name="radio" disabled={disabled}>
+      <RadioComponent name="radio" disabled={disabled}>
         <Text>{label}</Text>
-      </RadioContainer>
-      <RadioContainer name="radio" disabled={disabled}>
+      </RadioComponent>
+      <RadioComponent name="radio" disabled={disabled}>
         <Text>{label}</Text>
-      </RadioContainer>
+      </RadioComponent>
     </>
   );
 };
