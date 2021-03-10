@@ -1,6 +1,17 @@
+import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
-import { RadioProps } from "./RadioContainer";
+
+export type Props = {
+  name?: string;
+  defaultChecked?: boolean;
+  value?: string;
+  disabled?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
+  children?: React.ReactNode;
+  className?: string;
+};
 
 const RadioWrapper = styled.span`
   ${({ theme: { radio } }) => css`
@@ -106,15 +117,11 @@ const Label = styled.label`
   vertical-align: middle;
 `;
 
-export const RadioPresenter: React.FC<RadioProps> = ({
-  children,
-  className,
-  ...rest
-}) => {
-  return (
+const Radio = forwardRef<HTMLInputElement, Props>(
+  ({ children, className, ...rest }, ref) => (
     <Label>
       <RadioWrapper className={className}>
-        <Input type="radio" {...rest} />
+        <Input type="radio" ref={ref} {...rest} />
         <Box />
         <IconWrapper>
           <Icon />
@@ -123,5 +130,9 @@ export const RadioPresenter: React.FC<RadioProps> = ({
 
       {children}
     </Label>
-  );
-};
+  )
+);
+
+Radio.displayName = "Radio";
+
+export { Radio };

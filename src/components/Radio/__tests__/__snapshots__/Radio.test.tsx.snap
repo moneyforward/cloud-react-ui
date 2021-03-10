@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio default 1`] = `
+<DocumentFragment>
+  .c1 {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.c2 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c2:checked + .c3 {
+  background-color: #3B7DE9;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.c2:disabled + .c3 {
+  background-color: #D4D8DD;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D4D8DD;
+}
+
+.c4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D4D8DD;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.c5 {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+
+.c5 > svg {
+  vertical-align: top;
+}
+
+.c6 {
+  width: 6px;
+  height: 6px;
+}
+
+.c6 > circle {
+  fill: #FFFFFF;
+}
+
+.c0 {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+<label
+    class="c0"
+  >
+    <span
+      class="c1"
+    >
+      <input
+        class="c2"
+        type="radio"
+      />
+      <span
+        class="c3 c4"
+      />
+      <span
+        class="c5"
+      >
+        <svg
+          class="c6"
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="102"
+            cy="546"
+            fill-rule="evenodd"
+            r="3"
+            transform="translate(-99 -543)"
+          />
+        </svg>
+      </span>
+    </span>
+    radio
+  </label>
+</DocumentFragment>
+`;
