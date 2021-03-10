@@ -1,13 +1,13 @@
 import { text, boolean } from "@storybook/addon-knobs";
-import { TextFieldContainer } from "./TextFieldContainer";
+import { TextField as TextFieldComponent } from "./TextField";
 
 export default {
-  component: TextFieldContainer,
+  component: TextFieldComponent,
   title: "components/Text Field",
 };
 
-export const TextField: React.FC = () => (
-  <TextFieldContainer
+export const TextField = (): JSX.Element => (
+  <TextFieldComponent
     placeholder={text("placeholder", "")}
     error={boolean("error", false)}
   />

@@ -1,9 +1,12 @@
 import { forwardRef } from "react";
 import styled, { css } from "styled-components";
-import { TextFieldProps } from "./TextFieldContainer";
 import { defaultProps } from "../../theme";
 
-const StyledInput = styled.input<TextFieldProps>`
+export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
+  error?: boolean;
+};
+
+const StyledInput = styled.input<Props>`
   ${({ theme: { textField }, error = false }) => {
     const colorType = error ? "error" : "default";
 
@@ -28,8 +31,12 @@ const StyledInput = styled.input<TextFieldProps>`
 `;
 StyledInput.defaultProps = defaultProps;
 
-export const TextFieldPresenter = forwardRef<HTMLInputElement, TextFieldProps>(
-  function TextFieldPresenter({ type = "text", ...rest }, ref) {
-    return <StyledInput type={type} ref={ref} {...rest} />;
-  }
+const TextField = forwardRef<HTMLInputElement, Props>(
+  ({ type = "text", ...rest }, ref) => (
+    <StyledInput type={type} ref={ref} {...rest} />
+  )
 );
+
+TextField.displayName = "TextField";
+
+export { TextField };

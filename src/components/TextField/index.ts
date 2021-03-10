@@ -1,2 +1,2 @@
-export { TextFieldContainer as TextField } from "./TextFieldContainer";
-export type { TextFieldProps } from "./TextFieldContainer";
+export { TextField } from "./TextField";
+export type { Props as TextFieldProps } from "./TextField";
