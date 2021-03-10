@@ -1,9 +1,33 @@
+import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import ReactSelect from "react-select";
-import { SelectProps } from "./SelectContainer";
 import { defaultProps } from "../../theme";
 
-export const StyledSelect = styled(ReactSelect)<SelectProps>`
+export type GroupOption = {
+  label: string;
+  options: Option[];
+};
+
+export type Option = {
+  value: string;
+  label: string;
+  isDisabled?: boolean;
+};
+
+export type Props = {
+  options?: Option[] | GroupOption[];
+  value?: Option | GroupOption;
+  name?: string;
+  placeholder?: string;
+  onChange?: (option: Option) => void;
+  clearable?: boolean;
+  disabled?: boolean;
+  searchable?: boolean;
+  error?: boolean;
+  className?: string;
+};
+
+export const StyledSelect = styled(ReactSelect)<Props>`
   ${({ theme: { select }, isError = false }) => {
     const colorType = isError ? "error" : "default";
 
@@ -103,16 +127,19 @@ export const StyledSelect = styled(ReactSelect)<SelectProps>`
 `;
 StyledSelect.defaultProps = defaultProps;
 
-export const SelectPresenter: React.FC<SelectProps> = ({
-  clearable = true,
-  disabled = false,
-  searchable = true,
-  error = false,
-  ...rest
-}) => {
-  // TODO: icon indicator
-  return (
+const Select = forwardRef<HTMLInputElement, Props>(
+  (
+    {
+      clearable = true,
+      disabled = false,
+      searchable = true,
+      error = false,
+      ...rest
+    },
+    ref
+  ) => (
     <StyledSelect
+      ref={ref}
       isClearable={clearable}
       isDisabled={disabled}
       isSearchable={searchable}
@@ -120,5 +147,9 @@ export const SelectPresenter: React.FC<SelectProps> = ({
       classNamePrefix="react-select"
       {...rest}
     />
-  );
-};
+  )
+);
+
+Select.displayName = "Select";
+
+export { Select };
