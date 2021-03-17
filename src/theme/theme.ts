@@ -338,7 +338,7 @@ export const uiTheme = {
   footer: {
     height: "35px",
     padding: "9px 20px 10px",
-    backgroundColor: color.whisper,
+    backgroundColor: color.cloudGrey,
     borderTop: `1px solid ${color.linkWater}`,
     zIndex: 100,
   },

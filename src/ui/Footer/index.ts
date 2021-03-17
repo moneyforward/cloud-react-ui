@@ -1,2 +1,2 @@
-export { FooterContainer as Footer } from "./FooterContainer";
-export type { FooterProps } from "./FooterContainer";
+export { Footer } from "./Footer";
+export type { Props as FooterProps } from "./Footer";

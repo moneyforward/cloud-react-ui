@@ -1,7 +1,13 @@
 import { useMemo } from "react";
 import styled, { css } from "styled-components";
-import { HeaderProps } from "./HeaderContainer";
 import { defaultProps } from "../../theme";
+
+export type Props = {
+  fixed?: boolean;
+  left: React.ReactNode;
+  right: React.ReactNode;
+  className?: string;
+};
 
 const FixedWrapper = styled.div`
   ${({ theme: { header } }) => css`
@@ -40,12 +46,12 @@ const StyledRight = styled.div`
   margin-left: auto;
 `;
 
-export const HeaderPresenter: React.FC<HeaderProps> = ({
+export const Header = ({
   fixed = false,
   left,
   right,
   ...rest
-}) => {
+}: Props): JSX.Element => {
   const Header = useMemo(
     () => (
       <StyledHeader {...rest}>

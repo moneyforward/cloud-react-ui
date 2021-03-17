@@ -1,9 +1,9 @@
 import { boolean } from "@storybook/addon-knobs";
-import { HeaderContainer } from "./HeaderContainer";
+import { Header as HeaderComponent } from "./Header";
 import { Icon, Text } from "../../components";
 
 export default {
-  component: HeaderContainer,
+  component: HeaderComponent,
   title: "ui/Header",
 };
 
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <HeaderContainer
+      <HeaderComponent
         fixed={boolean("fixed", false)}
         left={<Left />}
         right={<Right />}
