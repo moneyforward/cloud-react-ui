@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { boolean } from "@storybook/addon-knobs";
-import { FooterContainer } from "./FooterContainer";
+import { Footer as FooterComponent } from "./Footer";
 import { Link, Text } from "../../components";
 
 export default {
-  component: FooterContainer,
+  component: FooterComponent,
   title: "ui/Footer",
 };
 
@@ -15,7 +15,7 @@ const StyledText = styled(Text)`
 
 export const Footer: React.FC = () => {
   return (
-    <FooterContainer fixed={boolean("fixed", false)}>
+    <FooterComponent fixed={boolean("fixed", false)}>
       <StyledText size="small">
         <Link href="#">利用規約</Link>
       </StyledText>
@@ -25,6 +25,6 @@ export const Footer: React.FC = () => {
       </StyledText>
 
       <StyledText size="small">&copy; Money Forward, Inc.</StyledText>
-    </FooterContainer>
+    </FooterComponent>
   );
 };

@@ -1,7 +1,12 @@
 import React, { useMemo } from "react";
 import styled, { css } from "styled-components";
-import { FooterProps } from "./FooterContainer";
 import { defaultProps } from "../../theme";
+
+export type Props = {
+  fixed?: boolean;
+  className?: string;
+  children: React.ReactNode;
+};
 
 const FixedWrapper = styled.div`
   ${({ theme: { footer } }) => css`
@@ -29,10 +34,7 @@ const StyledFooter = styled.footer`
 `;
 StyledFooter.defaultProps = defaultProps;
 
-export const FooterPresenter: React.FC<FooterProps> = ({
-  fixed = false,
-  ...rest
-}) => {
+export const Footer = ({ fixed = false, ...rest }: Props): JSX.Element => {
   const Footer = useMemo(() => <StyledFooter {...rest} />, [rest]);
 
   return fixed ? <FixedWrapper>{Footer}</FixedWrapper> : Footer;
