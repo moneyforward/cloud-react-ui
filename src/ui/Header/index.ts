@@ -1,2 +1,2 @@
-export { HeaderContainer as Header } from "./HeaderContainer";
-export type { HeaderProps } from "./HeaderContainer";
+export { Header } from "./Header";
+export type { Props as HeaderProps } from "./Header";
