@@ -16,7 +16,8 @@ export type Option = {
 
 export type Props = {
   options?: Option[] | GroupOption[];
-  value?: Option | GroupOption;
+  value?: Option;
+  defaultValue?: Option;
   name?: string;
   placeholder?: string;
   onChange?: (option: Option) => void;
