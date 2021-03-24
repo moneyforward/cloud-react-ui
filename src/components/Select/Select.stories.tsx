@@ -53,6 +53,7 @@ export const Select = (): JSX.Element => {
 
   return (
     <SelectComponent
+      instanceId="select"
       options={isGroupOption ? groupOptions : defaultOptions}
       value={selected}
       defaultValue={

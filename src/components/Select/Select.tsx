@@ -15,6 +15,7 @@ export type Option = {
 };
 
 export type Props = {
+  instanceId?: string;
   options?: Option[] | GroupOption[];
   value?: Option;
   defaultValue?: Option;
