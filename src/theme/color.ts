@@ -32,7 +32,7 @@ export const color = {
   salmon: "#F57575",
   sanMarino: "#5176AE",
   silver: "#BEBEBE",
-  solitude: "#E6EAED",
+  solitude: "#ECF2FD",
   steelBlue: "#4772B3",
   stormGrey: "#787E8D",
   sunsetOrange: "#EC4949",

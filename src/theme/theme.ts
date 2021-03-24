@@ -124,6 +124,30 @@ export const componentsTheme = {
       color: color.white,
     },
   },
+  // FlashMessage
+  flashMessage: {
+    width: "100%",
+    padding: "12px",
+    backgroundColor: {
+      success: color.solitude,
+      warning: color.cornSilk,
+      error: color.mistyRose,
+    },
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "4px",
+    borderColor: {
+      success: color.royalBlue,
+      warning: color.ecru,
+      error: color.salmon,
+    },
+    color: {
+      success: color.royalBlue,
+      warning: color.mcKenzie,
+      error: color.sunsetOrange,
+    },
+    fontSize: values.text.size.small,
+  },
   // Icon
   icon: {
     fontSize: values.text.size.middle,

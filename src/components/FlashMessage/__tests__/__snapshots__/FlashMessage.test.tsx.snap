@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashMessage snapshot test 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 100%;
+  padding: 12px;
+  background-color: #ECF2FD;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3B7DE9;
+  border-radius: 4px;
+  color: #3B7DE9;
+  font-size: 12px;
+}
+
+<div
+    class="c0"
+    color="success"
+  >
+    flash message
+  </div>
+</DocumentFragment>
+`;
