@@ -1,49 +1,49 @@
 import { text, radios, boolean } from "@storybook/addon-knobs";
-import { ButtonContainer, ButtonProps } from "./ButtonContainer";
+import { Button as ButtonComponent, Props } from "./Button";
 
 export default {
-  component: ButtonContainer,
+  component: ButtonComponent,
   title: "components/Button",
 };
 
-const sizeOptions: { [key: string]: ButtonProps["size"] } = {
+const sizeOptions: { [key: string]: Props["size"] } = {
   small: "small",
   medium: "medium",
   large: "large",
 };
 
-const colorOptions: { [key: string]: ButtonProps["color"] } = {
+const colorOptions: { [key: string]: Props["color"] } = {
   default: "default",
   danger: "danger",
   primary: "primary",
   settings: "settings",
 };
 
-const iconOptions: { [key: string]: ButtonProps["icon"] } = {
+const iconOptions: { [key: string]: Props["icon"] } = {
   none: undefined,
   plus: "plus",
 };
 
-const iconPlacementOptions: { [key: string]: ButtonProps["iconPlacement"] } = {
+const iconPlacementOptions: { [key: string]: Props["iconPlacement"] } = {
   start: "start",
   end: "end",
 };
 
 export const Button: React.FC = () => (
-  <ButtonContainer
-    size={radios("Size", sizeOptions, "small") as ButtonProps["size"]}
-    color={radios("Color", colorOptions, "default") as ButtonProps["color"]}
+  <ButtonComponent
+    size={radios("Size", sizeOptions, "small") as Props["size"]}
+    color={radios("Color", colorOptions, "default") as Props["color"]}
     disabled={boolean("Disabled", false)}
-    icon={radios("Icon", iconOptions, undefined) as ButtonProps["icon"]}
+    icon={radios("Icon", iconOptions, undefined) as Props["icon"]}
     iconPlacement={
       radios(
         "IconPlacement",
         iconPlacementOptions,
         undefined
-      ) as ButtonProps["iconPlacement"]
+      ) as Props["iconPlacement"]
     }
     onClick={() => console.log("button clicked")}
   >
     {text("Button Text", "Button")}
-  </ButtonContainer>
+  </ButtonComponent>
 );

@@ -1,10 +1,21 @@
-import React from "react";
+import { forwardRef } from "react";
 import styled, { css } from "styled-components";
-import { ButtonProps } from "./ButtonContainer";
-import { Icon } from "../Icon";
+import { Icon, IconTypes } from "../Icon";
 import { defaultProps } from "../../theme";
 
-const StyledButton = styled.button<ButtonProps>`
+export type Props = {
+  size?: "small" | "medium" | "large";
+  color?: "default" | "danger" | "primary" | "settings";
+  disabled?: boolean;
+  type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
+  icon?: IconTypes;
+  iconPlacement?: "start" | "end";
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  children?: React.ReactNode;
+  className?: string;
+};
+
+const StyledButton = styled.button<Props>`
   ${({ theme: { button }, size = "medium", color = "default", disabled }) => {
     const buttonSize = button.size[size];
     const buttonColor = button[disabled ? "disabled" : color];
@@ -61,7 +72,7 @@ const StyledButton = styled.button<ButtonProps>`
 `;
 StyledButton.defaultProps = defaultProps;
 
-const StyledIcon = styled((props) => <Icon {...props} />)`
+const StyledIcon = styled(({ iconPlacement, ...props }) => <Icon {...props} />)`
   ${({
     theme: { button },
     iconPlacement = "start",
@@ -77,24 +88,28 @@ const StyledIcon = styled((props) => <Icon {...props} />)`
 `;
 StyledIcon.defaultProps = defaultProps;
 
-export const ButtonPresenter: React.FC<ButtonProps> = ({
-  size,
-  type,
-  icon,
-  iconPlacement,
-  onClick,
-  children,
-  ...rest
-}) => {
-  const ButtonIcon = (
-    <StyledIcon icon={icon} iconPlacement={iconPlacement} {...rest} />
-  );
+const Button = forwardRef<HTMLButtonElement, Props>(
+  ({ size, type, icon, iconPlacement, onClick, children, ...rest }, ref) => {
+    const ButtonIcon = (
+      <StyledIcon icon={icon} iconPlacement={iconPlacement} {...rest} />
+    );
 
-  return (
-    <StyledButton size={size} type={type} onClick={onClick} {...rest}>
-      {icon && iconPlacement === "start" && ButtonIcon}
-      {children}
-      {icon && iconPlacement === "end" && ButtonIcon}
-    </StyledButton>
-  );
-};
+    return (
+      <StyledButton
+        size={size}
+        type={type}
+        onClick={onClick}
+        ref={ref}
+        {...rest}
+      >
+        {icon && iconPlacement === "start" && ButtonIcon}
+        {children}
+        {icon && iconPlacement === "end" && ButtonIcon}
+      </StyledButton>
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+export { Button };
