@@ -2,6 +2,7 @@ export * from "./Block";
 export * from "./Box";
 export * from "./Button";
 export * from "./Checkbox";
+export * from "./FlashMessage";
 export * from "./Heading";
 export * from "./Icon";
 export * from "./Link";
