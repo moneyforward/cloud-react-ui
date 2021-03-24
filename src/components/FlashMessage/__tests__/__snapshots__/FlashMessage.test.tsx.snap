@@ -5,12 +5,12 @@ exports[`FlashMessage snapshot test 1`] = `
   .c0 {
   width: 100%;
   padding: 12px;
-  background-color: #E6EAED;
+  background-color: #ECF2FD;
   border-width: 1px;
   border-style: solid;
-  border-color: #A9BCDB;
+  border-color: #3B7DE9;
   border-radius: 4px;
-  color: #4772B3;
+  color: #3B7DE9;
   font-size: 12px;
 }
 

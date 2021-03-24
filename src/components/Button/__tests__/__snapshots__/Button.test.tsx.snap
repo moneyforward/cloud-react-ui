@@ -29,7 +29,7 @@ exports[`Button default 1`] = `
 
 .c0.c0:before {
   z-index: -1;
-  background: linear-gradient(to bottom,#FFFFFF,#E6EAED);
+  background: linear-gradient(to bottom,#FFFFFF,#ECF2FD);
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
@@ -37,7 +37,7 @@ exports[`Button default 1`] = `
 .c0.c0:after {
   content: "";
   z-index: -2;
-  background: linear-gradient(to bottom,#E6EAED,#FFFFFF);
+  background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
 }
 
@@ -98,7 +98,7 @@ exports[`Button with icon 1`] = `
 
 .c0.c0:before {
   z-index: -1;
-  background: linear-gradient(to bottom,#FFFFFF,#E6EAED);
+  background: linear-gradient(to bottom,#FFFFFF,#ECF2FD);
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
@@ -106,7 +106,7 @@ exports[`Button with icon 1`] = `
 .c0.c0:after {
   content: "";
   z-index: -2;
-  background: linear-gradient(to bottom,#E6EAED,#FFFFFF);
+  background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
 }
 
