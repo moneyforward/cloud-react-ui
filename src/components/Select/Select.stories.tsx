@@ -48,12 +48,16 @@ const groupOptions: GroupOption[] = [
 ];
 
 export const Select = (): JSX.Element => {
-  const [selected, setSelected] = useState<Option | GroupOption>();
+  const [selected, setSelected] = useState<Option>();
+  const isGroupOption = boolean("GroupOption", false);
 
   return (
     <SelectComponent
-      options={boolean("GroupOption", false) ? groupOptions : defaultOptions}
+      options={isGroupOption ? groupOptions : defaultOptions}
       value={selected}
+      defaultValue={
+        isGroupOption ? groupOptions[0].options[0] : defaultOptions[0]
+      }
       placeholder={text("Placeholder", "")}
       onChange={(option) => setSelected(option)}
       clearable={boolean("Clearable", true)}
