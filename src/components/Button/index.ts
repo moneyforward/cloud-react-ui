@@ -1,2 +1,2 @@
-export { ButtonContainer as Button } from "./ButtonContainer";
-export type { ButtonProps } from "./ButtonContainer";
+export { Button } from "./Button";
+export type { Props as ButtonProps } from "./Button";
