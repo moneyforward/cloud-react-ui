@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CircularProgress snapshot test 1`] = `
+<DocumentFragment>
+  .c0 .MuiCircularProgress-circle {
+  color: #3B7DE9;
+}
+
+<div
+    class="MuiCircularProgress-root c0 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+    role="progressbar"
+    style="width: 40px; height: 40px;"
+    theme="[object Object]"
+  >
+    <svg
+      class="MuiCircularProgress-svg"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+        cx="44"
+        cy="44"
+        fill="none"
+        r="20.2"
+        stroke-width="3.6"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;

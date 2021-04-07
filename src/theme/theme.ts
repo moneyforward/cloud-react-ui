@@ -2,6 +2,10 @@ import { color } from "./color";
 import { values } from "./values";
 
 export const componentsTheme = {
+  // Backdrop
+  backdrop: {
+    zIndex: 10,
+  },
   // Block
   block: {
     width: "",
@@ -123,6 +127,10 @@ export const componentsTheme = {
       height: "8px",
       color: color.white,
     },
+  },
+  // CircularProgress
+  circularProgress: {
+    color: color.royalBlue,
   },
   // FlashMessage
   flashMessage: {
