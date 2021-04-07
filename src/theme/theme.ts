@@ -2,6 +2,10 @@ import { color } from "./color";
 import { values } from "./values";
 
 export const componentsTheme = {
+  // Backdrop
+  backdrop: {
+    zIndex: 10,
+  },
   // Block
   block: {
     width: "",
