@@ -4,7 +4,7 @@ import { values } from "./values";
 export const componentsTheme = {
   // Backdrop
   backdrop: {
-    zIndex: 10,
+    zIndex: 200,
   },
   // Block
   block: {
