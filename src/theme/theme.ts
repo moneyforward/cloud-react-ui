@@ -124,6 +124,10 @@ export const componentsTheme = {
       color: color.white,
     },
   },
+  // CircularProgress
+  circularProgress: {
+    color: color.royalBlue,
+  },
   // FlashMessage
   flashMessage: {
     width: "100%",
