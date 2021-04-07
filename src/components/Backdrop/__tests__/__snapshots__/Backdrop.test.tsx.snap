@@ -7,7 +7,7 @@ exports[`Backdrop snapshot test 1`] = `
 }
 
 .c0.c0 {
-  z-index: 10;
+  z-index: 200;
 }
 
 <div
