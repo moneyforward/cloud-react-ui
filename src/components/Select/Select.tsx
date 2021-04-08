@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import styled, { css } from "styled-components";
-import ReactSelect from "react-select";
+import ReactSelect, { Props as ReactSelectProps } from "react-select";
 import { defaultProps } from "../../theme";
 
 export type GroupOption = {
@@ -27,6 +27,7 @@ export type Props = {
   searchable?: boolean;
   error?: boolean;
   className?: string;
+  components: ReactSelectProps["components"];
 };
 
 export const StyledSelect = styled(ReactSelect)<Props>`
