@@ -27,7 +27,7 @@ export type Props = {
   searchable?: boolean;
   error?: boolean;
   className?: string;
-  components: ReactSelectProps["components"];
+  components?: ReactSelectProps["components"];
 };
 
 export const StyledSelect = styled(ReactSelect)<Props>`
