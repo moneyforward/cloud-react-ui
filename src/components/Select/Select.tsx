@@ -1,6 +1,9 @@
 import { forwardRef } from "react";
 import styled, { css } from "styled-components";
-import ReactSelect, { Props as ReactSelectProps } from "react-select";
+import ReactSelect, {
+  components,
+  Props as ReactSelectProps,
+} from "react-select";
 import { defaultProps } from "../../theme";
 
 export type GroupOption = {
@@ -27,7 +30,7 @@ export type Props = {
   searchable?: boolean;
   error?: boolean;
   className?: string;
-  components?: ReactSelectProps["components"];
+  dropdownImage?: JSX.Element;
 };
 
 export const StyledSelect = styled(ReactSelect)<Props>`
@@ -137,20 +140,30 @@ const Select = forwardRef<HTMLInputElement, Props>(
       disabled = false,
       searchable = true,
       error = false,
+      dropdownImage,
       ...rest
     },
     ref
-  ) => (
-    <StyledSelect
-      ref={ref}
-      isClearable={clearable}
-      isDisabled={disabled}
-      isSearchable={searchable}
-      isError={error}
-      classNamePrefix="react-select"
-      {...rest}
-    />
-  )
+  ) => {
+    const DropdownIndicator = (props: any) => (
+      <components.DropdownIndicator {...props}>
+        {dropdownImage}
+      </components.DropdownIndicator>
+    );
+
+    return (
+      <StyledSelect
+        ref={ref}
+        isClearable={clearable}
+        isDisabled={disabled}
+        isSearchable={searchable}
+        isError={error}
+        classNamePrefix="react-select"
+        {...(dropdownImage && { components: { DropdownIndicator } })}
+        {...rest}
+      />
+    );
+  }
 );
 
 Select.displayName = "Select";

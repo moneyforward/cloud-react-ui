@@ -68,3 +68,34 @@ export const Select = (): JSX.Element => {
     />
   );
 };
+
+export const SelectCustomDropdownIndicator = (): JSX.Element => {
+  const [selected, setSelected] = useState<Option>();
+  const isGroupOption = boolean("GroupOption", false);
+
+  const Image = (
+    <img
+      src="https://1.bp.blogspot.com/-gARR6ehVBP8/UZB6YR-tXBI/AAAAAAAASCo/fZGPc8JEd6w/s400/search_mushimegane.png"
+      width={12}
+      height={12}
+    />
+  );
+
+  return (
+    <SelectComponent
+      instanceId="select"
+      options={isGroupOption ? groupOptions : defaultOptions}
+      value={selected}
+      defaultValue={
+        isGroupOption ? groupOptions[0].options[0] : defaultOptions[0]
+      }
+      placeholder={text("Placeholder", "")}
+      onChange={(option) => setSelected(option)}
+      clearable={boolean("Clearable", true)}
+      disabled={boolean("Disabled", false)}
+      searchable={boolean("Searchable", true)}
+      error={boolean("Error", false)}
+      dropdownImage={Image}
+    />
+  );
+};
