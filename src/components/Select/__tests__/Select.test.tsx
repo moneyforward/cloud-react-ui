@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import { Select } from "../Select";
+import { Indicator } from "../Select.stories";
 
 describe("Select", () => {
   it("default", () => {
@@ -9,6 +10,11 @@ describe("Select", () => {
     expect(
       container.getElementsByClassName("react-select__control")[0]
     ).toHaveStyle("background-color: #FFFFFF");
+  });
+
+  it("with indicatorImage props", () => {
+    const { asFragment } = render(<Select indicatorImage={Indicator} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("error props", () => {

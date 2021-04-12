@@ -47,7 +47,7 @@ const groupOptions: GroupOption[] = [
   },
 ];
 
-const Indicator = (
+export const Indicator = (
   <svg
     width="12"
     height="12"
