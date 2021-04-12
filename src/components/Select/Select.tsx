@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useMemo } from "react";
 import styled, { css } from "styled-components";
 import ReactSelect, {
   components,
@@ -30,7 +30,7 @@ export type Props = {
   searchable?: boolean;
   error?: boolean;
   className?: string;
-  dropdownImage?: JSX.Element;
+  indicatorImage?: JSX.Element;
 };
 
 export const StyledSelect = styled(ReactSelect)<Props>`
@@ -140,16 +140,22 @@ const Select = forwardRef<HTMLInputElement, Props>(
       disabled = false,
       searchable = true,
       error = false,
-      dropdownImage,
+      indicatorImage,
       ...rest
     },
     ref
   ) => {
-    const DropdownIndicator = (props: any) => (
-      <components.DropdownIndicator {...props}>
-        {dropdownImage}
-      </components.DropdownIndicator>
-    );
+    const customComponents: ReactSelectProps["components"] = {};
+    if (indicatorImage) {
+      customComponents["DropdownIndicator"] = useMemo(() => {
+        const DropdownIndicator = (props: any) => (
+          <components.DropdownIndicator {...props}>
+            {indicatorImage}
+          </components.DropdownIndicator>
+        );
+        return DropdownIndicator;
+      }, [indicatorImage]);
+    }
 
     return (
       <StyledSelect
@@ -159,7 +165,7 @@ const Select = forwardRef<HTMLInputElement, Props>(
         isSearchable={searchable}
         isError={error}
         classNamePrefix="react-select"
-        {...(dropdownImage && { components: { DropdownIndicator } })}
+        components={customComponents}
         {...rest}
       />
     );
