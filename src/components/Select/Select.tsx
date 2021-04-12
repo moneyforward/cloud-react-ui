@@ -1,6 +1,9 @@
-import { forwardRef } from "react";
+import { forwardRef, useMemo } from "react";
 import styled, { css } from "styled-components";
-import ReactSelect from "react-select";
+import ReactSelect, {
+  components,
+  Props as ReactSelectProps,
+} from "react-select";
 import { defaultProps } from "../../theme";
 
 export type GroupOption = {
@@ -27,6 +30,7 @@ export type Props = {
   searchable?: boolean;
   error?: boolean;
   className?: string;
+  indicatorImage?: JSX.Element;
 };
 
 export const StyledSelect = styled(ReactSelect)<Props>`
@@ -136,20 +140,36 @@ const Select = forwardRef<HTMLInputElement, Props>(
       disabled = false,
       searchable = true,
       error = false,
+      indicatorImage,
       ...rest
     },
     ref
-  ) => (
-    <StyledSelect
-      ref={ref}
-      isClearable={clearable}
-      isDisabled={disabled}
-      isSearchable={searchable}
-      isError={error}
-      classNamePrefix="react-select"
-      {...rest}
-    />
-  )
+  ) => {
+    const customComponents: ReactSelectProps["components"] = {};
+    if (indicatorImage) {
+      customComponents["DropdownIndicator"] = useMemo(() => {
+        const DropdownIndicator = (props: any) => (
+          <components.DropdownIndicator {...props}>
+            {indicatorImage}
+          </components.DropdownIndicator>
+        );
+        return DropdownIndicator;
+      }, [indicatorImage]);
+    }
+
+    return (
+      <StyledSelect
+        ref={ref}
+        isClearable={clearable}
+        isDisabled={disabled}
+        isSearchable={searchable}
+        isError={error}
+        classNamePrefix="react-select"
+        components={customComponents}
+        {...rest}
+      />
+    );
+  }
 );
 
 Select.displayName = "Select";
