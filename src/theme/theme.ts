@@ -304,6 +304,49 @@ export const componentsTheme = {
       },
     },
   },
+  // StatusLabel
+  statusLabel: {
+    display: "inline-block",
+    height: {
+      default: "18px",
+      outline: "20px",
+    },
+    padding: {
+      default: "2px 3px",
+      outline: "3px 6px",
+    },
+    backgroundColor: {
+      gray: color.nobel,
+      red: color.sunsetOrange,
+      green: color.apple,
+      orange: color.burningSand,
+      blue: color.royalBlue,
+      outline: color.white,
+    },
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "4px",
+    borderColor: {
+      gray: color.nobel,
+      red: color.sunsetOrange,
+      green: color.apple,
+      orange: color.burningSand,
+      blue: color.royalBlue,
+    },
+    color: {
+      gray: color.white,
+      red: color.white,
+      green: color.white,
+      orange: color.white,
+      blue: color.white,
+    },
+    fontSize: values.text.size.small,
+    fontWeight: {
+      normal: "normal",
+      bold: "bold",
+    },
+    lineHeight: values.text.size.small,
+  },
   // Table
   table: {
     width: "100%",

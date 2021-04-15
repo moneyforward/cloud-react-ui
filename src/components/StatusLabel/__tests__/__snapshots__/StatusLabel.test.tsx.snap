@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusLabel snapshot test bold=true 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: inline-block;
+  height: 18px;
+  padding: 2px 3px;
+  line-height: 12px;
+  background-color: #999999;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #999999;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+<span
+    class="c0"
+    color="gray"
+  >
+    status label(bold)
+  </span>
+</DocumentFragment>
+`;
+
+exports[`StatusLabel snapshot test default 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: inline-block;
+  height: 18px;
+  padding: 2px 3px;
+  line-height: 12px;
+  background-color: #EC4949;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #EC4949;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+<span
+    class="c0"
+    color="red"
+  >
+    status label
+  </span>
+</DocumentFragment>
+`;
+
+exports[`StatusLabel snapshot test outline=true 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: inline-block;
+  height: 20px;
+  padding: 3px 6px;
+  line-height: 12px;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #65AB51;
+  border-radius: 4px;
+  color: #65AB51;
+  font-size: 12px;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+<span
+    class="c0"
+    color="green"
+  >
+    status label(outline)
+  </span>
+</DocumentFragment>
+`;
