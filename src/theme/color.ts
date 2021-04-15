@@ -2,7 +2,9 @@ export const color = {
   // http://www.htmlcsscolor.com/
   aliceBlue: "#F5FAFF",
   amour: "#FAEFF0",
+  apple: "#65AB51",
   black: "#000",
+  burningSand: "#D68155",
   cloudGrey: "#EFF1F4",
   cobalt: "#0054AC",
   cornSilk: "#FCF8E3",
