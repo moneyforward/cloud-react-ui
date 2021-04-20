@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Select as SelectComponent, Option, GroupOption } from "./Select";
+import { AsyncSelect as AsyncSelectComponent } from "./AsyncSelect";
 import { boolean, text } from "@storybook/addon-knobs";
 
 export default {
@@ -15,6 +16,14 @@ const defaultOptions: Option[] = [
   {
     value: "2",
     label: "label2",
+  },
+  {
+    value: "3",
+    label: "label3",
+  },
+  {
+    value: "4",
+    label: "label4",
   },
 ];
 
@@ -47,7 +56,7 @@ const groupOptions: GroupOption[] = [
   },
 ];
 
-export const Indicator = (
+const Indicator = (
   <svg
     width="12"
     height="12"
@@ -83,6 +92,33 @@ export const Select = (): JSX.Element => {
       searchable={boolean("Searchable", true)}
       error={boolean("Error", false)}
       indicatorImage={boolean("customIndicator", false) ? Indicator : undefined}
+    />
+  );
+};
+
+export const AsyncSelect = (): JSX.Element => {
+  const [selected, setSelected] = useState<Option>();
+
+  const handleInputChange = async (inputValue: string) => {
+    return new Promise<Option[]>((resolve) => {
+      setTimeout(
+        () =>
+          resolve(
+            defaultOptions.filter((option) =>
+              option.label.toLowerCase().includes(inputValue.toLowerCase())
+            )
+          ),
+        1000
+      );
+    });
+  };
+
+  return (
+    <AsyncSelectComponent
+      defaultOptions
+      value={selected}
+      onChange={(option) => setSelected(option)}
+      onInputChange={handleInputChange}
     />
   );
 };

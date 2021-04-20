@@ -5,7 +5,6 @@ import ReactSelect, {
   Props as ReactSelectProps,
 } from "react-select";
 import { defaultProps } from "../../theme";
-
 export type GroupOption = {
   label: string;
   options: Option[];
@@ -33,7 +32,7 @@ export type Props = {
   indicatorImage?: JSX.Element;
 };
 
-export const StyledSelect = styled(ReactSelect)<Props>`
+export const Styled = css<{ isError?: boolean }>`
   ${({ theme: { select }, isError = false }) => {
     const colorType = isError ? "error" : "default";
 
@@ -57,7 +56,7 @@ export const StyledSelect = styled(ReactSelect)<Props>`
 
           &:hover {
             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-            border-color: ${select.backgroundColor[colorType]};
+            border-color: ${select.borderColor[colorType]};
           }
 
           &--is-disabled {
@@ -130,6 +129,10 @@ export const StyledSelect = styled(ReactSelect)<Props>`
       }
     `;
   }}
+`;
+
+export const StyledSelect = styled(ReactSelect)`
+  ${Styled}
 `;
 StyledSelect.defaultProps = defaultProps;
 
