@@ -23,7 +23,7 @@ exports[`Select default 1`] = `
 
 .c0 .react-select__control:hover {
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  border-color: #FFFFFF;
+  border-color: #CCC;
 }
 
 .c0 .react-select__control--is-disabled {
@@ -188,7 +188,7 @@ exports[`Select with indicatorImage props 1`] = `
 
 .c0 .react-select__control:hover {
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  border-color: #FFFFFF;
+  border-color: #CCC;
 }
 
 .c0 .react-select__control--is-disabled {

@@ -56,7 +56,7 @@ export const Styled = css<{ isError?: boolean }>`
 
           &:hover {
             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-            border-color: ${select.backgroundColor[colorType]};
+            border-color: ${select.borderColor[colorType]};
           }
 
           &--is-disabled {
