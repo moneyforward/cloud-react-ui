@@ -208,6 +208,8 @@ export const componentsTheme = {
       color: color.nobel,
     },
   },
+  // ProgressBar
+  progressBar: {},
   // ProgressLabel
   progressLabel: {
     display: "inline-block",
