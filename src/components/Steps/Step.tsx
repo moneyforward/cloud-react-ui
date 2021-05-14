@@ -1,18 +1,18 @@
-import { forwardRef } from "react";
+import { forwardRef, useContext } from "react";
 import styled, {css} from "styled-components";
 import { defaultProps } from "../../theme";
+import { StepsModeContext } from "./Steps"
 
 export type Props = {
   step: number;
   stepStatus: 'waiting' | 'inProgress' | 'completed';
   title: string;
-  useCheck: boolean;
   className?: string;
 }
 
 const StepWrapper = styled.div`
   ${( {theme: { steps } } ) => css`
-    position: relative;
+    position: ${steps.step.position};
   `}
 `;
 StepWrapper.defaultProps = defaultProps
@@ -33,38 +33,55 @@ const Title = styled.span<{ stepStatus: Props['stepStatus'] }>`
 Title.defaultProps = defaultProps
 
 const Circle = styled.div<{ stepStatus: Props['stepStatus'] }>`
-  ${( {theme: { steps }, stepStatus } ) => {
-    return css`
-      margin-top: ${steps.step.marginTop};
-      width: ${steps.step.width};
-      height: ${steps.step.height};
-      border-radius: ${steps.step.borderRadius};
-      display: ${steps.step.display};
-      align-items: ${steps.step.alignItems};
-      justify-content: ${steps.step.justifyContent};
-      background-color: ${steps.step.backgroundColor[stepStatus]};
-      border-style: ${steps.step.borderStyle};
-      border-width: ${steps.step.borderWidth};
-      border-color: ${steps.step.borderColor[stepStatus]};
-      color: ${steps.step.color[stepStatus]};
-      line-height: ${steps.step.lineHeight};
-    `
-  }}
+  ${( {theme: { steps }, stepStatus } ) => css`
+    margin-top: ${steps.step.circle.marginTop};
+    width: ${steps.step.circle.width};
+    height: ${steps.step.circle.height};
+    border-radius: ${steps.step.circle.borderRadius};
+    display: ${steps.step.circle.display};
+    align-items: ${steps.step.circle.alignItems};
+    justify-content: ${steps.step.circle.justifyContent};
+    background-color: ${steps.step.circle.backgroundColor[stepStatus]};
+    border-style: ${steps.step.circle.borderStyle};
+    border-width: ${steps.step.circle.borderWidth};
+    border-color: ${steps.step.circle.borderColor[stepStatus]};
+    color: ${steps.step.circle.color[stepStatus]};
+    line-height: ${steps.step.circle.lineHeight};
+  `}
 `;
 Circle.defaultProps = defaultProps
 
+const Check = (
+  <svg
+    width="18"
+    height="14"
+    viewBox="0 0 18 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M5.9999 11.2L1.7999 6.99998L0.399902 8.39998L5.9999 14L17.9999 1.99998L16.5999 0.599976L5.9999 11.2Z"
+      fill="#fff"/>
+  </svg>
+);
+
 const Step = forwardRef<HTMLDivElement, Props>(
-  ({step, title, useCheck,  className, ...rest}, ref) => (
-    <StepWrapper className={className}>
-      <Title {...rest}>
-        {title}
-      </Title>
-      { useCheck }
-      <Circle ref={ref} {...rest}>
-        {step}
-      </Circle>
-    </StepWrapper>
-  )
+  ({step, title, className, stepStatus}, ref) => {
+    const { mode } = useContext(StepsModeContext);
+
+    return(
+      <StepWrapper ref={ref} className={className}>
+        <Title stepStatus={stepStatus}>
+          {title}
+        </Title>
+        
+        <Circle stepStatus={stepStatus}>
+          { mode === "check" && stepStatus === 'completed' ? Check : step }
+        </Circle>
+      </StepWrapper>
+    )
+  }
 );
 
 Step.displayName = "Step"

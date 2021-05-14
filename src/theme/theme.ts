@@ -210,31 +210,36 @@ export const componentsTheme = {
   },
   // Steps
   steps: {
+    display: "flex",
+    alignItems: "flex-end",
     step: {
-      marginTop: "26px",
-      width: "34px",
-      height: "34px",
-      borderRadius: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      lineHeight: values.text.size.middle,
-      backgroundColor: {
-        waiting: color.linkWater,
-        inProgress: color.white,
-        completed: color.royalBlue,
-      },
-      borderWidth: values.border.width.thin,
-      borderStyle: values.border.style.solid,
-      borderColor: {
-        waiting: color.linkWater,
-        inProgress: color.royalBlue,
-        completed: color.royalBlue,
-      },
-      color: {
-        waiting: color.white,
-        inProgress: color.royalBlue,
-        completed: color.white,
+      position: "relative",
+      circle: {
+        marginTop: "26px",
+        width: "34px",
+        height: "34px",
+        borderRadius: "50%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        lineHeight: values.text.size.middle,
+        backgroundColor: {
+          waiting: color.linkWater,
+          inProgress: color.white,
+          completed: color.royalBlue,
+        },
+        borderWidth: values.border.width.thin,
+        borderStyle: values.border.style.solid,
+        borderColor: {
+          waiting: color.linkWater,
+          inProgress: color.royalBlue,
+          completed: color.royalBlue,
+        },
+        color: {
+          waiting: color.white,
+          inProgress: color.royalBlue,
+          completed: color.white,
+        },
       },
       title: {
         color: {
