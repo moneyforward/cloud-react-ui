@@ -210,13 +210,62 @@ export const componentsTheme = {
   },
   // Steps
   steps: {
-    stepTie: {
-      width: "110px",
-      height: "2px",
-      background: {
+    step: {
+      marginTop: "26px",
+      width: "34px",
+      height: "34px",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      lineHeight: values.text.size.middle,
+      backgroundColor: {
         waiting: color.linkWater,
+        inProgress: color.white,
         completed: color.royalBlue,
       },
+      borderWidth: values.border.width.thin,
+      borderStyle: values.border.style.solid,
+      borderColor: {
+        waiting: color.linkWater,
+        inProgress: color.royalBlue,
+        completed: color.royalBlue,
+      },
+      color: {
+        waiting: color.white,
+        inProgress: color.royalBlue,
+        completed: color.white,
+      },
+      title: {
+        color: {
+          waiting: color.dimGray,
+          inProgress: color.dimGray,
+          completed: color.royalBlue,
+        },
+        position: "absolute",
+        top: "0%",
+        left: "50%",
+        transform: "translateX(-50%)",
+        minWidth: "110px",
+        textAlign: "center",
+        fontSize: values.text.size.middle,
+        fontWeight: values.font.waight.bold,
+      }
+    },
+    stepTie: {
+      width: "110px",
+      height: "36px",
+      margin: "0 6px",
+      display: "flex",
+      alignItems: "center",
+      tie: {
+        width: "100%",
+        height: "2px",
+        background: {
+          waiting: color.linkWater,
+          completed: color.royalBlue,
+        },
+      }
     }
   },
   // ProgressLabel
