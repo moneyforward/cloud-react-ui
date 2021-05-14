@@ -7,21 +7,35 @@ export type Props = {
   className?: string;
 }
 
-const StyledStepTie = styled.div<Props>`
+const StepTieWrapper = styled.div`
+  ${({ theme: { steps } }) => css`
+      width: ${steps.stepTie.width};
+      height: ${steps.stepTie.height};
+      margin: ${steps.stepTie.margin};
+      display: ${steps.stepTie.display};
+      align-items: ${steps.stepTie.alignItems};
+    `
+  }
+`;
+StepTieWrapper.defaultProps = defaultProps
+
+const Tie = styled.div<Props>`
   ${({ theme: { steps }, completed = false }) => {
     const colorType = completed ? "completed" : "waiting";
 
     return css`
-      width: ${steps.stepTie.width};
-      height: ${steps.stepTie.height};
-      background: ${steps.stepTie.background[colorType]};
+      width: ${steps.stepTie.tie.width};
+      height: ${steps.stepTie.tie.height};
+      background: ${steps.stepTie.tie.background[colorType]};
     `
   }}
 `;
-StyledStepTie.defaultProps = defaultProps
+Tie.defaultProps = defaultProps
 
 const StepTie = forwardRef<HTMLDivElement, Props>((props, ref) => (
-  <StyledStepTie ref={ref} {...props} />
+  <StepTieWrapper>
+    <Tie ref={ref} {...props} />
+  </StepTieWrapper>
 ));
 
 StepTie.displayName = "StepTie"
