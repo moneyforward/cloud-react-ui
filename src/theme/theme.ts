@@ -208,9 +208,9 @@ export const componentsTheme = {
       color: color.nobel,
     },
   },
-  // ProgressBar
-  progressBar: {
-    progressBarLine: {
+  // Steps
+  steps: {
+    stepTie: {
       width: "110px",
       height: "2px",
       background: {
