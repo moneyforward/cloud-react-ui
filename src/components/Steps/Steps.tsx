@@ -5,10 +5,11 @@ import { defaultProps } from "../../theme";
 export type Mode = "number" | "check";
 export const StepsModeContext = createContext<{ mode: Mode}>({
   mode: "check"
-});
+})
 
 export type Props = {
   className?: string;
+  mode?: Mode
   children: React.ReactNode
 }
 
@@ -20,8 +21,10 @@ const StyledSteps = styled.div<Props>`
 `;
 StyledSteps.defaultProps = defaultProps
 
-const Steps = forwardRef<HTMLDivElement, Props>((props, ref) => (
-  <StyledSteps ref={ref} {...props} />
+const Steps = forwardRef<HTMLDivElement, Props>(({mode = "check", ...rest}, ref) => (
+  <StepsModeContext.Provider value={{ mode }}>
+    <StyledSteps ref={ref} {...rest} />
+  </StepsModeContext.Provider>
 ));
 
 Steps.displayName = "Steps"
