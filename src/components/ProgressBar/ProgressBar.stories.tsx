@@ -1,10 +1,19 @@
-import { ProgressBar as ProgressBarComponent } from "./ProgressBar";
+import { Story, Meta } from '@storybook/react';
+import { ProgressBar } from "./ProgressBar";
+import { ProgressBarLine } from "./ProgressBarLine"
 
 export default {
-  component: ProgressBarComponent,
+  component: ProgressBar,
   title: "components/ProgressBar"
 };
 
-export const ProgressBar = (): JSX.Element => (
-  <ProgressBarComponent />
-);
+const Template: Story = () => {
+  return (
+    <ProgressBar>
+      <ProgressBarLine completed />
+      <ProgressBarLine />
+    </ProgressBar>
+  );
+};
+
+export const Default = Template.bind({});

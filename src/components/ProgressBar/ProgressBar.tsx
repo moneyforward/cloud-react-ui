@@ -3,6 +3,8 @@ import styled, {css} from "styled-components";
 import { defaultProps } from "../../theme";
 
 export type Props = {
+  className?: string;
+  children: React.ReactNode
 }
 
 const StyledProgressBar = styled.div<Props>`
@@ -16,6 +18,5 @@ const ProgressBar = forwardRef<HTMLDivElement, Props>((props, ref) => (
 ));
 
 ProgressBar.displayName = "ProgressBar"
-
 
 export { ProgressBar };
