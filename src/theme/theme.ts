@@ -209,7 +209,16 @@ export const componentsTheme = {
     },
   },
   // ProgressBar
-  progressBar: {},
+  progressBar: {
+    progressBarLine: {
+      width: "110px",
+      height: "2px",
+      background: {
+        waiting: color.linkWater,
+        completed: color.royalBlue,
+      },
+    }
+  },
   // ProgressLabel
   progressLabel: {
     display: "inline-block",
