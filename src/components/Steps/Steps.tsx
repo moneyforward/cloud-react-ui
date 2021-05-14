@@ -9,6 +9,8 @@ export type Props = {
 
 const StyledSteps = styled.div<Props>`
   ${({ theme: { steps } }) => css`
+    display: flex;
+    align-items: flex-end;
   `}
 `;
 StyledSteps.defaultProps = defaultProps
