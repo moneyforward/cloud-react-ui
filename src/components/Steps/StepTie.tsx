@@ -8,11 +8,15 @@ export type Props = {
 }
 
 const StyledStepTie = styled.div<Props>`
-  ${({ theme: { steps }, completed = false }) => css`
-    width: ${steps.stepTie.width};
-    height: ${steps.stepTie.height};
-    background: ${completed ? steps.stepTie.background["completed"] : steps.stepTie.background["waiting"]};
-  `}
+  ${({ theme: { steps }, completed = false }) => {
+    const colorType = completed ? "completed" : "waiting";
+
+    return css`
+      width: ${steps.stepTie.width};
+      height: ${steps.stepTie.height};
+      background: ${steps.stepTie.background[colorType]};
+    `
+  }}
 `;
 StyledStepTie.defaultProps = defaultProps
 
