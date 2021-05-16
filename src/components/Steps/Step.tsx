@@ -51,20 +51,39 @@ const Circle = styled.div<{ stepStatus: Props['stepStatus'] }>`
 `;
 Circle.defaultProps = defaultProps
 
-const Check = (
+const Count = styled.span`
+  ${( {theme: { steps } } ) => css`
+    position: ${steps.step.circle.count.position};
+    top: ${steps.step.circle.count.top};
+  `}
+`;
+Count.defaultProps = defaultProps
+
+const Check = styled(({ className }) => (
   <svg
-    width="18"
-    height="14"
     viewBox="0 0 18 14"
+    xmlns="http://www.w3.org/2000/svg"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    className={className}
+    >
+    <title>check</title>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
       d="M5.9999 11.2L1.7999 6.99998L0.399902 8.39998L5.9999 14L17.9999 1.99998L16.5999 0.599976L5.9999 11.2Z"
-      fill="#fff"/>
+    />
   </svg>
-);
+))`
+  ${({ theme: { steps } }) => css`
+    width: ${steps.step.check.width};
+    height: ${steps.step.check.height};
+
+    & > path {
+      fill: ${steps.step.check.color};
+    }
+  `}
+`;
+Check.defaultProps = defaultProps
 
 const Step = forwardRef<HTMLDivElement, Props>(
   ({step, title, className, stepStatus}, ref) => {
@@ -77,7 +96,13 @@ const Step = forwardRef<HTMLDivElement, Props>(
         </Title>
         
         <Circle stepStatus={stepStatus}>
-          { mode === "check" && stepStatus === 'completed' ? Check : step }
+          { mode === "check" && stepStatus === 'completed' ? (
+            <Check />
+          ) : (
+            <Count>
+              { step }
+            </Count>
+          )}
         </Circle>
       </StepWrapper>
     )

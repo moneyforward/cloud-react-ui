@@ -240,6 +240,10 @@ export const componentsTheme = {
           inProgress: color.royalBlue,
           completed: color.white,
         },
+        count: {
+          position: "relative",
+          top: "-1px"
+        }
       },
       title: {
         color: {
@@ -255,7 +259,12 @@ export const componentsTheme = {
         textAlign: "center",
         fontSize: values.text.size.middle,
         fontWeight: values.font.waight.bold,
-      }
+      },
+      check: {
+        width: "18px",
+        height: "14px",
+        color: color.white,
+      },
     },
     stepTie: {
       width: "110px",
