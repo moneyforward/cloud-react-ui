@@ -1,0 +1,472 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/Steps renders of check mode 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c2 {
+  color: #3B7DE9;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 110px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.c7 {
+  color: #666;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 110px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.c3 {
+  margin-top: 26px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #3B7DE9;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3B7DE9;
+  color: #FFFFFF;
+  line-height: 13px;
+}
+
+.c8 {
+  margin-top: 26px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3B7DE9;
+  color: #3B7DE9;
+  line-height: 13px;
+}
+
+.c11 {
+  margin-top: 26px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #D4D8DD;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D4D8DD;
+  color: #FFFFFF;
+  line-height: 13px;
+}
+
+.c9 {
+  position: relative;
+  top: -1px;
+}
+
+.c4 {
+  width: 18px;
+  height: 14px;
+}
+
+.c4 > path {
+  fill: #FFFFFF;
+}
+
+.c5 {
+  width: 110px;
+  height: 36px;
+  margin: 0 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  width: 100%;
+  height: 2px;
+  background: #3B7DE9;
+}
+
+.c10 {
+  width: 100%;
+  height: 2px;
+  background: #D4D8DD;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <span
+        class="c2"
+      >
+        Step 1
+      </span>
+      <div
+        class="c3"
+      >
+        <svg
+          class="c4"
+          fill="none"
+          viewBox="0 0 18 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            check
+          </title>
+          <path
+            clip-rule="evenodd"
+            d="M5.9999 11.2L1.7999 6.99998L0.399902 8.39998L5.9999 14L17.9999 1.99998L16.5999 0.599976L5.9999 11.2Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c6"
+      />
+    </div>
+    <div
+      class="c1"
+    >
+      <span
+        class="c7"
+      >
+        Step 2
+      </span>
+      <div
+        class="c8"
+      >
+        <span
+          class="c9"
+        >
+          2
+        </span>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c1"
+    >
+      <span
+        class="c7"
+      >
+        Step 3
+      </span>
+      <div
+        class="c11"
+      >
+        <span
+          class="c9"
+        >
+          3
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ui/Steps renders of number mode 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c2 {
+  color: #3B7DE9;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 110px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.c7 {
+  color: #666;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 110px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.c3 {
+  margin-top: 26px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #3B7DE9;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3B7DE9;
+  color: #FFFFFF;
+  line-height: 13px;
+}
+
+.c8 {
+  margin-top: 26px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3B7DE9;
+  color: #3B7DE9;
+  line-height: 13px;
+}
+
+.c10 {
+  margin-top: 26px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #D4D8DD;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D4D8DD;
+  color: #FFFFFF;
+  line-height: 13px;
+}
+
+.c4 {
+  position: relative;
+  top: -1px;
+}
+
+.c5 {
+  width: 110px;
+  height: 36px;
+  margin: 0 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  width: 100%;
+  height: 2px;
+  background: #3B7DE9;
+}
+
+.c9 {
+  width: 100%;
+  height: 2px;
+  background: #D4D8DD;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <span
+        class="c2"
+      >
+        Step 1
+      </span>
+      <div
+        class="c3"
+      >
+        <span
+          class="c4"
+        >
+          1
+        </span>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c6"
+      />
+    </div>
+    <div
+      class="c1"
+    >
+      <span
+        class="c7"
+      >
+        Step 2
+      </span>
+      <div
+        class="c8"
+      >
+        <span
+          class="c4"
+        >
+          2
+        </span>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c9"
+      />
+    </div>
+    <div
+      class="c1"
+    >
+      <span
+        class="c7"
+      >
+        Step 3
+      </span>
+      <div
+        class="c10"
+      >
+        <span
+          class="c4"
+        >
+          3
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
