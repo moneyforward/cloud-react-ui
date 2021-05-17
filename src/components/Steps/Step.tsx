@@ -1,24 +1,24 @@
 import { forwardRef, useContext } from "react";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
-import { StepsModeContext } from "./Steps"
+import { StepsModeContext } from "./Steps";
 
 export type Props = {
   step: number;
-  stepStatus: 'waiting' | 'inProgress' | 'completed';
+  stepStatus: "waiting" | "inProgress" | "completed";
   title: string;
   className?: string;
-}
+};
 
 const StepWrapper = styled.div`
-  ${( {theme: { steps } } ) => css`
+  ${({ theme: { steps } }) => css`
     position: ${steps.step.position};
   `}
 `;
-StepWrapper.defaultProps = defaultProps
+StepWrapper.defaultProps = defaultProps;
 
-const Title = styled.span<{ stepStatus: Props['stepStatus'] }>`
-  ${( {theme: { steps }, stepStatus } ) => css`
+const Title = styled.span<{ stepStatus: Props["stepStatus"] }>`
+  ${({ theme: { steps }, stepStatus }) => css`
     color: ${steps.step.title.color[stepStatus]};
     position: ${steps.step.title.position};
     top: ${steps.step.title.top};
@@ -30,10 +30,10 @@ const Title = styled.span<{ stepStatus: Props['stepStatus'] }>`
     font-weight: ${steps.step.title.fontWeight};
   `}
 `;
-Title.defaultProps = defaultProps
+Title.defaultProps = defaultProps;
 
-const Circle = styled.div<{ stepStatus: Props['stepStatus'] }>`
-  ${( {theme: { steps }, stepStatus } ) => css`
+const Circle = styled.div<{ stepStatus: Props["stepStatus"] }>`
+  ${({ theme: { steps }, stepStatus }) => css`
     margin-top: ${steps.step.circle.marginTop};
     width: ${steps.step.circle.width};
     height: ${steps.step.circle.height};
@@ -49,15 +49,15 @@ const Circle = styled.div<{ stepStatus: Props['stepStatus'] }>`
     line-height: ${steps.step.circle.lineHeight};
   `}
 `;
-Circle.defaultProps = defaultProps
+Circle.defaultProps = defaultProps;
 
 const Count = styled.span`
-  ${( {theme: { steps } } ) => css`
+  ${({ theme: { steps } }) => css`
     position: ${steps.step.circle.count.position};
     top: ${steps.step.circle.count.top};
   `}
 `;
-Count.defaultProps = defaultProps
+Count.defaultProps = defaultProps;
 
 const Check = styled(({ className }) => (
   <svg
@@ -65,11 +65,11 @@ const Check = styled(({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     className={className}
-    >
+  >
     <title>check</title>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M5.9999 11.2L1.7999 6.99998L0.399902 8.39998L5.9999 14L17.9999 1.99998L16.5999 0.599976L5.9999 11.2Z"
     />
   </svg>
@@ -83,32 +83,28 @@ const Check = styled(({ className }) => (
     }
   `}
 `;
-Check.defaultProps = defaultProps
+Check.defaultProps = defaultProps;
 
 const Step = forwardRef<HTMLDivElement, Props>(
-  ({step, title, className, stepStatus}, ref) => {
+  ({ step, title, className, stepStatus }, ref) => {
     const { mode } = useContext(StepsModeContext);
 
-    return(
+    return (
       <StepWrapper ref={ref} className={className}>
-        <Title stepStatus={stepStatus}>
-          {title}
-        </Title>
-        
+        <Title stepStatus={stepStatus}>{title}</Title>
+
         <Circle stepStatus={stepStatus}>
-          { mode === "check" && stepStatus === 'completed' ? (
+          {mode === "check" && stepStatus === "completed" ? (
             <Check />
           ) : (
-            <Count>
-              { step }
-            </Count>
+            <Count>{step}</Count>
           )}
         </Circle>
       </StepWrapper>
-    )
+    );
   }
 );
 
-Step.displayName = "Step"
+Step.displayName = "Step";
 
 export { Step };

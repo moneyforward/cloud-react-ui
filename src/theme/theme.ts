@@ -242,8 +242,8 @@ export const componentsTheme = {
         },
         count: {
           position: "relative",
-          top: "-1px"
-        }
+          top: "-1px",
+        },
       },
       title: {
         color: {
@@ -279,8 +279,8 @@ export const componentsTheme = {
           waiting: color.linkWater,
           completed: color.royalBlue,
         },
-      }
-    }
+      },
+    },
   },
   // ProgressLabel
   progressLabel: {

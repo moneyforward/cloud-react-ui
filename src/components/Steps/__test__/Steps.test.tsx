@@ -14,10 +14,10 @@ describe("ui/Steps", () => {
         <Step step={3} stepStatus="waiting" title="Step 3" />
       </Steps>
     );
-    expect(screen.getByTitle('check')).toBeInTheDocument();
-    expect(screen.queryByText('1')).not.toBeInTheDocument();
-    expect(screen.getByText('2')).toBeInTheDocument();
-    expect(screen.getByText('3')).toBeInTheDocument();
+    expect(screen.getByTitle("check")).toBeInTheDocument();
+    expect(screen.queryByText("1")).not.toBeInTheDocument();
+    expect(screen.getByText("2")).toBeInTheDocument();
+    expect(screen.getByText("3")).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -31,9 +31,9 @@ describe("ui/Steps", () => {
         <Step step={3} stepStatus="waiting" title="Step 3" />
       </Steps>
     );
-    expect(screen.getByText('1')).toBeInTheDocument();
-    expect(screen.getByText('2')).toBeInTheDocument();
-    expect(screen.getByText('3')).toBeInTheDocument();
+    expect(screen.getByText("1")).toBeInTheDocument();
+    expect(screen.getByText("2")).toBeInTheDocument();
+    expect(screen.getByText("3")).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 });
