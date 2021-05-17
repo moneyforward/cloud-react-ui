@@ -12,6 +12,7 @@ export * from "./ProgressLabel";
 export * from "./Radio";
 export * from "./Select";
 export * from "./StatusLabel";
+export * from "./Steps";
 export * from "./Table";
 export * from "./Text";
 export * from "./TextField";
