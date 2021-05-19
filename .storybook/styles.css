@@ -1,7 +1,7 @@
 * {
-  font-family: "Noto Sans JP";
+  box-sizing: border-box;
 }
 
-html, body {
-  background-color: #E5E5E5;
+html {
+  font-family: "Noto Sans JP";
 }
