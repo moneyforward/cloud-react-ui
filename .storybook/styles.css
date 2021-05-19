@@ -1,9 +1,10 @@
-* {
+html {
+  font-family: "Noto Sans JP";
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Noto Sans JP";
+*, :before, :after {
+  box-sizing: inherit;
 }
 
 body {
