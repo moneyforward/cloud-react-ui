@@ -222,7 +222,6 @@ export const componentsTheme = {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        lineHeight: values.text.size.middle,
         backgroundColor: {
           waiting: color.linkWater,
           inProgress: color.white,
@@ -243,6 +242,8 @@ export const componentsTheme = {
         count: {
           position: "relative",
           top: "-1px",
+          fontSize: values.text.size.xxlarge,
+          letterSpacing: "-0.5px",
         },
       },
       title: {

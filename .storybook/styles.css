@@ -5,3 +5,8 @@
 html {
   font-family: "Noto Sans JP";
 }
+
+body {
+  font-size: 13px;
+  color: #333;
+}

@@ -15,7 +15,9 @@ export const values = {
       middle: "13px",
       large: "14px",
       xlarge: "16px",
-      xxLarge: "20px",
+      xxlarge: "18px",
+      xxxLarge: "20px",
+      xxxxLarge: "24px",
     },
     color: {
       default: color.nightRider,
