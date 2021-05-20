@@ -67,7 +67,6 @@ exports[`ui/Steps renders of check mode 1`] = `
   border-width: 1px;
   border-color: #3B7DE9;
   color: #FFFFFF;
-  line-height: 13px;
 }
 
 .c8 {
@@ -92,7 +91,6 @@ exports[`ui/Steps renders of check mode 1`] = `
   border-width: 1px;
   border-color: #3B7DE9;
   color: #3B7DE9;
-  line-height: 13px;
 }
 
 .c11 {
@@ -117,12 +115,16 @@ exports[`ui/Steps renders of check mode 1`] = `
   border-width: 1px;
   border-color: #D4D8DD;
   color: #FFFFFF;
-  line-height: 13px;
 }
 
 .c9 {
   position: relative;
   top: -1px;
+  font-size: 18px;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
 }
 
 .c4 {
@@ -312,7 +314,6 @@ exports[`ui/Steps renders of number mode 1`] = `
   border-width: 1px;
   border-color: #3B7DE9;
   color: #FFFFFF;
-  line-height: 13px;
 }
 
 .c8 {
@@ -337,7 +338,6 @@ exports[`ui/Steps renders of number mode 1`] = `
   border-width: 1px;
   border-color: #3B7DE9;
   color: #3B7DE9;
-  line-height: 13px;
 }
 
 .c10 {
@@ -362,12 +362,16 @@ exports[`ui/Steps renders of number mode 1`] = `
   border-width: 1px;
   border-color: #D4D8DD;
   color: #FFFFFF;
-  line-height: 13px;
 }
 
 .c4 {
   position: relative;
   top: -1px;
+  font-size: 18px;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
 }
 
 .c5 {

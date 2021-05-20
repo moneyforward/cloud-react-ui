@@ -46,7 +46,6 @@ const Circle = styled.div<{ stepStatus: Props["stepStatus"] }>`
     border-width: ${steps.step.circle.borderWidth};
     border-color: ${steps.step.circle.borderColor[stepStatus]};
     color: ${steps.step.circle.color[stepStatus]};
-    line-height: ${steps.step.circle.lineHeight};
   `}
 `;
 Circle.defaultProps = defaultProps;
@@ -55,6 +54,8 @@ const Count = styled.span`
   ${({ theme: { steps } }) => css`
     position: ${steps.step.circle.count.position};
     top: ${steps.step.circle.count.top};
+    font-size: ${steps.step.circle.count.fontSize};
+    letter-spacing: ${steps.step.circle.count.letterSpacing};
   `}
 `;
 Count.defaultProps = defaultProps;
