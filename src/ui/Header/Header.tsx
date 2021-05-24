@@ -9,19 +9,8 @@ export type Props = {
   className?: string;
 };
 
-const FixedWrapper = styled.div`
-  ${({ theme: { header } }) => css`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: ${header.zIndex};
-  `}
-`;
-FixedWrapper.defaultProps = defaultProps;
-
-const StyledHeader = styled.header`
-  ${({ theme: { header } }) => css`
+const StyledHeader = styled.header<Props>`
+  ${({ theme: { header }, fixed }) => css`
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -31,6 +20,14 @@ const StyledHeader = styled.header`
     border-bottom: ${header.borderBottom};
     background-color: ${header.backgroundColor};
     box-sizing: border-box;
+
+    ${fixed && css`
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: ${header.zIndex};
+    ` };
   `}
 `;
 StyledHeader.defaultProps = defaultProps;
