@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 
@@ -30,32 +29,15 @@ const StyledHeader = styled.header<Props>`
 `;
 StyledHeader.defaultProps = defaultProps;
 
-const StyledLeft = styled.div`
+const HeaderName = styled.div`
   display: flex;
   align-items: center;
 `;
 
-const StyledRight = styled.div`
+const HeaderItem = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
 `;
 
-export const Header = ({
-  fixed = false,
-  left,
-  right,
-  ...rest
-}: Props): JSX.Element => {
-  const Header = useMemo(
-    () => (
-      <StyledHeader {...rest}>
-        <StyledLeft>{left}</StyledLeft>
-        <StyledRight>{right}</StyledRight>
-      </StyledHeader>
-    ),
-    [left, right, rest]
-  );
-
-  return fixed ? <FixedWrapper>{Header}</FixedWrapper> : Header;
-};
+export const Header = Object.assign(StyledHeader, { Name: HeaderName, Item: HeaderItem});
