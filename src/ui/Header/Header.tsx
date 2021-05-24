@@ -4,8 +4,6 @@ import { defaultProps } from "../../theme";
 
 export type Props = {
   fixed?: boolean;
-  left: React.ReactNode;
-  right: React.ReactNode;
   className?: string;
 };
 
