@@ -38,9 +38,10 @@ export const Header: React.FC = () => {
     <>
       <HeaderComponent
         fixed={boolean("fixed", false)}
-        left={<Left />}
-        right={<Right />}
-      />
+      >
+        <HeaderComponent.Name><Left /></HeaderComponent.Name>
+        <HeaderComponent.Item><Right /></HeaderComponent.Item>
+      </HeaderComponent>
       <Content />
     </>
   );
