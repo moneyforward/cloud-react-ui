@@ -3,14 +3,6 @@
 exports[`Header snapshot test (fixed) 1`] = `
 <DocumentFragment>
   .c0 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,6 +21,22 @@ exports[`Header snapshot test (fixed) 1`] = `
   border-bottom: 1px solid #D4D8DD;
   background-color: #FFFFFF;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c2 {
@@ -40,42 +48,27 @@ exports[`Header snapshot test (fixed) 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   margin-left: auto;
 }
 
-<div
+<header
     class="c0"
   >
-    <header
+    <div
       class="c1"
     >
-      <div
-        class="c2"
-      >
-        <div>
-          left
-        </div>
+      <div>
+        Service or page name
       </div>
-      <div
-        class="c3"
-      >
-        <div>
-          right
-        </div>
+    </div>
+    <div
+      class="c2"
+    >
+      <div>
+        Navigation, dropdown, etc.
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
 </DocumentFragment>
 `;
 
@@ -132,14 +125,14 @@ exports[`Header snapshot test 1`] = `
       class="c1"
     >
       <div>
-        left
+        Service or page name
       </div>
     </div>
     <div
       class="c2"
     >
       <div>
-        right
+        Navigation, dropdown, etc.
       </div>
     </div>
   </header>

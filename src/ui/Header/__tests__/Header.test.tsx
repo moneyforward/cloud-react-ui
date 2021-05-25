@@ -4,14 +4,28 @@ import { Header } from "../Header";
 describe("Header", () => {
   it("snapshot test", () => {
     const { asFragment } = render(
-      <Header left={<div>left</div>} right={<div>right</div>} />
+      <Header>
+        <Header.Name>
+          <div>Service or page name</div>
+        </Header.Name>
+        <Header.Item>
+          <div>Navigation, dropdown, etc.</div>
+        </Header.Item>
+      </Header>
     );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("snapshot test (fixed)", () => {
     const { asFragment } = render(
-      <Header fixed left={<div>left</div>} right={<div>right</div>} />
+      <Header fixed>
+        <Header.Name>
+          <div>Service or page name</div>
+        </Header.Name>
+        <Header.Item>
+          <div>Navigation, dropdown, etc.</div>
+        </Header.Item>
+      </Header>
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -8,7 +8,7 @@ export default {
 };
 
 export const Header: React.FC = () => {
-  const Left = () => (
+  const Logo = () => (
     <svg
       width="140"
       height="20"
@@ -25,22 +25,19 @@ export const Header: React.FC = () => {
     </svg>
   );
 
-  const Right = () => (
-    <>
-      <Text size="small">Header</Text>
-      <Icon icon="caretUp" rotation={180} />
-    </>
-  );
-
   const Content = () => <div style={{ height: "1000px" }} />;
 
   return (
     <>
-      <HeaderComponent
-        fixed={boolean("fixed", false)}
-        left={<Left />}
-        right={<Right />}
-      />
+      <HeaderComponent fixed={boolean("fixed", false)}>
+        <HeaderComponent.Name>
+          <Logo />
+        </HeaderComponent.Name>
+        <HeaderComponent.Item>
+          <Text size="small">Header</Text>
+          <Icon icon="caretUp" rotation={180} />
+        </HeaderComponent.Item>
+      </HeaderComponent>
       <Content />
     </>
   );

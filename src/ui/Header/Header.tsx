@@ -1,27 +1,13 @@
-import { useMemo } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 
 export type Props = {
   fixed?: boolean;
-  left: React.ReactNode;
-  right: React.ReactNode;
   className?: string;
 };
 
-const FixedWrapper = styled.div`
-  ${({ theme: { header } }) => css`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: ${header.zIndex};
-  `}
-`;
-FixedWrapper.defaultProps = defaultProps;
-
-const StyledHeader = styled.header`
-  ${({ theme: { header } }) => css`
+const StyledHeader = styled.header<Props>`
+  ${({ theme: { header }, fixed }) => css`
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -31,36 +17,30 @@ const StyledHeader = styled.header`
     border-bottom: ${header.borderBottom};
     background-color: ${header.backgroundColor};
     box-sizing: border-box;
+
+    ${fixed &&
+    css`
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: ${header.zIndex};
+    `};
   `}
 `;
 StyledHeader.defaultProps = defaultProps;
 
-const StyledLeft = styled.div`
+const Name = styled.div`
   display: flex;
   align-items: center;
 `;
+Name.displayName = "Header.Name";
 
-const StyledRight = styled.div`
+const Item = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
 `;
+Item.displayName = "Header.Item";
 
-export const Header = ({
-  fixed = false,
-  left,
-  right,
-  ...rest
-}: Props): JSX.Element => {
-  const Header = useMemo(
-    () => (
-      <StyledHeader {...rest}>
-        <StyledLeft>{left}</StyledLeft>
-        <StyledRight>{right}</StyledRight>
-      </StyledHeader>
-    ),
-    [left, right, rest]
-  );
-
-  return fixed ? <FixedWrapper>{Header}</FixedWrapper> : Header;
-};
+export const Header = Object.assign(StyledHeader, { Name, Item });
