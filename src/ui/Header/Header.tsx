@@ -18,13 +18,14 @@ const StyledHeader = styled.header<Props>`
     background-color: ${header.backgroundColor};
     box-sizing: border-box;
 
-    ${fixed && css`
+    ${fixed &&
+    css`
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: ${header.zIndex};
-    ` };
+    `};
   `}
 `;
 StyledHeader.defaultProps = defaultProps;
@@ -33,13 +34,16 @@ const HeaderName = styled.div`
   display: flex;
   align-items: center;
 `;
-HeaderName.displayName = 'Header.Name'
+HeaderName.displayName = "Header.Name";
 
 const HeaderItem = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
 `;
-HeaderItem.displayName = 'Header.Item'
+HeaderItem.displayName = "Header.Item";
 
-export const Header = Object.assign(StyledHeader, { Name: HeaderName, Item: HeaderItem});
+export const Header = Object.assign(StyledHeader, {
+  Name: HeaderName,
+  Item: HeaderItem,
+});

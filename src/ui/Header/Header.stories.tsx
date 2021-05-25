@@ -29,9 +29,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <HeaderComponent
-        fixed={boolean("fixed", false)}
-      >
+      <HeaderComponent fixed={boolean("fixed", false)}>
         <HeaderComponent.Name>
           <Logo />
         </HeaderComponent.Name>
