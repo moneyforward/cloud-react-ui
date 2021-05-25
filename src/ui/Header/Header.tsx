@@ -30,23 +30,20 @@ const StyledHeader = styled.header<Props>`
 `;
 StyledHeader.defaultProps = defaultProps;
 
-const Name = styled.div`
+const HeaderName = styled.div`
   display: flex;
   align-items: center;
 `;
-Name.displayName = "Header.Name";
+HeaderName.displayName = "Header.Name";
 
-const Item = styled.div`
+const HeaderItem = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
 `;
-Item.displayName = "Header.Item";
+HeaderItem.displayName = "Header.Item";
 
-export const Header = {
-  StyledHeader,
-  ...{
-    Name,
-    Item,
-  },
-};
+export const Header = Object.assign(StyledHeader, {
+  Name: HeaderName,
+  Item: HeaderItem,
+});
