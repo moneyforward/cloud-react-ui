@@ -33,11 +33,13 @@ const HeaderName = styled.div`
   display: flex;
   align-items: center;
 `;
+HeaderName.displayName = 'Header.Name'
 
 const HeaderItem = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
 `;
+HeaderItem.displayName = 'Header.Item'
 
 export const Header = Object.assign(StyledHeader, { Name: HeaderName, Item: HeaderItem});
