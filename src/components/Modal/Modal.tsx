@@ -2,11 +2,11 @@ import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import {
   Dialog as MuiDialog,
-  DialogProps as MuiDialogProp
+  DialogProps as MuiDialogProp,
 } from "@material-ui/core";
 import { defaultProps } from "../../theme";
 
-export type ModalProps = MuiDialogProp;
+export type Props = MuiDialogProp;
 
 const StyledModal = styled(MuiDialog)`
   ${({ theme: { modal } }) => css`
@@ -15,11 +15,13 @@ const StyledModal = styled(MuiDialog)`
 `;
 StyledModal.defaultProps = defaultProps;
 
-const Modal = forwardRef<HTMLDivElement, ModalProps>(( {children,  ...rest} , ref) => (
-  <StyledModal ref={ref} { ...rest}>
-    {children}
-  </StyledModal>
-));
+const Modal = forwardRef<HTMLDivElement, Props>(
+  ({ children, ...rest }, ref) => (
+    <StyledModal ref={ref} {...rest}>
+      {children}
+    </StyledModal>
+  )
+);
 
 Modal.displayName = "Modal";
 

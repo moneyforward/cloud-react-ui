@@ -286,6 +286,13 @@ export const componentsTheme = {
   //Modal
   modal: {
     color: color.black,
+    header: {
+      icon: {
+        width: "24px",
+        height: "24px",
+        color: color.lightSlateGrey,
+      }
+    }
   },
   // ProgressLabel
   progressLabel: {
