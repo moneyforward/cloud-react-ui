@@ -283,6 +283,10 @@ export const componentsTheme = {
       },
     },
   },
+  //Modal
+  modal: {
+    color: color.black,
+  },
   // ProgressLabel
   progressLabel: {
     display: "inline-block",

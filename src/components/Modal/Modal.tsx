@@ -1,9 +1,26 @@
 import { forwardRef } from "react";
+import styled, { css } from "styled-components";
+import {
+  Dialog as MuiDialog,
+  DialogProps as MuiDialogProp
+} from "@material-ui/core";
+import { defaultProps } from "../../theme";
 
-export type Props = {
-  children?: React.ReactNode
-};
+export type ModalProps = MuiDialogProp;
 
-const Modal = forwardRef<Props>( () => <div></div>);
+const StyledModal = styled(MuiDialog)`
+  ${({ theme: { modal } }) => css`
+    color: ${modal.color};
+  `}
+`;
+StyledModal.defaultProps = defaultProps;
 
-export { Modal }
+const Modal = forwardRef<HTMLDivElement, ModalProps>(( {children,  ...rest} , ref) => (
+  <StyledModal ref={ref} { ...rest}>
+    {children}
+  </StyledModal>
+));
+
+Modal.displayName = "Modal";
+
+export { Modal };
