@@ -28,6 +28,7 @@
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "storybook": "start-storybook -c .storybook/ --quiet",
+    "storybook:build": "build-storybook -o storybook-static",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
