@@ -1,10 +1,11 @@
-import { CircularProgress as CircularProgressComponent } from "./CircularProgress";
+import { Story, Meta } from "@storybook/react";
+import { CircularProgress, Props } from "./CircularProgress";
 
 export default {
-  component: CircularProgressComponent,
-  title: "components/Circular Progress",
-};
+  component: CircularProgress,
+  title: "components/CircularProgress",
+} as Meta;
 
-export const CircularProgress = (): JSX.Element => (
-  <CircularProgressComponent />
-);
+const Template: Story<Props> = (args) => <CircularProgress {...args} />;
+
+export const Default = Template.bind({});

@@ -1,30 +1,33 @@
 import styled from "styled-components";
-import { boolean } from "@storybook/addon-knobs";
-import { Footer as FooterComponent } from "./Footer";
+import { Story, Meta } from "@storybook/react";
+import { Footer, Props } from "./Footer";
 import { Link, Text } from "../../components";
 
 export default {
-  component: FooterComponent,
+  component: Footer,
   title: "ui/Footer",
-};
+} as Meta;
 
 const StyledText = styled(Text)`
   margin-right: 32px;
   letter-spacing: 0.4px;
 `;
 
-export const Footer: React.FC = () => {
-  return (
-    <FooterComponent fixed={boolean("fixed", false)}>
-      <StyledText size="small">
-        <Link href="#">利用規約</Link>
-      </StyledText>
+const Template: Story<Props> = (args) => (
+  <Footer {...args}>
+    <StyledText size="small">
+      <Link href="#">利用規約</Link>
+    </StyledText>
 
-      <StyledText size="small">
-        <Link href="#">個人情報保護方針</Link>
-      </StyledText>
+    <StyledText size="small">
+      <Link href="#">個人情報保護方針</Link>
+    </StyledText>
 
-      <StyledText size="small">&copy; Money Forward, Inc.</StyledText>
-    </FooterComponent>
-  );
-};
+    <StyledText size="small">&copy; Money Forward, Inc.</StyledText>
+  </Footer>
+);
+
+export const Default = Template.bind({});
+
+export const Fixed = Template.bind({});
+Fixed.args = { fixed: true };

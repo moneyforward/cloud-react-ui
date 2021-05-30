@@ -1,49 +1,32 @@
-import { text, radios, boolean } from "@storybook/addon-knobs";
-import { Button as ButtonComponent, Props } from "./Button";
+import { Story, Meta } from "@storybook/react";
+import { Button, Props } from "./Button";
 
 export default {
-  component: ButtonComponent,
+  component: Button,
   title: "components/Button",
-};
+} as Meta;
 
-const sizeOptions: { [key: string]: Props["size"] } = {
-  small: "small",
-  medium: "medium",
-  large: "large",
-};
+const Template: Story<Props> = (args) => <Button {...args}>Button</Button>;
 
-const colorOptions: { [key: string]: Props["color"] } = {
-  default: "default",
-  danger: "danger",
-  primary: "primary",
-  settings: "settings",
-};
+export const Default = Template.bind({});
 
-const iconOptions: { [key: string]: Props["icon"] } = {
-  none: undefined,
-  plus: "plus",
-};
+export const SizeSmall = Template.bind({ size: "large" });
+SizeSmall.args = { size: "small" };
 
-const iconPlacementOptions: { [key: string]: Props["iconPlacement"] } = {
-  start: "start",
-  end: "end",
-};
+export const SizeMedium = Template.bind({});
+SizeMedium.args = { size: "medium" };
 
-export const Button: React.FC = () => (
-  <ButtonComponent
-    size={radios("Size", sizeOptions, "small") as Props["size"]}
-    color={radios("Color", colorOptions, "default") as Props["color"]}
-    disabled={boolean("Disabled", false)}
-    icon={radios("Icon", iconOptions, undefined) as Props["icon"]}
-    iconPlacement={
-      radios(
-        "IconPlacement",
-        iconPlacementOptions,
-        undefined
-      ) as Props["iconPlacement"]
-    }
-    onClick={() => console.log("button clicked")}
-  >
-    {text("Button Text", "Button")}
-  </ButtonComponent>
-);
+export const SizeLarge = Template.bind({});
+SizeLarge.args = { size: "large" };
+
+export const ColorDanger = Template.bind({});
+ColorDanger.args = { color: "danger" };
+
+export const ColorPrimary = Template.bind({});
+ColorPrimary.args = { color: "primary" };
+
+export const ColorSettings = Template.bind({});
+ColorSettings.args = { color: "settings" };
+
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };

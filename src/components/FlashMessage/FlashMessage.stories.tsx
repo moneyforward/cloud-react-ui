@@ -1,21 +1,19 @@
-import { text, radios } from "@storybook/addon-knobs";
-import { FlashMessage as FlashMessageComponent, Props } from "./FlashMessage";
+import { Story, Meta } from "@storybook/react";
+import { FlashMessage, Props } from "./FlashMessage";
 
 export default {
-  component: FlashMessageComponent,
-  title: "components/Flash Message",
-};
+  component: FlashMessage,
+  title: "components/FlashMessage",
+} as Meta;
 
-const colorOptions = {
-  success: "success",
-  warning: "warning",
-  error: "error",
-};
-
-export const FlashMessage = (): JSX.Element => (
-  <FlashMessageComponent
-    color={radios("Color", colorOptions, "success") as Props["color"]}
-  >
-    {text("Text", "Flash Message")}
-  </FlashMessageComponent>
+const Template: Story<Props> = (args) => (
+  <FlashMessage {...args}>Flash Message</FlashMessage>
 );
+
+export const Default = Template.bind({});
+
+export const Error = Template.bind({});
+Error.args = { color: "error" };
+
+export const Warning = Template.bind({});
+Warning.args = { color: "warning" };

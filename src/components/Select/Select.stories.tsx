@@ -1,60 +1,11 @@
-import { useState } from "react";
-import { Select as SelectComponent, Option, GroupOption } from "./Select";
-import { AsyncSelect as AsyncSelectComponent } from "./AsyncSelect";
-import { boolean, text } from "@storybook/addon-knobs";
+import { Story, Meta } from "@storybook/react";
+import { Select, Props, Option } from "./Select";
+import { AsyncSelect, Props as AsyncProps } from "./AsyncSelect";
 
 export default {
-  component: SelectComponent,
+  component: Select,
   title: "components/Select",
-};
-
-const defaultOptions: Option[] = [
-  {
-    value: "1",
-    label: "label1",
-  },
-  {
-    value: "2",
-    label: "label2",
-  },
-  {
-    value: "3",
-    label: "label3",
-  },
-  {
-    value: "4",
-    label: "label4",
-  },
-];
-
-const groupOptions: GroupOption[] = [
-  {
-    label: "parent1",
-    options: [
-      {
-        label: "child1",
-        value: "child1",
-      },
-      {
-        label: "child2",
-        value: "child2",
-      },
-    ],
-  },
-  {
-    label: "parent2",
-    options: [
-      {
-        label: "child3",
-        value: "child3",
-      },
-      {
-        label: "child4",
-        value: "child4",
-      },
-    ],
-  },
-];
+} as Meta;
 
 const Indicator = (
   <svg
@@ -73,52 +24,75 @@ const Indicator = (
   </svg>
 );
 
-export const Select = (): JSX.Element => {
-  const [selected, setSelected] = useState<Option>();
-  const isGroupOption = boolean("GroupOption", false);
+const Template: Story<Props> = (args) => <Select {...args} />;
 
-  return (
-    <SelectComponent
-      instanceId="select"
-      options={isGroupOption ? groupOptions : defaultOptions}
-      value={selected}
-      defaultValue={
-        isGroupOption ? groupOptions[0].options[0] : defaultOptions[0]
-      }
-      placeholder={text("Placeholder", "")}
-      onChange={(option) => setSelected(option)}
-      clearable={boolean("Clearable", true)}
-      disabled={boolean("Disabled", false)}
-      searchable={boolean("Searchable", true)}
-      error={boolean("Error", false)}
-      indicatorImage={boolean("customIndicator", false) ? Indicator : undefined}
-    />
-  );
+export const Default = Template.bind({});
+Default.args = {
+  options: [
+    {
+      value: "1",
+      label: "label1",
+    },
+    {
+      value: "2",
+      label: "label2",
+    },
+  ],
 };
 
-export const AsyncSelect = (): JSX.Element => {
-  const [selected, setSelected] = useState<Option>();
+export const GroupOption = Template.bind({});
+GroupOption.args = {
+  options: [
+    {
+      label: "parent1",
+      options: [
+        {
+          label: "child1",
+          value: "child1",
+        },
+        {
+          label: "child2",
+          value: "child2",
+        },
+      ],
+    },
+    {
+      label: "parent2",
+      options: [
+        {
+          label: "child3",
+          value: "child3",
+        },
+        {
+          label: "child4",
+          value: "child4",
+        },
+      ],
+    },
+  ],
+};
 
-  const handleInputChange = async (inputValue: string) => {
-    return new Promise<Option[]>((resolve) => {
+export const CustomIndicator = Template.bind({});
+CustomIndicator.args = {
+  options: Default.args?.options as Option[],
+  indicatorImage: Indicator,
+};
+
+const AsyncTemplate: Story<AsyncProps> = (args) => <AsyncSelect {...args} />;
+
+export const Async = AsyncTemplate.bind({});
+Async.args = {
+  defaultOptions: Default.args?.options as Option[],
+  onInputChange: async (inputValue: string) =>
+    new Promise<Option[]>((resolve) => {
       setTimeout(
         () =>
           resolve(
-            defaultOptions.filter((option) =>
+            (Default.args?.options as Option[]).filter((option) =>
               option.label.toLowerCase().includes(inputValue.toLowerCase())
             )
           ),
         1000
       );
-    });
-  };
-
-  return (
-    <AsyncSelectComponent
-      defaultOptions
-      value={selected}
-      onChange={(option) => setSelected(option)}
-      onInputChange={handleInputChange}
-    />
-  );
+    }),
 };

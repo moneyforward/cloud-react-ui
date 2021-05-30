@@ -1,3 +1,4 @@
+import { Story, Meta } from "@storybook/react";
 import { LeftLayout } from "./LeftLayout";
 import { Block, Text, Button } from "../../components";
 import { ThemeProvider, createTheme } from "../../theme";
@@ -5,7 +6,7 @@ import { ThemeProvider, createTheme } from "../../theme";
 export default {
   component: LeftLayout,
   title: "Layouts/Left",
-};
+} as Meta;
 
 const centerBoxTheme = createTheme({
   leftLayout: {
@@ -20,7 +21,7 @@ const centerBoxTheme = createTheme({
   },
 });
 
-export const Left: React.FC = () => (
+const Template: Story = () => (
   <ThemeProvider theme={centerBoxTheme}>
     <LeftLayout>
       <Block>
@@ -34,3 +35,5 @@ export const Left: React.FC = () => (
     </LeftLayout>
   </ThemeProvider>
 );
+
+export const Default = Template.bind({});

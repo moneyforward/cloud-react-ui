@@ -1,30 +1,14 @@
-import styled from "styled-components";
-import { text, boolean } from "@storybook/addon-knobs";
-import { Radio as RadioComponent } from "./Radio";
-import { Text as TextComponent } from "../../components";
+import { Story, Meta } from "@storybook/react";
+import { Radio, Props } from "./Radio";
 
 export default {
-  component: RadioComponent,
+  component: Radio,
   title: "components/Radio",
-};
+} as Meta;
 
-const Text = styled(TextComponent)`
-  margin-left: 4px;
-  margin-right: 10px;
-`;
+const Template: Story<Props> = (args) => <Radio {...args}>Radio</Radio>;
 
-export const Radio = (): JSX.Element => {
-  const disabled = boolean("Disabled", false);
-  const label = text("Text", "Radio");
+export const Default = Template.bind({});
 
-  return (
-    <>
-      <RadioComponent name="radio" disabled={disabled}>
-        <Text>{label}</Text>
-      </RadioComponent>
-      <RadioComponent name="radio" disabled={disabled}>
-        <Text>{label}</Text>
-      </RadioComponent>
-    </>
-  );
-};
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };
