@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { theme } from '@moneyforward/cloud-react-ui';
-import { Link } from '@moneyforward/cloud-react-ui';
-import NextLink from 'next/link';
+import { theme } from '../../theme';
+import { Link } from '../../components';
+// import NextLink from 'next/link';
 
 type MenuItemLinkProps = {
   children: React.ReactNode;
@@ -52,9 +52,7 @@ const StyledMenuItemLink = styled.li`
 
 export const MenuItemLink = ({ children, href }: MenuItemLinkProps) => (
   <StyledMenuItemLink>
-    <NextLink href={href} passHref>
-      <Link>{children}</Link>
-    </NextLink>
+    <Link>{children}</Link>
   </StyledMenuItemLink>
 );
 
