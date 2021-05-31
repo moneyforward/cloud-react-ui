@@ -24,13 +24,11 @@ export const ToggleButton = ({
   children,
   ariaExpanded,
   onClick,
-}: ToggleButtonProps) => {
-  return (
-    <BaseToggleButton onClick={onClick} ariaExpanded={ariaExpanded}>
-      {children}
-      <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
-    </BaseToggleButton>
-  );
-};
+}: ToggleButtonProps) => (
+  <BaseToggleButton onClick={onClick} ariaExpanded={ariaExpanded}>
+    {children}
+    <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
+  </BaseToggleButton>
+);
 
 ToggleButton.displayName = 'Dropdown.ToggleButton';
