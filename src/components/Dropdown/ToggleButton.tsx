@@ -1,19 +1,36 @@
 import styled from 'styled-components';
+import { Icon } from '../../components';
+import { MouseEventHandler } from 'react';
 
 type ToggleButtonProps = {
   children: React.ReactNode;
   ariaExpanded: boolean;
+  onClick: MouseEventHandler;
 };
 
-export const ToggleButton = styled.button.attrs<ToggleButtonProps>((props) => ({
-  'aria-expanded': props.ariaExpanded,
-  'aria-hasPopup': true,
-}))<ToggleButtonProps>`
-  padding: 16px;
-
-  & + & {
-    border-top: 1px solid #d4d8dd;
+const BaseToggleButton = styled.button.attrs<ToggleButtonProps>(
+  ({ ariaExpanded }) => ({
+    'aria-expanded': ariaExpanded,
+    'aria-hasPopup': true,
+  })
+)<ToggleButtonProps>`
+  border: none;
+  svg {
+    margin-left: 6px;
   }
 `;
 
-ToggleButton.displayName = 'Dropdown.Block';
+export const ToggleButton = ({
+  children,
+  ariaExpanded,
+  onClick,
+}: ToggleButtonProps) => {
+  return (
+    <BaseToggleButton onClick={onClick} ariaExpanded={ariaExpanded}>
+      {children}
+      <Icon icon="caretUp" rotation={180} />
+    </BaseToggleButton>
+  );
+};
+
+ToggleButton.displayName = 'Dropdown.ToggleButton';
