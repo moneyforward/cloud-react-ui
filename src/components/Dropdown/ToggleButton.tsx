@@ -28,7 +28,7 @@ export const ToggleButton = ({
   return (
     <BaseToggleButton onClick={onClick} ariaExpanded={ariaExpanded}>
       {children}
-      <Icon icon="caretUp" rotation={180} />
+      <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
     </BaseToggleButton>
   );
 };
