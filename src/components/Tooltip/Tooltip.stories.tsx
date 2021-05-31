@@ -1,35 +1,21 @@
-import { text, radios, boolean } from "@storybook/addon-knobs";
-import { TooltipContainer, TooltipProps } from "./TooltipContainer";
+import { Story, Meta } from "@storybook/react";
+import {
+  TooltipContainer as Tooltip,
+  TooltipProps as Props,
+} from "./TooltipContainer";
 import { Icon } from "../Icon";
 
 export default {
-  component: TooltipContainer,
+  component: Tooltip,
   title: "components/Tooltip",
-};
+} as Meta;
 
-const placementOptions = {
-  top: "top",
-  topStart: "top-start",
-  topEnd: "top-end",
-  bottom: "bottom",
-  bottomStart: "bottom-start",
-  bottomEnd: "bottom-end",
-};
-
-export const Tooltip: React.FC = () => (
-  <div style={{ marginTop: "50px", marginLeft: "50px" }}>
-    <TooltipContainer
-      message={text("Message", "Tooltip")}
-      placement={
-        radios(
-          "Placement",
-          placementOptions,
-          "top"
-        ) as TooltipProps["placement"]
-      }
-      arrow={boolean("Arrow", true)}
-    >
+const Template: Story<Props> = ({ message = "tooltip", ...rest }) => (
+  <div style={{ marginTop: "100px", marginLeft: "100px" }}>
+    <Tooltip message={message} {...rest}>
       <Icon icon="bell" />
-    </TooltipContainer>
+    </Tooltip>
   </div>
 );
+
+export const Default = Template.bind({});

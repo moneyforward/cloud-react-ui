@@ -1,11 +1,12 @@
+import { Story, Meta } from "@storybook/react";
 import { CenterBlockLayout } from "./CenterBlockLayout";
 import { Text, Button } from "../../components";
 import { ThemeProvider, createTheme } from "../../theme";
 
 export default {
   component: CenterBlockLayout,
-  title: "Layouts/Center Block",
-};
+  title: "Layouts/CenterBlock",
+} as Meta;
 
 const centerBlockTheme = createTheme({
   centerLayout: {
@@ -19,7 +20,7 @@ const centerBlockTheme = createTheme({
   },
 });
 
-export const CenterBlock: React.FC = () => (
+const Template: Story = () => (
   <ThemeProvider theme={centerBlockTheme}>
     <CenterBlockLayout>
       <Text tag="p">Center Block Layout</Text>
@@ -27,3 +28,5 @@ export const CenterBlock: React.FC = () => (
     </CenterBlockLayout>
   </ThemeProvider>
 );
+
+export const Default = Template.bind({});

@@ -1,40 +1,30 @@
-import { number, radios, select } from "@storybook/addon-knobs";
-import {
-  IconContainer,
-  Icons,
-  IconTypes,
-  IconRotation,
-  IconProps,
-} from "./IconContainer";
+import { Story, Meta } from "@storybook/react";
+import { IconContainer as Icon, IconProps as Props } from "./IconContainer";
 
 export default {
-  component: IconContainer,
+  component: Icon,
   title: "components/Icon",
-};
+} as Meta;
 
-const iconOptions = Icons.reduce((obj, icon) => {
-  obj[icon] = icon;
-  return obj;
-}, {} as { [key in IconTypes]: IconTypes });
+const Template: Story<Props> = (args) => <Icon {...args} />;
 
-const rotationOption = {
-  range: true,
-  min: 0,
-  max: 270,
-  step: 90,
-};
+export const Bell = Template.bind({});
+Bell.args = { icon: "bell" };
 
-const flipOption = {
-  none: undefined,
-  vertical: "vertical",
-  horizontal: "horizontal",
-  both: "both",
-};
+export const Bullhorn = Template.bind({});
+Bullhorn.args = { icon: "bullhorn" };
 
-export const Icon: React.FC = () => (
-  <IconContainer
-    icon={select("Icon", iconOptions, "bell")}
-    rotation={number("Rotation", 0, rotationOption) as IconRotation}
-    flip={radios("Flip", flipOption, "none") as IconProps["flip"]}
-  />
-);
+export const CaretUp = Template.bind({});
+CaretUp.args = { icon: "caretUp" };
+
+export const ChevronUp = Template.bind({});
+ChevronUp.args = { icon: "chevronUp" };
+
+export const Envelope = Template.bind({});
+Envelope.args = { icon: "envelope" };
+
+export const Plus = Template.bind({});
+Plus.args = { icon: "plus" };
+
+export const Question = Template.bind({});
+Question.args = { icon: "question" };

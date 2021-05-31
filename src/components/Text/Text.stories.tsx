@@ -1,34 +1,11 @@
-import { text, radios } from "@storybook/addon-knobs";
-import { TextContainer, TextProps } from "./TextContainer";
-import { theme } from "../../theme";
+import { Story, Meta } from "@storybook/react";
+import { TextContainer as Text, TextProps as Props } from "./TextContainer";
 
 export default {
-  component: TextContainer,
+  component: Text,
   title: "components/Text",
-};
+} as Meta;
 
-const tagOption = {
-  span: "span",
-  p: "p",
-  div: "div",
-};
+const Template: Story<Props> = (args) => <Text {...args}>Text</Text>;
 
-const sizeOption = Object.keys(theme.text.size).reduce((obj, key) => {
-  obj[key] = key;
-  return obj;
-}, {} as { [key: string]: string });
-
-const colorOption = Object.keys(theme.text.color).reduce((obj, key) => {
-  obj[key] = key;
-  return obj;
-}, {} as { [key: string]: string });
-
-export const Text: React.FC = () => (
-  <TextContainer
-    tag={radios("Tag", tagOption, "span") as keyof JSX.IntrinsicElements}
-    size={radios("Size", sizeOption, "middle") as TextProps["size"]}
-    color={radios("Color", colorOption, "default") as TextProps["color"]}
-  >
-    {text("Text", "Text")}
-  </TextContainer>
-);
+export const Default = Template.bind({});
