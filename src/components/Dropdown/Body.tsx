@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 type DropdownBodyProps = {
   children?: React.ReactNode;
@@ -16,14 +16,14 @@ export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
   left: ${({ placement }) => placement === 'left' && 0};
   right: ${({ placement }) => placement === 'right' && 0};
   transform-origin: top ${({ placement }) => placement};
-  transition: 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition-property: opacity transform;
-  max-height: none;
+  transition: opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   overflow-y: auto;
   opacity: 1;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  visibility: visible;
 
   & > .block {
     padding: 8px 16px;
@@ -34,8 +34,11 @@ export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
   }
 
   &[aria-hidden='true'] {
-    max-height: 0;
     transform: scale(0.75, 0.5625);
+    transition: opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      visibility 299ms linear 299ms;
+    visibility: hidden;
     opacity: 0;
   }
 `;
