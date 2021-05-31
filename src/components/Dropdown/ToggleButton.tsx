@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Icon } from '../../components';
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, forwardRef } from 'react';
 
 type ToggleButtonProps = {
   children: React.ReactNode;
@@ -20,15 +20,15 @@ const BaseToggleButton = styled.button.attrs<ToggleButtonProps>(
   }
 `;
 
-export const ToggleButton = ({
-  children,
-  ariaExpanded,
-  onClick,
-}: ToggleButtonProps) => (
-  <BaseToggleButton onClick={onClick} ariaExpanded={ariaExpanded}>
-    {children}
-    <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
-  </BaseToggleButton>
+export const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
+  ({ children, ariaExpanded, onClick }, ref) => {
+    return (
+      <BaseToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
+        {children}
+        <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
+      </BaseToggleButton>
+    );
+  }
 );
 
 ToggleButton.displayName = 'Dropdown.ToggleButton';
