@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react";
 import { Modal } from "./Modal";
 import { ModalHeader } from "./ModalHeader";
+import { ModalContent } from "./ModalContent";
 
 export default {
   component: Modal,
@@ -11,7 +12,7 @@ const Template: Story = () => {
   return (
     <Modal open fullWidth>
       <ModalHeader>test</ModalHeader>
-      <p>test</p>
+      <ModalContent>hello</ModalContent>
     </Modal>
   );
 };
