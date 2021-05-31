@@ -119,3 +119,4 @@ dist
 
 # custom
 lib/
+storybook-static/

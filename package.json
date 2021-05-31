@@ -28,7 +28,7 @@
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "storybook": "start-storybook -c .storybook/ --quiet",
-    "deploy-storybook": "storybook-to-ghpages"
+    "storybook:build": "build-storybook -o storybook-static"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -45,7 +45,6 @@
   "devDependencies": {
     "@storybook/addon-knobs": "^6.2.9",
     "@storybook/react": "^6.2.9",
-    "@storybook/storybook-deployer": "^2.8.8",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/react": "^17.0.0",
