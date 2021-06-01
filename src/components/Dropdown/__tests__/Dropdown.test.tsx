@@ -1,46 +1,36 @@
 import { render } from "@testing-library/react";
-import { Dropdown } from "../../Dropdown";
+import { Dropdown, DropdownProps } from "../../Dropdown";
 import { Link } from "../../../components";
 
-describe("Button", () => {
+describe("Dropdown", () => {
+  const Template  = (args: DropdownProps): JSX.Element => (
+    <Dropdown {...args}>
+      <Dropdown.Block>
+        <Dropdown.Menu>
+          <Dropdown.MenuItem>
+            <Link href="#">ユーザー設定</Link>
+          </Dropdown.MenuItem>
+          <Dropdown.MenuItem>
+            <Link href="#">ユーザー設定</Link>
+          </Dropdown.MenuItem>
+          <Dropdown.MenuItem>
+            <Link href="#">ユーザー設定</Link>
+          </Dropdown.MenuItem>
+        </Dropdown.Menu>
+      </Dropdown.Block>
+    </Dropdown>
+  );
+
   it("default", () => {
     const { asFragment } = render(
-      <Dropdown toggleLabel="ラベル">
-        <Dropdown.Block>
-          <Dropdown.Menu>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-          </Dropdown.Menu>
-        </Dropdown.Block>
-      </Dropdown>
+      <Template toggleLabel="ラベル" />
     );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("with placement", () => {
     const { asFragment } = render(
-      <Dropdown toggleLabel="ラベル" placement="right">
-        <Dropdown.Block>
-          <Dropdown.Menu>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-          </Dropdown.Menu>
-        </Dropdown.Block>
-      </Dropdown>
+      <Template toggleLabel="ラベル" placement="right"/>
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button default 1`] = `
+exports[`Dropdown default 1`] = `
 <DocumentFragment>
   .c7 {
   margin-top: -8px;
@@ -37,7 +37,7 @@ exports[`Button default 1`] = `
 }
 
 .c5 + .c5 {
-  border-top: 1px solid #d4d8dd;
+  border-top: 1px solid #D4D8DD;
 }
 
 .c4 {
@@ -219,7 +219,7 @@ exports[`Button default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Button with multiple blocks 1`] = `
+exports[`Dropdown with multiple blocks 1`] = `
 <DocumentFragment>
   .c7 {
   margin-top: -8px;
@@ -256,7 +256,7 @@ exports[`Button with multiple blocks 1`] = `
 }
 
 .c5 + .c5 {
-  border-top: 1px solid #d4d8dd;
+  border-top: 1px solid #D4D8DD;
 }
 
 .c4 {
@@ -448,7 +448,7 @@ exports[`Button with multiple blocks 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Button with placement 1`] = `
+exports[`Dropdown with placement 1`] = `
 <DocumentFragment>
   .c7 {
   margin-top: -8px;
@@ -485,7 +485,7 @@ exports[`Button with placement 1`] = `
 }
 
 .c5 + .c5 {
-  border-top: 1px solid #d4d8dd;
+  border-top: 1px solid #D4D8DD;
 }
 
 .c4 {
