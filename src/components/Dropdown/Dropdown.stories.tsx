@@ -1,12 +1,13 @@
-import { Dropdown } from "./Dropdown";
+import { Story, Meta } from "@storybook/react";
+import { Dropdown, DropdownProps } from "./Dropdown";
 
 export default {
   component: Dropdown,
   title: "Components/Dropdown",
-};
+} as Meta;
 
-export const Default: React.FC = () => (
-  <Dropdown toggleLabel="ラベル">
+const Template: Story<DropdownProps> = (args) => (
+  <Dropdown {...args}>
     <Dropdown.Block>
       <Dropdown.Menu>
         <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
@@ -17,20 +18,14 @@ export const Default: React.FC = () => (
   </Dropdown>
 );
 
-export const Placement: React.FC = () => (
-  <Dropdown toggleLabel="ラベル(placement: right)" placement="right">
-    <Dropdown.Block>
-      <Dropdown.Menu>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-      </Dropdown.Menu>
-    </Dropdown.Block>
-  </Dropdown>
-);
+export const Default = Template.bind({});
+Default.args = { toggleLabel: 'ラベル' };
 
-export const MultipleBlock: React.FC = () => (
-  <Dropdown toggleLabel="ラベル(複数Block)">
+export const Placement = Template.bind({});
+Placement.args = { toggleLabel: 'ラベル(placement: right)', placement: 'right' };
+
+const MultipleTemplate: Story<DropdownProps> = (args) => (
+  <Dropdown {...args}>
     <Dropdown.Block>
       Blockを複数配置することで、内容を分割できます。
     </Dropdown.Block>
@@ -46,3 +41,6 @@ export const MultipleBlock: React.FC = () => (
     </Dropdown.Block>
   </Dropdown>
 );
+
+export const MultipleBlock = MultipleTemplate.bind({});
+MultipleBlock.args = { toggleLabel: 'ラベル' };
