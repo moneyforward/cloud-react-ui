@@ -3,13 +3,23 @@ import {
   Dialog as MuiDialog,
   DialogProps as MuiDialogProp,
 } from "@material-ui/core";
+import { ModalHeader } from "./ModalHeader";
+import { ModalContent } from "./ModalContent";
+import { ModalActions } from "./ModalActions";
 
-export type Props = MuiDialogProp;
+export type ModalProps = MuiDialogProp;
 
-const Modal = forwardRef<HTMLDivElement, Props>(
+const ModalRoot = forwardRef<HTMLDivElement, ModalProps>(
   ({...rest }, ref) => <MuiDialog ref={ref} {...rest} />
 );
 
-Modal.displayName = "Modal";
+ModalRoot.displayName = "Modal"
 
-export { Modal };
+export type { ModalHeaderProps } from "./ModalHeader";
+export type { ModalContentProps } from "./ModalContent";
+export type { ModalActionsProps } from "./ModalActions";
+export const Modal = Object.assign(ModalRoot, {
+  Header: ModalHeader,
+  Content: ModalContent,
+  Actions: ModalActions,
+});

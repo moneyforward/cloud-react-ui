@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 
-export type Props = {
+export type ModalActionsProps = {
   children?: React.ReactNode;
   className?: string;
 };
@@ -24,10 +24,10 @@ const StyledModalActions = styled.div`
 `;
 StyledModalActions.defaultProps = defaultProps;
 
-const ModalActions = forwardRef<HTMLDivElement, Props>(
+const ModalActions = forwardRef<HTMLDivElement, ModalActionsProps>(
   ({ ...rest }, ref) => <StyledModalActions ref={ref} {...rest} />
 );
 
-ModalActions.displayName = "ModalActions";
+ModalActions.displayName = "Modal.Actions";
 
 export { ModalActions };

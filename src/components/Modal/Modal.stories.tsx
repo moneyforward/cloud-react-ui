@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Story, Meta } from "@storybook/react";
 import { Modal } from "./Modal";
-import { ModalHeader } from "./ModalHeader";
-import { ModalContent } from "./ModalContent";
-import { ModalActions } from "./ModalActions";
 import { Button } from "../Button";
 
 export default {
@@ -21,12 +18,12 @@ const Template: Story = () => {
     <>
       <Button onClick={() => setOpen(!open)}>Show Modal</Button>
       <Modal open={open} onClose={handleClose}>
-        <ModalHeader handleClose={handleClose}>test</ModalHeader>
-        <ModalContent>hello</ModalContent>
-        <ModalActions>
+        <Modal.Header handleClose={handleClose}>test</Modal.Header>
+        <Modal.Content>hello</Modal.Content>
+        <Modal.Actions>
           <Button onClick={handleClose}>test</Button>
           <Button>test</Button>
-        </ModalActions>
+        </Modal.Actions>
       </Modal>
     </>
   );

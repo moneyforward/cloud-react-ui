@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 
-export type Props = {
+export type ModalContentProps = {
   children?: React.ReactNode;
   className?: string;
 };
@@ -16,10 +16,10 @@ const StyledModalContent = styled.div`
 `;
 StyledModalContent.defaultProps = defaultProps;
 
-const ModalContent = forwardRef<HTMLDivElement, Props>(
+const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
   ({ ...rest }, ref) => <StyledModalContent ref={ref} {...rest} />
 );
 
-ModalContent.displayName = "ModalContent";
+ModalContent.displayName = "Modal.Content";
 
-export { ModalContent };
+export { ModalContent } ;

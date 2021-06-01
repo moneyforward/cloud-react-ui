@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 import { IconButton as MuiIconButton } from "@material-ui/core";
 
-export type Props = {
+export type ModalHeaderProps = {
   handleClose?: VoidFunction;
   children?: React.ReactNode;
   className?: string;
@@ -58,7 +58,7 @@ const CloseIcon = styled(({ className }) => (
 `;
 CloseIcon.defaultProps = defaultProps;
 
-const ModalHeader = forwardRef<HTMLDivElement, Props>(
+const ModalHeader = forwardRef<HTMLDivElement, ModalHeaderProps>(
   ({ children, handleClose, ...rest }, ref) => (
     <StyledModalHeader ref={ref} {...rest}>
       {children}
@@ -69,6 +69,6 @@ const ModalHeader = forwardRef<HTMLDivElement, Props>(
   )
 );
 
-ModalHeader.displayName = "ModalHeader";
+ModalHeader.displayName = "Modal.Header";
 
-export { ModalHeader };
+export { ModalHeader }
