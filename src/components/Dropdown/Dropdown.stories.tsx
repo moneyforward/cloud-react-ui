@@ -18,7 +18,7 @@ export const Default: React.FC = () => (
 );
 
 export const Placement: React.FC = () => (
-  <Dropdown toggleLabel="ラベル" placement="right">
+  <Dropdown toggleLabel="ラベル(placement: right)" placement="right">
     <Dropdown.Block>
       <Dropdown.Menu>
         <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
@@ -30,7 +30,7 @@ export const Placement: React.FC = () => (
 );
 
 export const MultipleBlock: React.FC = () => (
-  <Dropdown toggleLabel="ラベル">
+  <Dropdown toggleLabel="ラベル(複数Block)">
     <Dropdown.Block>
       Blockを複数配置することで、内容を分割できます。
     </Dropdown.Block>
