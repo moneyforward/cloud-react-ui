@@ -51,9 +51,7 @@ const StyledMenuItem = styled.li`
 `;
 
 export const MenuItem = ({ children }: MenuItemProps) => (
-  <StyledMenuItem>
-    {children}
-  </StyledMenuItem>
+  <StyledMenuItem>{children}</StyledMenuItem>
 );
 
 MenuItem.displayName = "Dropdown.MenuItem";

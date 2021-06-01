@@ -8,9 +8,15 @@ describe("Button", () => {
       <Dropdown toggleLabel="ラベル">
         <Dropdown.Block>
           <Dropdown.Menu>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown.Block>
       </Dropdown>
@@ -23,9 +29,15 @@ describe("Button", () => {
       <Dropdown toggleLabel="ラベル" placement="right">
         <Dropdown.Block>
           <Dropdown.Menu>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown.Block>
       </Dropdown>
@@ -41,9 +53,15 @@ describe("Button", () => {
         </Dropdown.Block>
         <Dropdown.Block>
           <Dropdown.Menu>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
-            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
+            <Dropdown.MenuItem>
+              <Link href="#">ユーザー設定</Link>
+            </Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown.Block>
         <Dropdown.Block>
