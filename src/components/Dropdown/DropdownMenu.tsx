@@ -20,7 +20,7 @@ const StyledMenu = styled.div`
   }
 `;
 
-export const DropdownMenu = ({ children }: MenuProps) => (
+export const DropdownMenu = ({ children }: MenuProps): JSX.Element => (
   <StyledMenu>
     <ul>{children}</ul>
   </StyledMenu>
@@ -50,7 +50,7 @@ const StyledMenuItem = styled.li`
   }
 `;
 
-export const DropdownMenuItem = ({ children }: MenuItemProps) => (
+export const DropdownMenuItem = ({ children }: MenuItemProps): JSX.Element => (
   <StyledMenuItem>{children}</StyledMenuItem>
 );
 
