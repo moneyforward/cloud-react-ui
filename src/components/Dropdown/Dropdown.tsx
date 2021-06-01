@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Menu, MenuItemLink } from "./Menu";
 import { Block } from "./Block";
 import { Body } from "./Body";
