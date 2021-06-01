@@ -22,7 +22,7 @@ export const Default: React.FC = () => (
   </Dropdown>
 );
 
-export const Align: React.FC = () => (
+export const Placement: React.FC = () => (
   <Dropdown toggleLabel="ここをクリック" placement="right">
     <Dropdown.Block>
       <Dropdown.Menu>

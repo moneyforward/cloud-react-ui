@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
+import { theme } from "../../theme";
 
 type ToggleButtonProps = {
   children: React.ReactNode;
@@ -14,7 +15,11 @@ const StyledToggleButton = styled.button.attrs<ToggleButtonProps>(
     "aria-hasPopup": true,
   })
 )<ToggleButtonProps>`
+  font-size: ${theme.text.size.middle};
+  color: ${theme.text.color.default};
+  background-color: #fff;
   border: none;
+
   svg {
     margin-left: 6px;
   }
