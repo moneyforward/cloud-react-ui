@@ -9,25 +9,23 @@ export type Props = {
 
 const StyledModalActions = styled.div`
   ${({ theme: { modal } }) => css`
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    justify-content: center;
-    flex: 0 0 auto;
-    border-top: 1px solid #D4D8DD;
+    display: ${modal.actions.display};
+    align-items: ${modal.actions.alignItems};
+    justify-content: ${modal.actions.justifyContent};
+    flex: ${modal.actions.flex};
+    padding: ${modal.actions.padding};
+    border-top-style: ${modal.actions.borderTopStyle};
+    border-top-width: ${modal.actions.borderTopWidth};
+    border-top-color: ${modal.actions.borderTopColor};
     & > * {
-      margin: 0 8px;
+      margin: ${modal.actions.children.margin};
     }
   `}
 `;
 StyledModalActions.defaultProps = defaultProps;
 
 const ModalActions = forwardRef<HTMLDivElement, Props>(
-  ({ children, ...rest }, ref) => (
-    <StyledModalActions ref={ref} {...rest}>
-      {children}
-    </StyledModalActions>
-  )
+  ({ ...rest }, ref) => <StyledModalActions ref={ref} {...rest} />
 );
 
 ModalActions.displayName = "ModalActions";

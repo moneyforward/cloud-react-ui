@@ -11,22 +11,24 @@ export type Props = {
 
 const StyledModalHeader = styled.div`
   ${({ theme: { modal } }) => css`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fafafa;
-    padding: 8px 16px;
-    min--height: 48px;
-    font-size: 16px;
-    font-weight: bold;
-    word-break: break-all;
+    display: ${modal.header.display};
+    align-items: ${modal.header.alignItems};
+    justify-content: ${modal.header.justifyContent};
+    background: ${modal.header.background};
+    padding: ${modal.header.padding};
+    min-height: ${modal.header.minHeight};
+    font-size: ${modal.header.fontSize};
+    font-weight: ${modal.header.fontWeight};
+    word-break: ${modal.header.wordBreak};
   `}
 `;
 StyledModalHeader.defaultProps = defaultProps;
 
 const CloseButton = styled(MuiIconButton)`
   ${({ theme: { modal } }) => css`
-    flex-shrink: 0;
+    && {
+      flex: ${modal.header.button.flex};
+    }
   `}
 `;
 CloseButton.defaultProps = defaultProps;
@@ -46,11 +48,11 @@ const CloseIcon = styled(({ className }) => (
   </svg>
 ))`
   ${({ theme: { modal } }) => css`
-    width: ${modal.header.icon.width};
-    height: ${modal.header.icon.height};
+    width: ${modal.header.button.icon.width};
+    height: ${modal.header.button.icon.height};
 
     & > path {
-      fill: ${modal.header.icon.color};
+      fill: ${modal.header.button.icon.color};
     }
   `}
 `;

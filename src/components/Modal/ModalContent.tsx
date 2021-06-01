@@ -9,19 +9,15 @@ export type Props = {
 
 const StyledModalContent = styled.div`
   ${({ theme: { modal } }) => css`
-    flex: 1 1 auto;
-    padding: 16px;
-    overflow-y: auto;
+    flex: ${modal.content.flex};
+    padding: ${modal.content.padding};
+    overflow-y: ${modal.content.overflowY};
   `}
 `;
 StyledModalContent.defaultProps = defaultProps;
 
 const ModalContent = forwardRef<HTMLDivElement, Props>(
-  ({ children, ...rest }, ref) => (
-    <StyledModalContent ref={ref} {...rest}>
-      {children}
-    </StyledModalContent>
-  )
+  ({ ...rest }, ref) => <StyledModalContent ref={ref} {...rest} />
 );
 
 ModalContent.displayName = "ModalContent";
