@@ -62,7 +62,7 @@ const ModalHeader = forwardRef<HTMLDivElement, ModalHeaderProps>(
   ({ children, handleClose, ...rest }, ref) => (
     <StyledModalHeader ref={ref} {...rest}>
       {children}
-      <CloseButton size="small" onClick={handleClose}>
+      <CloseButton aria-label="閉じる" size="small" onClick={handleClose}>
         <CloseIcon />
       </CloseButton>
     </StyledModalHeader>
