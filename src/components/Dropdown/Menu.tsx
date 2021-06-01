@@ -34,6 +34,9 @@ const StyledMenuItem = styled.li`
   padding: 0;
   margin: 0;
 
+  // 下層のリンク要素のClickable領域を広げる
+  // 現状はリンクを前提としたスタイルとなっている。
+  // https://github.com/moneyforward/cloud-react-ui/pull/68#discussion_r642748112
   a {
     display: inline-block;
     width: 100%;
