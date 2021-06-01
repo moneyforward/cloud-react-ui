@@ -1,20 +1,14 @@
-import { text, boolean } from "@storybook/addon-knobs";
-import { LinkContainer } from "./LinkContainer";
+import { Story, Meta } from "@storybook/react";
+import { LinkContainer as Link, LinkProps as Props } from "./LinkContainer";
 
 export default {
-  component: LinkContainer,
+  component: Link,
   title: "components/Link",
-};
+} as Meta;
 
-export const Link: React.FC = () => (
-  <LinkContainer
-    href="#"
-    target="_self"
-    disabled={boolean("disabled?", false)}
-    isEnabledOnlyOnceClick={boolean("isEnabledOnlyOnceClick?", false)}
-    remoteModal={boolean("remoteModal?(for Rails)", false)}
-    method={boolean("method(for Rails)", false) ? "post" : undefined}
-  >
-    {text("Text", "Link")}
-  </LinkContainer>
-);
+const Template: Story<Props> = (args) => <Link {...args}>Link</Link>;
+
+export const Default = Template.bind({});
+
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };

@@ -1,24 +1,20 @@
-import { text } from "@storybook/addon-knobs";
-import { Box as BoxComponent, BoxProps } from "./Box";
-import { Text } from "../Text";
+import { Story, Meta } from "@storybook/react";
+import { Box, BoxProps as Props } from "./Box";
 
 export default {
-  component: BoxComponent,
+  component: Box,
   title: "components/Box",
-};
+} as Meta;
 
-export const Box: React.FC = () => {
-  const tag = text("tag", "div") as BoxProps["as"];
-  const width = text("width", "300px");
-  const height = text("height", "100px");
-  const margin = text("margin", "50px");
-  const padding = text("padding", "10px");
+const Template: Story<Props> = (args) => <Box {...args}>Text</Box>;
 
-  return (
-    <BoxComponent as={tag} width={width} height={height} m={margin} p={padding}>
-      <Text>
-        margin: {margin} padding: {padding}
-      </Text>
-    </BoxComponent>
-  );
-};
+export const Default = Template.bind({});
+
+export const CustomTag = Template.bind({});
+CustomTag.args = { as: "span" };
+
+export const Margined = Template.bind({});
+Margined.args = { margin: "100px" };
+
+export const Paddinged = Template.bind({});
+Paddinged.args = { padding: "100px" };

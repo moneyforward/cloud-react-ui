@@ -1,14 +1,11 @@
-import { text, boolean } from "@storybook/addon-knobs";
-import { TextField as TextFieldComponent } from "./TextField";
+import { Story, Meta } from "@storybook/react";
+import { TextField, Props } from "./TextField";
 
 export default {
-  component: TextFieldComponent,
-  title: "components/Text Field",
-};
+  component: TextField,
+  title: "components/TextField",
+} as Meta;
 
-export const TextField = (): JSX.Element => (
-  <TextFieldComponent
-    placeholder={text("placeholder", "")}
-    error={boolean("error", false)}
-  />
-);
+const Template: Story<Props> = (args) => <TextField {...args} />;
+
+export const Default = Template.bind({});

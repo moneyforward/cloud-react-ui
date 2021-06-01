@@ -1,46 +1,14 @@
-import { text, radios } from "@storybook/addon-knobs";
-import { HeadingContainer, HeadingProps } from "./HeadingContainer";
-import { theme } from "../../theme";
+import { Story, Meta } from "@storybook/react";
+import {
+  HeadingContainer as Heading,
+  HeadingProps as Props,
+} from "./HeadingContainer";
 
 export default {
-  component: HeadingContainer,
+  component: Heading,
   title: "components/Heading",
-};
+} as Meta;
 
-const levelOption = {
-  h1: 1,
-  h2: 2,
-  h3: 3,
-  h4: 4,
-  h5: 5,
-  h6: 6,
-};
+const Template: Story<Props> = (args) => <Heading {...args}>Heading</Heading>;
 
-const sizeOption = Object.keys(theme.heading.fontSize).reduce((obj, key) => {
-  obj[key] = key;
-  return obj;
-}, {} as { [key: string]: string });
-
-const weightOption = Object.keys(theme.heading.fontWeight).reduce(
-  (obj, key) => {
-    obj[key] = key;
-    return obj;
-  },
-  {} as { [key: string]: string }
-);
-
-const colorOption = Object.keys(theme.heading.color).reduce((obj, key) => {
-  obj[key] = key;
-  return obj;
-}, {} as { [key: string]: string });
-
-export const Heading: React.FC = () => (
-  <HeadingContainer
-    level={radios("level", levelOption, 1) as HeadingProps["level"]}
-    size={radios("size", sizeOption, "middle") as HeadingProps["size"]}
-    weight={radios("weight", weightOption, "default") as HeadingProps["weight"]}
-    color={radios("color", colorOption, "title") as HeadingProps["color"]}
-  >
-    {text("Text", "Heading")}
-  </HeadingContainer>
-);
+export const Default = Template.bind({});

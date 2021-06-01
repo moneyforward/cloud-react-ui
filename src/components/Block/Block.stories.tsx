@@ -1,14 +1,14 @@
-import { boolean } from "@storybook/addon-knobs";
-import { Block as BlockComponent } from "./Block";
-import { Text } from "../Text";
+import { Story, Meta } from "@storybook/react";
+import { Block, Props } from "./Block";
 
 export default {
-  component: BlockComponent,
+  component: Block,
   title: "components/Block",
-};
+} as Meta;
 
-export const Block = (): JSX.Element => (
-  <BlockComponent border={boolean("border", false)}>
-    <Text>Block</Text>
-  </BlockComponent>
-);
+const Template: Story<Props> = (args) => <Block {...args}>Block</Block>;
+
+export const Default = Template.bind({});
+
+export const Bordered = Template.bind({});
+Bordered.args = { border: true };

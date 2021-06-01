@@ -1,30 +1,23 @@
-import { text, radios } from "@storybook/addon-knobs";
+import { Story, Meta } from "@storybook/react";
 import {
-  ProgressLabelContainer,
-  ProgressLabelProps,
+  ProgressLabelContainer as ProgressLabel,
+  ProgressLabelProps as Props,
 } from "./ProgressLabelContainer";
 
 export default {
-  component: ProgressLabelContainer,
-  title: "components/Progress Label",
-};
+  component: ProgressLabel,
+  title: "components/ProgressLabel",
+} as Meta;
 
-const statusOption = {
-  waiting: "waiting",
-  inProgress: "inProgress",
-  completed: "completed",
-};
-
-export const ProgressLabel: React.FC = () => (
-  <ProgressLabelContainer
-    status={
-      radios(
-        "Status",
-        statusOption,
-        "inProgress"
-      ) as ProgressLabelProps["status"]
-    }
-  >
-    {text("Text", "ステップ1")}
-  </ProgressLabelContainer>
+const Template: Story<Props> = (args) => (
+  <ProgressLabel {...args}>ステップ1</ProgressLabel>
 );
+
+export const Waiting = Template.bind({});
+Waiting.args = { status: "waiting" };
+
+export const InProgress = Template.bind({});
+InProgress.args = { status: "inProgress" };
+
+export const Completed = Template.bind({});
+Completed.args = { status: "completed" };

@@ -1,30 +1,16 @@
-import styled from "styled-components";
-import { text, boolean } from "@storybook/addon-knobs";
-import { Checkbox as CheckboxComponent } from "./Checkbox";
-import { Text as TextComponent } from "../../components";
+import { Story, Meta } from "@storybook/react";
+import { Checkbox, Props } from "./Checkbox";
 
 export default {
-  component: CheckboxComponent,
+  component: Checkbox,
   title: "components/Checkbox",
-};
+} as Meta;
 
-const Text = styled(TextComponent)`
-  margin-left: 4px;
-  margin-right: 10px;
-`;
+const Template: Story<Props> = (args) => (
+  <Checkbox {...args}>Checkbox</Checkbox>
+);
 
-export const Checkbox = (): JSX.Element => {
-  const disabled = boolean("Disabled", false);
-  const label = text("Text", "Checkbox");
+export const Default = Template.bind({});
 
-  return (
-    <>
-      <CheckboxComponent name="checkbox" disabled={disabled}>
-        <Text>{label}</Text>
-      </CheckboxComponent>
-      <CheckboxComponent name="checkbox" disabled={disabled}>
-        <Text>{label}</Text>
-      </CheckboxComponent>
-    </>
-  );
-};
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };

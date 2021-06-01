@@ -1,19 +1,22 @@
 import { useState } from "react";
-import { Backdrop as BackdropComponent } from "./Backdrop";
+import { Story, Meta } from "@storybook/react";
+import { Backdrop, Props } from "./Backdrop";
 import { Button } from "../Button";
 
 export default {
-  component: BackdropComponent,
+  component: Backdrop,
   title: "components/Backdrop",
-};
+} as Meta;
 
-export const Backdrop = (): JSX.Element => {
-  const [open, setOpen] = useState(true);
+const Template: Story<Props> = () => {
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <BackdropComponent open={open} onClick={() => setOpen(false)} />
+      <Backdrop open={open} onClick={() => setOpen(false)} />
       <Button onClick={() => setOpen(!open)}>Show Backdrop</Button>
     </>
   );
 };
+
+export const Default = Template.bind({});
