@@ -29,7 +29,6 @@ const DropdownBase = ({
 
   function handleClick() {
     setIsOpen(!isOpen);
-    console.log(isOpen);
   }
 
   return (
