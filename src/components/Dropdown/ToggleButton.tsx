@@ -21,14 +21,12 @@ const BaseToggleButton = styled.button.attrs<ToggleButtonProps>(
 `;
 
 export const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
-  ({ children, ariaExpanded, onClick }, ref) => {
-    return (
-      <BaseToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
-        {children}
-        <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
-      </BaseToggleButton>
-    );
-  }
+  ({ children, ariaExpanded, onClick }, ref) => (
+    <BaseToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
+      {children}
+      <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
+    </BaseToggleButton>
+  )
 );
 
 ToggleButton.displayName = 'Dropdown.ToggleButton';
