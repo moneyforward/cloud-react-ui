@@ -25,11 +25,11 @@ const DropdownBase = ({
 }: DropdownProps) => {
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
-  const [isOpened, setIsOpened] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
-    setIsOpened(!isOpened);
-    console.log(isOpened);
+    setIsOpen(!isOpen);
+    console.log(isOpen);
   }
 
   return (
@@ -37,11 +37,11 @@ const DropdownBase = ({
       <ToggleButton
         onClick={handleClick}
         ref={toggleButtonRef}
-        ariaExpanded={isOpened}
+        ariaExpanded={isOpen}
       >
         {toggleLabel}
       </ToggleButton>
-      <Body width={width} ariaHidden={!isOpened} placement={placement}>
+      <Body width={width} ariaHidden={!isOpen} placement={placement}>
         {children}
       </Body>
     </StyledDropdown>
