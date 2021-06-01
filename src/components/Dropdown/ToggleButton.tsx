@@ -8,7 +8,7 @@ type ToggleButtonProps = {
   onClick: MouseEventHandler;
 };
 
-const BaseToggleButton = styled.button.attrs<ToggleButtonProps>(
+const StyledToggleButton = styled.button.attrs<ToggleButtonProps>(
   ({ ariaExpanded }) => ({
     "aria-expanded": ariaExpanded,
     "aria-hasPopup": true,
@@ -22,10 +22,10 @@ const BaseToggleButton = styled.button.attrs<ToggleButtonProps>(
 
 export const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
   ({ children, ariaExpanded, onClick }, ref) => (
-    <BaseToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
+    <StyledToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
       {children}
       <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
-    </BaseToggleButton>
+    </StyledToggleButton>
   )
 );
 
