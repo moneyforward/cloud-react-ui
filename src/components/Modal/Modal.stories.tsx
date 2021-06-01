@@ -11,9 +11,9 @@ export default {
 
 const Template: Story = () => {
   const [open, setOpen] = useState(false);
-  const  handleClose = () => {
+  const handleClose = () => {
     setOpen(false);
-  }
+  };
 
   return (
     <>
@@ -25,7 +25,9 @@ const Template: Story = () => {
         </Modal.Content>
         <Modal.Actions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button color="primary" type="button" >Action</Button>
+          <Button color="primary" type="button">
+            Action
+          </Button>
         </Modal.Actions>
       </Modal>
     </>

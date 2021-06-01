@@ -297,12 +297,12 @@ export const componentsTheme = {
       fontWeight: "bold",
       wordBreak: "break-all",
       button: {
-        flex: '0 0 auto',
+        flex: "0 0 auto",
         icon: {
           width: "24px",
           height: "24px",
           color: color.lightSlateGrey,
-        }
+        },
       },
     },
     content: {
@@ -321,8 +321,8 @@ export const componentsTheme = {
       borderTopColor: color.linkWater,
       children: {
         margin: "0 8px",
-      }
-    }
+      },
+    },
   },
   // ProgressLabel
   progressLabel: {

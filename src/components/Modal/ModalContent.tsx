@@ -22,4 +22,4 @@ const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
 
 ModalContent.displayName = "Modal.Content";
 
-export { ModalContent } ;
+export { ModalContent };

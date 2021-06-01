@@ -1,10 +1,10 @@
-import { useState } from "react"
-import { render, screen, fireEvent, waitFor } from "@testing-library/react"
-import { Modal } from "../Modal"
+import { useState } from "react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { Modal } from "../Modal";
 import { Button } from "../../Button";
 
 type TestModalProps = {
-  initOpenValue: boolean
+  initOpenValue: boolean;
 };
 
 const TestModal = ({ initOpenValue }: TestModalProps): JSX.Element => {
@@ -26,31 +26,31 @@ const TestModal = ({ initOpenValue }: TestModalProps): JSX.Element => {
 
 describe("Modal", () => {
   it("snapshot test", () => {
-    const {asFragment} = render(<TestModal initOpenValue={true} />)
+    const { asFragment } = render(<TestModal initOpenValue={true} />);
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   it("opened modal", async () => {
-    const {asFragment} = render(<TestModal initOpenValue={false} />)
-    
-    fireEvent.click(screen.getByText('Show Modal'));
+    const { asFragment } = render(<TestModal initOpenValue={false} />);
 
-    await waitFor( () => {
-      expect(screen.getByRole('dialog')).toBeInTheDocument();
-    }) 
-    
+    fireEvent.click(screen.getByText("Show Modal"));
+
+    await waitFor(() => {
+      expect(screen.getByRole("dialog")).toBeInTheDocument();
+    });
+
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   it("closed modal with close button", async () => {
-    const {asFragment} = render(<TestModal initOpenValue={true}/>)
-    
-    fireEvent.click(screen.getByLabelText('閉じる'));
+    const { asFragment } = render(<TestModal initOpenValue={true} />);
 
-    await waitFor( () => {
-      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
-    }) 
+    fireEvent.click(screen.getByLabelText("閉じる"));
+
+    await waitFor(() => {
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
 
     expect(asFragment()).toMatchSnapshot();
-  })
-})
+  });
+});
