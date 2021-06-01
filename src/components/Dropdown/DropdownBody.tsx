@@ -8,9 +8,11 @@ type DropdownBodyProps = {
   placement?: "left" | "right";
 };
 
-export const DropdownBody = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
-  "aria-hidden": ariaHidden,
-}))<DropdownBodyProps>`
+export const DropdownBody = styled.div.attrs<DropdownBodyProps>(
+  ({ ariaHidden }) => ({
+    "aria-hidden": ariaHidden,
+  })
+)<DropdownBodyProps>`
   width: ${({ width }) => width};
   position: absolute;
   top: calc(100% + 10px);
