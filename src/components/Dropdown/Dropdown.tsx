@@ -23,7 +23,6 @@ const DropdownBase = ({
   width,
   placement,
 }: DropdownProps) => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
@@ -32,10 +31,7 @@ const DropdownBase = ({
 
   return (
     <StyledDropdown>
-      <ToggleButton
-        onClick={handleClick}
-        ariaExpanded={isOpen}
-      >
+      <ToggleButton onClick={handleClick} ariaExpanded={isOpen}>
         {toggleLabel}
       </ToggleButton>
       <Body width={width} ariaHidden={!isOpen} placement={placement}>

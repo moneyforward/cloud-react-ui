@@ -19,10 +19,13 @@ const Template: Story<DropdownProps> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { toggleLabel: 'ラベル' };
+Default.args = { toggleLabel: "ラベル" };
 
 export const Placement = Template.bind({});
-Placement.args = { toggleLabel: 'ラベル(placement: right)', placement: 'right' };
+Placement.args = {
+  toggleLabel: "ラベル(placement: right)",
+  placement: "right",
+};
 
 const MultipleTemplate: Story<DropdownProps> = (args) => (
   <Dropdown {...args}>
@@ -43,4 +46,4 @@ const MultipleTemplate: Story<DropdownProps> = (args) => (
 );
 
 export const MultipleBlock = MultipleTemplate.bind({});
-MultipleBlock.args = { toggleLabel: 'ラベル' };
+MultipleBlock.args = { toggleLabel: "ラベル" };
