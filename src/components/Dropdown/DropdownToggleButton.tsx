@@ -25,7 +25,7 @@ const StyledToggleButton = styled.button.attrs<ToggleButtonProps>(
   }
 `;
 
-export const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
+export const DropdownToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
   ({ children, ariaExpanded, onClick }, ref) => (
     <StyledToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
       {children}
@@ -34,4 +34,4 @@ export const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
   )
 );
 
-ToggleButton.displayName = "Dropdown.ToggleButton";
+DropdownToggleButton.displayName = "Dropdown.ToggleButton";

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { Menu, MenuItem } from "./Menu";
-import { Block } from "./Block";
-import { Body } from "./Body";
-import { ToggleButton } from "./ToggleButton";
+import { DropdownMenu, DropdownMenuItem } from "./DropdownMenu";
+import { DropdownBlock } from "./DropdownBlock";
+import { DropdownBody } from "./DropdownBody";
+import { DropdownToggleButton } from "./DropdownToggleButton";
 
 export type DropdownProps = {
   children?: React.ReactNode;
@@ -31,19 +31,19 @@ const DropdownBase = ({
 
   return (
     <StyledDropdown>
-      <ToggleButton onClick={handleClick} ariaExpanded={isOpen}>
+      <DropdownToggleButton onClick={handleClick} ariaExpanded={isOpen}>
         {toggleLabel}
-      </ToggleButton>
-      <Body width={width} ariaHidden={!isOpen} placement={placement}>
+      </DropdownToggleButton>
+      <DropdownBody width={width} ariaHidden={!isOpen} placement={placement}>
         {children}
-      </Body>
+      </DropdownBody>
     </StyledDropdown>
   );
 };
 
 export const Dropdown = Object.assign(DropdownBase, {
-  Body,
-  Block,
-  Menu,
-  MenuItem: MenuItem,
+  Body: DropdownBody,
+  Block: DropdownBlock,
+  Menu: DropdownMenu,
+  MenuItem: DropdownMenuItem,
 });

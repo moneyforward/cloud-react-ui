@@ -20,13 +20,13 @@ const StyledMenu = styled.div`
   }
 `;
 
-export const Menu = ({ children }: MenuProps) => (
+export const DropdownMenu = ({ children }: MenuProps) => (
   <StyledMenu>
     <ul>{children}</ul>
   </StyledMenu>
 );
 
-Menu.displayName = "Dropdown.Menu";
+DropdownMenu.displayName = "Dropdown.Menu";
 
 const StyledMenuItem = styled.li`
   list-style: none;
@@ -50,8 +50,8 @@ const StyledMenuItem = styled.li`
   }
 `;
 
-export const MenuItem = ({ children }: MenuItemProps) => (
+export const DropdownMenuItem = ({ children }: MenuItemProps) => (
   <StyledMenuItem>{children}</StyledMenuItem>
 );
 
-MenuItem.displayName = "Dropdown.MenuItem";
+DropdownMenuItem.displayName = "Dropdown.MenuItem";

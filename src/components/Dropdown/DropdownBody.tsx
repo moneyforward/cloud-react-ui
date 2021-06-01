@@ -8,7 +8,7 @@ type DropdownBodyProps = {
   placement?: "left" | "right";
 };
 
-export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
+export const DropdownBody = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
   "aria-hidden": ariaHidden,
 }))<DropdownBodyProps>`
   width: ${({ width }) => width};
@@ -44,9 +44,9 @@ export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
   }
 `;
 
-Body.defaultProps = {
+DropdownBody.defaultProps = {
   width: "max-content",
   placement: "left",
 };
 
-Body.displayName = "Dropdown.Body";
+DropdownBody.displayName = "Dropdown.Body";
