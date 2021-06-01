@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Icon } from '../../components';
-import { MouseEventHandler, forwardRef } from 'react';
+import styled from "styled-components";
+import { Icon } from "../../components";
+import { MouseEventHandler, forwardRef } from "react";
 
 type ToggleButtonProps = {
   children: React.ReactNode;
@@ -10,8 +10,8 @@ type ToggleButtonProps = {
 
 const BaseToggleButton = styled.button.attrs<ToggleButtonProps>(
   ({ ariaExpanded }) => ({
-    'aria-expanded': ariaExpanded,
-    'aria-hasPopup': true,
+    "aria-expanded": ariaExpanded,
+    "aria-hasPopup": true,
   })
 )<ToggleButtonProps>`
   border: none;
@@ -29,4 +29,4 @@ export const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(
   )
 );
 
-ToggleButton.displayName = 'Dropdown.ToggleButton';
+ToggleButton.displayName = "Dropdown.ToggleButton";

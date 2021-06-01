@@ -1,11 +1,11 @@
-import { Dropdown } from './Dropdown';
+import { Dropdown } from "./Dropdown";
 
 export default {
   component: Dropdown,
-  title: 'ui/Dropdown',
+  title: "ui/Dropdown",
   parameters: {
     backgrounds: {
-      default: 'biz-pay',
+      default: "biz-pay",
     },
   },
 };

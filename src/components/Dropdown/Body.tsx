@@ -1,20 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 type DropdownBodyProps = {
   children?: React.ReactNode;
   width?: string;
   ariaHidden: boolean;
-  placement?: 'left' | 'right';
+  placement?: "left" | "right";
 };
 
 export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
-  'aria-hidden': ariaHidden,
+  "aria-hidden": ariaHidden,
 }))<DropdownBodyProps>`
   width: ${({ width }) => width};
   position: absolute;
   top: calc(100% + 10px);
-  left: ${({ placement }) => placement === 'left' && 0};
-  right: ${({ placement }) => placement === 'right' && 0};
+  left: ${({ placement }) => placement === "left" && 0};
+  right: ${({ placement }) => placement === "right" && 0};
   transform-origin: top ${({ placement }) => placement};
   transition: opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -33,7 +33,7 @@ export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
     }
   }
 
-  &[aria-hidden='true'] {
+  &[aria-hidden="true"] {
     transform: scale(0.75, 0.5625);
     transition: opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -44,8 +44,8 @@ export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
 `;
 
 Body.defaultProps = {
-  width: 'max-content',
-  placement: 'left',
+  width: "max-content",
+  placement: "left",
 };
 
-Body.displayName = 'Dropdown.Body';
+Body.displayName = "Dropdown.Body";

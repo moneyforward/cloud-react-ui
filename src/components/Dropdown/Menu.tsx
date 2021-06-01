@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { theme } from '../../theme';
-import { Link } from '../../components';
+import styled from "styled-components";
+import { theme } from "../../theme";
+import { Link } from "../../components";
 // import NextLink from 'next/link';
 
 type MenuItemLinkProps = {
@@ -29,7 +29,7 @@ export const Menu = ({ children }: MenuProps) => (
   </StyledMenu>
 );
 
-Menu.displayName = 'Dropdown.Menu';
+Menu.displayName = "Dropdown.Menu";
 
 const StyledMenuItemLink = styled.li`
   list-style: none;
@@ -56,4 +56,4 @@ export const MenuItemLink = ({ children, href }: MenuItemLinkProps) => (
   </StyledMenuItemLink>
 );
 
-MenuItemLink.displayName = 'Dropdown.MenuItemLink';
+MenuItemLink.displayName = "Dropdown.MenuItemLink";

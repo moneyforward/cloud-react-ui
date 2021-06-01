@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import { useRef, useState } from 'react';
-import { Menu, MenuItemLink } from './Menu';
-import { Block } from './Block';
-import { Body } from './Body';
-import { ToggleButton } from './ToggleButton';
+import styled from "styled-components";
+import { useRef, useState } from "react";
+import { Menu, MenuItemLink } from "./Menu";
+import { Block } from "./Block";
+import { Body } from "./Body";
+import { ToggleButton } from "./ToggleButton";
 
 export type DropdownProps = {
   children?: React.ReactNode;
   width?: string;
   toggleLabel: string;
-  placement?: 'left' | 'right';
+  placement?: "left" | "right";
 };
 
 const StyledDropdown = styled.div`

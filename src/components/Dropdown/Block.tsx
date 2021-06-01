@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Block = styled.div`
   padding: 16px;
@@ -8,4 +8,4 @@ export const Block = styled.div`
   }
 `;
 
-Block.displayName = 'Dropdown.Block';
+Block.displayName = "Dropdown.Block";
