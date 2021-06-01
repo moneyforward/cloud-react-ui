@@ -23,7 +23,6 @@ const DropdownBase = ({
   width,
   placement,
 }: DropdownProps) => {
-  const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +34,6 @@ const DropdownBase = ({
     <StyledDropdown>
       <ToggleButton
         onClick={handleClick}
-        ref={toggleButtonRef}
         ariaExpanded={isOpen}
       >
         {toggleLabel}
