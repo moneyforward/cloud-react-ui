@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color } from "../../theme";
 
 type DropdownBodyProps = {
   children?: React.ReactNode;
@@ -29,7 +30,7 @@ export const Body = styled.div.attrs<DropdownBodyProps>(({ ariaHidden }) => ({
     padding: 8px 16px;
 
     & + & {
-      border-top: 1px solid #d4d8dd;
+      border-top: 1px solid ${color.linkWater};
     }
   }
 
