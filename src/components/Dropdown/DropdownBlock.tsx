@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { color } from "../../theme";
 
 export const DropdownBlock = styled.div`
   padding: 16px;
 
   & + & {
-    border-top: 1px solid #d4d8dd;
+    border-top: 1px solid ${color.linkWater};
   }
 `;
 
