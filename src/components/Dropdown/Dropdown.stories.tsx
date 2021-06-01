@@ -2,7 +2,7 @@ import { Dropdown } from "./Dropdown";
 
 export default {
   component: Dropdown,
-  title: "ui/Dropdown",
+  title: "Components/Dropdown",
 };
 
 export const Default: React.FC = () => (
