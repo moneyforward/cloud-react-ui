@@ -3,7 +3,7 @@ import { Dropdown, DropdownProps } from "../../Dropdown";
 import { Link } from "../../../components";
 
 describe("Dropdown", () => {
-  const Template  = (args: DropdownProps): JSX.Element => (
+  const Template = (args: DropdownProps): JSX.Element => (
     <Dropdown {...args}>
       <Dropdown.Block>
         <Dropdown.Menu>
@@ -22,15 +22,13 @@ describe("Dropdown", () => {
   );
 
   it("default", () => {
-    const { asFragment } = render(
-      <Template toggleLabel="ラベル" />
-    );
+    const { asFragment } = render(<Template toggleLabel="ラベル" />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("with placement", () => {
     const { asFragment } = render(
-      <Template toggleLabel="ラベル" placement="right"/>
+      <Template toggleLabel="ラベル" placement="right" />
     );
     expect(asFragment()).toMatchSnapshot();
   });
