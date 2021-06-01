@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 import { Link } from "../../components";
-// import NextLink from 'next/link';
 
 type MenuItemLinkProps = {
   children: React.ReactNode;
