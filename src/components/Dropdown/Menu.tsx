@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
-import { Link } from "../../components";
 
-type MenuItemLinkProps = {
+type MenuItemProps = {
   children: React.ReactNode;
-  href: string;
 };
 
 type MenuProps = {
@@ -30,7 +28,7 @@ export const Menu = ({ children }: MenuProps) => (
 
 Menu.displayName = "Dropdown.Menu";
 
-const StyledMenuItemLink = styled.li`
+const StyledMenuItem = styled.li`
   list-style: none;
   font-size: ${theme.text.size.middle};
   padding: 0;
@@ -49,10 +47,10 @@ const StyledMenuItemLink = styled.li`
   }
 `;
 
-export const MenuItemLink = ({ children, href }: MenuItemLinkProps) => (
-  <StyledMenuItemLink>
-    <Link>{children}</Link>
-  </StyledMenuItemLink>
+export const MenuItem = ({ children }: MenuItemProps) => (
+  <StyledMenuItem>
+    {children}
+  </StyledMenuItem>
 );
 
-MenuItemLink.displayName = "Dropdown.MenuItemLink";
+MenuItem.displayName = "Dropdown.MenuItem";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { Menu, MenuItemLink } from "./Menu";
+import { Menu, MenuItem } from "./Menu";
 import { Block } from "./Block";
 import { Body } from "./Body";
 import { ToggleButton } from "./ToggleButton";
@@ -45,5 +45,5 @@ export const Dropdown = Object.assign(DropdownBase, {
   Body,
   Block,
   Menu,
-  MenuItemLink,
+  MenuItem: MenuItem,
 });

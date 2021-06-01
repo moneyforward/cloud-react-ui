@@ -2,52 +2,7 @@
 
 exports[`Button default 1`] = `
 <DocumentFragment>
-  .c2 {
-  font-size: 13px;
-  color: #333333;
-}
-
-.c2:hover {
-  color: #333333;
-}
-
-.c9 {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:visited {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:focus {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:active {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:hover {
-  cursor: pointer;
-  color: #3B7DE9;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c9.disabled {
-  cursor: not-allowed;
-  color: #999999;
-}
-
-.c7 {
+  .c7 {
   margin-top: -8px;
   margin-bottom: -8px;
 }
@@ -111,7 +66,7 @@ exports[`Button default 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #d4d8dd;
+  border-top: 1px solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
@@ -123,6 +78,51 @@ exports[`Button default 1`] = `
   transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
+}
+
+.c2 {
+  font-size: 13px;
+  color: #333333;
+}
+
+.c2:hover {
+  color: #333333;
+}
+
+.c9 {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:focus {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:active {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:hover {
+  cursor: pointer;
+  color: #3B7DE9;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9.disabled {
+  cursor: not-allowed;
+  color: #999999;
 }
 
 .c1 {
@@ -186,6 +186,7 @@ exports[`Button default 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -195,6 +196,7 @@ exports[`Button default 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -204,6 +206,7 @@ exports[`Button default 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -218,52 +221,7 @@ exports[`Button default 1`] = `
 
 exports[`Button with multiple blocks 1`] = `
 <DocumentFragment>
-  .c2 {
-  font-size: 13px;
-  color: #333333;
-}
-
-.c2:hover {
-  color: #333333;
-}
-
-.c9 {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:visited {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:focus {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:active {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:hover {
-  cursor: pointer;
-  color: #3B7DE9;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c9.disabled {
-  cursor: not-allowed;
-  color: #999999;
-}
-
-.c7 {
+  .c7 {
   margin-top: -8px;
   margin-bottom: -8px;
 }
@@ -327,7 +285,7 @@ exports[`Button with multiple blocks 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #d4d8dd;
+  border-top: 1px solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
@@ -339,6 +297,51 @@ exports[`Button with multiple blocks 1`] = `
   transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
+}
+
+.c2 {
+  font-size: 13px;
+  color: #333333;
+}
+
+.c2:hover {
+  color: #333333;
+}
+
+.c9 {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:focus {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:active {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:hover {
+  cursor: pointer;
+  color: #3B7DE9;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9.disabled {
+  cursor: not-allowed;
+  color: #999999;
 }
 
 .c1 {
@@ -407,6 +410,7 @@ exports[`Button with multiple blocks 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -416,6 +420,7 @@ exports[`Button with multiple blocks 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -425,6 +430,7 @@ exports[`Button with multiple blocks 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -444,52 +450,7 @@ exports[`Button with multiple blocks 1`] = `
 
 exports[`Button with placement 1`] = `
 <DocumentFragment>
-  .c2 {
-  font-size: 13px;
-  color: #333333;
-}
-
-.c2:hover {
-  color: #333333;
-}
-
-.c9 {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:visited {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:focus {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:active {
-  color: #3B7DE9;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9:hover {
-  cursor: pointer;
-  color: #3B7DE9;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c9.disabled {
-  cursor: not-allowed;
-  color: #999999;
-}
-
-.c7 {
+  .c7 {
   margin-top: -8px;
   margin-bottom: -8px;
 }
@@ -553,7 +514,7 @@ exports[`Button with placement 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #d4d8dd;
+  border-top: 1px solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
@@ -565,6 +526,51 @@ exports[`Button with placement 1`] = `
   transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
+}
+
+.c2 {
+  font-size: 13px;
+  color: #333333;
+}
+
+.c2:hover {
+  color: #333333;
+}
+
+.c9 {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:focus {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:active {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9:hover {
+  cursor: pointer;
+  color: #3B7DE9;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9.disabled {
+  cursor: not-allowed;
+  color: #999999;
 }
 
 .c1 {
@@ -628,6 +634,7 @@ exports[`Button with placement 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -637,6 +644,7 @@ exports[`Button with placement 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>
@@ -646,6 +654,7 @@ exports[`Button with placement 1`] = `
             >
               <a
                 class="c9"
+                href="#"
               >
                 ユーザー設定
               </a>

@@ -1,5 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import { Dropdown, DropdownProps } from "./Dropdown";
+import { Link } from "../../components";
 
 export default {
   component: Dropdown,
@@ -10,9 +11,9 @@ const Template: Story<DropdownProps> = (args) => (
   <Dropdown {...args}>
     <Dropdown.Block>
       <Dropdown.Menu>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
+        <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+        <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+        <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
       </Dropdown.Menu>
     </Dropdown.Block>
   </Dropdown>
@@ -34,9 +35,9 @@ const MultipleTemplate: Story<DropdownProps> = (args) => (
     </Dropdown.Block>
     <Dropdown.Block>
       <Dropdown.Menu>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-        <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
+        <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+        <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+        <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
       </Dropdown.Menu>
     </Dropdown.Block>
     <Dropdown.Block>

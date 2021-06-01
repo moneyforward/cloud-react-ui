@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import { Dropdown } from "../../Dropdown";
+import { Link } from "../../../components";
 
 describe("Button", () => {
   it("default", () => {
@@ -7,9 +8,9 @@ describe("Button", () => {
       <Dropdown toggleLabel="ラベル">
         <Dropdown.Block>
           <Dropdown.Menu>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown.Block>
       </Dropdown>
@@ -22,9 +23,9 @@ describe("Button", () => {
       <Dropdown toggleLabel="ラベル" placement="right">
         <Dropdown.Block>
           <Dropdown.Menu>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown.Block>
       </Dropdown>
@@ -40,9 +41,9 @@ describe("Button", () => {
         </Dropdown.Block>
         <Dropdown.Block>
           <Dropdown.Menu>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
-            <Dropdown.MenuItemLink href="#">ユーザー設定</Dropdown.MenuItemLink>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
+            <Dropdown.MenuItem><Link href="#">ユーザー設定</Link></Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown.Block>
         <Dropdown.Block>
