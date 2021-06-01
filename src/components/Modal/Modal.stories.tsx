@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Story, Meta } from "@storybook/react";
 import { Modal } from "./Modal";
 import { Button } from "../Button";
-
+import { Text } from "../Text";
 export default {
   component: Modal,
   title: "components/Modal",
@@ -17,17 +17,15 @@ const Template: Story = () => {
   return (
     <>
       <Button onClick={() => setOpen(!open)}>Show Modal</Button>
-      <Modal open={open} onClose={handleClose}>
-        <Modal.Header handleClose={handleClose}>test</Modal.Header>
-        <Modal.Content>hello</Modal.Content>
+      <Modal open={open} maxWidth="sm" fullWidth onClose={handleClose}>
+        <Modal.Header handleClose={handleClose}>ModalHeader</Modal.Header>
+        <Modal.Content>ModalContent</Modal.Content>
         <Modal.Actions>
-          <Button onClick={handleClose}>test</Button>
-          <Button>test</Button>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button color="primary" type="button" >Action</Button>
         </Modal.Actions>
       </Modal>
     </>
   );
 };
-
 export const Default = Template.bind({});
-
