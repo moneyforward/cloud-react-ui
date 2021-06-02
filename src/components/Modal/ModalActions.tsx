@@ -25,7 +25,7 @@ const StyledModalActions = styled.div`
 StyledModalActions.defaultProps = defaultProps;
 
 const ModalActions = forwardRef<HTMLDivElement, ModalActionsProps>(
-  ({ ...rest }, ref) => <StyledModalActions ref={ref} {...rest} />
+  ({ ...props }, ref) => <StyledModalActions ref={ref} {...props} />
 );
 
 ModalActions.displayName = "Modal.Actions";
