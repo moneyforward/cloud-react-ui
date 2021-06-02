@@ -9,6 +9,7 @@ export * from "./FlashMessage";
 export * from "./Heading";
 export * from "./Icon";
 export * from "./Link";
+export * from "./Modal";
 export * from "./ProgressLabel";
 export * from "./Radio";
 export * from "./Select";

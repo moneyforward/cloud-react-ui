@@ -283,6 +283,47 @@ export const componentsTheme = {
       },
     },
   },
+  //Modal
+  modal: {
+    color: color.black,
+    header: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      background: color.whiteSmoke,
+      padding: "8px 16px",
+      minHeight: "48px",
+      fontSize: "16px",
+      fontWeight: "bold",
+      wordBreak: "break-all",
+      button: {
+        flex: "0 0 auto",
+        icon: {
+          width: "24px",
+          height: "24px",
+          color: color.lightSlateGrey,
+        },
+      },
+    },
+    content: {
+      flex: "1 1 auto",
+      padding: "16px",
+      overflowY: "auto",
+    },
+    actions: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "16px",
+      flex: "0 0 auto",
+      borderTopStyle: values.border.style.solid,
+      borderTopWidth: values.border.width.thin,
+      borderTopColor: color.linkWater,
+      children: {
+        margin: "0 8px",
+      },
+    },
+  },
   // ProgressLabel
   progressLabel: {
     display: "inline-block",
