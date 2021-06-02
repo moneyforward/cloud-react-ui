@@ -35,9 +35,7 @@ describe("Modal", () => {
 
     fireEvent.click(screen.getByText("Show Modal"));
 
-    await waitFor(() => {
-      expect(screen.getByRole("dialog")).toBeInTheDocument();
-    });
+    expect(screen.getByRole("dialog")).toBeInTheDocument();
 
     expect(asFragment()).toMatchSnapshot();
   });
