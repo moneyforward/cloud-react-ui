@@ -10,7 +10,7 @@ import { ModalActions } from "./ModalActions";
 export type ModalProps = MuiDialogProp;
 
 const ModalRoot = forwardRef<HTMLDivElement, ModalProps>(
-  ({ ...props }, ref) => <MuiDialog ref={ref} {...props} />
+  (props, ref) => <MuiDialog ref={ref} {...props} />
 );
 
 ModalRoot.displayName = "Modal";

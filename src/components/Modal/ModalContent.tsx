@@ -17,7 +17,7 @@ const StyledModalContent = styled.div`
 StyledModalContent.defaultProps = defaultProps;
 
 const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
-  ({ ...props }, ref) => <StyledModalContent ref={ref} {...props} />
+  (props, ref) => <StyledModalContent ref={ref} {...props} />
 );
 
 ModalContent.displayName = "Modal.Content";
