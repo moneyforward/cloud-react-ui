@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { color } from "../../theme";
+import { SearchPanelToggle, SearchPanelToggleProps } from "./SearchPanelToggle";
 
 const SearchPanelBody = styled.div`
   width: 100%;
@@ -23,6 +24,7 @@ const StyledSearchPanel = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   background-color: #fff;
+  position: relative;
 `;
 
 export type SearchPanelProps = {
@@ -30,7 +32,10 @@ export type SearchPanelProps = {
 };
 
 export const SearchPanelBase = ({ children }: SearchPanelProps) => (
-  <StyledSearchPanel>{children}</StyledSearchPanel>
+  <StyledSearchPanel>
+    {children}
+    <SearchPanelToggle>絞り込み条件</SearchPanelToggle>
+  </StyledSearchPanel>
 );
 
 export const SearchPanel = Object.assign(SearchPanelBase, {
