@@ -41,6 +41,10 @@ const SearchPanelActions = styled.div`
 
 SearchPanelActions.displayName = "SearchPanel.Actions";
 
+const SearchPanelFilters = styled.div``;
+
+SearchPanelFilters.displayName = "SearchPanel.Filters";
+
 const StyledSearchPanel = styled.div`
   width: 100%;
   padding-left: 20px;
@@ -72,5 +76,6 @@ export const SearchPanelBase = ({ children }: SearchPanelProps) => {
 };
 
 export const SearchPanel = Object.assign(SearchPanelBase, {
+  Filters: SearchPanelFilters,
   Actions: SearchPanelActions,
 });
