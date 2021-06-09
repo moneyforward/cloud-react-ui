@@ -1,6 +1,7 @@
+import { useState } from "react";
 import styled, { css } from "styled-components";
 import { color } from "../../theme";
-import { SearchPanelToggle, SearchPanelToggleProps } from "./SearchPanelToggle";
+import { SearchPanelToggle } from "./SearchPanelToggle";
 
 const SearchPanelBody = styled.div`
   width: 100%;
@@ -33,12 +34,22 @@ export type SearchPanelProps = {
   children?: React.ReactNode;
 };
 
-export const SearchPanelBase = ({ children }: SearchPanelProps) => (
-  <StyledSearchPanel>
-    {children}
-    <SearchPanelToggle>絞り込み条件</SearchPanelToggle>
-  </StyledSearchPanel>
-);
+export const SearchPanelBase = ({ children }: SearchPanelProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <StyledSearchPanel>
+      {children}
+      <SearchPanelToggle onClick={handleClick} ariaExpanded={isOpen}>
+        絞り込み条件
+      </SearchPanelToggle>
+    </StyledSearchPanel>
+  );
+};
 
 export const SearchPanel = Object.assign(SearchPanelBase, {
   Body: SearchPanelBody,

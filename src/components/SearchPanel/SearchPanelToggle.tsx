@@ -3,7 +3,12 @@ import { color } from "../../theme";
 import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
 
-const StyledSearchPanelToggle = styled.button`
+const StyledSearchPanelToggle = styled.button.attrs<SearchPanelToggleProps>(
+  ({ ariaExpanded }) => ({
+    "aria-expanded": ariaExpanded,
+    "aria-hasPopup": true,
+  })
+)<SearchPanelToggleProps>`
   background-color: #fff;
   border: 1px solid ${color.linkWater};
   border-radius: 0 0 4px 4px;
@@ -28,14 +33,17 @@ export type SearchPanelToggleProps = {
   onClick: MouseEventHandler;
 };
 
-export const SearchPanelToggle = ({
-  children,
-  ariaExpanded,
-  onClick,
-}: SearchPanelToggleProps) => (
-  <StyledSearchPanelToggle>
+export const SearchPanelToggle = forwardRef<
+  HTMLButtonElement,
+  SearchPanelToggleProps
+>(({ children, ariaExpanded, onClick }, ref) => (
+  <StyledSearchPanelToggle
+    ref={ref}
+    onClick={onClick}
+    ariaExpanded={ariaExpanded}
+  >
     {children} <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
   </StyledSearchPanelToggle>
-);
+));
 
 SearchPanelToggle.displayName = "SearchPanel.Toggle";
