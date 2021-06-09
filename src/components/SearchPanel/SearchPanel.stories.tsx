@@ -10,7 +10,6 @@ export default {
 
 const Template: Story<SearchPanelProps> = ({ children }) => (
   <SearchPanel>
-    <SearchPanel.Body>{children}</SearchPanel.Body>
     <SearchPanel.Actions>
       <Button color="settings">クリア</Button>
       <Button color="primary">検索</Button>

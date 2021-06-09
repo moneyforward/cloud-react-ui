@@ -3,11 +3,30 @@ import styled, { css } from "styled-components";
 import { color } from "../../theme";
 import { SearchPanelToggle } from "./SearchPanelToggle";
 
-const SearchPanelBody = styled.div`
+type SearchPanelBodyProps = {
+  children?: React.ReactNode;
+  width?: string;
+  ariaHidden: boolean;
+  placement?: "left" | "right";
+};
+
+const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
+  ({ ariaHidden }) => ({
+    "aria-hidden": ariaHidden,
+  })
+)<SearchPanelBodyProps>`
   width: 100%;
   padding-top: 15px;
-  padding-bottom: 15px;
+  overflow-y: auto;
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+  }
 `;
+
 SearchPanelBody.displayName = "SearchPanel.Body";
 
 const SearchPanelActions = styled.div`
@@ -43,7 +62,8 @@ export const SearchPanelBase = ({ children }: SearchPanelProps) => {
 
   return (
     <StyledSearchPanel>
-      {children}
+      <SearchPanelBody ariaHidden={!isOpen}>{children}</SearchPanelBody>
+
       <SearchPanelToggle onClick={handleClick} ariaExpanded={isOpen}>
         絞り込み条件
       </SearchPanelToggle>
@@ -52,6 +72,5 @@ export const SearchPanelBase = ({ children }: SearchPanelProps) => {
 };
 
 export const SearchPanel = Object.assign(SearchPanelBase, {
-  Body: SearchPanelBody,
   Actions: SearchPanelActions,
 });
