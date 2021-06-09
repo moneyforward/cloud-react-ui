@@ -15,7 +15,7 @@ const StyledSearchPanelToggle = styled.button`
 
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 20px;
 
   svg {
     margin-left: 6px;

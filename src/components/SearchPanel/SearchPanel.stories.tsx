@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react";
 import { SearchPanel } from "./SearchPanel";
 import type { SearchPanelProps } from "./SearchPanel";
+import { Button } from "../../components";
 
 export default {
   component: SearchPanel,
@@ -10,7 +11,10 @@ export default {
 const Template: Story<SearchPanelProps> = ({ children }) => (
   <SearchPanel>
     <SearchPanel.Body>{children}</SearchPanel.Body>
-    <SearchPanel.Actions>Button</SearchPanel.Actions>
+    <SearchPanel.Actions>
+      <Button color="settings">クリア</Button>
+      <Button color="primary">検索</Button>
+    </SearchPanel.Actions>
   </SearchPanel>
 );
 

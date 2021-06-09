@@ -16,7 +16,9 @@ const SearchPanelActions = styled.div`
   border-top: 1px solid ${color.linkWater};
   display: flex;
   justify-content: center;
+  column-gap: 8px;
 `;
+
 SearchPanelActions.displayName = "SearchPanel.Actions";
 
 const StyledSearchPanel = styled.div`
