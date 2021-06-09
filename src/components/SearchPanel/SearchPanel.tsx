@@ -6,6 +6,6 @@ export type SearchPanelProps = {
   children?: React.ReactNode;
 };
 
-export const SearchPanel = (props: SearchPanelProps) => (
-  <StyledSearchPanel></StyledSearchPanel>
+export const SearchPanel = ({ children }: SearchPanelProps) => (
+  <StyledSearchPanel>{children}</StyledSearchPanel>
 );
