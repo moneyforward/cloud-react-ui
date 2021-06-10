@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { color } from "../../theme";
 import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
@@ -19,7 +19,7 @@ const StyledSearchPanelToggle = styled.button.attrs<SearchPanelToggleProps>(
   padding-right: 10px;
 
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1px);
   right: 20px;
 
   svg {

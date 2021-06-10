@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { color } from "../../theme";
 import { SearchPanelToggle } from "./SearchPanelToggle";
 import { SearchPanelBody } from "./SearchPanelBody";
 import { SearchPanelFilters } from "./SearchPanelFilters";
@@ -9,9 +10,6 @@ import { SearchPanelButtonGroup } from "./SearchPanelButtonGroup";
 
 const StyledSearchPanel = styled.div`
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #fff;
   position: relative;
 `;
 

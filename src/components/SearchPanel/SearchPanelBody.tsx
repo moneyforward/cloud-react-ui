@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color } from "../../theme";
 
 type SearchPanelBodyProps = {
   children?: React.ReactNode;
@@ -12,6 +13,10 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   })
 )<SearchPanelBodyProps>`
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid ${color.linkWater};
   overflow-y: auto;
   transition: max-height 199ms ease-in-out 0ms;
 
@@ -25,9 +30,10 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   max-height: calc(var(--height-actions) + var(--height-filters));
 
   &[aria-hidden="true"] {
+    border-bottom: none;
     visibility: hidden;
     max-height: 0;
-    transition: visibility 299ms linear 299ms, max-height 199ms ease-in-out 0ms;
+    transition: visibility 199ms linear 199ms, max-height 199ms ease-in-out 0ms;
   }
 `;
 
