@@ -16,7 +16,7 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   transition: max-height 199ms ease-in-out 0ms;
 
   /* ToggleアニメーションのためにPanelの "おおよそ" のmax-heightを設定 */
-  --max-row-number: 2;
+  --max-row-number: 3;
   --height-actions: 64px;
   --height-filters-row: 48px;
   --height-filters-total-gaps: calc(15px * (var(--max-row-number) + 1));
