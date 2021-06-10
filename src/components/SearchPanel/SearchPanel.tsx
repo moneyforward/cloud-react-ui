@@ -16,11 +16,10 @@ const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   })
 )<SearchPanelBodyProps>`
   width: 100%;
-  padding-top: 15px;
   overflow-y: auto;
-  transition: max-height 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: max-height 199ms ease-in-out 0ms, padding 199ms ease-in-out 0ms;
 
-  /* ToggleアニメーションのためにPanelのおおよそのmax-heightを設定 */
+  /* ToggleアニメーションのためにPanelの "おおよそ" のmax-heightを設定 */
   --max-row-number: 2;
   --height-actions: 64px;
   --height-filters-row: 48px;
@@ -32,9 +31,7 @@ const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   &[aria-hidden="true"] {
     visibility: hidden;
     max-height: 0;
-    padding: 0;
-    transition: visibility 299ms linear 299ms,
-      max-height 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: visibility 299ms linear 299ms, max-height 199ms ease-in-out 0ms;
   }
 `;
 
@@ -52,7 +49,10 @@ const SearchPanelActions = styled.div`
 
 SearchPanelActions.displayName = "SearchPanel.Actions";
 
-const SearchPanelFilters = styled.div``;
+const SearchPanelFilters = styled.div`
+  padding-top: 15px;
+  padding-bottom: 15px;
+`;
 
 SearchPanelFilters.displayName = "SearchPanel.Filters";
 
