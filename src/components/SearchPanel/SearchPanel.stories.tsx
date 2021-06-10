@@ -3,13 +3,19 @@ import { SearchPanel } from "./SearchPanel";
 import type { SearchPanelProps } from "./SearchPanel";
 import { Button } from "../../components";
 import { TextField, Checkbox } from "../../components";
+import styled from "styled-components";
 
 export default {
   component: SearchPanel,
   title: "components/SearchPanel",
 } as Meta;
 
-const Template: Story<SearchPanelProps> = ({ children }) => (
+const Fieldset = styled.fieldset`
+  border: 0;
+  padding: 0;
+`;
+
+const Template: Story<SearchPanelProps> = () => (
   <SearchPanel>
     <form>
       <SearchPanel.Filters>
@@ -29,24 +35,24 @@ const Template: Story<SearchPanelProps> = ({ children }) => (
         </SearchPanel.Row>
         <SearchPanel.Row>
           <SearchPanel.Column>
-            <fieldset>
+            <Fieldset>
               <legend>Checkbox group</legend>
               <Checkbox>checkbox 1</Checkbox>
               <Checkbox>checkbox 2</Checkbox>
               <Checkbox>checkbox 3</Checkbox>
               <Checkbox>checkbox 4</Checkbox>
               <Checkbox>checkbox 5</Checkbox>
-            </fieldset>
+            </Fieldset>
           </SearchPanel.Column>
           <SearchPanel.Column>
-            <fieldset>
+            <Fieldset>
               <legend>Checkbox group</legend>
               <Checkbox>checkbox 1</Checkbox>
               <Checkbox>checkbox 2</Checkbox>
               <Checkbox>checkbox 3</Checkbox>
               <Checkbox>checkbox 4</Checkbox>
               <Checkbox>checkbox 5</Checkbox>
-            </fieldset>
+            </Fieldset>
           </SearchPanel.Column>
         </SearchPanel.Row>
       </SearchPanel.Filters>
