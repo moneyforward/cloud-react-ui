@@ -7,7 +7,6 @@ type SearchPanelBodyProps = {
   children?: React.ReactNode;
   width?: string;
   ariaHidden: boolean;
-  placement?: "left" | "right";
 };
 
 const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
