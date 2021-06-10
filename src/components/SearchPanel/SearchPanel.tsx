@@ -1,59 +1,9 @@
 import { useState } from "react";
-import styled, { css } from "styled-components";
-import { color } from "../../theme";
+import styled from "styled-components";
 import { SearchPanelToggle } from "./SearchPanelToggle";
-
-type SearchPanelBodyProps = {
-  children?: React.ReactNode;
-  width?: string;
-  ariaHidden: boolean;
-};
-
-const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
-  ({ ariaHidden }) => ({
-    "aria-hidden": ariaHidden,
-  })
-)<SearchPanelBodyProps>`
-  width: 100%;
-  overflow-y: auto;
-  transition: max-height 199ms ease-in-out 0ms, padding 199ms ease-in-out 0ms;
-
-  /* ToggleアニメーションのためにPanelの "おおよそ" のmax-heightを設定 */
-  --max-row-number: 2;
-  --height-actions: 64px;
-  --height-filters-row: 48px;
-  --height-filters-total-gaps: calc(15px * (var(--max-row-number) + 1));
-  --height-filters: var(--height-filters-row) * var(--max-row-number) +
-    var(--height-filters-total-gaps);
-  max-height: calc(var(--height-actions) + var(--height-filters));
-
-  &[aria-hidden="true"] {
-    visibility: hidden;
-    max-height: 0;
-    transition: visibility 299ms linear 299ms, max-height 199ms ease-in-out 0ms;
-  }
-`;
-
-SearchPanelBody.displayName = "SearchPanel.Body";
-
-const SearchPanelActions = styled.div`
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-top: 1px solid ${color.linkWater};
-  display: flex;
-  justify-content: center;
-  column-gap: 8px;
-`;
-
-SearchPanelActions.displayName = "SearchPanel.Actions";
-
-const SearchPanelFilters = styled.div`
-  padding-top: 15px;
-  padding-bottom: 15px;
-`;
-
-SearchPanelFilters.displayName = "SearchPanel.Filters";
+import { SearchPanelBody } from "./SearchPanelBody";
+import { SearchPanelActions } from "./SearchPanelActions";
+import { SearchPanelFilters } from "./SearchPanelFilters";
 
 const StyledSearchPanel = styled.div`
   width: 100%;
