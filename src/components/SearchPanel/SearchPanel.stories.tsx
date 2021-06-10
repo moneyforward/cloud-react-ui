@@ -13,8 +13,10 @@ const Template: Story<SearchPanelProps> = ({ children }) => (
     <form>
       <SearchPanel.Filters>input要素が入る</SearchPanel.Filters>
       <SearchPanel.Actions>
-        <Button color="settings">クリア</Button>
-        <Button color="primary">検索</Button>
+        <SearchPanel.ButtonGroup>
+          <Button color="settings">クリア</Button>
+          <Button color="primary">検索</Button>
+        </SearchPanel.ButtonGroup>
       </SearchPanel.Actions>
     </form>
   </SearchPanel>

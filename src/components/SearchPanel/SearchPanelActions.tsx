@@ -6,9 +6,6 @@ export const SearchPanelActions = styled.div`
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 1px solid ${color.linkWater};
-  display: flex;
-  justify-content: center;
-  column-gap: 8px;
 `;
 
 SearchPanelActions.displayName = "SearchPanel.Actions";
