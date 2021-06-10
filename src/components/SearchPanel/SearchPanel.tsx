@@ -18,12 +18,23 @@ const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   width: 100%;
   padding-top: 15px;
   overflow-y: auto;
+  transition: max-height 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  /* ToggleアニメーションのためにPanelのおおよそのmax-heightを設定 */
+  --max-row-number: 2;
+  --height-actions: 64px;
+  --height-filters-row: 48px;
+  --height-filters-total-gaps: calc(15px * (var(--max-row-number) + 1));
+  --height-filters: var(--height-filters-row) * var(--max-row-number) +
+    var(--height-filters-total-gaps);
+  max-height: calc(var(--height-actions) + var(--height-filters));
 
   &[aria-hidden="true"] {
     visibility: hidden;
-    opacity: 0;
     max-height: 0;
     padding: 0;
+    transition: visibility 299ms linear 299ms,
+      max-height 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 `;
 
