@@ -13,6 +13,7 @@ export * from "./Modal";
 export * from "./ProgressLabel";
 export * from "./Radio";
 export * from "./Select";
+export * from "./SearchPanel";
 export * from "./StatusLabel";
 export * from "./Steps";
 export * from "./Table";
