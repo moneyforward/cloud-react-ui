@@ -11,7 +11,10 @@ export default {
 const Template: Story<SearchPanelProps> = ({ children }) => (
   <SearchPanel>
     <form>
-      <SearchPanel.Filters>input要素が入る</SearchPanel.Filters>
+      <SearchPanel.Filters>
+        <SearchPanel.Row>input要素が入る</SearchPanel.Row>
+        <SearchPanel.Row>input要素が入る</SearchPanel.Row>
+      </SearchPanel.Filters>
       <SearchPanel.Actions>
         <SearchPanel.ButtonGroup>
           <Button color="settings">クリア</Button>

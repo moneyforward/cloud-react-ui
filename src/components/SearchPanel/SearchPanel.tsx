@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { SearchPanelToggle } from "./SearchPanelToggle";
 import { SearchPanelBody } from "./SearchPanelBody";
 import { SearchPanelFilters } from "./SearchPanelFilters";
+import { SearchPanelRow } from "./SearchPanelRow";
 import { SearchPanelActions } from "./SearchPanelActions";
 import { SearchPanelButtonGroup } from "./SearchPanelButtonGroup";
 
@@ -40,6 +41,7 @@ export const SearchPanelBase = ({
 
 export const SearchPanel = Object.assign(SearchPanelBase, {
   Filters: SearchPanelFilters,
+  Row: SearchPanelRow,
   Actions: SearchPanelActions,
   ButtonGroup: SearchPanelButtonGroup,
 });
