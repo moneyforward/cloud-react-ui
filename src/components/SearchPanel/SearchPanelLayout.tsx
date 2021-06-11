@@ -8,7 +8,7 @@ const SearchPanelRow = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 42px;
+  column-gap: 8px;
 
   & + & {
     margin-top: 15px;
