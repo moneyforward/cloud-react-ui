@@ -1,8 +1,7 @@
 import { Story, Meta } from "@storybook/react";
 import { SearchPanel } from "./SearchPanel";
 import type { SearchPanelProps } from "./SearchPanel";
-import { Button } from "../../components";
-import { TextField, Checkbox } from "../../components";
+import { Button, TextField, Checkbox } from "../../components";
 import styled from "styled-components";
 
 export default {
@@ -28,8 +27,8 @@ const Template: Story<SearchPanelProps> = () => (
           </SearchPanel.Column>
           <SearchPanel.Column>
             <div>
-              <label htmlFor="text-field-1">Text label</label>
-              <TextField id="text-field-1" />
+              <label htmlFor="text-field-2">Text label</label>
+              <TextField id="text-field-2" />
             </div>
           </SearchPanel.Column>
         </SearchPanel.Row>
