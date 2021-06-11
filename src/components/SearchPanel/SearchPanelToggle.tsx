@@ -6,7 +6,7 @@ import { MouseEventHandler, forwardRef } from "react";
 const StyledSearchPanelToggle = styled.button.attrs<SearchPanelToggleProps>(
   ({ ariaExpanded }) => ({
     "aria-expanded": ariaExpanded,
-    "aria-hasPopup": true,
+    "aria-haspopup": true,
   })
 )<SearchPanelToggleProps>`
   background-color: #fff;
