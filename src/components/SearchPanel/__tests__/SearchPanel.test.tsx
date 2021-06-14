@@ -29,7 +29,7 @@ describe("SearchPanel", () => {
   });
 
   it("onClick Toggle", () => {
-    const { getByRole, getByText, queryByText } = render(<Template />);
+    const { getByRole, queryByText } = render(<Template />);
     const button = getByRole("button", { expanded: true });
 
     fireEvent.click(button);
