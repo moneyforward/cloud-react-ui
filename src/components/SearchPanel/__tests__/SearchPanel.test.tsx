@@ -1,4 +1,4 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import { SearchPanel, SearchPanelProps } from "../SearchPanel";
 import { Button, TextField } from "../../../components";
 
@@ -9,10 +9,7 @@ describe("SearchPanel", () => {
         <SearchPanel.Filters>
           <SearchPanel.Row>
             <SearchPanel.Column>
-              <div>
-                <label htmlFor="text-field-1">Text label</label>
-                <TextField id="text-field-1" />
-              </div>
+              <div>SearchPanel.Body content</div>
             </SearchPanel.Column>
           </SearchPanel.Row>
         </SearchPanel.Filters>
@@ -32,16 +29,15 @@ describe("SearchPanel", () => {
   });
 
   it("onClick Toggle", () => {
-    const { getByRole, baseElement } = render(<Template />);
+    const { getByRole, getByText, queryByText } = render(<Template />);
     const button = getByRole("button", { expanded: true });
-    const panelBody = baseElement.querySelector("div[aria-hidden]");
 
     fireEvent.click(button);
     expect(button.getAttribute("aria-expanded")).toBe("false");
-    expect(panelBody!.getAttribute("aria-hidden")).toBe("true");
+    expect(queryByText("SearchPanel.Body content")).not.toBeVisible();
 
     fireEvent.click(button);
     expect(button.getAttribute("aria-expanded")).toBe("true");
-    expect(panelBody!.getAttribute("aria-hidden")).toBe("false");
+    expect(queryByText("SearchPanel.Body content")).toBeVisible();
   });
 });

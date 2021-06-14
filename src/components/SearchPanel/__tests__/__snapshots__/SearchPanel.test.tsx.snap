@@ -2,13 +2,63 @@
 
 exports[`SearchPanel default 1`] = `
 <DocumentFragment>
-  .c11 {
+  .c10 {
   font-size: 13px;
   color: #333333;
 }
 
-.c11:hover {
+.c10:hover {
   color: #333333;
+}
+
+.c7.c7 {
+  display: inline-block;
+  height: 32px;
+  padding: 0 12px;
+  line-height: 32px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #D4D8DD;
+  color: #3B7DE9;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.c7.c7:before,
+.c7.c7:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+}
+
+.c7.c7:before {
+  z-index: -1;
+  background: linear-gradient(to bottom,#FFFFFF,#ECF2FD);
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.c7.c7:after {
+  content: "";
+  z-index: -2;
+  background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
+  border-radius: 4px;
+}
+
+.c7.c7:hover:before {
+  opacity: 0;
+}
+
+.c7.c7:active,
+.c7.c7:focus,
+.c7.c7:visited {
+  outline: 0;
+  box-shadow: 0 0 2px rgba(212,216,221,0.3);
 }
 
 .c8.c8 {
@@ -18,8 +68,8 @@ exports[`SearchPanel default 1`] = `
   line-height: 32px;
   font-size: 14px;
   border-radius: 4px;
-  border: 1px solid #D4D8DD;
-  color: #3B7DE9;
+  border: 1px solid rgba(0,0,0,0.15);
+  color: #FFFFFF;
   background: transparent;
   cursor: pointer;
   position: relative;
@@ -38,7 +88,7 @@ exports[`SearchPanel default 1`] = `
 
 .c8.c8:before {
   z-index: -1;
-  background: linear-gradient(to bottom,#FFFFFF,#ECF2FD);
+  background: linear-gradient(to bottom,#3B7DE9,#0054AC 100%);
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
@@ -46,7 +96,7 @@ exports[`SearchPanel default 1`] = `
 .c8.c8:after {
   content: "";
   z-index: -2;
-  background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
+  background: linear-gradient(to bottom,#0054AC,#3B7DE9);
   border-radius: 4px;
 }
 
@@ -61,88 +111,8 @@ exports[`SearchPanel default 1`] = `
   box-shadow: 0 0 2px rgba(212,216,221,0.3);
 }
 
-.c9.c9 {
-  display: inline-block;
-  height: 32px;
-  padding: 0 12px;
-  line-height: 32px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.15);
-  color: #FFFFFF;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-}
-
-.c9.c9:before,
-.c9.c9:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  border-radius: 4px;
-}
-
-.c9.c9:before {
-  z-index: -1;
-  background: linear-gradient(to bottom,#3B7DE9,#0054AC 100%);
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.c9.c9:after {
-  content: "";
-  z-index: -2;
-  background: linear-gradient(to bottom,#0054AC,#3B7DE9);
-  border-radius: 4px;
-}
-
-.c9.c9:hover:before {
-  opacity: 0;
-}
-
-.c9.c9:active,
-.c9.c9:focus,
-.c9.c9:visited {
-  outline: 0;
-  box-shadow: 0 0 2px rgba(212,216,221,0.3);
-}
-
-.c5 {
-  width: 100%;
-  height: 34px;
-  padding: 10px 5px;
+.c9 {
   background-color: #FFFFFF;
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #D4D8DD;
-  color: #333333;
-  font-size: 13px;
-  box-sizing: border-box;
-}
-
-.c5::-webkit-input-placeholder {
-  color: #999999;
-}
-
-.c5::-moz-placeholder {
-  color: #999999;
-}
-
-.c5:-ms-input-placeholder {
-  color: #999999;
-}
-
-.c5::placeholder {
-  color: #999999;
-}
-
-.c10 {
-  background-color: #fff;
   border: 1px solid #D4D8DD;
   border-radius: 0 0 4px 4px;
   border-top: 0;
@@ -155,7 +125,7 @@ exports[`SearchPanel default 1`] = `
   right: 20px;
 }
 
-.c10 svg {
+.c9 svg {
   margin-left: 6px;
 }
 
@@ -163,11 +133,11 @@ exports[`SearchPanel default 1`] = `
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #D4D8DD;
   overflow-y: auto;
   -webkit-transition: max-height 199ms ease-in-out 0ms;
   transition: max-height 199ms ease-in-out 0ms;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D4D8DD;
   --max-row-number: 4;
   --height-actions: 64px;
   --height-filters-row: 48px;
@@ -206,14 +176,14 @@ exports[`SearchPanel default 1`] = `
   margin-top: 15px;
 }
 
-.c6 {
+.c5 {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 1px solid #D4D8DD;
 }
 
-.c7 {
+.c6 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -227,7 +197,7 @@ exports[`SearchPanel default 1`] = `
   column-gap: 8px;
 }
 
-.c7 > button {
+.c6 > button {
   min-width: 76px;
 }
 
@@ -254,34 +224,25 @@ exports[`SearchPanel default 1`] = `
               class=""
             >
               <div>
-                <label
-                  for="text-field-1"
-                >
-                  Text label
-                </label>
-                <input
-                  class="c5"
-                  id="text-field-1"
-                  type="text"
-                />
+                SearchPanel.Body content
               </div>
             </div>
           </div>
         </div>
         <div
-          class="c6"
+          class="c5"
         >
           <div
-            class="c7"
+            class="c6"
           >
             <button
-              class="c8"
+              class="c7"
               color="settings"
             >
               クリア
             </button>
             <button
-              class="c9"
+              class="c8"
               color="primary"
             >
               検索
@@ -293,12 +254,12 @@ exports[`SearchPanel default 1`] = `
     <button
       aria-expanded="true"
       aria-haspopup="true"
-      class="c10"
+      class="c9"
     >
       絞り込み条件 
       <svg
         aria-hidden="true"
-        class="svg-inline--fa fa-caret-up fa-w-10 c11"
+        class="svg-inline--fa fa-caret-up fa-w-10 c10"
         data-icon="caret-up"
         data-prefix="fas"
         focusable="false"
