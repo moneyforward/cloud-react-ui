@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { color } from "../../theme";
+import styled, { css } from "styled-components";
+import { defaultProps } from "../../theme";
 import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
 
@@ -9,15 +9,17 @@ const StyledSearchPanelToggle = styled.button.attrs<SearchPanelToggleProps>(
     "aria-haspopup": true,
   })
 )<SearchPanelToggleProps>`
-  background-color: #fff;
-  border: 1px solid ${color.linkWater};
-  border-radius: 0 0 4px 4px;
-  border-top: 0;
+  ${({ theme: { searchPanel } }) => css`
+    background-color: ${searchPanel.backgroundColor};
+    border: 1px solid ${searchPanel.borderColor};
+    border-radius: 0 0 4px 4px;
+    border-top: 0;
+  `}
+
   color: #666;
   height: 32px;
   padding-left: 10px;
   padding-right: 10px;
-
   position: absolute;
   top: calc(100% - 1px);
   right: 20px;
@@ -26,6 +28,8 @@ const StyledSearchPanelToggle = styled.button.attrs<SearchPanelToggleProps>(
     margin-left: 6px;
   }
 `;
+
+StyledSearchPanelToggle.defaultProps = defaultProps;
 
 export type SearchPanelToggleProps = {
   children: React.ReactNode;

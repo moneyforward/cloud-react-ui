@@ -1,11 +1,16 @@
-import styled from "styled-components";
-import { color } from "../../theme";
+import styled, { css } from "styled-components";
+import { defaultProps } from "../../theme";
 
 export const SearchPanelActions = styled.div`
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-top: 1px solid ${color.linkWater};
+
+  ${({ theme: { searchPanel } }) =>
+    css`
+      border-top: 1px solid ${searchPanel.borderColor};
+    `}
 `;
 
+SearchPanelActions.defaultProps = defaultProps;
 SearchPanelActions.displayName = "SearchPanel.Actions";

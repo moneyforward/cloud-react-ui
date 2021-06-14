@@ -463,6 +463,10 @@ export const componentsTheme = {
     },
     lineHeight: values.text.size.small,
   },
+  searchPanel: {
+    borderColor: `${color.linkWater}`,
+    backgroundColor: color.white,
+  },
   // Table
   table: {
     width: "100%",

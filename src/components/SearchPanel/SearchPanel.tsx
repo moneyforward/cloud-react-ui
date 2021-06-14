@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { color } from "../../theme";
+import { defaultProps } from "../../theme";
 import { SearchPanelToggle } from "./SearchPanelToggle";
 import { SearchPanelBody } from "./SearchPanelBody";
 import { SearchPanelFilters } from "./SearchPanelFilters";
@@ -12,6 +12,7 @@ const StyledSearchPanel = styled.div`
   width: 100%;
   position: relative;
 `;
+StyledSearchPanel.defaultProps = defaultProps;
 
 export type SearchPanelProps = {
   children?: React.ReactNode;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { color } from "../../theme";
+import styled, { css } from "styled-components";
+import { defaultProps } from "../../theme";
 
 type SearchPanelBodyProps = {
   children?: React.ReactNode;
@@ -15,10 +15,14 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #fff;
-  border-bottom: 1px solid ${color.linkWater};
   overflow-y: auto;
   transition: max-height 199ms ease-in-out 0ms;
+
+  ${({ theme: { searchPanel } }) =>
+    css`
+      background-color: ${searchPanel.backgroundColor};
+      border-bottom: 1px solid ${searchPanel.borderColor};
+    `}
 
   /* ToggleアニメーションのためにPanelの "おおよそ" のmax-heightを設定 */
   --max-row-number: 4; /* 余裕をもってrow * 4の高さ */
@@ -37,4 +41,5 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   }
 `;
 
+SearchPanelBody.defaultProps = defaultProps;
 SearchPanelBody.displayName = "SearchPanel.Body";
