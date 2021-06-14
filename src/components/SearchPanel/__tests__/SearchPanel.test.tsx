@@ -1,6 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import { SearchPanel, SearchPanelProps } from "../SearchPanel";
-import { Button, TextField, Checkbox } from "../../../components";
+import { Button, TextField } from "../../../components";
 
 describe("SearchPanel", () => {
   const Template = (args: SearchPanelProps): JSX.Element => (
