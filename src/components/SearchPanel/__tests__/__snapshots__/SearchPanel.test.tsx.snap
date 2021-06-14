@@ -2,16 +2,16 @@
 
 exports[`SearchPanel default 1`] = `
 <DocumentFragment>
-  .c18 {
+  .c11 {
   font-size: 13px;
   color: #333333;
 }
 
-.c18:hover {
+.c11:hover {
   color: #333333;
 }
 
-.c15.c15 {
+.c8.c8 {
   display: inline-block;
   height: 32px;
   padding: 0 12px;
@@ -26,8 +26,8 @@ exports[`SearchPanel default 1`] = `
   z-index: 0;
 }
 
-.c15.c15:before,
-.c15.c15:after {
+.c8.c8:before,
+.c8.c8:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -36,32 +36,32 @@ exports[`SearchPanel default 1`] = `
   border-radius: 4px;
 }
 
-.c15.c15:before {
+.c8.c8:before {
   z-index: -1;
   background: linear-gradient(to bottom,#FFFFFF,#ECF2FD);
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 
-.c15.c15:after {
+.c8.c8:after {
   content: "";
   z-index: -2;
   background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
 }
 
-.c15.c15:hover:before {
+.c8.c8:hover:before {
   opacity: 0;
 }
 
-.c15.c15:active,
-.c15.c15:focus,
-.c15.c15:visited {
+.c8.c8:active,
+.c8.c8:focus,
+.c8.c8:visited {
   outline: 0;
   box-shadow: 0 0 2px rgba(212,216,221,0.3);
 }
 
-.c16.c16 {
+.c9.c9 {
   display: inline-block;
   height: 32px;
   padding: 0 12px;
@@ -76,8 +76,8 @@ exports[`SearchPanel default 1`] = `
   z-index: 0;
 }
 
-.c16.c16:before,
-.c16.c16:after {
+.c9.c9:before,
+.c9.c9:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -86,106 +86,29 @@ exports[`SearchPanel default 1`] = `
   border-radius: 4px;
 }
 
-.c16.c16:before {
+.c9.c9:before {
   z-index: -1;
   background: linear-gradient(to bottom,#3B7DE9,#0054AC 100%);
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 
-.c16.c16:after {
+.c9.c9:after {
   content: "";
   z-index: -2;
   background: linear-gradient(to bottom,#0054AC,#3B7DE9);
   border-radius: 4px;
 }
 
-.c16.c16:hover:before {
+.c9.c9:hover:before {
   opacity: 0;
 }
 
-.c16.c16:active,
-.c16.c16:focus,
-.c16.c16:visited {
+.c9.c9:active,
+.c9.c9:focus,
+.c9.c9:visited {
   outline: 0;
   box-shadow: 0 0 2px rgba(212,216,221,0.3);
-}
-
-.c7 {
-  position: relative;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-}
-
-.c8 {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c8:checked + .c9 {
-  background-color: #3B7DE9;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(0,0,0,0.15);
-}
-
-.c8:disabled + .c9 {
-  background-color: #D4D8DD;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #D4D8DD;
-}
-
-.c10 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #D4D8DD;
-  pointer-events: none;
-  box-sizing: border-box;
-}
-
-.c11 {
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 8px;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  pointer-events: none;
-}
-
-.c11 > svg {
-  vertical-align: top;
-}
-
-.c12 {
-  width: 10px;
-  height: 8px;
-}
-
-.c12 > path {
-  fill: #FFFFFF;
-}
-
-.c6 {
-  cursor: pointer;
-  vertical-align: middle;
 }
 
 .c5 {
@@ -218,7 +141,7 @@ exports[`SearchPanel default 1`] = `
   color: #999999;
 }
 
-.c17 {
+.c10 {
   background-color: #fff;
   border: 1px solid #D4D8DD;
   border-radius: 0 0 4px 4px;
@@ -232,7 +155,7 @@ exports[`SearchPanel default 1`] = `
   right: 20px;
 }
 
-.c17 svg {
+.c10 svg {
   margin-left: 6px;
 }
 
@@ -283,14 +206,14 @@ exports[`SearchPanel default 1`] = `
   margin-top: 15px;
 }
 
-.c13 {
+.c6 {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 1px solid #D4D8DD;
 }
 
-.c14 {
+.c7 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -304,7 +227,7 @@ exports[`SearchPanel default 1`] = `
   column-gap: 8px;
 }
 
-.c14 > button {
+.c7 > button {
   min-width: 76px;
 }
 
@@ -343,360 +266,22 @@ exports[`SearchPanel default 1`] = `
                 />
               </div>
             </div>
-            <div
-              class=""
-            >
-              <div>
-                <label
-                  for="text-field-1"
-                >
-                  Text label
-                </label>
-                <input
-                  class="c5"
-                  id="text-field-1"
-                  type="text"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="c3 c4"
-          >
-            <div
-              class=""
-            >
-              <fieldset>
-                <legend>
-                  Checkbox group
-                </legend>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 1
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 2
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 3
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 4
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 5
-                </label>
-              </fieldset>
-            </div>
-            <div
-              class=""
-            >
-              <fieldset>
-                <legend>
-                  Checkbox group
-                </legend>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 1
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 2
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 3
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 4
-                </label>
-                <label
-                  class="c6"
-                >
-                  <span
-                    class="c7"
-                  >
-                    <input
-                      class="c8"
-                      type="checkbox"
-                    />
-                    <span
-                      class="c9 c10"
-                    />
-                    <span
-                      class="c11"
-                    >
-                      <svg
-                        class="c12"
-                        viewBox="0 0 10 8"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M.34 4.72a.485.485 0 0 1 0-.682l.68-.683a.478.478 0 0 1 .678 0L3.8 5.47 8.302.941a.478.478 0 0 1 .679 0l.678.683a.485.485 0 0 1 0 .683L4.14 7.859a.478.478 0 0 1-.678 0L.34 4.72z"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                  checkbox 5
-                </label>
-              </fieldset>
-            </div>
           </div>
         </div>
         <div
-          class="c13"
+          class="c6"
         >
           <div
-            class="c14"
+            class="c7"
           >
             <button
-              class="c15"
+              class="c8"
               color="settings"
             >
               クリア
             </button>
             <button
-              class="c16"
+              class="c9"
               color="primary"
             >
               検索
@@ -708,12 +293,12 @@ exports[`SearchPanel default 1`] = `
     <button
       aria-expanded="true"
       aria-haspopup="true"
-      class="c17"
+      class="c10"
     >
       絞り込み条件 
       <svg
         aria-hidden="true"
-        class="svg-inline--fa fa-caret-up fa-w-10 c18"
+        class="svg-inline--fa fa-caret-up fa-w-10 c11"
         data-icon="caret-up"
         data-prefix="fas"
         focusable="false"
