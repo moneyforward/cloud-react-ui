@@ -36,12 +36,12 @@ describe("SearchPanel", () => {
     const button = getByRole("button", { expanded: true });
     const panelBody = baseElement.querySelector("div[aria-hidden]");
 
-    fireEvent.click(button!);
-    expect(button!.getAttribute("aria-expanded")).toBe("false");
+    fireEvent.click(button);
+    expect(button.getAttribute("aria-expanded")).toBe("false");
     expect(panelBody!.getAttribute("aria-hidden")).toBe("true");
 
-    fireEvent.click(button!);
-    expect(button!.getAttribute("aria-expanded")).toBe("true");
+    fireEvent.click(button);
+    expect(button.getAttribute("aria-expanded")).toBe("true");
     expect(panelBody!.getAttribute("aria-hidden")).toBe("false");
   });
 });
