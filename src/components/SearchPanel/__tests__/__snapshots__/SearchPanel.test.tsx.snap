@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPanel default 1`] = `
+<DocumentFragment>
+  .c10 {
+  font-size: 13px;
+  color: #333333;
+}
+
+.c10:hover {
+  color: #333333;
+}
+
+.c7.c7 {
+  display: inline-block;
+  height: 32px;
+  padding: 0 12px;
+  line-height: 32px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #D4D8DD;
+  color: #3B7DE9;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.c7.c7:before,
+.c7.c7:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+}
+
+.c7.c7:before {
+  z-index: -1;
+  background: linear-gradient(to bottom,#FFFFFF,#ECF2FD);
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.c7.c7:after {
+  content: "";
+  z-index: -2;
+  background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
+  border-radius: 4px;
+}
+
+.c7.c7:hover:before {
+  opacity: 0;
+}
+
+.c7.c7:active,
+.c7.c7:focus,
+.c7.c7:visited {
+  outline: 0;
+  box-shadow: 0 0 2px rgba(212,216,221,0.3);
+}
+
+.c8.c8 {
+  display: inline-block;
+  height: 32px;
+  padding: 0 12px;
+  line-height: 32px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.15);
+  color: #FFFFFF;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.c8.c8:before,
+.c8.c8:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+}
+
+.c8.c8:before {
+  z-index: -1;
+  background: linear-gradient(to bottom,#3B7DE9,#0054AC 100%);
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.c8.c8:after {
+  content: "";
+  z-index: -2;
+  background: linear-gradient(to bottom,#0054AC,#3B7DE9);
+  border-radius: 4px;
+}
+
+.c8.c8:hover:before {
+  opacity: 0;
+}
+
+.c8.c8:active,
+.c8.c8:focus,
+.c8.c8:visited {
+  outline: 0;
+  box-shadow: 0 0 2px rgba(212,216,221,0.3);
+}
+
+.c9 {
+  background-color: #FFFFFF;
+  border: 1px solid #D4D8DD;
+  border-radius: 0 0 4px 4px;
+  border-top: 0;
+  color: #666;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: calc(100% - 1px);
+  right: 20px;
+}
+
+.c9 svg {
+  margin-left: 6px;
+}
+
+.c1 {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: auto;
+  -webkit-transition: max-height 199ms ease-in-out 0ms;
+  transition: max-height 199ms ease-in-out 0ms;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D4D8DD;
+  --max-row-number: 4;
+  --height-actions: 64px;
+  --height-filters-row: 48px;
+  --height-filters-total-gaps: calc(15px * (var(--max-row-number) + 1));
+  --height-filters: var(--height-filters-row) * var(--max-row-number) + var(--height-filters-total-gaps);
+  max-height: calc(var(--height-actions) + var(--height-filters));
+}
+
+.c1[aria-hidden="true"] {
+  border-bottom: none;
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transition: visibility 199ms linear 199ms,max-height 199ms ease-in-out 0ms;
+  transition: visibility 199ms linear 199ms,max-height 199ms ease-in-out 0ms;
+}
+
+.c2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+}
+
+.c3 + .c3 {
+  margin-top: 15px;
+}
+
+.c5 {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #D4D8DD;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+}
+
+.c6 > button {
+  min-width: 76px;
+}
+
+.c0 {
+  width: 100%;
+  position: relative;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      aria-hidden="false"
+      class="c1"
+    >
+      <form>
+        <div
+          class="c2"
+        >
+          <div
+            class="c3 c4"
+          >
+            <div
+              class=""
+            >
+              <div>
+                SearchPanel.Body content
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <button
+              class="c7"
+              color="settings"
+            >
+              クリア
+            </button>
+            <button
+              class="c8"
+              color="primary"
+            >
+              検索
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <button
+      aria-expanded="true"
+      aria-haspopup="true"
+      class="c9"
+    >
+      絞り込み条件 
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-caret-up fa-w-10 c10"
+        data-icon="caret-up"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        theme="[object Object]"
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;

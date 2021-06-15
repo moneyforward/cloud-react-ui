@@ -12,7 +12,7 @@ type ToggleButtonProps = {
 const StyledToggleButton = styled.button.attrs<ToggleButtonProps>(
   ({ ariaExpanded }) => ({
     "aria-expanded": ariaExpanded,
-    "aria-hasPopup": true,
+    "aria-haspopup": true,
   })
 )<ToggleButtonProps>`
   font-size: ${theme.text.size.middle};
