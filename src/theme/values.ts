@@ -3,7 +3,7 @@ import { color } from "./color";
 export const values = {
   font: {
     noto: "Noto Sans JP",
-    waight: {
+    weight: {
       normal: "normal",
       bold: "bold",
     },

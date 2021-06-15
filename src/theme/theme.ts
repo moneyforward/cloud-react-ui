@@ -259,7 +259,7 @@ export const componentsTheme = {
         minWidth: "110px",
         textAlign: "center",
         fontSize: values.text.size.middle,
-        fontWeight: values.font.waight.bold,
+        fontWeight: values.font.weight.bold,
       },
       check: {
         width: "18px",
@@ -482,7 +482,7 @@ export const componentsTheme = {
       backgroundColor: color.solitude,
       textAlign: "left",
       fontSize: values.text.size.middle,
-      fontWeight: values.font.waight.bold,
+      fontWeight: values.font.weight.bold,
     },
     td: {
       padding: "10px 17px",
@@ -490,8 +490,8 @@ export const componentsTheme = {
       textAlign: "left",
       fontSize: values.text.size.middle,
       fontWeight: {
-        normal: values.font.waight.normal,
-        bold: values.font.waight.bold,
+        normal: values.font.weight.normal,
+        bold: values.font.weight.bold,
       },
     },
   },
