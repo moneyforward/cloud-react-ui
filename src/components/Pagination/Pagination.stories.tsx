@@ -1,15 +1,19 @@
-import { Pagination } from "./Pagination";
+import { Pagination, PaginationProps } from "./Pagination";
 
 export default {
   component: Pagination,
-  title: "ui/Pagination",
+  title: "components/Pagination",
 };
 
-export const Default = (): JSX.Element => (
-  <Pagination>
-    <Pagination.Item>3</Pagination.Item>
-    <Pagination.Item>3</Pagination.Item>
-    <Pagination.Item>3</Pagination.Item>
-    <Pagination.Item>3</Pagination.Item>
+export const Default = ({
+  children,
+  currentPage,
+}: PaginationProps): JSX.Element => (
+  <Pagination currentPage={2}>
+    <Pagination.Item href="" label="<" disabled />
+    <Pagination.Item href="#" label="1" />
+    <Pagination.Item href="#" label="2" />
+    <Pagination.Item href="#" label="3" />
+    <Pagination.Item href="" label=">" disabled />
   </Pagination>
 );
