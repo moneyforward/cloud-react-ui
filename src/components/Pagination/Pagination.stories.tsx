@@ -1,8 +1,8 @@
-import { Pagination } from './Pagination';
+import { Pagination } from "./Pagination";
 
 export default {
   component: Pagination,
-  title: 'ui/Pagination',
+  title: "ui/Pagination",
 };
 
 export const Default = (): JSX.Element => (
