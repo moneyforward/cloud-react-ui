@@ -10,10 +10,10 @@ export const Default = ({
   currentPage,
 }: PaginationProps): JSX.Element => (
   <Pagination currentPage={2}>
-    <Pagination.Item href="" label="<" disabled />
+    <Pagination.Prev href="#" disabled />
     <Pagination.Item href="#" label="1" />
     <Pagination.Item href="#" label="2" />
     <Pagination.Item href="#" label="3" />
-    <Pagination.Item href="" label=">" disabled />
+    <Pagination.Next href="#" disabled />
   </Pagination>
 );

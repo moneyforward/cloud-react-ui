@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { PaginationItem } from "./PaginationItem";
+import {
+  PaginationItem,
+  PaginationPrev,
+  PaginationNext,
+} from "./PaginationItem";
 
 export type PaginationProps = {
   children?: React.ReactNode;
@@ -24,4 +28,6 @@ const BasePagination = ({ children }: PaginationProps): JSX.Element => (
 
 export const Pagination = Object.assign(BasePagination, {
   Item: PaginationItem,
+  Prev: PaginationPrev,
+  Next: PaginationNext,
 });
