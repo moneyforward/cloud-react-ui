@@ -5,7 +5,7 @@ import { Icon } from "../../components";
 export type PaginationItemProps = {
   href?: string;
   linkComponent?: React.ReactNode;
-  label?: string;
+  page?: number;
   disabled?: boolean;
 };
 
@@ -51,12 +51,12 @@ StyledPaginationItem.defaultProps = defaultProps;
 
 export const PaginationItem = ({
   href,
-  label,
+  page,
   disabled,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
     <a href={href} aria-disabled={disabled && true}>
-      {label}
+      {page}
     </a>
   </StyledPaginationItem>
 );

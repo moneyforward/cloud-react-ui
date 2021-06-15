@@ -11,9 +11,9 @@ export const Default = ({
 }: PaginationProps): JSX.Element => (
   <Pagination currentPage={2}>
     <Pagination.Prev href="#" disabled />
-    <Pagination.Item href="#" label="1" />
-    <Pagination.Item href="#" label="2" />
-    <Pagination.Item href="#" label="3" />
+    <Pagination.Item href="#" page={1} />
+    <Pagination.Item href="#" page={2} />
+    <Pagination.Item href="#" page={3} />
     <Pagination.Next href="#" disabled />
   </Pagination>
 );
