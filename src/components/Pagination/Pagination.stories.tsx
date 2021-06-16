@@ -1,5 +1,4 @@
 import { Pagination, PaginationProps } from "./Pagination";
-import { Icon } from "../../components";
 
 export default {
   component: Pagination,
@@ -9,33 +8,37 @@ export default {
 export const Default = ({
   children,
   currentPage,
-}: PaginationProps): JSX.Element => (
-  <Pagination>
-    <Pagination.Prev>
-      <Pagination.Link href="#" disabled>
-        <Icon icon="chevronUp" rotation={270} />
-      </Pagination.Link>
-    </Pagination.Prev>
+}: PaginationProps): JSX.Element => {
+  const pages = [1, 2, 3, 4, 5];
+  const current = 0;
+  const hasPrev = (current: number) => false;
+  const hasNext = (current: number) => true;
 
-    <Pagination.Item>
-      <Pagination.Link href="#" current>
-        1
-      </Pagination.Link>
-    </Pagination.Item>
-    <Pagination.Item>
-      <Pagination.Link href="#">2</Pagination.Link>
-    </Pagination.Item>
-    <Pagination.Item>
-      <Pagination.Link href="#">3</Pagination.Link>
-    </Pagination.Item>
-    <Pagination.Item>
-      <Pagination.Link href="#">4</Pagination.Link>
-    </Pagination.Item>
+  /* 
+    next/linkを利用する場合は、次のコンポーネントをNextLinkでラップして利用する必要があります。
+    [Pagination.Prev, Pagination.Link, Pagination.Next]
 
-    <Pagination.Next href="#" disabled>
-      <Pagination.Link href="#" disabled>
-        <Icon icon="chevronUp" rotation={90} />
-      </Pagination.Link>
-    </Pagination.Next>
-  </Pagination>
-);
+    <NextLink href="/xxx" passHref>
+      <Pagination.Link current>1</Pagination.Link>
+    </NextLink>
+  */
+  return (
+    <Pagination>
+      <Pagination.Item>
+        <Pagination.Prev href="#" disabled={hasPrev(current) || undefined} />
+      </Pagination.Item>
+
+      {pages.map((value, i) => (
+        <Pagination.Item key={i}>
+          <Pagination.Link href="#" current={current === i || undefined}>
+            {i + 1}
+          </Pagination.Link>
+        </Pagination.Item>
+      ))}
+
+      <Pagination.Item>
+        <Pagination.Next href="#" disabled={hasNext(current) || undefined} />
+      </Pagination.Item>
+    </Pagination>
+  );
+};
