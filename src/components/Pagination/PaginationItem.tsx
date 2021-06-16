@@ -24,36 +24,6 @@ const StyledPaginationItem = styled.li`
     border-right-width: 1px;
     border-radius: 0 4px 4px 0;
   }
-
-  a {
-    ${({ theme: { link } }) =>
-      css`
-        color: ${link.color};
-      `}
-
-    display: inline-block;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: inherit;
-    background-color: #fff;
-
-    &[aria-disabled] {
-      pointer-events: none;
-      cursor: auto;
-      color: #d8dade;
-    }
-
-    &[aria-current] {
-      color: #333;
-      font-weight: bold;
-      background-color: #fafafa;
-    }
-
-    svg {
-      color: inherit;
-      fill: currentColor;
-    }
-  }
 `;
 
 StyledPaginationItem.defaultProps = defaultProps;
@@ -71,8 +41,37 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
     "aria-current": current && "page",
     tabIndex: disabled ? -1 : 0,
   })
-)<PaginationLinkProps>``;
+)<PaginationLinkProps>`
+  ${({ theme: { link } }) =>
+    css`
+      color: ${link.color};
+    `}
 
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: inherit;
+  background-color: #fff;
+
+  &[aria-disabled] {
+    pointer-events: none;
+    cursor: auto;
+    color: #d8dade;
+  }
+
+  &[aria-current] {
+    color: #333;
+    font-weight: bold;
+    background-color: #fafafa;
+  }
+
+  svg {
+    color: inherit;
+    fill: currentColor;
+  }
+`;
+
+PaginationLink.defaultProps = defaultProps;
 PaginationLink.displayName = "Pagination.Link";
 
 export const PaginationItem = ({
@@ -83,18 +82,23 @@ export const PaginationItem = ({
 
 PaginationItem.displayName = "Pagination.Item";
 
-export const PaginationPrev = ({
-  children,
-}: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem>{children}</StyledPaginationItem>
-);
+export const PaginationPrev = forwardRef<
+  HTMLAnchorElement,
+  PaginationLinkProps
+>(({ disabled }, ref) => (
+  <PaginationLink ref={ref} disabled={disabled}>
+    <Icon icon="chevronUp" rotation={270} />
+  </PaginationLink>
+));
 
-PaginationItem.displayName = "Pagination.Prev";
+PaginationPrev.displayName = "Pagination.Prev";
 
-export const PaginationNext = ({
-  children,
-}: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem>{children}</StyledPaginationItem>
-);
-
-PaginationItem.displayName = "Pagination.Next";
+export const PaginationNext = forwardRef<
+  HTMLAnchorElement,
+  PaginationLinkProps
+>(({ disabled }, ref) => (
+  <PaginationLink ref={ref} disabled={disabled}>
+    <Icon icon="chevronUp" rotation={90} />
+  </PaginationLink>
+));
+PaginationNext.displayName = "Pagination.Next";
