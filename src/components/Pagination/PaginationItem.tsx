@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { defaultProps } from "../../theme";
 import React from "react";
 
 export type PaginationItemProps = {
@@ -20,8 +19,6 @@ const StyledPaginationItem = styled.li`
     border-radius: 0 4px 4px 0;
   }
 `;
-
-StyledPaginationItem.defaultProps = defaultProps;
 
 export const PaginationItem = ({
   children,
