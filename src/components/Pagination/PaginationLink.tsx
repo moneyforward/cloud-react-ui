@@ -26,6 +26,11 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
   border-radius: inherit;
   background-color: #fff;
 
+  &:hover {
+    color: #fff;
+    background-color: #5176ae;
+  }
+
   &[aria-disabled] {
     pointer-events: none;
     cursor: auto;
@@ -38,7 +43,8 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
     background-color: #fafafa;
   }
 
-  svg {
+  svg,
+  svg:hover {
     color: inherit;
     fill: currentColor;
   }
