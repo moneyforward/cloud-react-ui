@@ -6,7 +6,7 @@ UI components for Money Forward Cloud built with React.
 
 ## Component Catalog(Storybook)
 
-http://cloud-react-ui.s3-website-ap-northeast-1.amazonaws.com/
+<http://cloud-react-ui.s3-website-ap-northeast-1.amazonaws.com/>
 
 ## Contributing
 
@@ -17,4 +17,4 @@ npm run storybook
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/moneyforward/cloud-react-ui/blob/master/LICENSE.txt).
+This project is licensed under the terms of the [MIT license](https://github.com/moneyforward/cloud-react-ui/blob/main/LICENSE.txt).
