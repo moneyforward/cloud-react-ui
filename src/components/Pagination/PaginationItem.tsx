@@ -1,8 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { defaultProps } from "../../theme";
-import { Icon } from "../../components";
-import React, { forwardRef } from "react";
-import { PaginationLink } from "./PaginationLink";
+import React from "react";
 
 export type PaginationItemProps = {
   href?: string;
@@ -29,13 +27,6 @@ const StyledPaginationItem = styled.li`
 
 StyledPaginationItem.defaultProps = defaultProps;
 
-export type PaginationLinkProps = {
-  href?: string;
-  disabled?: boolean;
-  children?: React.ReactNode;
-  current?: boolean;
-};
-
 export const PaginationItem = ({
   children,
 }: PaginationItemProps): JSX.Element => (
@@ -43,24 +34,3 @@ export const PaginationItem = ({
 );
 
 PaginationItem.displayName = "Pagination.Item";
-
-export const PaginationPrev = forwardRef<
-  HTMLAnchorElement,
-  PaginationLinkProps
->(({ disabled }, ref) => (
-  <PaginationLink ref={ref} disabled={disabled}>
-    <Icon icon="chevronUp" rotation={270} />
-  </PaginationLink>
-));
-
-PaginationPrev.displayName = "Pagination.Prev";
-
-export const PaginationNext = forwardRef<
-  HTMLAnchorElement,
-  PaginationLinkProps
->(({ disabled }, ref) => (
-  <PaginationLink ref={ref} disabled={disabled}>
-    <Icon icon="chevronUp" rotation={90} />
-  </PaginationLink>
-));
-PaginationNext.displayName = "Pagination.Next";
