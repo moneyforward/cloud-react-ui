@@ -40,4 +40,4 @@ export const values = {
       solid: "solid",
     },
   },
-};
+} as const;
