@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 import { Icon } from "../../components";
-import React from "react";
+import React, { forwardRef } from "react";
 
 export type PaginationItemProps = {
   href?: string;
@@ -15,7 +15,6 @@ const StyledPaginationItem = styled.li`
   border-color: #c5cbcf;
   border-style: solid;
   border-width: 1px 0 1px 1px;
-  background-color: #fff;
 
   &:first-of-type {
     border-radius: 4px 0 0 4px;
@@ -35,6 +34,8 @@ const StyledPaginationItem = styled.li`
     display: inline-block;
     text-decoration: none;
     padding: 8px 14px;
+    border-radius: inherit;
+    background-color: #fff;
 
     &[aria-disabled] {
       pointer-events: none;
@@ -45,6 +46,7 @@ const StyledPaginationItem = styled.li`
     &[aria-current] {
       color: #333;
       font-weight: bold;
+      background-color: #fafafa;
     }
 
     svg {
@@ -63,25 +65,15 @@ export type PaginationLinkProps = {
   current?: boolean;
 };
 
-export const Link = ({
-  href,
-  disabled,
-  children,
-  current,
-  ...rest
-}: PaginationLinkProps): JSX.Element => {
-  return (
-    <a
-      href={href}
-      aria-disabled={disabled && true}
-      tabIndex={disabled ? -1 : 0}
-      aria-current={current && "page"}
-      {...rest}
-    >
-      {children}
-    </a>
-  );
-};
+export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
+  ({ disabled, current }) => ({
+    "aria-disabled": disabled,
+    "aria-current": current && "page",
+    tabIndex: disabled ? -1 : 0,
+  })
+)<PaginationLinkProps>``;
+
+PaginationLink.displayName = "Pagination.Link";
 
 export const PaginationItem = ({
   href,
@@ -91,9 +83,9 @@ export const PaginationItem = ({
   current,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <Link href={href} disabled={disabled} current={current}>
+    <PaginationLink href={href} disabled={disabled} current={current}>
       {page}
-    </Link>
+    </PaginationLink>
   </StyledPaginationItem>
 );
 
@@ -104,9 +96,9 @@ export const PaginationPrev = ({
   disabled,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <Link href={href} disabled={disabled}>
+    <PaginationLink href={href} disabled={disabled}>
       <Icon icon="chevronUp" rotation={270}></Icon>
-    </Link>
+    </PaginationLink>
   </StyledPaginationItem>
 );
 
@@ -117,9 +109,9 @@ export const PaginationNext = ({
   disabled,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <Link href={href} disabled={disabled}>
+    <PaginationLink href={href} disabled={disabled}>
       <Icon icon="chevronUp" rotation={90}></Icon>
-    </Link>
+    </PaginationLink>
   </StyledPaginationItem>
 );
 

@@ -14,6 +14,9 @@ export const Default = ({
     <Pagination.Item href="#" page={1} current />
     <Pagination.Item href="#" page={2} />
     <Pagination.Item href="#" page={3} />
+    <Pagination.Item>
+      <Pagination.Link href="#">4</Pagination.Link>
+    </Pagination.Item>
     <Pagination.Next href="#" disabled />
   </Pagination>
 );

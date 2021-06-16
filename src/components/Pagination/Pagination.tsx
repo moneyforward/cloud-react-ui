@@ -3,6 +3,7 @@ import {
   PaginationItem,
   PaginationPrev,
   PaginationNext,
+  PaginationLink,
 } from "./PaginationItem";
 
 export type PaginationProps = {
@@ -29,4 +30,5 @@ export const Pagination = Object.assign(BasePagination, {
   Item: PaginationItem,
   Prev: PaginationPrev,
   Next: PaginationNext,
+  Link: PaginationLink,
 });
