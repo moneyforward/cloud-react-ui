@@ -5,19 +5,17 @@ export default {
   title: "components/Pagination",
 };
 
-export const Default = ({
-  children,
-  currentPage,
-}: PaginationProps): JSX.Element => {
+export const Default = ({ children }: PaginationProps): JSX.Element => {
   const pages = [1, 2, 3, 4, 5];
   const current = 0;
   const hasPrev = (current: number) => false;
   const hasNext = (current: number) => true;
 
   /* 
-    next/linkを利用する場合は、次のコンポーネントをNextLinkでラップして利用する必要があります。
+    next/linkを利用する場合、以下ののコンポーネントではNextLinkでラップして利用する必要があります。
     [Pagination.Prev, Pagination.Link, Pagination.Next]
 
+    例:
     <NextLink href="/xxx" passHref>
       <Pagination.Link current>1</Pagination.Link>
     </NextLink>
@@ -25,7 +23,7 @@ export const Default = ({
   return (
     <Pagination>
       <Pagination.Item>
-        <Pagination.Prev href="#" disabled={hasPrev(current) || undefined} />
+        <Pagination.Prev href="#" disabled={!hasPrev(current) || undefined} />
       </Pagination.Item>
 
       {pages.map((value, i) => (
@@ -37,7 +35,7 @@ export const Default = ({
       ))}
 
       <Pagination.Item>
-        <Pagination.Next href="#" disabled={hasNext(current) || undefined} />
+        <Pagination.Next href="#" disabled={!hasNext(current) || undefined} />
       </Pagination.Item>
     </Pagination>
   );

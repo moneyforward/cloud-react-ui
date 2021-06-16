@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import {
-  PaginationItem,
-  PaginationPrev,
-  PaginationNext,
-  PaginationLink,
-} from "./PaginationItem";
+import { PaginationItem } from "./PaginationItem";
+import { PaginationPrev } from "./PaginationPrev";
+import { PaginationLink } from "./PaginationLink";
+import { PaginationNext } from "./PaginationNext";
 
 export type PaginationProps = {
   children?: React.ReactNode;
-  currentPage?: number;
+  ariaLabel?: string;
 };
 
 const StyledPagination = styled.nav``;
@@ -20,8 +18,12 @@ const PaginationList = styled.ul`
   margin: 0;
 `;
 
-const BasePagination = ({ children }: PaginationProps): JSX.Element => (
-  <StyledPagination>
+const BasePagination = ({
+  children,
+  ariaLabel = "pagination",
+  ...rest
+}: PaginationProps): JSX.Element => (
+  <StyledPagination aria-label={ariaLabel} {...rest}>
     <PaginationList>{children}</PaginationList>
   </StyledPagination>
 );
