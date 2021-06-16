@@ -8,13 +8,14 @@ export type PaginationItemProps = {
   page?: number;
   disabled?: boolean;
   children?: React.ReactNode;
+  current?: boolean;
 };
 
 const StyledPaginationItem = styled.li`
-  background-color: #fff;
   border-color: #c5cbcf;
   border-style: solid;
   border-width: 1px 0 1px 1px;
+  background-color: #fff;
 
   &:first-of-type {
     border-radius: 4px 0 0 4px;
@@ -41,6 +42,11 @@ const StyledPaginationItem = styled.li`
       color: #d8dade;
     }
 
+    &[aria-current] {
+      color: #333;
+      font-weight: bold;
+    }
+
     svg {
       color: inherit;
       fill: currentColor;
@@ -54,19 +60,23 @@ export type PaginationLinkProps = {
   href?: string;
   disabled?: boolean;
   children?: React.ReactNode;
+  current?: boolean;
 };
 
 export const Link = ({
   href,
-  page,
   disabled,
   children,
-}: PaginationItemProps): JSX.Element => {
+  current,
+  ...rest
+}: PaginationLinkProps): JSX.Element => {
   return (
     <a
       href={href}
       aria-disabled={disabled && true}
       tabIndex={disabled ? -1 : 0}
+      aria-current={current && "page"}
+      {...rest}
     >
       {children}
     </a>
@@ -78,9 +88,10 @@ export const PaginationItem = ({
   page,
   disabled,
   children,
+  current,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <Link href={href} disabled={disabled}>
+    <Link href={href} disabled={disabled} current={current}>
       {page}
     </Link>
   </StyledPaginationItem>
