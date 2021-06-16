@@ -76,43 +76,25 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
 PaginationLink.displayName = "Pagination.Link";
 
 export const PaginationItem = ({
-  href,
-  page,
-  disabled,
   children,
-  current,
 }: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem>
-    <PaginationLink href={href} disabled={disabled} current={current}>
-      {page}
-    </PaginationLink>
-  </StyledPaginationItem>
+  <StyledPaginationItem>{children}</StyledPaginationItem>
 );
 
 PaginationItem.displayName = "Pagination.Item";
 
 export const PaginationPrev = ({
-  href,
-  disabled,
+  children,
 }: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem>
-    <PaginationLink href={href} disabled={disabled}>
-      <Icon icon="chevronUp" rotation={270}></Icon>
-    </PaginationLink>
-  </StyledPaginationItem>
+  <StyledPaginationItem>{children}</StyledPaginationItem>
 );
 
 PaginationItem.displayName = "Pagination.Prev";
 
 export const PaginationNext = ({
-  href,
-  disabled,
+  children,
 }: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem>
-    <PaginationLink href={href} disabled={disabled}>
-      <Icon icon="chevronUp" rotation={90}></Icon>
-    </PaginationLink>
-  </StyledPaginationItem>
+  <StyledPaginationItem>{children}</StyledPaginationItem>
 );
 
 PaginationItem.displayName = "Pagination.Next";
