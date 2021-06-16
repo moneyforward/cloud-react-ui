@@ -5,7 +5,7 @@ export default {
   title: "components/Pagination",
 };
 
-export const Default = ({ children }: PaginationProps): JSX.Element => {
+export const Default = (): JSX.Element => {
   const pages = [1, 2, 3, 4, 5];
   const current = 0;
   const hasPrev = (current: number) => false;

@@ -3,11 +3,7 @@ import { defaultProps } from "../../theme";
 import React from "react";
 
 export type PaginationItemProps = {
-  href?: string;
-  page?: number;
-  disabled?: boolean;
-  children?: React.ReactNode;
-  current?: boolean;
+  children: React.ReactNode;
 };
 
 const StyledPaginationItem = styled.li`
@@ -29,8 +25,9 @@ StyledPaginationItem.defaultProps = defaultProps;
 
 export const PaginationItem = ({
   children,
+  ...rest
 }: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem>{children}</StyledPaginationItem>
+  <StyledPaginationItem {...rest}>{children}</StyledPaginationItem>
 );
 
 PaginationItem.displayName = "Pagination.Item";

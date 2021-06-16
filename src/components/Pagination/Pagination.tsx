@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { PaginationItem } from "./PaginationItem";
-import { PaginationPrev } from "./PaginationPrev";
-import { PaginationLink } from "./PaginationLink";
-import { PaginationNext } from "./PaginationNext";
+import { PaginationItem, PaginationItemProps } from "./PaginationItem";
+import { PaginationPrev, PaginationPrevProps } from "./PaginationPrev";
+import { PaginationLink, PaginationLinkProps } from "./PaginationLink";
+import { PaginationNext, PaginationNextProps } from "./PaginationNext";
 
-export type PaginationProps = {
+type PaginationProps = {
   children?: React.ReactNode;
   ariaLabel?: string;
 };
@@ -34,3 +34,11 @@ export const Pagination = Object.assign(BasePagination, {
   Next: PaginationNext,
   Link: PaginationLink,
 });
+
+export type {
+  PaginationProps,
+  PaginationItemProps,
+  PaginationPrevProps,
+  PaginationLinkProps,
+  PaginationNextProps,
+};

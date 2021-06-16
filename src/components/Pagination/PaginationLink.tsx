@@ -4,7 +4,7 @@ import { defaultProps } from "../../theme";
 export type PaginationLinkProps = {
   href?: string;
   disabled?: boolean;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   current?: boolean;
 };
 
