@@ -8,7 +8,6 @@ import {
 export type PaginationProps = {
   children?: React.ReactNode;
   currentPage?: number;
-  LinkComponent?: React.ReactNode;
 };
 
 const StyledPagination = styled.nav``;

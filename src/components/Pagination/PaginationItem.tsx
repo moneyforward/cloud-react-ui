@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 import { defaultProps } from "../../theme";
 import { Icon } from "../../components";
+import React from "react";
 
 export type PaginationItemProps = {
   href?: string;
-  linkComponent?: React.ReactNode;
   page?: number;
   disabled?: boolean;
+  children?: React.ReactNode;
 };
 
 const StyledPaginationItem = styled.li`
@@ -49,15 +50,39 @@ const StyledPaginationItem = styled.li`
 
 StyledPaginationItem.defaultProps = defaultProps;
 
+export type PaginationLinkProps = {
+  href?: string;
+  disabled?: boolean;
+  children?: React.ReactNode;
+};
+
+export const Link = ({
+  href,
+  page,
+  disabled,
+  children,
+}: PaginationItemProps): JSX.Element => {
+  return (
+    <a
+      href={href}
+      aria-disabled={disabled && true}
+      tabIndex={disabled ? -1 : 0}
+    >
+      {children}
+    </a>
+  );
+};
+
 export const PaginationItem = ({
   href,
   page,
   disabled,
+  children,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <a href={href} aria-disabled={disabled && true}>
+    <Link href={href} disabled={disabled}>
       {page}
-    </a>
+    </Link>
   </StyledPaginationItem>
 );
 
@@ -68,9 +93,9 @@ export const PaginationPrev = ({
   disabled,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <a href={href} aria-disabled={disabled && true}>
+    <Link href={href} disabled={disabled}>
       <Icon icon="chevronUp" rotation={270}></Icon>
-    </a>
+    </Link>
   </StyledPaginationItem>
 );
 
@@ -81,9 +106,9 @@ export const PaginationNext = ({
   disabled,
 }: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem>
-    <a href={href} aria-disabled={disabled && true}>
+    <Link href={href} disabled={disabled}>
       <Icon icon="chevronUp" rotation={90}></Icon>
-    </a>
+    </Link>
   </StyledPaginationItem>
 );
 
