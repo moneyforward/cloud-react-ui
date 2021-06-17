@@ -19,7 +19,7 @@ const CheckboxWrapper = styled.span`
     width: ${checkbox.width};
     height: ${checkbox.height};
     margin-top: 2px;
-    margin-right: 7px;
+    margin-right: 4px;
   `}
 `;
 CheckboxWrapper.defaultProps = defaultProps;
