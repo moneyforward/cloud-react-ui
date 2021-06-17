@@ -18,7 +18,8 @@ const CheckboxWrapper = styled.span`
     display: inline-block;
     width: ${checkbox.width};
     height: ${checkbox.height};
-    vertical-align: middle;
+    margin-top: 2px;
+    margin-right: 7px;
   `}
 `;
 CheckboxWrapper.defaultProps = defaultProps;
@@ -110,8 +111,11 @@ Icon.defaultProps = defaultProps;
 
 const Label = styled.label`
   cursor: pointer;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: flex-start;
 `;
+
+const LabelText = styled.span``;
 
 const Checkbox = forwardRef<HTMLInputElement, Props>(
   ({ children, className, ...rest }, ref) => (
@@ -123,8 +127,7 @@ const Checkbox = forwardRef<HTMLInputElement, Props>(
           <Icon />
         </IconWrapper>
       </CheckboxWrapper>
-
-      {children}
+      <LabelText>{children}</LabelText>
     </Label>
   )
 );
