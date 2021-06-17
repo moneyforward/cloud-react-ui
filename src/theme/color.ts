@@ -44,4 +44,4 @@ export const color = {
   whisper: "#EEEEEE",
   white: "#FFFFFF",
   whiteSmoke: "#F7F7F7",
-};
+} as const;
