@@ -19,7 +19,8 @@ const RadioWrapper = styled.span`
     display: inline-block;
     width: ${radio.width};
     height: ${radio.height};
-    vertical-align: middle;
+    margin-top: 2px;
+    margin-right: 4px;
   `}
 `;
 RadioWrapper.defaultProps = defaultProps;
@@ -114,8 +115,11 @@ Icon.defaultProps = defaultProps;
 
 const Label = styled.label`
   cursor: pointer;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: flex-start;
 `;
+
+const LabelText = styled.span``;
 
 const Radio = forwardRef<HTMLInputElement, Props>(
   ({ children, className, ...rest }, ref) => (
@@ -127,8 +131,7 @@ const Radio = forwardRef<HTMLInputElement, Props>(
           <Icon />
         </IconWrapper>
       </RadioWrapper>
-
-      {children}
+      <LabelText>{children}</LabelText>
     </Label>
   )
 );
