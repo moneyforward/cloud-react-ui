@@ -38,7 +38,7 @@ exports[`Pagination default 1`] = `
 
 .c2:hover {
   color: #fff;
-  background-color: #5176ae;
+  background-color: #3B7DE9;
 }
 
 .c2[aria-disabled] {
