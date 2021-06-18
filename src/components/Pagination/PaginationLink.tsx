@@ -28,7 +28,10 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
 
   &:hover {
     color: #fff;
-    background-color: #5176ae;
+    ${({ theme: { link } }) =>
+      css`
+        background-color: ${link.color};
+      `}
   }
 
   &[aria-disabled] {
