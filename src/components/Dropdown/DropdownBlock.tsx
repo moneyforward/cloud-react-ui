@@ -1,12 +1,32 @@
-import styled from "styled-components";
-import { color } from "../../theme";
+import { forwardRef } from "react";
+import styled, { css } from "styled-components";
+import { defaultProps } from "../../theme";
 
-export const DropdownBlock = styled.div`
-  padding: 16px;
+export type DropdownBlockProps = {
+  children?: React.ReactNode;
+  className?: string;
+  ariaLabel?: string;
+  collapsed?: boolean;
+  role?: string;
+};
 
-  & + & {
-    border-top: 1px solid ${color.linkWater};
-  }
+const StyledDropdownBlock = styled.div<DropdownBlockProps>`
+  ${({ collapsed = false, theme: { dropdown } }) => css`
+    padding: ${collapsed
+      ? dropdown.block.padding.collapsed
+      : dropdown.block.padding.default};
+    & + & {
+      border-top: ${dropdown.block.borderWidth} ${dropdown.block.borderStyle}
+        ${dropdown.block.borderColor};
+    }
+  `}
 `;
+StyledDropdownBlock.defaultProps = defaultProps;
+
+const DropdownBlock = forwardRef<HTMLDivElement, DropdownBlockProps>(
+  (props, ref) => <StyledDropdownBlock ref={ref} {...props} />
+);
 
 DropdownBlock.displayName = "Dropdown.Block";
+
+export { DropdownBlock };

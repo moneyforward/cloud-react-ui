@@ -526,6 +526,25 @@ export const componentsTheme = {
     fontSize: values.text.size.small,
     color: color.white,
   },
+  // Dropdown
+  dropdown: {
+    block: {
+      padding: {
+        default: "8px 0",
+        collapsed: "0",
+      },
+      borderWidth: values.border.width.thin,
+      borderStyle: values.border.style.solid,
+      borderColor: color.linkWater,
+    },
+    item: {
+      padding: {
+        default: "8px 16px",
+        collapsed: "0",
+      },
+      fontSize: values.text.size.middle,
+    },
+  },
 };
 
 export const uiTheme = {

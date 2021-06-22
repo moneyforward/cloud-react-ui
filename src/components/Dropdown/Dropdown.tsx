@@ -1,6 +1,7 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 import { useState } from "react";
-import { DropdownMenu, DropdownMenuItem } from "./DropdownMenu";
+import { DropdownItem } from "./DropdownItem";
 import { DropdownBlock } from "./DropdownBlock";
 import { DropdownBody } from "./DropdownBody";
 import { DropdownToggleButton } from "./DropdownToggleButton";
@@ -17,33 +18,34 @@ const StyledDropdown = styled.div`
   width: fit-content;
 `;
 
-const DropdownBase = ({
-  children,
-  toggleLabel,
-  width,
-  placement,
-}: DropdownProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
+  ({ children, toggleLabel, width, placement }, ref) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-  function handleClick() {
-    setIsOpen(!isOpen);
+    function handleClick() {
+      setIsOpen(!isOpen);
+    }
+
+    return (
+      <StyledDropdown ref={ref}>
+        <DropdownToggleButton onClick={handleClick} ariaExpanded={isOpen}>
+          {toggleLabel}
+        </DropdownToggleButton>
+        <DropdownBody width={width} ariaHidden={!isOpen} placement={placement}>
+          {children}
+        </DropdownBody>
+      </StyledDropdown>
+    );
   }
+);
 
-  return (
-    <StyledDropdown>
-      <DropdownToggleButton onClick={handleClick} ariaExpanded={isOpen}>
-        {toggleLabel}
-      </DropdownToggleButton>
-      <DropdownBody width={width} ariaHidden={!isOpen} placement={placement}>
-        {children}
-      </DropdownBody>
-    </StyledDropdown>
-  );
-};
+DropdownRoot.displayName = "Dropdown";
 
-export const Dropdown = Object.assign(DropdownBase, {
+export type { DropdownBodyProps } from "./DropdownBody";
+export type { DropdownBlockProps } from "./DropdownBlock";
+export type { DropdownItemProps } from "./DropdownItem";
+export const Dropdown = Object.assign(DropdownRoot, {
   Body: DropdownBody,
   Block: DropdownBlock,
-  Menu: DropdownMenu,
-  MenuItem: DropdownMenuItem,
+  Item: DropdownItem,
 });

@@ -3,37 +3,12 @@
 exports[`Dropdown default 1`] = `
 <DocumentFragment>
   .c7 {
-  margin-top: -8px;
-  margin-bottom: -8px;
-}
-
-.c7 ul {
-  padding: 0;
-  margin: 0;
-}
-
-.c8 {
-  list-style: none;
   font-size: 13px;
-  padding: 0;
-  margin: 0;
-}
-
-.c8 a {
-  display: inline-block;
-  width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #333;
-}
-
-.c8 a:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  padding: 8px 16px;
 }
 
 .c6 {
-  padding: 16px;
+  padding: 8px 0;
 }
 
 .c5 + .c5 {
@@ -89,38 +64,38 @@ exports[`Dropdown default 1`] = `
   color: #333333;
 }
 
-.c9 {
+.c8 {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:visited {
+.c8:visited {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:focus {
+.c8:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:active {
+.c8:active {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:hover {
+.c8:hover {
   cursor: pointer;
   color: #3B7DE9;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9.disabled {
+.c8.disabled {
   cursor: not-allowed;
   color: #999999;
 }
@@ -147,7 +122,6 @@ exports[`Dropdown default 1`] = `
     class="c0"
   >
     <button
-      aria-expanded="false"
       aria-haspopup="true"
       class="c1"
     >
@@ -172,7 +146,6 @@ exports[`Dropdown default 1`] = `
     <div
       aria-hidden="true"
       class="c3 c4"
-      width="max-content"
     >
       <div
         class="c5 c6"
@@ -180,38 +153,32 @@ exports[`Dropdown default 1`] = `
         <div
           class="c7"
         >
-          <ul>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-          </ul>
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
         </div>
       </div>
     </div>
@@ -222,37 +189,12 @@ exports[`Dropdown default 1`] = `
 exports[`Dropdown with multiple blocks 1`] = `
 <DocumentFragment>
   .c7 {
-  margin-top: -8px;
-  margin-bottom: -8px;
-}
-
-.c7 ul {
-  padding: 0;
-  margin: 0;
-}
-
-.c8 {
-  list-style: none;
   font-size: 13px;
-  padding: 0;
-  margin: 0;
-}
-
-.c8 a {
-  display: inline-block;
-  width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #333;
-}
-
-.c8 a:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  padding: 8px 16px;
 }
 
 .c6 {
-  padding: 16px;
+  padding: 8px 0;
 }
 
 .c5 + .c5 {
@@ -308,38 +250,38 @@ exports[`Dropdown with multiple blocks 1`] = `
   color: #333333;
 }
 
-.c9 {
+.c8 {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:visited {
+.c8:visited {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:focus {
+.c8:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:active {
+.c8:active {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:hover {
+.c8:hover {
   cursor: pointer;
   color: #3B7DE9;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9.disabled {
+.c8.disabled {
   cursor: not-allowed;
   color: #999999;
 }
@@ -366,7 +308,6 @@ exports[`Dropdown with multiple blocks 1`] = `
     class="c0"
   >
     <button
-      aria-expanded="false"
       aria-haspopup="true"
       class="c1"
     >
@@ -391,7 +332,6 @@ exports[`Dropdown with multiple blocks 1`] = `
     <div
       aria-hidden="true"
       class="c3 c4"
-      width="max-content"
     >
       <div
         class="c5 c6"
@@ -404,38 +344,32 @@ exports[`Dropdown with multiple blocks 1`] = `
         <div
           class="c7"
         >
-          <ul>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-          </ul>
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
         </div>
       </div>
       <div
@@ -451,37 +385,12 @@ exports[`Dropdown with multiple blocks 1`] = `
 exports[`Dropdown with placement 1`] = `
 <DocumentFragment>
   .c7 {
-  margin-top: -8px;
-  margin-bottom: -8px;
-}
-
-.c7 ul {
-  padding: 0;
-  margin: 0;
-}
-
-.c8 {
-  list-style: none;
   font-size: 13px;
-  padding: 0;
-  margin: 0;
-}
-
-.c8 a {
-  display: inline-block;
-  width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #333;
-}
-
-.c8 a:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  padding: 8px 16px;
 }
 
 .c6 {
-  padding: 16px;
+  padding: 8px 0;
 }
 
 .c5 + .c5 {
@@ -537,38 +446,38 @@ exports[`Dropdown with placement 1`] = `
   color: #333333;
 }
 
-.c9 {
+.c8 {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:visited {
+.c8:visited {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:focus {
+.c8:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:active {
+.c8:active {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:hover {
+.c8:hover {
   cursor: pointer;
   color: #3B7DE9;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9.disabled {
+.c8.disabled {
   cursor: not-allowed;
   color: #999999;
 }
@@ -595,7 +504,6 @@ exports[`Dropdown with placement 1`] = `
     class="c0"
   >
     <button
-      aria-expanded="false"
       aria-haspopup="true"
       class="c1"
     >
@@ -620,7 +528,6 @@ exports[`Dropdown with placement 1`] = `
     <div
       aria-hidden="true"
       class="c3 c4"
-      width="max-content"
     >
       <div
         class="c5 c6"
@@ -628,38 +535,32 @@ exports[`Dropdown with placement 1`] = `
         <div
           class="c7"
         >
-          <ul>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-            <li
-              class="c8"
-            >
-              <a
-                class="c9"
-                href="#"
-              >
-                ユーザー設定
-              </a>
-            </li>
-          </ul>
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            ユーザー設定
+          </a>
         </div>
       </div>
     </div>

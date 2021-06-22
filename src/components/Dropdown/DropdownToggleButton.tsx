@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
-import { theme } from "../../theme";
+import { theme, defaultProps } from "../../theme";
 
-type ToggleButtonProps = {
+type DropdownToggleButtonProps = {
   children: React.ReactNode;
   ariaExpanded: boolean;
   onClick: MouseEventHandler;
 };
 
-const StyledToggleButton = styled.button.attrs<ToggleButtonProps>(
+const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
   ({ ariaExpanded }) => ({
     "aria-expanded": ariaExpanded,
     "aria-haspopup": true,
   })
-)<ToggleButtonProps>`
+)`
   font-size: ${theme.text.size.middle};
   color: ${theme.text.color.default};
   background-color: #fff;
@@ -24,15 +24,18 @@ const StyledToggleButton = styled.button.attrs<ToggleButtonProps>(
     margin-left: 6px;
   }
 `;
+StyledToggleButton.defaultProps = defaultProps;
 
-export const DropdownToggleButton = forwardRef<
+const DropdownToggleButton = forwardRef<
   HTMLButtonElement,
-  ToggleButtonProps
+  DropdownToggleButtonProps
 >(({ children, ariaExpanded, onClick }, ref) => (
-  <StyledToggleButton ref={ref} onClick={onClick} ariaExpanded={ariaExpanded}>
+  <StyledToggleButton onClick={onClick} aria-expanded={ariaExpanded} ref={ref}>
     {children}
     <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
   </StyledToggleButton>
 ));
 
 DropdownToggleButton.displayName = "Dropdown.ToggleButton";
+
+export { DropdownToggleButton };

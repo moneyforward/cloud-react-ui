@@ -6,17 +6,15 @@ describe("Dropdown", () => {
   const Template = (args: DropdownProps): JSX.Element => (
     <Dropdown {...args}>
       <Dropdown.Block>
-        <Dropdown.Menu>
-          <Dropdown.MenuItem>
-            <Link href="#">ユーザー設定</Link>
-          </Dropdown.MenuItem>
-          <Dropdown.MenuItem>
-            <Link href="#">ユーザー設定</Link>
-          </Dropdown.MenuItem>
-          <Dropdown.MenuItem>
-            <Link href="#">ユーザー設定</Link>
-          </Dropdown.MenuItem>
-        </Dropdown.Menu>
+        <Dropdown.Item>
+          <Link href="#">ユーザー設定</Link>
+        </Dropdown.Item>
+        <Dropdown.Item>
+          <Link href="#">ユーザー設定</Link>
+        </Dropdown.Item>
+        <Dropdown.Item>
+          <Link href="#">ユーザー設定</Link>
+        </Dropdown.Item>
       </Dropdown.Block>
     </Dropdown>
   );
@@ -40,17 +38,15 @@ describe("Dropdown", () => {
           Blockを複数配置することで、内容を分割できます。
         </Dropdown.Block>
         <Dropdown.Block>
-          <Dropdown.Menu>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-            <Dropdown.MenuItem>
-              <Link href="#">ユーザー設定</Link>
-            </Dropdown.MenuItem>
-          </Dropdown.Menu>
+          <Dropdown.Item>
+            <Link href="#">ユーザー設定</Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link href="#">ユーザー設定</Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link href="#">ユーザー設定</Link>
+          </Dropdown.Item>
         </Dropdown.Block>
         <Dropdown.Block>
           Blockを複数配置することで、内容を分割できます。
