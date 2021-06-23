@@ -3,8 +3,10 @@ import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
 import { theme, defaultProps } from "../../theme";
 
-type DropdownToggleButtonProps = {
+export type DropdownToggleButtonProps = {
   children: React.ReactNode;
+  className?: string;
+  ariaLabel?: string;
   ariaExpanded: boolean;
   onClick: MouseEventHandler;
 };
@@ -29,8 +31,13 @@ StyledToggleButton.defaultProps = defaultProps;
 const DropdownToggleButton = forwardRef<
   HTMLButtonElement,
   DropdownToggleButtonProps
->(({ children, ariaExpanded, onClick }, ref) => (
-  <StyledToggleButton onClick={onClick} aria-expanded={ariaExpanded} ref={ref}>
+>(({ children, ariaExpanded, onClick, ...rest }, ref) => (
+  <StyledToggleButton
+    onClick={onClick}
+    aria-expanded={ariaExpanded}
+    ref={ref}
+    {...rest}
+  >
     {children}
     <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
   </StyledToggleButton>

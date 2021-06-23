@@ -4,6 +4,8 @@ import { color, defaultProps } from "../../theme";
 
 export type DropdownBodyProps = {
   children?: React.ReactNode;
+  className?: string;
+  ariaLabel?: string;
   width?: string;
   ariaHidden: boolean;
   placement?: "left" | "right";

@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, MouseEventHandler } from "react";
 import styled, { css } from "styled-components";
 import { values, defaultProps } from "../../theme";
 
@@ -8,6 +8,7 @@ export type DropdownItemProps = {
   ariaLabel?: string;
   collapsed?: boolean;
   role?: string;
+  onClick?: MouseEventHandler;
 };
 
 const StyledDropdownItem = styled.div<DropdownItemProps>`
