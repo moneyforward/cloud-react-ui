@@ -1,6 +1,6 @@
 import { forwardRef, MouseEventHandler } from "react";
 import styled, { css } from "styled-components";
-import { values, defaultProps } from "../../theme";
+import { defaultProps } from "../../theme";
 
 export type DropdownItemProps = {
   children?: React.ReactNode;

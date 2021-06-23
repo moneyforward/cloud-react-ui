@@ -1,9 +1,10 @@
 import { forwardRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { DropdownItem } from "./DropdownItem";
 import { DropdownBlock } from "./DropdownBlock";
 import { DropdownBody } from "./DropdownBody";
 import { DropdownToggleButton } from "./DropdownToggleButton";
+import { defaultProps } from "../../theme";
 
 export type DropdownProps = {
   children?: React.ReactNode;
@@ -12,9 +13,12 @@ export type DropdownProps = {
 };
 
 const StyledDropdown = styled.div`
-  position: relative;
-  width: fit-content;
+  ${({ theme: { dropdown } }) => css`
+    position: ${dropdown.root.position};
+    width: ${dropdown.root.width};
+  `}
 `;
+StyledDropdown.defaultProps = defaultProps;
 
 const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
   ({ children, ...rest }, ref) => {
