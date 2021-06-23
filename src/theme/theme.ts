@@ -526,66 +526,6 @@ export const componentsTheme = {
     fontSize: values.text.size.small,
     color: color.white,
   },
-  // Dropdown
-  dropdown: {
-    root: {
-      position: "relative",
-      width: "fit-content",
-    },
-    toggle: {
-      fontSize: values.text.size.middle,
-      color: values.text.color.default,
-      backgroundColor: color.white,
-      border: "none",
-      svg: {
-        marginLeft: "6px",
-      },
-    },
-    body: {
-      position: "absolute",
-      top: "calc(100% + 10px)",
-      transition: {
-        default: `opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-        transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms`,
-        hidden: `opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-        visibility 299ms linear 299ms`,
-      },
-      transform: "scale(0.75, 0.5625)",
-      overflowY: "auto",
-      opacity: {
-        default: "1",
-        hidden: "0",
-      },
-      borderRadius: "4px",
-      backgroundColor: color.white,
-      boxShadow: "1px 2px 4px rgba(0, 0, 0, 0.3)",
-      visibility: {
-        default: "visible",
-        hidden: "hidden",
-      },
-      block: {
-        borderWidth: values.border.width.thin,
-        borderStyle: values.border.style.solid,
-        borderColor: color.linkWater,
-      },
-    },
-    block: {
-      padding: {
-        default: "8px 0",
-        collapsed: "0",
-      },
-      borderWidth: values.border.width.thin,
-      borderStyle: values.border.style.solid,
-      borderColor: color.linkWater,
-    },
-    item: {
-      padding: {
-        default: "8px 16px",
-        collapsed: "0",
-      },
-      fontSize: values.text.size.middle,
-    },
-  },
 };
 
 export const uiTheme = {

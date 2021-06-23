@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { DropdownItem } from "./DropdownItem";
 import { DropdownBlock } from "./DropdownBlock";
 import { DropdownBody } from "./DropdownBody";
@@ -13,10 +13,8 @@ export type DropdownProps = {
 };
 
 const StyledDropdown = styled.div`
-  ${({ theme: { dropdown } }) => css`
-    position: ${dropdown.root.position};
-    width: ${dropdown.root.width};
-  `}
+  position: relative;
+  width: fit-content;
 `;
 StyledDropdown.defaultProps = defaultProps;
 
@@ -36,9 +34,10 @@ export type { DropdownToggleButtonProps } from "./DropdownToggleButton";
 export type { DropdownBodyProps } from "./DropdownBody";
 export type { DropdownBlockProps } from "./DropdownBlock";
 export type { DropdownItemProps } from "./DropdownItem";
-export const Dropdown = Object.assign(DropdownRoot, {
+const Dropdown = Object.assign(DropdownRoot, {
   Body: DropdownBody,
   Block: DropdownBlock,
   Item: DropdownItem,
   ToggleButton: DropdownToggleButton,
 });
+export { Dropdown };

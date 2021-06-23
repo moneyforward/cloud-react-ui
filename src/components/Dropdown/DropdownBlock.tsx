@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { values, color, defaultProps } from "../../theme";
 
 export type DropdownBlockProps = {
   children?: React.ReactNode;
@@ -11,13 +11,11 @@ export type DropdownBlockProps = {
 };
 
 const StyledDropdownBlock = styled.div<DropdownBlockProps>`
-  ${({ collapsed = false, theme: { dropdown } }) => css`
-    padding: ${collapsed
-      ? dropdown.block.padding.collapsed
-      : dropdown.block.padding.default};
+  ${({ collapsed = false }) => css`
+    padding: ${collapsed ? "0" : "8px 0"};
     & + & {
-      border-top: ${dropdown.block.borderWidth} ${dropdown.block.borderStyle}
-        ${dropdown.block.borderColor};
+      border-top: ${values.border.width.thin} ${values.border.style.solid}
+        ${color.linkWater};
     }
   `}
 `;

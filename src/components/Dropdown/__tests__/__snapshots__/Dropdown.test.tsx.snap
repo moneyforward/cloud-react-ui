@@ -35,16 +35,16 @@ exports[`Dropdown close 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #D4D8DD;
+  border-top: 1px, solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
   -webkit-transform: scale(0.75,0.5625);
   -ms-transform: scale(0.75,0.5625);
   transform: scale(0.75,0.5625);
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,-webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, -webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -216,16 +216,16 @@ exports[`Dropdown default 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #D4D8DD;
+  border-top: 1px, solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
   -webkit-transform: scale(0.75,0.5625);
   -ms-transform: scale(0.75,0.5625);
   transform: scale(0.75,0.5625);
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,-webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, -webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -397,16 +397,16 @@ exports[`Dropdown with multiple blocks 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #D4D8DD;
+  border-top: 1px, solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
   -webkit-transform: scale(0.75,0.5625);
   -ms-transform: scale(0.75,0.5625);
   transform: scale(0.75,0.5625);
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,-webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, -webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -588,16 +588,16 @@ exports[`Dropdown with placement 1`] = `
 }
 
 .c3 > .block + .c3 > .block {
-  border-top: 1px solid #D4D8DD;
+  border-top: 1px, solid #D4D8DD;
 }
 
 .c4[aria-hidden="true"] {
   -webkit-transform: scale(0.75,0.5625);
   -ms-transform: scale(0.75,0.5625);
   transform: scale(0.75,0.5625);
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,-webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
-  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, -webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
   visibility: hidden;
   opacity: 0;
 }

@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Icon } from "../../components";
 import { MouseEventHandler, forwardRef } from "react";
-import { theme, defaultProps } from "../../theme";
+import { values, color, defaultProps } from "../../theme";
 
 export type DropdownToggleButtonProps = {
   children: React.ReactNode;
@@ -17,16 +17,14 @@ const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
     "aria-haspopup": true,
   })
 )`
-  ${({ theme: { dropdown } }) => css`
-    font-size: ${dropdown.toggle.fontSize};
-    color: ${dropdown.toggle.color};
-    background-color: ${dropdown.toggle.backgroundColor};
-    border: ${dropdown.toggle.border};
+  font-size: ${values.text.size.middle};
+  color: ${values.text.color.default};
+  background-color: ${color.white};
+  border: none;
 
-    svg {
-      margin-left: ${dropdown.toggle.svg.marginLeft};
-    }
-  `}
+  svg {
+    margin-left: 6px;
+  }
 `;
 StyledToggleButton.defaultProps = defaultProps;
 
