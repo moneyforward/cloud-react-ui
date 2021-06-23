@@ -35,14 +35,14 @@ const Template: Story = (args) => {
         ariaHidden={!isOpen}
         placement={args["placement"]}
       >
-        <Dropdown.Block>
-          <Dropdown.Item collapsed onClick={handleClose}>
+        <Dropdown.Block role="list">
+          <Dropdown.Item collapsed role="listitem" onClick={handleClose}>
             <StyledLink href="#">ユーザー設定</StyledLink>
           </Dropdown.Item>
-          <Dropdown.Item collapsed onClick={handleClose}>
+          <Dropdown.Item collapsed role="listitem" onClick={handleClose}>
             <StyledLink href="#">ユーザー設定</StyledLink>
           </Dropdown.Item>
-          <Dropdown.Item collapsed onClick={handleClose}>
+          <Dropdown.Item collapsed role="listitem" onClick={handleClose}>
             <StyledLink href="#">ユーザー設定</StyledLink>
           </Dropdown.Item>
         </Dropdown.Block>
@@ -79,14 +79,14 @@ const MultipleTemplate: Story = () => {
             Blockを複数配置することで、内容を分割できます。
           </Dropdown.Item>
         </Dropdown.Block>
-        <Dropdown.Block>
-          <Dropdown.Item collapsed onClick={handleClose}>
+        <Dropdown.Block role="list">
+          <Dropdown.Item collapsed role="listitem" onClick={handleClose}>
             <StyledLink href="#">ユーザー設定</StyledLink>
           </Dropdown.Item>
-          <Dropdown.Item collapsed onClick={handleClose}>
+          <Dropdown.Item collapsed role="listitem" onClick={handleClose}>
             <StyledLink href="#">ユーザー設定</StyledLink>
           </Dropdown.Item>
-          <Dropdown.Item collapsed onClick={handleClose}>
+          <Dropdown.Item collapsed role="listitem" onClick={handleClose}>
             <StyledLink href="#">ユーザー設定</StyledLink>
           </Dropdown.Item>
         </Dropdown.Block>
