@@ -27,12 +27,12 @@ const Template: Story = (args) => {
 
   return (
     <Dropdown>
-      <Dropdown.ToggleButton onClick={handleToggle} ariaExpanded={isOpen}>
+      <Dropdown.ToggleButton onClick={handleToggle} isOpen={isOpen}>
         ドロップダウン開閉
       </Dropdown.ToggleButton>
       <Dropdown.Body
         width="200px"
-        ariaHidden={!isOpen}
+        isHidden={!isOpen}
         placement={args["placement"]}
       >
         <Dropdown.Block role="list">
@@ -70,10 +70,10 @@ const MultipleTemplate: Story = () => {
 
   return (
     <Dropdown>
-      <Dropdown.ToggleButton onClick={handleToggle} ariaExpanded={isOpen}>
+      <Dropdown.ToggleButton onClick={handleToggle} isOpen={isOpen}>
         ドロップダウン開閉
       </Dropdown.ToggleButton>
-      <Dropdown.Body width="200px" ariaHidden={!isOpen} placement="left">
+      <Dropdown.Body width="200px" isHidden={!isOpen} placement="left">
         <Dropdown.Block>
           <Dropdown.Item>
             Blockを複数配置することで、内容を分割できます。

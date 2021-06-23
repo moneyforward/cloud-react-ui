@@ -18,12 +18,12 @@ describe("Dropdown", () => {
     };
     return (
       <Dropdown>
-        <Dropdown.ToggleButton onClick={handleToggle} ariaExpanded={isOpen}>
+        <Dropdown.ToggleButton onClick={handleToggle} isOpen={isOpen}>
           ButtonLabel
         </Dropdown.ToggleButton>
         <Dropdown.Body
           width="200px"
-          ariaHidden={!isOpen}
+          isHidden={!isOpen}
           placement={args["placement"]}
         >
           <Dropdown.Block>
@@ -77,10 +77,10 @@ describe("Dropdown", () => {
       };
       return (
         <Dropdown>
-          <Dropdown.ToggleButton onClick={handleToggle} ariaExpanded={isOpen}>
+          <Dropdown.ToggleButton onClick={handleToggle} isOpen={isOpen}>
             ButtonLabel
           </Dropdown.ToggleButton>
-          <Dropdown.Body width="200px" ariaHidden={!isOpen}>
+          <Dropdown.Body width="200px" isHidden={!isOpen}>
             <Dropdown.Block>Block</Dropdown.Block>
             <Dropdown.Block>
               <Dropdown.Item collapsed>

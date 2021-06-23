@@ -7,13 +7,13 @@ export type DropdownToggleButtonProps = {
   children: React.ReactNode;
   className?: string;
   ariaLabel?: string;
-  ariaExpanded: boolean;
+  isOpen: boolean;
   onClick: MouseEventHandler;
 };
 
 const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
-  ({ ariaExpanded }) => ({
-    "aria-expanded": ariaExpanded,
+  ({ isOpen }) => ({
+    "aria-expanded": isOpen,
     "aria-haspopup": true,
   })
 )`
@@ -31,15 +31,15 @@ StyledToggleButton.defaultProps = defaultProps;
 const DropdownToggleButton = forwardRef<
   HTMLButtonElement,
   DropdownToggleButtonProps
->(({ children, ariaExpanded, onClick, ...rest }, ref) => (
+>(({ children, isOpen, onClick, ...rest }, ref) => (
   <StyledToggleButton
     onClick={onClick}
-    aria-expanded={ariaExpanded}
+    aria-expanded={isOpen}
     ref={ref}
     {...rest}
   >
     {children}
-    <Icon icon="caretUp" rotation={ariaExpanded ? undefined : 180} />
+    <Icon icon="caretUp" rotation={isOpen ? undefined : 180} />
   </StyledToggleButton>
 ));
 
