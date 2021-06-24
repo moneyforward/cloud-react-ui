@@ -49,10 +49,8 @@ const StyledDropdownBody = styled.div.attrs<DropdownBodyProps>(
 `;
 StyledDropdownBody.defaultProps = defaultProps;
 
-const DropdownBody = forwardRef<HTMLDivElement, DropdownBodyProps>(
+export const DropdownBody = forwardRef<HTMLDivElement, DropdownBodyProps>(
   (props, ref) => <StyledDropdownBody ref={ref} {...props} />
 );
 
 DropdownBody.displayName = "Dropdown.Body";
-
-export { DropdownBody };

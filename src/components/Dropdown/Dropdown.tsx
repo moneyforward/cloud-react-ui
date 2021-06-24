@@ -34,10 +34,9 @@ export type { DropdownToggleButtonProps } from "./DropdownToggleButton";
 export type { DropdownBodyProps } from "./DropdownBody";
 export type { DropdownBlockProps } from "./DropdownBlock";
 export type { DropdownItemProps } from "./DropdownItem";
-const Dropdown = Object.assign(DropdownRoot, {
+export const Dropdown = Object.assign(DropdownRoot, {
   Body: DropdownBody,
   Block: DropdownBlock,
   Item: DropdownItem,
   ToggleButton: DropdownToggleButton,
 });
-export { Dropdown };

@@ -21,10 +21,8 @@ const StyledDropdownBlock = styled.div<DropdownBlockProps>`
 `;
 StyledDropdownBlock.defaultProps = defaultProps;
 
-const DropdownBlock = forwardRef<HTMLDivElement, DropdownBlockProps>(
+export const DropdownBlock = forwardRef<HTMLDivElement, DropdownBlockProps>(
   (props, ref) => <StyledDropdownBlock ref={ref} {...props} />
 );
 
 DropdownBlock.displayName = "Dropdown.Block";
-
-export { DropdownBlock };
