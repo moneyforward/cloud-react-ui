@@ -18,13 +18,13 @@ const Template: Story<DropdownProps> = (args) => {
     <Dropdown {...args}>
       <Dropdown.Block role="list">
         <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">ユーザー設定</StyledLink>
+          <StyledLink href="#">リンク</StyledLink>
         </Dropdown.Item>
         <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">ユーザー設定</StyledLink>
+          <StyledLink href="#">リンク</StyledLink>
         </Dropdown.Item>
-        <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">ユーザー設定</StyledLink>
+        <Dropdown.Item collapsed role="listitem" isKeepOpen>
+          <StyledLink href="#">リンク(isKeepOpen)</StyledLink>
         </Dropdown.Item>
       </Dropdown.Block>
     </Dropdown>
@@ -44,24 +44,27 @@ const MultipleTemplate: Story<DropdownProps> = (args) => {
   return (
     <Dropdown {...args}>
       <Dropdown.Block>
-        <Dropdown.Item>
+        <Dropdown.Item isKeepOpen>
           Blockを複数配置することで、内容を分割できます。
         </Dropdown.Item>
       </Dropdown.Block>
       <Dropdown.Block role="list">
         <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">ユーザー設定</StyledLink>
+          <StyledLink href="#">リンク</StyledLink>
         </Dropdown.Item>
         <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">ユーザー設定</StyledLink>
+          <StyledLink href="#">リンク</StyledLink>
         </Dropdown.Item>
-        <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">ユーザー設定</StyledLink>
+        <Dropdown.Item collapsed role="listitem" isKeepOpen>
+          <StyledLink href="#">リンク(isKeepOpen)</StyledLink>
         </Dropdown.Item>
       </Dropdown.Block>
       <Dropdown.Block collapsed>
-        <Dropdown.Item collapsed>
-          collapsed オプションを使うことで余白を調整できます
+        <Dropdown.Item collapsed isKeepOpen>
+          collapsed オプションを使うことで余白を調整できます。
+          <br />
+          isKeepOpen
+          オプションを使うことで、クリックしてもドロップダウンが閉じなくなります。
         </Dropdown.Item>
       </Dropdown.Block>
     </Dropdown>

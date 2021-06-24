@@ -14,7 +14,7 @@ describe("Dropdown", () => {
           <Dropdown.Item collapsed>
             <Link href="#">Link</Link>
           </Dropdown.Item>
-          <Dropdown.Item collapsed>
+          <Dropdown.Item collapsed isKeepOpen aria-label="isKeepOpen">
             <Link href="#">Link</Link>
           </Dropdown.Item>
         </Dropdown.Block>
@@ -45,7 +45,16 @@ describe("Dropdown", () => {
       fireEvent.click(screen.getAllByText("Link")[0]);
       expect(screen.queryByLabelText("Contents")).not.toBeVisible();
     });
+    expect(asFragment()).toMatchSnapshot();
+  });
 
+  it("keep open with clicking isKeepOpen link ", async () => {
+    const { asFragment } = render(<Template toggleLabel="Label" />);
+    fireEvent.click(screen.getByRole("button"));
+    await waitFor(() => {
+      fireEvent.click(screen.getByLabelText("isKeepOpen"));
+      expect(screen.getAllByRole("link")).toHaveLength(3);
+    });
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -53,7 +62,9 @@ describe("Dropdown", () => {
     const MultipleTemplate = (args: DropdownProps): JSX.Element => {
       return (
         <Dropdown {...args}>
-          <Dropdown.Block>Block</Dropdown.Block>
+          <Dropdown.Block>
+            <Dropdown.Item isKeepOpen>Block</Dropdown.Item>
+          </Dropdown.Block>
           <Dropdown.Block>
             <Dropdown.Item collapsed>
               <Link href="#">Link</Link>
@@ -65,7 +76,9 @@ describe("Dropdown", () => {
               <Link href="#">Link</Link>
             </Dropdown.Item>
           </Dropdown.Block>
-          <Dropdown.Block>Block</Dropdown.Block>
+          <Dropdown.Block>
+            <Dropdown.Item isKeepOpen>Block</Dropdown.Item>
+          </Dropdown.Block>
         </Dropdown>
       );
     };
