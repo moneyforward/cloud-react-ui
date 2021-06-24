@@ -16,7 +16,9 @@ exports[`Dropdown close 1`] = `
 }
 
 .c4 {
-  width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
@@ -116,10 +118,11 @@ exports[`Dropdown close 1`] = `
     class="c0"
   >
     <button
+      aria-expanded="false"
       aria-haspopup="true"
       class="c1"
     >
-      ButtonLabel
+      Label
       <svg
         aria-hidden="true"
         class="svg-inline--fa fa-caret-up fa-w-10 fa-rotate-180 c2"
@@ -139,11 +142,10 @@ exports[`Dropdown close 1`] = `
     </button>
     <div
       aria-hidden="true"
-      aria-label="menu"
       class="c3 c4"
-      width="200px"
     >
       <div
+        aria-label="Contents"
         class="c5 c6"
       >
         <div
@@ -198,7 +200,9 @@ exports[`Dropdown default 1`] = `
 }
 
 .c4 {
-  width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
@@ -298,10 +302,11 @@ exports[`Dropdown default 1`] = `
     class="c0"
   >
     <button
+      aria-expanded="true"
       aria-haspopup="true"
       class="c1"
     >
-      ButtonLabel
+      Label
       <svg
         aria-hidden="true"
         class="svg-inline--fa fa-caret-up fa-w-10 c2"
@@ -321,11 +326,10 @@ exports[`Dropdown default 1`] = `
     </button>
     <div
       aria-hidden="false"
-      aria-label="menu"
       class="c3 c4"
-      width="200px"
     >
       <div
+        aria-label="Contents"
         class="c5 c6"
       >
         <div
@@ -380,7 +384,9 @@ exports[`Dropdown with multiple blocks 1`] = `
 }
 
 .c4 {
-  width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
@@ -480,10 +486,11 @@ exports[`Dropdown with multiple blocks 1`] = `
     class="c0"
   >
     <button
+      aria-expanded="true"
       aria-haspopup="true"
       class="c1"
     >
-      ButtonLabel
+      Label
       <svg
         aria-hidden="true"
         class="svg-inline--fa fa-caret-up fa-w-10 c2"
@@ -504,7 +511,6 @@ exports[`Dropdown with multiple blocks 1`] = `
     <div
       aria-hidden="false"
       class="c3 c4"
-      width="200px"
     >
       <div
         class="c5 c6"
@@ -571,7 +577,9 @@ exports[`Dropdown with placement 1`] = `
 }
 
 .c4 {
-  width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
@@ -671,10 +679,11 @@ exports[`Dropdown with placement 1`] = `
     class="c0"
   >
     <button
+      aria-expanded="true"
       aria-haspopup="true"
       class="c1"
     >
-      ButtonLabel
+      Label
       <svg
         aria-hidden="true"
         class="svg-inline--fa fa-caret-up fa-w-10 c2"
@@ -694,11 +703,10 @@ exports[`Dropdown with placement 1`] = `
     </button>
     <div
       aria-hidden="false"
-      aria-label="menu"
       class="c3 c4"
-      width="200px"
     >
       <div
+        aria-label="Contents"
         class="c5 c6"
       >
         <div

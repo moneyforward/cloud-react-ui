@@ -1,13 +1,14 @@
 import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { values, color, defaultProps } from "../../theme";
+import { useDropdown } from "./Dropdown";
 
 export type DropdownBodyProps = {
   children?: React.ReactNode;
   className?: string;
   ariaLabel?: string;
   width?: string;
-  isOpen: boolean;
+  isOpen?: boolean;
   placement?: "left" | "right";
 };
 
@@ -52,7 +53,10 @@ const StyledDropdownBody = styled.div.attrs<DropdownBodyProps>(
 StyledDropdownBody.defaultProps = defaultProps;
 
 export const DropdownBody = forwardRef<HTMLDivElement, DropdownBodyProps>(
-  (props, ref) => <StyledDropdownBody ref={ref} {...props} />
+  ({ isOpen, ...props }, ref) => {
+    const { isActive } = useDropdown();
+    return <StyledDropdownBody isOpen={isActive} ref={ref} {...props} />;
+  }
 );
 
 DropdownBody.displayName = "Dropdown.Body";

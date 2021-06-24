@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Icon } from "../../components";
-import { MouseEventHandler, forwardRef } from "react";
+import { forwardRef } from "react";
 import { values, color, defaultProps } from "../../theme";
+import { useDropdown } from "./Dropdown";
 
 export type DropdownToggleButtonProps = {
   children: React.ReactNode;
   className?: string;
   ariaLabel?: string;
-  isOpen: boolean;
-  onClick: MouseEventHandler;
+  isOpen?: boolean;
 };
 
 const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
@@ -16,7 +16,7 @@ const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
     "aria-expanded": isOpen,
     "aria-haspopup": true,
   })
-)`
+)<DropdownToggleButtonProps>`
   font-size: ${values.text.size.middle};
   color: ${values.text.color.default};
   background-color: ${color.white};
@@ -31,16 +31,23 @@ StyledToggleButton.defaultProps = defaultProps;
 export const DropdownToggleButton = forwardRef<
   HTMLButtonElement,
   DropdownToggleButtonProps
->(({ children, isOpen, onClick, ...rest }, ref) => (
-  <StyledToggleButton
-    onClick={onClick}
-    aria-expanded={isOpen}
-    ref={ref}
-    {...rest}
-  >
-    {children}
-    <Icon icon="caretUp" rotation={isOpen ? undefined : 180} />
-  </StyledToggleButton>
-));
+>(({ isOpen, children, ...rest }, ref) => {
+  const { isActive, setIsActive } = useDropdown();
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+  return (
+    <StyledToggleButton
+      onClick={handleClick}
+      aria-expanded={isActive}
+      ref={ref}
+      isOpen={isActive}
+      {...rest}
+    >
+      {children}
+      <Icon icon="caretUp" rotation={isActive ? undefined : 180} />
+    </StyledToggleButton>
+  );
+});
 
 DropdownToggleButton.displayName = "Dropdown.ToggleButton";
