@@ -62,7 +62,7 @@ describe("Dropdown", () => {
 
     await waitFor(() => {
       fireEvent.click(screen.getAllByText("Link")[0]);
-      expect(screen.queryAllByRole("link")).not.toHaveLength(3);
+      expect(screen.queryAllByRole("link")).not.toBeVisible;
     });
 
     expect(asFragment()).toMatchSnapshot();
