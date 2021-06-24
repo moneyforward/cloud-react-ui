@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import { Dropdown } from "./Dropdown";
+import { Dropdown, DropdownBodyProps } from "./Dropdown";
 import { Link } from "../../components";
 import styled from "styled-components";
 import { useState } from "react";
@@ -9,12 +9,14 @@ export default {
   title: "Components/Dropdown",
 } as Meta;
 
+type Props = Pick<DropdownBodyProps, "placement">;
+
 const StyledLink = styled(Link)`
   display: flex;
   padding: 8px 16px;
 `;
 
-const Template: Story = (args) => {
+const Template: Story<Props> = (args) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -32,7 +34,7 @@ const Template: Story = (args) => {
       </Dropdown.ToggleButton>
       <Dropdown.Body
         width="200px"
-        isHidden={!isOpen}
+        isOpen={isOpen}
         placement={args["placement"]}
       >
         <Dropdown.Block role="list">
@@ -73,7 +75,7 @@ const MultipleTemplate: Story = () => {
       <Dropdown.ToggleButton onClick={handleToggle} isOpen={isOpen}>
         ドロップダウン開閉
       </Dropdown.ToggleButton>
-      <Dropdown.Body width="200px" isHidden={!isOpen} placement="left">
+      <Dropdown.Body width="200px" isOpen={isOpen} placement="left">
         <Dropdown.Block>
           <Dropdown.Item>
             Blockを複数配置することで、内容を分割できます。

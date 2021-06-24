@@ -139,6 +139,7 @@ exports[`Dropdown close 1`] = `
     </button>
     <div
       aria-hidden="true"
+      aria-label="menu"
       class="c3 c4"
       width="200px"
     >
@@ -320,6 +321,7 @@ exports[`Dropdown default 1`] = `
     </button>
     <div
       aria-hidden="false"
+      aria-label="menu"
       class="c3 c4"
       width="200px"
     >
@@ -692,6 +694,7 @@ exports[`Dropdown with placement 1`] = `
     </button>
     <div
       aria-hidden="false"
+      aria-label="menu"
       class="c3 c4"
       width="200px"
     >

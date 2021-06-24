@@ -23,8 +23,9 @@ describe("Dropdown", () => {
         </Dropdown.ToggleButton>
         <Dropdown.Body
           width="200px"
-          isHidden={!isOpen}
+          isOpen={isOpen}
           placement={args["placement"]}
+          aria-label="menu"
         >
           <Dropdown.Block>
             <Dropdown.Item collapsed onClick={handleClose}>
@@ -59,10 +60,9 @@ describe("Dropdown", () => {
   it("close", async () => {
     const { asFragment } = render(<Template />);
     fireEvent.click(screen.getByRole("button"));
-
     await waitFor(() => {
       fireEvent.click(screen.getAllByText("Link")[0]);
-      expect(screen.queryAllByRole("link")).not.toBeVisible;
+      expect(screen.queryByLabelText("menu")).not.toBeVisible();
     });
 
     expect(asFragment()).toMatchSnapshot();
@@ -80,7 +80,7 @@ describe("Dropdown", () => {
           <Dropdown.ToggleButton onClick={handleToggle} isOpen={isOpen}>
             ButtonLabel
           </Dropdown.ToggleButton>
-          <Dropdown.Body width="200px" isHidden={!isOpen}>
+          <Dropdown.Body width="200px" isOpen={isOpen}>
             <Dropdown.Block>Block</Dropdown.Block>
             <Dropdown.Block>
               <Dropdown.Item collapsed>

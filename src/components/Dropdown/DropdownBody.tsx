@@ -7,12 +7,14 @@ export type DropdownBodyProps = {
   className?: string;
   ariaLabel?: string;
   width?: string;
-  isHidden: boolean;
+  isOpen: boolean;
   placement?: "left" | "right";
 };
 
 const StyledDropdownBody = styled.div.attrs<DropdownBodyProps>(
-  ({ isHidden }) => ({ "aria-hidden": isHidden })
+  ({ isOpen }) => ({
+    "aria-hidden": !isOpen,
+  })
 )<DropdownBodyProps>`
   ${({ width = "max-content", placement = "left" }) => css`
     width: ${width};
