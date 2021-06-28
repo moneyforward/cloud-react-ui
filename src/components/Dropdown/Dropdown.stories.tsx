@@ -1,5 +1,10 @@
 import { Story, Meta } from "@storybook/react";
-import { Dropdown, DropdownProps } from "./Dropdown";
+import {
+  Dropdown,
+  DropdownProps,
+  DropdownToggleButtonProps,
+  useDropdown,
+} from "./Dropdown";
 import { Link, Text } from "../../components";
 import styled from "styled-components";
 
@@ -11,6 +16,39 @@ export default {
 const StyledText = styled(Text)`
   margin-bottom: 4px;
 `;
+
+const StyledAnchorButton = styled.button.attrs<DropdownToggleButtonProps>(
+  ({ isOpen }) => ({
+    "aria-expanded": isOpen,
+    "aria-haspopup": true,
+  })
+)<DropdownToggleButtonProps>``;
+
+const AnchorButtonRoot = ({
+  children,
+  isOpen,
+  ...rest
+}: DropdownToggleButtonProps): JSX.Element => {
+  const { isActive, setIsActive } = useDropdown();
+  const handleClick = () => {
+    console.log(isActive);
+    setIsActive(!isActive);
+  };
+  return (
+    <StyledAnchorButton
+      onClick={handleClick}
+      aria-expanded={isActive}
+      isOpen={isActive}
+      {...rest}
+    >
+      {children}
+    </StyledAnchorButton>
+  );
+};
+
+const AnchorButton = (): JSX.Element => (
+  <AnchorButtonRoot>ドロップダウン開閉</AnchorButtonRoot>
+);
 
 const Template: Story<DropdownProps> = (args) => {
   return (
@@ -77,3 +115,26 @@ const MultipleTemplate: Story<DropdownProps> = (args) => {
 
 export const MultipleBlock = MultipleTemplate.bind({});
 MultipleBlock.args = { toggleLabel: "ドロップダウン開閉", placement: "left" };
+
+const AnchoredTemplate: Story<DropdownProps> = (args) => {
+  return (
+    <Dropdown {...args}>
+      <Dropdown.Block>
+        <Dropdown.ActionItem>
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem>
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem>
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+      </Dropdown.Block>
+    </Dropdown>
+  );
+};
+
+export const Anchored = Template.bind({});
+Anchored.args = {
+  anchor: <AnchorButton />,
+};

@@ -14,11 +14,12 @@ import { DropdownToggleButton } from "./DropdownToggleButton";
 import { defaultProps } from "../../theme";
 
 export type DropdownProps = {
+  anchor?: JSX.Element;
   children?: React.ReactNode;
   className?: string;
   ariaLabel?: string;
   width?: string;
-  toggleLabel: string;
+  toggleLabel?: string;
   placement?: "left" | "right";
 };
 
@@ -73,7 +74,7 @@ const StyledDropdown = styled.div`
 StyledDropdown.defaultProps = defaultProps;
 
 const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
-  ({ children, toggleLabel, width, placement, ...rest }, ref) => {
+  ({ anchor, children, toggleLabel, width, placement, ...rest }, ref) => {
     const [isActive, setIsActive] = useState(false);
     const handleClick = () => {
       setIsActive(false);
@@ -81,7 +82,12 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
     return (
       <DropdownContext.Provider value={{ isActive, setIsActive }}>
         <StyledDropdown ref={ref} {...rest}>
-          <DropdownToggleButton>{toggleLabel}</DropdownToggleButton>
+          {anchor ? (
+            anchor
+          ) : (
+            <DropdownToggleButton>{toggleLabel}</DropdownToggleButton>
+          )}
+
           <DropdownBody width={width} placement={placement}>
             {children}
           </DropdownBody>
@@ -99,6 +105,7 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
 
 DropdownRoot.displayName = "Dropdown";
 
+export type { DropdownToggleButtonProps } from "./DropdownToggleButton";
 export type { DropdownBlockProps } from "./DropdownBlock";
 export type { DropdownItemProps } from "./DropdownItem";
 export type { DropdownActionItemProps } from "./DropdownActionItem";
