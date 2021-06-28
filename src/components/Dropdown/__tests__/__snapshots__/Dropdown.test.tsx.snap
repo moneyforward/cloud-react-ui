@@ -196,7 +196,7 @@ exports[`Dropdown Anchored closes with anchored toggle 1`] = `
     <div
       aria-hidden="true"
       aria-label="閉じる"
-      class="c7 hogemoge"
+      class="c7"
     />
   </div>
 </DocumentFragment>
@@ -398,7 +398,7 @@ exports[`Dropdown Anchored renders 1`] = `
     <div
       aria-hidden="false"
       aria-label="閉じる"
-      class="c7 hogemoge"
+      class="c7"
     />
   </div>
 </DocumentFragment>
@@ -637,7 +637,7 @@ exports[`Dropdown Default closes with action item 1`] = `
     <div
       aria-hidden="true"
       aria-label="閉じる"
-      class="c9 hogemoge"
+      class="c9"
     />
   </div>
 </DocumentFragment>
@@ -876,7 +876,7 @@ exports[`Dropdown Default closes with overlay 1`] = `
     <div
       aria-hidden="true"
       aria-label="閉じる"
-      class="c9 hogemoge"
+      class="c9"
     />
   </div>
 </DocumentFragment>
@@ -1115,7 +1115,7 @@ exports[`Dropdown Default keeps open with clicking isKeepOpen action item 1`] = 
     <div
       aria-hidden="false"
       aria-label="閉じる"
-      class="c9 hogemoge"
+      class="c9"
     />
   </div>
 </DocumentFragment>
@@ -1354,7 +1354,7 @@ exports[`Dropdown Default renders 1`] = `
     <div
       aria-hidden="false"
       aria-label="閉じる"
-      class="c9 hogemoge"
+      class="c9"
     />
   </div>
 </DocumentFragment>
@@ -1593,7 +1593,7 @@ exports[`Dropdown Default renders with placement 1`] = `
     <div
       aria-hidden="false"
       aria-label="閉じる"
-      class="c9 hogemoge"
+      class="c9"
     />
   </div>
 </DocumentFragment>
@@ -1856,7 +1856,7 @@ exports[`Dropdown Multiple blocks renders 1`] = `
     <div
       aria-hidden="false"
       aria-label="閉じる"
-      class="c10 hogemoge"
+      class="c10"
     />
   </div>
 </DocumentFragment>
