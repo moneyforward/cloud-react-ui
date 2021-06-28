@@ -48,6 +48,16 @@ describe("Dropdown", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it("close with overlay", async () => {
+    const { asFragment } = render(<Template toggleLabel="Label" />);
+    fireEvent.click(screen.getByText("Label"));
+    await waitFor(() => {
+      fireEvent.click(screen.getByLabelText("閉じる"));
+      expect(screen.queryByLabelText("Contents")).not.toBeVisible();
+    });
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("keep open with clicking isKeepOpen link ", async () => {
     const { asFragment } = render(<Template toggleLabel="Label" />);
     fireEvent.click(screen.getByRole("button"));

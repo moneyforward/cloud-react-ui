@@ -1,4 +1,10 @@
-import { forwardRef, createContext, useState, useContext } from "react";
+import {
+  forwardRef,
+  createContext,
+  useState,
+  useContext,
+  MouseEventHandler,
+} from "react";
 import styled from "styled-components";
 import { DropdownItem } from "./DropdownItem";
 import { DropdownActionItem } from "./DropdownActionItem";
@@ -21,6 +27,12 @@ interface IDropdownContext {
   setIsActive: (flag: boolean) => void;
 }
 
+type OverlayProps = {
+  isOpen: boolean;
+  onClick: MouseEventHandler;
+  ariaLabel: string;
+};
+
 export const DropdownContext = createContext<IDropdownContext | undefined>(
   undefined
 );
@@ -35,6 +47,25 @@ export const useDropdown = (): IDropdownContext => {
   return context;
 };
 
+const StyledOverlay = styled.div.attrs<OverlayProps>(
+  ({ isOpen, ariaLabel }) => ({
+    "aria-hidden": !isOpen,
+    "aria-label": ariaLabel,
+  })
+)<OverlayProps>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+  &[aria-hidden="true"] {
+    display: none;
+  }
+`;
+
 const StyledDropdown = styled.div`
   position: relative;
   width: fit-content;
@@ -44,6 +75,9 @@ StyledDropdown.defaultProps = defaultProps;
 const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
   ({ children, toggleLabel, width, placement, ...rest }, ref) => {
     const [isActive, setIsActive] = useState(false);
+    const handleClick = () => {
+      setIsActive(false);
+    };
     return (
       <DropdownContext.Provider value={{ isActive, setIsActive }}>
         <StyledDropdown ref={ref} {...rest}>
@@ -51,6 +85,12 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
           <DropdownBody width={width} placement={placement}>
             {children}
           </DropdownBody>
+          <StyledOverlay
+            className="hogemoge"
+            isOpen={isActive}
+            onClick={handleClick}
+            ariaLabel="閉じる"
+          />
         </StyledDropdown>
       </DropdownContext.Provider>
     );

@@ -144,6 +144,21 @@ exports[`Dropdown close 1`] = `
   margin-left: 6px;
 }
 
+.c9 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+}
+
+.c9[aria-hidden="true"] {
+  display: none;
+}
+
 .c0 {
   position: relative;
   width: -webkit-fit-content;
@@ -215,6 +230,250 @@ exports[`Dropdown close 1`] = `
         </div>
       </div>
     </div>
+    <div
+      aria-hidden="true"
+      aria-label="閉じる"
+      class="c9 hogemoge"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Dropdown close with overlay 1`] = `
+<DocumentFragment>
+  .c7 > a,
+.c7 > button {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 8px 16px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: 13px;
+  color: #333333;
+}
+
+.c7 > a:hover,
+.c7 > button:hover,
+.c7 > a:active,
+.c7 > button:active,
+.c7 > a:visited,
+.c7 > button:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6 {
+  padding: 8px 0;
+}
+
+.c5 + .c5 {
+  border-top: 1px solid #D4D8DD;
+}
+
+.c4 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, -webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  overflow-y: auto;
+  opacity: 1;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+  visibility: visible;
+}
+
+.c3 > .block + .c3 > .block {
+  border-top: 1px, solid #D4D8DD;
+}
+
+.c4[aria-hidden="true"] {
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, -webkit-transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  -webkit-transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  transition: opacity 299ms cubic-bezier(0.4,0,0.2,1) 0ms, transform 199ms cubic-bezier(0.4,0,0.2,1) 0ms, visibility 299ms linear 299ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c2 {
+  font-size: 13px;
+  color: #333333;
+}
+
+.c2:hover {
+  color: #333333;
+}
+
+.c8 {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:focus {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:active {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:hover {
+  cursor: pointer;
+  color: #3B7DE9;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8.disabled {
+  cursor: not-allowed;
+  color: #999999;
+}
+
+.c1 {
+  font-size: 13px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 0;
+  cursor: pointer;
+}
+
+.c1 svg {
+  margin-left: 6px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+}
+
+.c9[aria-hidden="true"] {
+  display: none;
+}
+
+.c0 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+<div
+    class="c0"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="c1"
+    >
+      Label
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-caret-up fa-w-10 fa-rotate-180 c2"
+        data-icon="caret-up"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        theme="[object Object]"
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <div
+      aria-hidden="true"
+      class="c3 c4"
+    >
+      <div
+        aria-label="Contents"
+        class="c5 c6"
+      >
+        <div
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            Link
+          </a>
+        </div>
+        <div
+          class="c7"
+        >
+          <button>
+            Button
+          </button>
+        </div>
+        <div
+          aria-label="isKeepOpen"
+          class="c7"
+        >
+          <a
+            class="c8"
+            href="#"
+          >
+            Link(isKeepOpen)
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      aria-label="閉じる"
+      class="c9 hogemoge"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -363,6 +622,21 @@ exports[`Dropdown default 1`] = `
   margin-left: 6px;
 }
 
+.c9 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+}
+
+.c9[aria-hidden="true"] {
+  display: none;
+}
+
 .c0 {
   position: relative;
   width: -webkit-fit-content;
@@ -434,6 +708,11 @@ exports[`Dropdown default 1`] = `
         </div>
       </div>
     </div>
+    <div
+      aria-hidden="false"
+      aria-label="閉じる"
+      class="c9 hogemoge"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -582,6 +861,21 @@ exports[`Dropdown keep open with clicking isKeepOpen link  1`] = `
   margin-left: 6px;
 }
 
+.c9 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+}
+
+.c9[aria-hidden="true"] {
+  display: none;
+}
+
 .c0 {
   position: relative;
   width: -webkit-fit-content;
@@ -653,6 +947,11 @@ exports[`Dropdown keep open with clicking isKeepOpen link  1`] = `
         </div>
       </div>
     </div>
+    <div
+      aria-hidden="false"
+      aria-label="閉じる"
+      class="c9 hogemoge"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -806,6 +1105,21 @@ exports[`Dropdown with multiple blocks 1`] = `
   margin-left: 6px;
 }
 
+.c10 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+}
+
+.c10[aria-hidden="true"] {
+  display: none;
+}
+
 .c0 {
   position: relative;
   width: -webkit-fit-content;
@@ -896,6 +1210,11 @@ exports[`Dropdown with multiple blocks 1`] = `
         </div>
       </div>
     </div>
+    <div
+      aria-hidden="false"
+      aria-label="閉じる"
+      class="c10 hogemoge"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -1044,6 +1363,21 @@ exports[`Dropdown with placement 1`] = `
   margin-left: 6px;
 }
 
+.c9 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  z-index: -1;
+}
+
+.c9[aria-hidden="true"] {
+  display: none;
+}
+
 .c0 {
   position: relative;
   width: -webkit-fit-content;
@@ -1115,6 +1449,11 @@ exports[`Dropdown with placement 1`] = `
         </div>
       </div>
     </div>
+    <div
+      aria-hidden="false"
+      aria-label="閉じる"
+      class="c9 hogemoge"
+    />
   </div>
 </DocumentFragment>
 `;
