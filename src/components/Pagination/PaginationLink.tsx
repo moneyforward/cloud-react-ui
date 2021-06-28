@@ -22,7 +22,7 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
 
   display: inline-block;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 5px 14px;
   border-radius: inherit;
   background-color: #fff;
 
