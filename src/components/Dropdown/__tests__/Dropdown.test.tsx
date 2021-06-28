@@ -1,5 +1,4 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { renderHook } from "@testing-library/react-hooks";
 import { Dropdown, DropdownProps, useDropdown } from "../../Dropdown";
 import { Link } from "../../../components";
 
