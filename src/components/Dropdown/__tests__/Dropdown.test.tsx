@@ -8,15 +8,15 @@ describe("Dropdown", () => {
     return (
       <Dropdown {...args}>
         <Dropdown.Block aria-label="Contents">
-          <Dropdown.Item collapsed>
+          <Dropdown.ActionItem>
             <Link href="#">Link</Link>
-          </Dropdown.Item>
-          <Dropdown.Item collapsed>
-            <Link href="#">Link</Link>
-          </Dropdown.Item>
-          <Dropdown.Item collapsed isKeepOpen aria-label="isKeepOpen">
-            <Link href="#">Link</Link>
-          </Dropdown.Item>
+          </Dropdown.ActionItem>
+          <Dropdown.ActionItem>
+            <button>Button</button>
+          </Dropdown.ActionItem>
+          <Dropdown.ActionItem isKeepOpen aria-label="isKeepOpen">
+            <Link href="#">Link(isKeepOpen)</Link>
+          </Dropdown.ActionItem>
         </Dropdown.Block>
       </Dropdown>
     );
@@ -24,8 +24,8 @@ describe("Dropdown", () => {
 
   it("default", async () => {
     const { asFragment } = render(<Template toggleLabel="Label" />);
-    fireEvent.click(screen.getByRole("button"));
-    expect(screen.getAllByRole("link")).toHaveLength(3);
+    fireEvent.click(screen.getByText("Label"));
+    expect(screen.getByLabelText("Contents")).toBeVisible();
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -33,14 +33,14 @@ describe("Dropdown", () => {
     const { asFragment } = render(
       <Template toggleLabel="Label" placement="right" />
     );
-    fireEvent.click(screen.getByRole("button"));
-    expect(screen.getAllByRole("link")).toHaveLength(3);
+    fireEvent.click(screen.getByText("Label"));
+    expect(screen.getByLabelText("Contents")).toBeVisible();
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("close", async () => {
     const { asFragment } = render(<Template toggleLabel="Label" />);
-    fireEvent.click(screen.getByRole("button"));
+    fireEvent.click(screen.getByText("Label"));
     await waitFor(() => {
       fireEvent.click(screen.getAllByText("Link")[0]);
       expect(screen.queryByLabelText("Contents")).not.toBeVisible();
@@ -53,7 +53,7 @@ describe("Dropdown", () => {
     fireEvent.click(screen.getByRole("button"));
     await waitFor(() => {
       fireEvent.click(screen.getByLabelText("isKeepOpen"));
-      expect(screen.getAllByRole("link")).toHaveLength(3);
+      expect(screen.getByLabelText("Contents")).toBeVisible();
     });
     expect(asFragment()).toMatchSnapshot();
   });
@@ -63,21 +63,21 @@ describe("Dropdown", () => {
       return (
         <Dropdown {...args}>
           <Dropdown.Block>
-            <Dropdown.Item isKeepOpen>Block</Dropdown.Item>
+            <Dropdown.Item>Block</Dropdown.Item>
           </Dropdown.Block>
           <Dropdown.Block>
-            <Dropdown.Item collapsed>
+            <Dropdown.ActionItem>
               <Link href="#">Link</Link>
-            </Dropdown.Item>
-            <Dropdown.Item collapsed>
+            </Dropdown.ActionItem>
+            <Dropdown.ActionItem>
               <Link href="#">Link</Link>
-            </Dropdown.Item>
-            <Dropdown.Item collapsed>
+            </Dropdown.ActionItem>
+            <Dropdown.ActionItem>
               <Link href="#">Link</Link>
-            </Dropdown.Item>
+            </Dropdown.ActionItem>
           </Dropdown.Block>
           <Dropdown.Block>
-            <Dropdown.Item isKeepOpen>Block</Dropdown.Item>
+            <Dropdown.Item>Block</Dropdown.Item>
           </Dropdown.Block>
         </Dropdown>
       );

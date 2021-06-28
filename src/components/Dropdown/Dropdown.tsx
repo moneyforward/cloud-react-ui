@@ -1,6 +1,7 @@
 import { forwardRef, createContext, useState, useContext } from "react";
 import styled from "styled-components";
 import { DropdownItem } from "./DropdownItem";
+import { DropdownActionItem } from "./DropdownActionItem";
 import { DropdownBlock } from "./DropdownBlock";
 import { DropdownBody } from "./DropdownBody";
 import { DropdownToggleButton } from "./DropdownToggleButton";
@@ -60,7 +61,9 @@ DropdownRoot.displayName = "Dropdown";
 
 export type { DropdownBlockProps } from "./DropdownBlock";
 export type { DropdownItemProps } from "./DropdownItem";
+export type { DropdownActionItemProps } from "./DropdownActionItem";
 export const Dropdown = Object.assign(DropdownRoot, {
   Block: DropdownBlock,
   Item: DropdownItem,
+  ActionItem: DropdownActionItem,
 });

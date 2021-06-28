@@ -2,9 +2,45 @@
 
 exports[`Dropdown close 1`] = `
 <DocumentFragment>
-  .c7 {
+  .c7 > a,
+.c7 > button {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 8px 16px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
   font-size: 13px;
-  padding: 0;
+  color: #333333;
+}
+
+.c7 > a:hover,
+.c7 > button:hover,
+.c7 > a:active,
+.c7 > button:active,
+.c7 > a:visited,
+.c7 > button:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c6 {
@@ -100,7 +136,8 @@ exports[`Dropdown close 1`] = `
   font-size: 13px;
   color: #333333;
   background-color: #FFFFFF;
-  border: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .c1 svg {
@@ -161,12 +198,9 @@ exports[`Dropdown close 1`] = `
         <div
           class="c7"
         >
-          <a
-            class="c8"
-            href="#"
-          >
-            Link
-          </a>
+          <button>
+            Button
+          </button>
         </div>
         <div
           aria-label="isKeepOpen"
@@ -176,7 +210,7 @@ exports[`Dropdown close 1`] = `
             class="c8"
             href="#"
           >
-            Link
+            Link(isKeepOpen)
           </a>
         </div>
       </div>
@@ -187,9 +221,45 @@ exports[`Dropdown close 1`] = `
 
 exports[`Dropdown default 1`] = `
 <DocumentFragment>
-  .c7 {
+  .c7 > a,
+.c7 > button {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 8px 16px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
   font-size: 13px;
-  padding: 0;
+  color: #333333;
+}
+
+.c7 > a:hover,
+.c7 > button:hover,
+.c7 > a:active,
+.c7 > button:active,
+.c7 > a:visited,
+.c7 > button:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c6 {
@@ -285,7 +355,8 @@ exports[`Dropdown default 1`] = `
   font-size: 13px;
   color: #333333;
   background-color: #FFFFFF;
-  border: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .c1 svg {
@@ -346,12 +417,9 @@ exports[`Dropdown default 1`] = `
         <div
           class="c7"
         >
-          <a
-            class="c8"
-            href="#"
-          >
-            Link
-          </a>
+          <button>
+            Button
+          </button>
         </div>
         <div
           aria-label="isKeepOpen"
@@ -361,7 +429,7 @@ exports[`Dropdown default 1`] = `
             class="c8"
             href="#"
           >
-            Link
+            Link(isKeepOpen)
           </a>
         </div>
       </div>
@@ -372,9 +440,45 @@ exports[`Dropdown default 1`] = `
 
 exports[`Dropdown keep open with clicking isKeepOpen link  1`] = `
 <DocumentFragment>
-  .c7 {
+  .c7 > a,
+.c7 > button {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 8px 16px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
   font-size: 13px;
-  padding: 0;
+  color: #333333;
+}
+
+.c7 > a:hover,
+.c7 > button:hover,
+.c7 > a:active,
+.c7 > button:active,
+.c7 > a:visited,
+.c7 > button:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c6 {
@@ -470,7 +574,8 @@ exports[`Dropdown keep open with clicking isKeepOpen link  1`] = `
   font-size: 13px;
   color: #333333;
   background-color: #FFFFFF;
-  border: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .c1 svg {
@@ -531,12 +636,9 @@ exports[`Dropdown keep open with clicking isKeepOpen link  1`] = `
         <div
           class="c7"
         >
-          <a
-            class="c8"
-            href="#"
-          >
-            Link
-          </a>
+          <button>
+            Button
+          </button>
         </div>
         <div
           aria-label="isKeepOpen"
@@ -546,7 +648,7 @@ exports[`Dropdown keep open with clicking isKeepOpen link  1`] = `
             class="c8"
             href="#"
           >
-            Link
+            Link(isKeepOpen)
           </a>
         </div>
       </div>
@@ -562,9 +664,45 @@ exports[`Dropdown with multiple blocks 1`] = `
   padding: 8px 16px;
 }
 
-.c8 {
+.c8 > a,
+.c8 > button {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 8px 16px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
   font-size: 13px;
-  padding: 0;
+  color: #333333;
+}
+
+.c8 > a:hover,
+.c8 > button:hover,
+.c8 > a:active,
+.c8 > button:active,
+.c8 > a:visited,
+.c8 > button:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c6 {
@@ -660,7 +798,8 @@ exports[`Dropdown with multiple blocks 1`] = `
   font-size: 13px;
   color: #333333;
   background-color: #FFFFFF;
-  border: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .c1 svg {
@@ -763,9 +902,45 @@ exports[`Dropdown with multiple blocks 1`] = `
 
 exports[`Dropdown with placement 1`] = `
 <DocumentFragment>
-  .c7 {
+  .c7 > a,
+.c7 > button {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 8px 16px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
   font-size: 13px;
-  padding: 0;
+  color: #333333;
+}
+
+.c7 > a:hover,
+.c7 > button:hover,
+.c7 > a:active,
+.c7 > button:active,
+.c7 > a:visited,
+.c7 > button:visited {
+  color: #3B7DE9;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c6 {
@@ -861,7 +1036,8 @@ exports[`Dropdown with placement 1`] = `
   font-size: 13px;
   color: #333333;
   background-color: #FFFFFF;
-  border: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .c1 svg {
@@ -922,12 +1098,9 @@ exports[`Dropdown with placement 1`] = `
         <div
           class="c7"
         >
-          <a
-            class="c8"
-            href="#"
-          >
-            Link
-          </a>
+          <button>
+            Button
+          </button>
         </div>
         <div
           aria-label="isKeepOpen"
@@ -937,7 +1110,7 @@ exports[`Dropdown with placement 1`] = `
             class="c8"
             href="#"
           >
-            Link
+            Link(isKeepOpen)
           </a>
         </div>
       </div>
