@@ -92,7 +92,6 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
             {children}
           </DropdownBody>
           <StyledOverlay
-            className="hogemoge"
             isOpen={isActive}
             onClick={handleClick}
             ariaLabel="閉じる"
