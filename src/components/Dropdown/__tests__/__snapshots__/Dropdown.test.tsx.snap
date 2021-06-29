@@ -36,8 +36,8 @@ exports[`Dropdown Anchored closes with anchored toggle 1`] = `
 .c5 > button:hover,
 .c5 > a:active,
 .c5 > button:active,
-.c5 > a:visited,
-.c5 > button:visited {
+.c5 > a:focus,
+.c5 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -238,8 +238,8 @@ exports[`Dropdown Anchored renders 1`] = `
 .c5 > button:hover,
 .c5 > a:active,
 .c5 > button:active,
-.c5 > a:visited,
-.c5 > button:visited {
+.c5 > a:focus,
+.c5 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -440,8 +440,8 @@ exports[`Dropdown Default closes with action item 1`] = `
 .c7 > button:hover,
 .c7 > a:active,
 .c7 > button:active,
-.c7 > a:visited,
-.c7 > button:visited {
+.c7 > a:focus,
+.c7 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -679,8 +679,8 @@ exports[`Dropdown Default closes with overlay 1`] = `
 .c7 > button:hover,
 .c7 > a:active,
 .c7 > button:active,
-.c7 > a:visited,
-.c7 > button:visited {
+.c7 > a:focus,
+.c7 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -918,8 +918,8 @@ exports[`Dropdown Default keeps open with clicking isKeepOpen action item 1`] = 
 .c7 > button:hover,
 .c7 > a:active,
 .c7 > button:active,
-.c7 > a:visited,
-.c7 > button:visited {
+.c7 > a:focus,
+.c7 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1157,8 +1157,8 @@ exports[`Dropdown Default renders 1`] = `
 .c7 > button:hover,
 .c7 > a:active,
 .c7 > button:active,
-.c7 > a:visited,
-.c7 > button:visited {
+.c7 > a:focus,
+.c7 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1396,8 +1396,8 @@ exports[`Dropdown Default renders with placement 1`] = `
 .c7 > button:hover,
 .c7 > a:active,
 .c7 > button:active,
-.c7 > a:visited,
-.c7 > button:visited {
+.c7 > a:focus,
+.c7 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1640,8 +1640,8 @@ exports[`Dropdown Multiple blocks renders 1`] = `
 .c8 > button:hover,
 .c8 > a:active,
 .c8 > button:active,
-.c8 > a:visited,
-.c8 > button:visited {
+.c8 > a:focus,
+.c8 > button:focus {
   color: #3B7DE9;
   -webkit-text-decoration: none;
   text-decoration: none;

@@ -31,7 +31,7 @@ const StyledDropdownActionItem = styled.div<DropdownActionItemProps>`
     color: ${color.nightRider};
     &:hover,
     &:active,
-    &:visited {
+    &:focus {
       color: ${color.royalBlue};
       text-decoration: none;
     }
