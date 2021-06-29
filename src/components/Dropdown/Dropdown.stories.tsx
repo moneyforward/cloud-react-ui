@@ -1,6 +1,11 @@
 import { Story, Meta } from "@storybook/react";
-import { Dropdown, DropdownProps } from "./Dropdown";
-import { Link } from "../../components";
+import {
+  Dropdown,
+  DropdownProps,
+  DropdownToggleButtonProps,
+  useDropdown,
+} from "./Dropdown";
+import { Link, Text } from "../../components";
 import styled from "styled-components";
 
 export default {
@@ -8,24 +13,63 @@ export default {
   title: "Components/Dropdown",
 } as Meta;
 
-const StyledLink = styled(Link)`
-  display: flex;
-  padding: 8px 16px;
+const StyledText = styled(Text)`
+  margin-bottom: 4px;
 `;
+
+const StyledAnchorButton = styled.button.attrs<DropdownToggleButtonProps>(
+  ({ isOpen }) => ({
+    "aria-expanded": isOpen,
+    "aria-haspopup": true,
+  })
+)<DropdownToggleButtonProps>``;
+
+const AnchorButtonRoot = ({
+  children,
+  isOpen,
+  ...rest
+}: DropdownToggleButtonProps): JSX.Element => {
+  const { isActive, setIsActive } = useDropdown();
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+  return (
+    <StyledAnchorButton
+      onClick={handleClick}
+      aria-expanded={isActive}
+      isOpen={isActive}
+      {...rest}
+    >
+      {children}
+    </StyledAnchorButton>
+  );
+};
+
+const AnchorButton = (): JSX.Element => (
+  <AnchorButtonRoot>ドロップダウン開閉</AnchorButtonRoot>
+);
 
 const Template: Story<DropdownProps> = (args) => {
   return (
     <Dropdown {...args}>
       <Dropdown.Block role="list">
-        <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">リンク</StyledLink>
-        </Dropdown.Item>
-        <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">リンク</StyledLink>
-        </Dropdown.Item>
-        <Dropdown.Item collapsed role="listitem" isKeepOpen>
-          <StyledLink href="#">リンク(isKeepOpen)</StyledLink>
-        </Dropdown.Item>
+        <Dropdown.ActionItem role="listitem">
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem role="listitem">
+          <Link href="#">
+            <StyledText size="small" color="notes">
+              注意書き
+            </StyledText>
+            リンク
+          </Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem role="listitem">
+          <button>ボタン</button>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem role="listitem" isKeepOpen>
+          <Link href="#">リンク(isKeepOpen)</Link>
+        </Dropdown.ActionItem>
       </Dropdown.Block>
     </Dropdown>
   );
@@ -44,27 +88,24 @@ const MultipleTemplate: Story<DropdownProps> = (args) => {
   return (
     <Dropdown {...args}>
       <Dropdown.Block>
-        <Dropdown.Item isKeepOpen>
+        <Dropdown.Item>
           Blockを複数配置することで、内容を分割できます。
         </Dropdown.Item>
       </Dropdown.Block>
       <Dropdown.Block role="list">
-        <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">リンク</StyledLink>
-        </Dropdown.Item>
-        <Dropdown.Item collapsed role="listitem">
-          <StyledLink href="#">リンク</StyledLink>
-        </Dropdown.Item>
-        <Dropdown.Item collapsed role="listitem" isKeepOpen>
-          <StyledLink href="#">リンク(isKeepOpen)</StyledLink>
-        </Dropdown.Item>
+        <Dropdown.ActionItem role="listitem">
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem role="listitem">
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem role="listitem" isKeepOpen>
+          <Link href="#">リンク(isKeepOpen)</Link>
+        </Dropdown.ActionItem>
       </Dropdown.Block>
       <Dropdown.Block collapsed>
-        <Dropdown.Item collapsed isKeepOpen>
-          collapsed オプションを使うことで余白を調整できます。
-          <br />
-          isKeepOpen
-          オプションを使うことで、クリックしてもドロップダウンが閉じなくなります。
+        <Dropdown.Item collapsed>
+          Blockを複数配置することで、内容を分割できます。(collapsed)
         </Dropdown.Item>
       </Dropdown.Block>
     </Dropdown>
@@ -73,3 +114,26 @@ const MultipleTemplate: Story<DropdownProps> = (args) => {
 
 export const MultipleBlock = MultipleTemplate.bind({});
 MultipleBlock.args = { toggleLabel: "ドロップダウン開閉", placement: "left" };
+
+const AnchoredTemplate: Story<DropdownProps> = (args) => {
+  return (
+    <Dropdown {...args}>
+      <Dropdown.Block>
+        <Dropdown.ActionItem>
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem>
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+        <Dropdown.ActionItem>
+          <Link href="#">リンク</Link>
+        </Dropdown.ActionItem>
+      </Dropdown.Block>
+    </Dropdown>
+  );
+};
+
+export const Anchored = Template.bind({});
+Anchored.args = {
+  anchor: <AnchorButton />,
+};

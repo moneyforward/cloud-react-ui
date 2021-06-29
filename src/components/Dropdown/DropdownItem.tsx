@@ -1,7 +1,6 @@
-import { forwardRef, MouseEventHandler } from "react";
+import { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { values, defaultProps } from "../../theme";
-import { useDropdown } from "./Dropdown";
 
 export type DropdownItemProps = {
   children?: React.ReactNode;
@@ -9,7 +8,6 @@ export type DropdownItemProps = {
   ariaLabel?: string;
   collapsed?: boolean;
   role?: string;
-  isKeepOpen?: boolean;
 };
 
 const StyledDropdownItem = styled.div<DropdownItemProps>`
@@ -21,15 +19,8 @@ const StyledDropdownItem = styled.div<DropdownItemProps>`
 StyledDropdownItem.defaultProps = defaultProps;
 
 export const DropdownItem = forwardRef<HTMLDivElement, DropdownItemProps>(
-  ({ isKeepOpen, ...props }, ref) => {
-    const { setIsActive } = useDropdown();
-    const handleClick = () => {
-      if (isKeepOpen) {
-        return;
-      }
-      setIsActive(false);
-    };
-    return <StyledDropdownItem onClick={handleClick} ref={ref} {...props} />;
+  ({ ...props }, ref) => {
+    return <StyledDropdownItem ref={ref} {...props} />;
   }
 );
 
