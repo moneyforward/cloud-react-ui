@@ -41,7 +41,7 @@ exports[`Pagination default 1`] = `
   background-color: #3B7DE9;
 }
 
-.c2[aria-disabled] {
+.c2[aria-disabled="true"] {
   pointer-events: none;
   cursor: auto;
   color: #d8dade;
@@ -81,9 +81,9 @@ exports[`Pagination default 1`] = `
       >
         <a
           aria-disabled="true"
+          aria-label="前のページ"
           class="c2"
           disabled=""
-          href="#"
           tabindex="-1"
         >
           <svg
@@ -120,6 +120,7 @@ exports[`Pagination default 1`] = `
         class="c1"
       >
         <a
+          aria-label="次のページ"
           class="c2"
           href="#"
           tabindex="0"

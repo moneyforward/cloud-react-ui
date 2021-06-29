@@ -36,13 +36,17 @@ describe("Pagination.Link", () => {
 describe("Pagination.Prev", () => {
   it("should have aria-disabled with a disabled prop", () => {
     render(<Pagination.Prev href="#" disabled />);
-    expect(screen.getByRole("link")).toHaveAttribute("aria-disabled");
+    expect(screen.getByLabelText("前のページ")).toHaveAttribute(
+      "aria-disabled"
+    );
   });
 });
 
 describe("Pagination.Next", () => {
   it("should have aria-disabled with a disabled prop", () => {
     render(<Pagination.Next href="#" disabled />);
-    expect(screen.getByRole("link")).toHaveAttribute("aria-disabled");
+    expect(screen.getByLabelText("次のページ")).toHaveAttribute(
+      "aria-disabled"
+    );
   });
 });
