@@ -20,8 +20,8 @@ const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
   font-size: ${values.text.size.middle};
   color: ${values.text.color.default};
   background-color: ${color.white};
-  border: none;
-
+  border: 0;
+  cursor: pointer;
   svg {
     margin-left: 6px;
   }
