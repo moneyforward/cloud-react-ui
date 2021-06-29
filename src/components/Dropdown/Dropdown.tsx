@@ -82,12 +82,7 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
     return (
       <DropdownContext.Provider value={{ isActive, setIsActive }}>
         <StyledDropdown ref={ref} {...rest}>
-          {anchor ? (
-            anchor
-          ) : (
-            <DropdownToggleButton>{toggleLabel}</DropdownToggleButton>
-          )}
-
+          {anchor ?? <DropdownToggleButton>{toggleLabel}</DropdownToggleButton>}
           <DropdownBody width={width} placement={placement}>
             {children}
           </DropdownBody>
