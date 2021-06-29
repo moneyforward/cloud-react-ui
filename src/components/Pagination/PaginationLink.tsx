@@ -13,7 +13,6 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
     "aria-current": current && "page",
     "aria-disabled": disabled,
     tabIndex: disabled ? -1 : 0,
-    as: disabled ? "span" : "a",
     href: disabled ? undefined : href,
   })
 )<PaginationLinkProps>`
