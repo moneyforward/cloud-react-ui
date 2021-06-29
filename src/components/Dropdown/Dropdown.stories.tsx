@@ -31,7 +31,6 @@ const AnchorButtonRoot = ({
 }: DropdownToggleButtonProps): JSX.Element => {
   const { isActive, setIsActive } = useDropdown();
   const handleClick = () => {
-    console.log(isActive);
     setIsActive(!isActive);
   };
   return (

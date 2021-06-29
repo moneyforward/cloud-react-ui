@@ -127,8 +127,8 @@ exports[`Dropdown Anchored closes with anchored toggle 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -329,8 +329,8 @@ exports[`Dropdown Anchored renders 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -552,8 +552,8 @@ exports[`Dropdown Default closes with action item 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -791,8 +791,8 @@ exports[`Dropdown Default closes with overlay 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -1030,8 +1030,8 @@ exports[`Dropdown Default keeps open with clicking isKeepOpen action item 1`] = 
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -1269,8 +1269,8 @@ exports[`Dropdown Default renders 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -1508,8 +1508,8 @@ exports[`Dropdown Default renders with placement 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
@@ -1752,8 +1752,8 @@ exports[`Dropdown Multiple blocks renders 1`] = `
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: block;
   background: transparent;
   z-index: -1;
