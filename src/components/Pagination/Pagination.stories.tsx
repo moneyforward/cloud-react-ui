@@ -23,7 +23,7 @@ export const Default = (): JSX.Element => {
   return (
     <Pagination>
       <Pagination.Item>
-        <Pagination.Prev href="#" disabled={!hasPrev(current) || undefined} />
+        <Pagination.Prev href="#" disabled={!hasPrev(current)} />
       </Pagination.Item>
 
       {pages.map((value, i) => (
@@ -35,7 +35,7 @@ export const Default = (): JSX.Element => {
       ))}
 
       <Pagination.Item>
-        <Pagination.Next href="#" disabled={!hasNext(current) || undefined} />
+        <Pagination.Next href="#" disabled={!hasNext(current)} />
       </Pagination.Item>
     </Pagination>
   );
