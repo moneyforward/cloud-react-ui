@@ -34,7 +34,7 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
       `}
   }
 
-  &[aria-disabled] {
+  &[aria-disabled="true"] {
     pointer-events: none;
     cursor: auto;
     color: #d8dade;
