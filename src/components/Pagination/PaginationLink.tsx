@@ -9,10 +9,11 @@ export type PaginationLinkProps = {
 };
 
 export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
-  ({ disabled, current }) => ({
-    "aria-disabled": disabled,
+  ({ disabled, current, href }) => ({
     "aria-current": current && "page",
+    "aria-disabled": disabled,
     tabIndex: disabled ? -1 : 0,
+    href: disabled ? undefined : href,
   })
 )<PaginationLinkProps>`
   ${({ theme: { link } }) =>
@@ -22,7 +23,7 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
 
   display: inline-block;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 5px 14px;
   border-radius: inherit;
   background-color: #fff;
 
@@ -34,7 +35,7 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
       `}
   }
 
-  &[aria-disabled] {
+  &[aria-disabled="true"] {
     pointer-events: none;
     cursor: auto;
     color: #d8dade;

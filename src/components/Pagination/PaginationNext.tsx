@@ -11,7 +11,13 @@ export const PaginationNext = forwardRef<
   HTMLAnchorElement,
   PaginationNextProps
 >(({ href, disabled, ...rest }, ref) => (
-  <PaginationLink href={href} ref={ref} disabled={disabled} {...rest}>
+  <PaginationLink
+    aria-label="次のページ"
+    href={href}
+    ref={ref}
+    disabled={disabled}
+    {...rest}
+  >
     <Icon icon="chevronUp" rotation={90} />
   </PaginationLink>
 ));
