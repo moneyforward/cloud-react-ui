@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const SearchPanelColumn = styled.div``;
+export const SearchPanelColumn = styled.div``;
 
 SearchPanelColumn.displayName = "SearchPanel.Column";
 
-const SearchPanelRow = styled.div`
+export const SearchPanelRow = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -17,4 +17,24 @@ const SearchPanelRow = styled.div`
 
 SearchPanelRow.displayName = "SearchPanel.Row";
 
-export { SearchPanelRow, SearchPanelColumn };
+export type SearchPanelFieldGroupProps = {
+  children: React.ReactNode;
+  type?: "text" | "checkbox";
+};
+
+export const SearchPanelFieldGroup = styled.div.attrs<SearchPanelFieldGroupProps>(
+  ({ type = "text" }) => ({
+    "data-type": type,
+  })
+)<SearchPanelFieldGroupProps>`
+  display: grid;
+
+  [data-type="text"] {
+    column-gap: 8px;
+  }
+  [data-type="checkbox"] {
+    column-gap: 84px;
+  }
+`;
+
+SearchPanelFieldGroup.displayName = "SearchPanel.FieldGroup";
