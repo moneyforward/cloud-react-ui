@@ -28,6 +28,7 @@ export const SearchPanelFieldGroup = styled.div.attrs<SearchPanelFieldGroupProps
   })
 )<SearchPanelFieldGroupProps>`
   display: grid;
+  row-gap: 8px;
 
   [data-type="text"] {
     column-gap: 8px;
