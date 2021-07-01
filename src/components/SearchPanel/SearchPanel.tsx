@@ -21,7 +21,7 @@ export type SearchPanelProps = {
 export const SearchPanelBase = ({
   children,
 }: SearchPanelProps): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
