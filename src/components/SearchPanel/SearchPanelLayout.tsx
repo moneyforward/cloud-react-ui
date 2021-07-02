@@ -4,7 +4,7 @@ export const SearchPanelColumn = styled.div``;
 
 SearchPanelColumn.displayName = "SearchPanel.Column";
 
-// gapの一貫性を保つために指定できる数値を型で限定しています
+// gapの一貫性を保つために指定できる数値を型で限定している
 type SearchPanelRowProps = {
   children: React.ReactNode;
   gap?: 8 | 32;
