@@ -4,11 +4,16 @@ export const SearchPanelColumn = styled.div``;
 
 SearchPanelColumn.displayName = "SearchPanel.Column";
 
-export const SearchPanelRow = styled.div`
+type SearchPanelRowProps = {
+  children: React.ReactNode;
+  gap?: number;
+};
+
+export const SearchPanelRow = styled.div<SearchPanelRowProps>`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 8px;
+  column-gap: ${({ gap = 8 }) => `${gap}px`};
 
   & + & {
     margin-top: 15px;
