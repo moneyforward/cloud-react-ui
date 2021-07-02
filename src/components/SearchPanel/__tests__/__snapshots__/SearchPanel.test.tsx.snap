@@ -210,7 +210,7 @@ exports[`SearchPanel default 1`] = `
     class="c0"
   >
     <div
-      aria-hidden="false"
+      aria-hidden="true"
       class="c1"
     >
       <form>
@@ -224,7 +224,7 @@ exports[`SearchPanel default 1`] = `
               class=""
             >
               <div>
-                SearchPanel.Body content
+                Content
               </div>
             </div>
           </div>
@@ -252,14 +252,14 @@ exports[`SearchPanel default 1`] = `
       </form>
     </div>
     <button
-      aria-expanded="true"
+      aria-expanded="false"
       aria-haspopup="true"
       class="c9"
     >
       絞り込み条件 
       <svg
         aria-hidden="true"
-        class="svg-inline--fa fa-caret-up fa-w-10 c10"
+        class="svg-inline--fa fa-caret-up fa-w-10 fa-rotate-180 c10"
         data-icon="caret-up"
         data-prefix="fas"
         focusable="false"

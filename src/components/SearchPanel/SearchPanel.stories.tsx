@@ -32,7 +32,7 @@ const Template: Story<SearchPanelProps> = () => (
             </div>
           </SearchPanel.Column>
         </SearchPanel.Row>
-        <SearchPanel.Row>
+        <SearchPanel.Row gap={32}>
           <SearchPanel.Column>
             <Fieldset>
               <legend>Checkbox group</legend>

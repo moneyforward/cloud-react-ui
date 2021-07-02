@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
-const SearchPanelColumn = styled.div``;
+export const SearchPanelColumn = styled.div``;
 
 SearchPanelColumn.displayName = "SearchPanel.Column";
 
-const SearchPanelRow = styled.div`
+// gapの一貫性を保つために指定できる数値を型で限定している
+type SearchPanelRowProps = {
+  children: React.ReactNode;
+  gap?: 8 | 32;
+};
+
+export const SearchPanelRow = styled.div<SearchPanelRowProps>`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 8px;
+  column-gap: ${({ gap = 8 }) => `${gap}px`};
 
   & + & {
     margin-top: 15px;
@@ -16,5 +22,3 @@ const SearchPanelRow = styled.div`
 `;
 
 SearchPanelRow.displayName = "SearchPanel.Row";
-
-export { SearchPanelRow, SearchPanelColumn };
