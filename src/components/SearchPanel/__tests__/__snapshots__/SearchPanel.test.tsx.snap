@@ -224,7 +224,7 @@ exports[`SearchPanel default 1`] = `
               class=""
             >
               <div>
-                SearchPanel.Body content
+                Content
               </div>
             </div>
           </div>

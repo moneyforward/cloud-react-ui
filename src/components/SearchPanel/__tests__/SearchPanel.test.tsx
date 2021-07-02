@@ -1,30 +1,28 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import { SearchPanel } from "../SearchPanel";
 import { Button } from "../../../components";
 
 describe("SearchPanel", () => {
-  const Template = (): JSX.Element => (
-    <SearchPanel>
-      <form>
-        <SearchPanel.Filters>
-          <SearchPanel.Row>
-            <SearchPanel.Column>
-              <div>SearchPanel.Body content</div>
-            </SearchPanel.Column>
-          </SearchPanel.Row>
-        </SearchPanel.Filters>
-        <SearchPanel.Actions>
-          <SearchPanel.ButtonGroup>
-            <Button color="settings">クリア</Button>
-            <Button color="primary">検索</Button>
-          </SearchPanel.ButtonGroup>
-        </SearchPanel.Actions>
-      </form>
-    </SearchPanel>
-  );
-
   it("default", () => {
-    const { asFragment } = render(<Template />);
+    const { asFragment } = render(
+      <SearchPanel>
+        <form>
+          <SearchPanel.Filters>
+            <SearchPanel.Row>
+              <SearchPanel.Column>
+                <div>Content</div>
+              </SearchPanel.Column>
+            </SearchPanel.Row>
+          </SearchPanel.Filters>
+          <SearchPanel.Actions>
+            <SearchPanel.ButtonGroup>
+              <Button color="settings">クリア</Button>
+              <Button color="primary">検索</Button>
+            </SearchPanel.ButtonGroup>
+          </SearchPanel.Actions>
+        </form>
+      </SearchPanel>
+    );
     expect(asFragment()).toMatchSnapshot();
     expect(screen.getByText("Content")).not.toBeVisible();
   });
@@ -35,15 +33,15 @@ describe("SearchPanel", () => {
   });
 
   it("onClick Toggle", () => {
-    const { getByRole, queryByText } = render(<Template />);
-    const button = getByRole("button", { expanded: false });
+    render(<SearchPanel>Content</SearchPanel>);
+    const button = screen.getByRole("button", { expanded: false });
 
     fireEvent.click(button);
-    expect(button.getAttribute("aria-expanded")).toBe("true");
-    expect(queryByText("SearchPanel.Body content")).toBeVisible();
+    expect(button).toHaveAttribute("aria-expanded", "true");
+    expect(screen.queryByText("Content")).toBeVisible();
 
     fireEvent.click(button);
-    expect(button.getAttribute("aria-expanded")).toBe("false");
-    expect(queryByText("SearchPanel.Body content")).not.toBeVisible();
+    expect(button).toHaveAttribute("aria-expanded", "false");
+    expect(screen.queryByText("Content")).not.toBeVisible();
   });
 });
