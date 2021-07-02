@@ -26,6 +26,12 @@ describe("SearchPanel", () => {
   it("default", () => {
     const { asFragment } = render(<Template />);
     expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByText("Content")).not.toBeVisible();
+  });
+
+  it("should be open when 'defaultOpen' has true", () => {
+    render(<SearchPanel defaultOpen={true}>Content</SearchPanel>);
+    expect(screen.getByText("Content")).toBeVisible();
   });
 
   it("onClick Toggle", () => {

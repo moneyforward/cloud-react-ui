@@ -16,12 +16,14 @@ StyledSearchPanel.defaultProps = defaultProps;
 
 export type SearchPanelProps = {
   children?: React.ReactNode;
+  defaultOpen?: boolean;
 };
 
 export const SearchPanelBase = ({
   children,
+  defaultOpen = false,
 }: SearchPanelProps): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
