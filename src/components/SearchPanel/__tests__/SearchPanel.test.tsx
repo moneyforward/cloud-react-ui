@@ -1,9 +1,9 @@
 import { render, fireEvent } from "@testing-library/react";
-import { SearchPanel, SearchPanelProps } from "../SearchPanel";
+import { SearchPanel } from "../SearchPanel";
 import { Button } from "../../../components";
 
 describe("SearchPanel", () => {
-  const Template = (args: SearchPanelProps): JSX.Element => (
+  const Template = (): JSX.Element => (
     <SearchPanel>
       <form>
         <SearchPanel.Filters>
@@ -30,14 +30,14 @@ describe("SearchPanel", () => {
 
   it("onClick Toggle", () => {
     const { getByRole, queryByText } = render(<Template />);
-    const button = getByRole("button", { expanded: true });
-
-    fireEvent.click(button);
-    expect(button.getAttribute("aria-expanded")).toBe("false");
-    expect(queryByText("SearchPanel.Body content")).not.toBeVisible();
+    const button = getByRole("button", { expanded: false });
 
     fireEvent.click(button);
     expect(button.getAttribute("aria-expanded")).toBe("true");
     expect(queryByText("SearchPanel.Body content")).toBeVisible();
+
+    fireEvent.click(button);
+    expect(button.getAttribute("aria-expanded")).toBe("false");
+    expect(queryByText("SearchPanel.Body content")).not.toBeVisible();
   });
 });
