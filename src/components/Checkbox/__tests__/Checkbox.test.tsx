@@ -1,37 +1,35 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import { Checkbox } from "../Checkbox";
 
 describe("Checkbox", () => {
   it("default", () => {
-    const { asFragment, getByRole } = render(<Checkbox>checkbox</Checkbox>);
+    const { asFragment } = render(<Checkbox>checkbox</Checkbox>);
     expect(asFragment()).toMatchSnapshot();
 
-    const checkbox = getByRole("checkbox");
+    const checkbox = screen.getByRole("checkbox");
     expect(checkbox).not.toBeChecked();
-    expect(checkbox).not.toBeDisabled();
+    expect(checkbox).toBeEnabled();
   });
 
   it("defaultChecked props", () => {
-    const { getByRole } = render(
-      <Checkbox defaultChecked={true}>checkbox</Checkbox>
-    );
-    expect(getByRole("checkbox")).toBeChecked();
+    render(<Checkbox defaultChecked={true}>checkbox</Checkbox>);
+    expect(screen.getByRole("checkbox")).toBeChecked();
   });
 
   it("disabled props", () => {
-    const { getByRole } = render(<Checkbox disabled={true}>checkbox</Checkbox>);
-    expect(getByRole("checkbox")).toBeDisabled();
+    render(<Checkbox disabled={true}>checkbox</Checkbox>);
+    expect(screen.getByRole("checkbox")).toBeDisabled();
   });
 
   it("onChange, onClick props", () => {
     const onChange = jest.fn();
     const onClick = jest.fn();
-    const { getByText } = render(
+    render(
       <Checkbox onChange={onChange} onClick={onClick}>
         checkbox
       </Checkbox>
     );
-    fireEvent.click(getByText("checkbox"));
+    fireEvent.click(screen.getByText("checkbox"));
 
     expect(onChange).toBeCalledTimes(1);
     expect(onClick).toBeCalledTimes(1);

@@ -136,6 +136,15 @@ export const StyledSelect = styled(ReactSelect)`
 `;
 StyledSelect.defaultProps = defaultProps;
 
+const DropdownIndicatorComponent = (indicatorImage: JSX.Element) => {
+  const DropdownIndicator = (props: any) => (
+    <components.DropdownIndicator {...props}>
+      {indicatorImage}
+    </components.DropdownIndicator>
+  );
+  return DropdownIndicator;
+};
+
 const Select = forwardRef<HTMLInputElement, Props>(
   (
     {
@@ -150,14 +159,7 @@ const Select = forwardRef<HTMLInputElement, Props>(
   ) => {
     const customComponents: ReactSelectProps["components"] = {};
     if (indicatorImage) {
-      customComponents["DropdownIndicator"] = useMemo(() => {
-        const DropdownIndicator = (props: any) => (
-          <components.DropdownIndicator {...props}>
-            {indicatorImage}
-          </components.DropdownIndicator>
-        );
-        return DropdownIndicator;
-      }, [indicatorImage]);
+      customComponents["DropdownIndicator"] = DropdownIndicatorComponent(indicatorImage)
     }
 
     return (

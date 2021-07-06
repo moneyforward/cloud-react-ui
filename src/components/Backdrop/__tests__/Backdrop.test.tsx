@@ -1,4 +1,4 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import { Backdrop } from "../Backdrop";
 
 describe("Backdrop", () => {
@@ -9,8 +9,8 @@ describe("Backdrop", () => {
 
   it("called onClick", () => {
     const onClick = jest.fn();
-    const { container } = render(<Backdrop open onClick={onClick} />);
-    fireEvent.click(container.getElementsByClassName("MuiBackdrop-root")[0]);
+    render(<Backdrop data-testid="backdrop" open onClick={onClick} />);
+    fireEvent.click(screen.getByTestId('backdrop'));
     expect(onClick).toBeCalledTimes(1);
   });
 });

@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Block } from "../Block";
 
 describe("Block", () => {
@@ -9,13 +9,13 @@ describe("Block", () => {
 
   describe("border props", () => {
     it("border=true", () => {
-      const { container } = render(<Block border>block</Block>);
-      expect(container.firstChild).toHaveStyle("border: 1px solid #d4d8dd;");
+      render(<Block border data-testid="block">block</Block>);
+      expect(screen.getByTestId('block')).toHaveStyle("border: 1px solid #d4d8dd;");
     });
 
     it("border=false", () => {
-      const { container } = render(<Block>block</Block>);
-      expect(container.firstChild).toHaveStyle("border: none;");
+      const { container } = render(<Block data-testid="block">block</Block>);
+      expect(screen.getByTestId('block')).toHaveStyle("border: none;");
     });
   });
 });

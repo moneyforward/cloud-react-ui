@@ -20,10 +20,11 @@ const Indicator = (
 
 describe("Select", () => {
   it("default", () => {
-    const { asFragment, container } = render(<Select />);
+    const { asFragment, container } = render(<Select data-testid="select"/>);
     expect(asFragment()).toMatchSnapshot();
 
     expect(
+      // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
       container.getElementsByClassName("react-select__control")[0]
     ).toHaveStyle("background-color: #FFFFFF");
   });
@@ -37,6 +38,7 @@ describe("Select", () => {
     const { container } = render(<Select error={true} />);
 
     expect(
+      // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
       container.getElementsByClassName("react-select__control")[0]
     ).toHaveStyle("background-color: #FFF4F4");
   });
