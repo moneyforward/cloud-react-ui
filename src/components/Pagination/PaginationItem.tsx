@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 
 export type PaginationItemProps = {
+  onClick?: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
   children: React.ReactNode;
 };
 
@@ -20,11 +21,8 @@ const StyledPaginationItem = styled.li`
   }
 `;
 
-export const PaginationItem = ({
-  children,
-  ...rest
-}: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem {...rest}>{children}</StyledPaginationItem>
+export const PaginationItem = (props: PaginationItemProps): JSX.Element => (
+  <StyledPaginationItem {...props} />
 );
 
 PaginationItem.displayName = "Pagination.Item";

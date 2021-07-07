@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { Pagination } from "../Pagination";
 
 describe("Pagination", () => {
@@ -19,6 +19,17 @@ describe("Pagination", () => {
       </Pagination>
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe("Pagination.Item", () => {
+  it("should called onClick with listitem click", () => {
+    const onClick = jest.fn();
+    render(<Pagination.Item onClick={onClick}>Item</Pagination.Item>);
+    expect(screen.getByText("Item")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("listitem"));
+    expect(onClick).toBeCalled();
   });
 });
 
