@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React from "react";
 
 export type PaginationItemProps = {
-  onClick?: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
   children: React.ReactNode;
 };
 

@@ -49,20 +49,41 @@ export const OnClickProps = (): JSX.Element => {
 
   return (
     <Pagination>
-      <Pagination.Item onClick={() => console.log("prev")}>
-        <Pagination.Prev disabled={!hasPrev(current)} />
+      <Pagination.Item>
+        <Pagination.Prev
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("prev");
+          }}
+          disabled={!hasPrev(current)}
+        />
       </Pagination.Item>
 
       {pages.map((value, i) => (
-        <Pagination.Item key={i} onClick={() => console.log(`page${value}`)}>
-          <Pagination.Link current={current === i || undefined}>
+        <Pagination.Item key={i}>
+          <Pagination.Link
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(`page${value}`);
+            }}
+            current={current === i || undefined}
+          >
             {value}
           </Pagination.Link>
         </Pagination.Item>
       ))}
 
-      <Pagination.Item onClick={() => console.log("next")}>
-        <Pagination.Next disabled={!hasNext(current)} />
+      <Pagination.Item>
+        <Pagination.Next
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            console.log(`next`);
+          }}
+          disabled={!hasNext(current)}
+        />
       </Pagination.Item>
     </Pagination>
   );

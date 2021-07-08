@@ -4,6 +4,7 @@ import { defaultProps } from "../../theme";
 export type PaginationLinkProps = {
   href?: string;
   disabled?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   children: React.ReactNode;
   current?: boolean;
 };
@@ -14,6 +15,7 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
     "aria-disabled": disabled,
     tabIndex: disabled ? -1 : 0,
     href: disabled ? undefined : href,
+    onclick,
   })
 )<PaginationLinkProps>`
   ${({ theme: { link } }) =>

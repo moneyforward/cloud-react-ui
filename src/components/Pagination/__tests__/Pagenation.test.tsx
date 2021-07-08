@@ -23,13 +23,11 @@ describe("Pagination", () => {
 });
 
 describe("Pagination.Item", () => {
-  it("should called onClick with listitem click", () => {
-    const onClick = jest.fn();
-    render(<Pagination.Item onClick={onClick}>Item</Pagination.Item>);
+  it("renders", () => {
+    const { asFragment } = render(<Pagination.Item>Item</Pagination.Item>);
     expect(screen.getByText("Item")).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole("listitem"));
-    expect(onClick).toBeCalled();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
@@ -41,6 +39,14 @@ describe("Pagination.Link", () => {
       </Pagination.Link>
     );
     expect(screen.getByRole("link")).toHaveAttribute("aria-current", "page");
+  });
+
+  it("should called onClick with click", () => {
+    const onClick = jest.fn();
+    render(<Pagination.Link onClick={onClick}>Link</Pagination.Link>);
+
+    fireEvent.click(screen.getByText("Link"));
+    expect(onClick).toBeCalled();
   });
 });
 

@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
 import { Icon } from "../../components";
-import { PaginationLink } from "./PaginationLink";
+import { PaginationLink, PaginationLinkProps } from "./PaginationLink";
 
-export type PaginationPrevProps = {
-  href?: string;
-  disabled?: boolean;
-};
+export type PaginationPrevProps = Pick<
+  PaginationLinkProps,
+  "href" | "disabled" | "onClick"
+>;
 
 export const PaginationPrev = forwardRef<
   HTMLAnchorElement,
