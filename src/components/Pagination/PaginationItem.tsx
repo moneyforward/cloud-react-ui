@@ -20,11 +20,8 @@ const StyledPaginationItem = styled.li`
   }
 `;
 
-export const PaginationItem = ({
-  children,
-  ...rest
-}: PaginationItemProps): JSX.Element => (
-  <StyledPaginationItem {...rest}>{children}</StyledPaginationItem>
+export const PaginationItem = (props: PaginationItemProps): JSX.Element => (
+  <StyledPaginationItem {...props} />
 );
 
 PaginationItem.displayName = "Pagination.Item";

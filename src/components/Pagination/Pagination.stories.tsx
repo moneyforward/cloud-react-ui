@@ -40,3 +40,51 @@ export const Default = (): JSX.Element => {
     </Pagination>
   );
 };
+
+export const OnClickProps = (): JSX.Element => {
+  const pages = [1, 2, 3, 4, 5];
+  const current = 0;
+  const hasPrev = (current: number) => false;
+  const hasNext = (current: number) => true;
+
+  return (
+    <Pagination>
+      <Pagination.Item>
+        <Pagination.Prev
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("prev");
+          }}
+          disabled={!hasPrev(current)}
+        />
+      </Pagination.Item>
+
+      {pages.map((value, i) => (
+        <Pagination.Item key={i}>
+          <Pagination.Link
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(`page${value}`);
+            }}
+            current={current === i || undefined}
+          >
+            {value}
+          </Pagination.Link>
+        </Pagination.Item>
+      ))}
+
+      <Pagination.Item>
+        <Pagination.Next
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            console.log(`next`);
+          }}
+          disabled={!hasNext(current)}
+        />
+      </Pagination.Item>
+    </Pagination>
+  );
+};
