@@ -33,7 +33,7 @@ export type Props = {
 };
 
 export const Styled = css<{ isError?: boolean }>`
-  ${({ theme: { select }, isError = false }) => {
+  ${({ theme: { select, footer }, isError = false }) => {
     const colorType = isError ? "error" : "default";
 
     return css`
@@ -81,6 +81,7 @@ export const Styled = css<{ isError?: boolean }>`
           margin: 0;
           border-radius: 0 0 4px 4px;
           font-size: ${select.fontSize};
+          z-index: ${footer.zIndex + 1};
         }
 
         &__menu-list {
