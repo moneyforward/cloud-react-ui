@@ -10,12 +10,12 @@ export type PaginationLinkProps = {
 };
 
 export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
-  ({ disabled, current, href }) => ({
+  ({ disabled, current, href, onClick }) => ({
     "aria-current": current && "page",
     "aria-disabled": disabled,
     tabIndex: disabled ? -1 : 0,
     href: disabled ? undefined : href,
-    onclick,
+    onClick,
   })
 )<PaginationLinkProps>`
   ${({ theme: { link } }) =>
