@@ -77,7 +77,7 @@ const Notification = forwardRef<HTMLDivElement, NotificationProps>(
     }
 
     return (
-      <StyledNotification ref={ref} {...rest}>
+      <StyledNotification ref={ref} {...rest} role="alert">
         <Inner>
           <Content align={align}>{children}</Content>
           <Action>
