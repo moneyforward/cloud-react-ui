@@ -9,6 +9,7 @@ export type TextProps = {
   size?: Size;
   color?: Color;
   className?: string;
+  align?: "center" | "left" | "right" | "start" | "end";
 };
 
 export const TextContainer: React.FC<TextProps> = (props) => {
