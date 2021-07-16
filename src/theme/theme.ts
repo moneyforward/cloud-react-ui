@@ -526,6 +526,13 @@ export const componentsTheme = {
     fontSize: values.text.size.small,
     color: color.white,
   },
+  notification: {
+    backgroundColor: {
+      success: color.royalBlue,
+      warning: color.ecru,
+      error: color.sunsetOrange,
+    },
+  },
 };
 
 export const uiTheme = {

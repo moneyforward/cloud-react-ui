@@ -1,13 +1,29 @@
+import styled from "styled-components";
 import { Story, Meta } from "@storybook/react";
-import { Notification, Props } from "./Notification";
+import { Notification, NotificationProps } from "./Notification";
 
 export default {
   component: Notification,
   title: "components/Notification",
 } as Meta;
 
-const Template: Story<Props> = (args) => (
-  <Notification {...args}>Notification</Notification>
+const Wrapper = styled.div`
+  > * + * {
+    margin-top: 24px;
+  }
+`;
+
+const Template: Story<NotificationProps> = ({ isOpen, align, ...rest }) => (
+  <>
+    <Wrapper>
+      <Notification {...rest} isOpen={true}>
+        Notification
+      </Notification>
+      <Notification {...rest} align="center" isOpen={true}>
+        Notification align=center
+      </Notification>
+    </Wrapper>
+  </>
 );
 
 export const Default = Template.bind({});
