@@ -7,7 +7,7 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <Notification {...args}>Flash Message</Notification>
+  <Notification {...args}>Notification</Notification>
 );
 
 export const Default = Template.bind({});
