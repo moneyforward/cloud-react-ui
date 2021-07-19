@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification should be in error colorSchema 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 100%;
+  background-color: #EC4949;
+  opacity: 0.9;
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+.c4 {
+  padding: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.c3 {
+  -webkit-flex: 0 0;
+  -ms-flex: 0 0;
+  flex: 0 0;
+}
+
+.c2 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 12px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="c0"
+    color="error"
+    role="alert"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        Notification
+      </div>
+      <div
+        class="c3"
+      >
+        <button
+          aria-label="閉じる"
+          class="c4"
+          type="button"
+        >
+          <svg
+            aria-label="hidden"
+            fill="none"
+            height="15"
+            viewBox="0 0 15 15"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 0.714286L14.2857 0L7.50003 6.78568L0.714355 8.70763e-06L6.93137e-05 0.714294L6.78574 7.49997L0 14.2857L0.714286 15L7.50003 8.21426L14.2858 15L15.0001 14.2857L8.21432 7.49997L15 0.714286Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Notification should be in success colorSchema as default 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 100%;
+  background-color: #3B7DE9;
+  opacity: 0.9;
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+.c4 {
+  padding: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.c3 {
+  -webkit-flex: 0 0;
+  -ms-flex: 0 0;
+  flex: 0 0;
+}
+
+.c2 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 12px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="c0"
+    role="alert"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        Notification
+      </div>
+      <div
+        class="c3"
+      >
+        <button
+          aria-label="閉じる"
+          class="c4"
+          type="button"
+        >
+          <svg
+            aria-label="hidden"
+            fill="none"
+            height="15"
+            viewBox="0 0 15 15"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 0.714286L14.2857 0L7.50003 6.78568L0.714355 8.70763e-06L6.93137e-05 0.714294L6.78574 7.49997L0 14.2857L0.714286 15L7.50003 8.21426L14.2858 15L15.0001 14.2857L8.21432 7.49997L15 0.714286Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Notification should be in warning colorSchema 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 100%;
+  background-color: #C0AA7B;
+  opacity: 0.9;
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+.c4 {
+  padding: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.c3 {
+  -webkit-flex: 0 0;
+  -ms-flex: 0 0;
+  flex: 0 0;
+}
+
+.c2 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 12px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="c0"
+    color="warning"
+    role="alert"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        Notification
+      </div>
+      <div
+        class="c3"
+      >
+        <button
+          aria-label="閉じる"
+          class="c4"
+          type="button"
+        >
+          <svg
+            aria-label="hidden"
+            fill="none"
+            height="15"
+            viewBox="0 0 15 15"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 0.714286L14.2857 0L7.50003 6.78568L0.714355 8.70763e-06L6.93137e-05 0.714294L6.78574 7.49997L0 14.2857L0.714286 15L7.50003 8.21426L14.2858 15L15.0001 14.2857L8.21432 7.49997L15 0.714286Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
