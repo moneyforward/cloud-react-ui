@@ -3,10 +3,9 @@ import type { TextProps } from "./TextContainer";
 import { defaultProps } from "../../theme";
 
 const StyledText = styled.span<TextProps>`
-  ${({ theme: { text }, size, color, align }) => css`
+  ${({ theme: { text }, size, color }) => css`
     font-size: ${text.size[size || "middle"]};
     color: ${text.color[color || "default"]};
-    text-align: ${align};
   `}
 `;
 StyledText.defaultProps = defaultProps;
