@@ -16,7 +16,7 @@ describe("Notification", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should be in warning colorSchema ", () => {
+  it("should be in warning colorSchema", () => {
     const { asFragment } = render(
       <Notification color="warning" isOpen>
         Notification
@@ -29,7 +29,7 @@ describe("Notification", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should be in error colorSchema ", () => {
+  it("should be in error colorSchema", () => {
     const { asFragment } = render(
       <Notification color="error" isOpen>
         Notification
@@ -46,5 +46,15 @@ describe("Notification", () => {
     render(<Notification>Notification</Notification>);
 
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+  });
+
+  it("should be align center", () => {
+    render(
+      <Notification align="center" isOpen>
+        Notification
+      </Notification>
+    );
+
+    expect(screen.getByText("Notification")).toHaveStyle("text-align: center;");
   });
 });

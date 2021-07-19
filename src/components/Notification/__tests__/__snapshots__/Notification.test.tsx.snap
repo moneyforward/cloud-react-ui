@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Notification should be in error colorSchema  1`] = `
+exports[`Notification should be in error colorSchema 1`] = `
 <DocumentFragment>
   .c0 {
   width: 100%;
@@ -169,7 +169,7 @@ exports[`Notification should be in success colorSchema as default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Notification should be in warning colorSchema  1`] = `
+exports[`Notification should be in warning colorSchema 1`] = `
 <DocumentFragment>
   .c0 {
   width: 100%;
