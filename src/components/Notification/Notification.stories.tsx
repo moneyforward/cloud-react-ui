@@ -14,16 +14,14 @@ const Wrapper = styled.div`
 `;
 
 const Template: Story<NotificationProps> = ({ isOpen, align, ...rest }) => (
-  <>
-    <Wrapper>
-      <Notification {...rest} isOpen={true}>
-        Notification
-      </Notification>
-      <Notification {...rest} align="center" isOpen={true}>
-        Notification align=center
-      </Notification>
-    </Wrapper>
-  </>
+  <Wrapper>
+    <Notification {...rest} isOpen={true}>
+      Notification
+    </Notification>
+    <Notification {...rest} align="center" isOpen={true}>
+      Notification align=center
+    </Notification>
+  </Wrapper>
 );
 
 export const Default = Template.bind({});
