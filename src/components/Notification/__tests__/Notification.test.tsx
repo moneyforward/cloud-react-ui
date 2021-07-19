@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { Notification } from "../Notification";
 import { defaultProps } from "../../../theme";
 
@@ -14,6 +14,13 @@ describe("Notification", () => {
       `background-color: ${colorSchema.success}`
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("should be closed when the close button is clicked", () => {
+    render(<Notification isOpen>Notification</Notification>);
+    fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
+
+    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
   });
 
   it("should be in warning colorSchema", () => {
