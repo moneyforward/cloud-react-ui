@@ -52,6 +52,7 @@ exports[`Dropdown Anchored closes with anchored toggle 1`] = `
 }
 
 .c2 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -254,6 +255,7 @@ exports[`Dropdown Anchored renders 1`] = `
 }
 
 .c2 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -456,6 +458,7 @@ exports[`Dropdown Default closes with action item 1`] = `
 }
 
 .c4 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -695,6 +698,7 @@ exports[`Dropdown Default closes with overlay 1`] = `
 }
 
 .c4 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -934,6 +938,7 @@ exports[`Dropdown Default keeps open with clicking isKeepOpen action item 1`] = 
 }
 
 .c4 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1173,6 +1178,7 @@ exports[`Dropdown Default renders 1`] = `
 }
 
 .c4 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1412,6 +1418,7 @@ exports[`Dropdown Default renders with placement 1`] = `
 }
 
 .c4 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1656,6 +1663,7 @@ exports[`Dropdown Multiple blocks renders 1`] = `
 }
 
 .c4 {
+  z-index: 7000;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
