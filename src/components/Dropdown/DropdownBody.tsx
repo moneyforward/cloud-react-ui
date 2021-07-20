@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import styled, { css } from "styled-components";
-import { values, color, defaultProps } from "../../theme";
+import { values, color, zIndex, defaultProps } from "../../theme";
 import { useDropdown } from "./Dropdown";
 
 export type DropdownBodyProps = {
@@ -18,6 +18,7 @@ const StyledDropdownBody = styled.div.attrs<DropdownBodyProps>(
   })
 )<DropdownBodyProps>`
   ${({ width = "max-content", placement = "left" }) => css`
+    z-index: ${zIndex.dropdown};
     width: ${width};
     position: absolute;
     top: calc(100% + 10px);
