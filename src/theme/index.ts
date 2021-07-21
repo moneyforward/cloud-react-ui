@@ -1,13 +1,15 @@
 import merge from "deepmerge";
 
-import { color } from "./color";
-import { values } from "./values";
+export { color } from "./color";
+export { zIndex } from "./zIndex";
+export { values } from "./values";
+
 import { componentsTheme, uiTheme, layoutTheme } from "./theme";
 
 export { ThemeProvider } from "styled-components";
 
 const theme = { ...componentsTheme, ...uiTheme, ...layoutTheme };
-export { color, values, theme };
+export { theme };
 export const defaultProps = { theme };
 
 type TTheme = typeof theme;

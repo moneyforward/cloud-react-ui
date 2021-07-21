@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import { Header, Props } from "./Header";
-import { Icon, Text } from "../../components";
+import { Link, Dropdown } from "../../components";
 
 export default {
   component: Header,
@@ -33,8 +33,16 @@ const Template: Story<Props> = (args) => (
         <Logo />
       </Header.Name>
       <Header.Item>
-        <Text size="small">Header</Text>
-        <Icon icon="caretUp" rotation={180} />
+        <Dropdown placement="right" toggleLabel="ユーザー 太郎">
+          <Dropdown.Block role="list">
+            <Dropdown.ActionItem role="listitem">
+              <Link href="#">設定</Link>
+            </Dropdown.ActionItem>
+            <Dropdown.ActionItem role="listitem">
+              <Link href="#">ログアウト</Link>
+            </Dropdown.ActionItem>
+          </Dropdown.Block>
+        </Dropdown>
       </Header.Item>
     </Header>
     <Content />
