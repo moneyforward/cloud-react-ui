@@ -10,6 +10,7 @@ export * from "./Heading";
 export * from "./Icon";
 export * from "./Link";
 export * from "./Modal";
+export * from "./Notification";
 export * from "./Pagination";
 export * from "./ProgressLabel";
 export * from "./Radio";
