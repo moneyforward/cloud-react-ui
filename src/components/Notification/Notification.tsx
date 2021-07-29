@@ -8,11 +8,14 @@ export type NotificationProps = {
   children: React.ReactNode;
   align?: "center" | "left" | "right" | "start" | "end";
   isOpen?: boolean;
+  onClickClose?: () => void;
 };
 
 const white = color.white;
 
-const StyledNotification = styled.div<NotificationProps>`
+const StyledNotification = styled.div<
+  Omit<NotificationProps, "align" | "children" | "isOpen" | "onClickClose">
+>`
   ${({ color = "success", theme: { notification } }) => css`
     width: 100%;
     background-color: ${notification.backgroundColor[color]};
@@ -68,9 +71,14 @@ const Inner = styled.div`
 `;
 
 const Notification = forwardRef<HTMLDivElement, NotificationProps>(
-  ({ children, align, isOpen = false, ...rest }, ref) => {
+  ({ children, align, isOpen = false, onClickClose, ...rest }, ref) => {
     const [isActive, setIsActive] = useState(isOpen);
-    const handleCloseClick = () => setIsActive(false);
+    const handleCloseClick = () => {
+      if (typeof onClickClose === "function") {
+        onClickClose();
+      }
+      setIsActive(false);
+    };
 
     useEffect(() => {
       setIsActive(isOpen);
@@ -81,7 +89,7 @@ const Notification = forwardRef<HTMLDivElement, NotificationProps>(
     }
 
     return (
-      <StyledNotification ref={ref} {...rest} role="alert">
+      <StyledNotification ref={ref} role="alert" {...rest}>
         <Inner>
           <Content align={align}>{children}</Content>
           <Action>
