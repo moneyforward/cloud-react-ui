@@ -64,4 +64,16 @@ describe("Notification", () => {
 
     expect(screen.getByText("Notification")).toHaveStyle("text-align: center;");
   });
+
+  describe("when props.isOpen changed ", () => {
+    it("state.isActive changed too", () => {
+      const { rerender } = render(
+        <Notification isOpen>Notification</Notification>
+      );
+      expect(screen.queryByRole("alert")).toBeInTheDocument();
+
+      rerender(<Notification isOpen={false}>Notification</Notification>);
+      expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    });
+  });
 });

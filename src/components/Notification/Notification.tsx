@@ -1,4 +1,4 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { defaultProps, color } from "../../theme";
 
@@ -71,6 +71,10 @@ const Notification = forwardRef<HTMLDivElement, NotificationProps>(
   ({ children, align, isOpen = false, ...rest }, ref) => {
     const [isActive, setIsActive] = useState(isOpen);
     const handleCloseClick = () => setIsActive(false);
+
+    useEffect(() => {
+      setIsActive(isOpen);
+    }, [isOpen]);
 
     if (!isActive) {
       return null;

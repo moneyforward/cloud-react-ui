@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta, Args } from "@storybook/react";
 import { Notification, NotificationProps } from "./Notification";
 
 export default {
@@ -13,21 +13,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const Template: Story<NotificationProps> = ({ isOpen, align, ...rest }) => (
+const Template: Story = ({ text, ...rest }: Args) => (
   <Wrapper>
-    <Notification {...rest} isOpen={true}>
-      Notification
-    </Notification>
-    <Notification {...rest} align="center" isOpen={true}>
-      Notification align=center
-    </Notification>
+    <Notification {...rest}>{text}</Notification>
   </Wrapper>
 );
 
 export const Default = Template.bind({});
-
-export const Error = Template.bind({});
-Error.args = { color: "error" };
-
-export const Warning = Template.bind({});
-Warning.args = { color: "warning" };
+Default.args = {
+  text: "dummy text",
+  isOpen: true,
+  color: "success",
+  align: "center",
+};
