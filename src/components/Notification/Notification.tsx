@@ -74,9 +74,7 @@ const Notification = forwardRef<HTMLDivElement, NotificationProps>(
   ({ children, align, isOpen = false, onClickClose, ...rest }, ref) => {
     const [isActive, setIsActive] = useState(isOpen);
     const handleCloseClick = () => {
-      if (typeof onClickClose === "function") {
-        onClickClose();
-      }
+      onClickClose && onClickClose();
       setIsActive(false);
     };
 
