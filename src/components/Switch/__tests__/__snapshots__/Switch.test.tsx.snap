@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch default 1`] = `
+<DocumentFragment>
+  <span
+    class="MuiSwitch-root makeStyles-root-1"
+  >
+    <span
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiSwitch-switchBase makeStyles-switchBase-2 MuiSwitch-colorSecondary"
+    >
+      <span
+        class="MuiIconButton-label"
+      >
+        <input
+          class="PrivateSwitchBase-input-9 MuiSwitch-input"
+          type="checkbox"
+          value=""
+        />
+        <span
+          class="MuiSwitch-thumb makeStyles-thumb-3"
+        />
+      </span>
+    </span>
+    <span
+      class="MuiSwitch-track makeStyles-track-4"
+    />
+  </span>
+</DocumentFragment>
+`;
