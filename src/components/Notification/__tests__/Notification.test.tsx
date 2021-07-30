@@ -16,13 +16,6 @@ describe("Notification", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should be closed when the close button is clicked", () => {
-    render(<Notification isOpen>Notification</Notification>);
-    fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
-
-    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
-  });
-
   it("should be in warning colorSchema", () => {
     const { asFragment } = render(
       <Notification color="warning" isOpen>
@@ -63,5 +56,37 @@ describe("Notification", () => {
     );
 
     expect(screen.getByText("Notification")).toHaveStyle("text-align: center;");
+  });
+
+  describe("when props.isOpen changed ", () => {
+    it("state.isActive changed too", () => {
+      const { rerender } = render(
+        <Notification isOpen>Notification</Notification>
+      );
+      expect(screen.queryByRole("alert")).toBeInTheDocument();
+
+      rerender(<Notification isOpen={false}>Notification</Notification>);
+      expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    });
+  });
+
+  describe("when CloseButton is clicked", () => {
+    const onClickClose = jest.fn();
+    beforeEach(() => {
+      render(
+        <Notification isOpen onClickClose={onClickClose}>
+          Notification
+        </Notification>
+      );
+      fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
+    });
+
+    it("props.onClickClose is called", () => {
+      expect(onClickClose).toBeCalled();
+    });
+
+    it("should not be render", () => {
+      expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    });
   });
 });
