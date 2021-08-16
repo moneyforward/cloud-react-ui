@@ -4,6 +4,7 @@ import { defaultProps } from "../../theme";
 
 export type Props = {
   name?: string;
+  checked?: boolean;
   defaultChecked?: boolean;
   disabled?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;

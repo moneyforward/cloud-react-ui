@@ -1,4 +1,5 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
+import { useState } from "react";
 import { Checkbox } from "../Checkbox";
 
 describe("Checkbox", () => {
@@ -35,5 +36,26 @@ describe("Checkbox", () => {
 
     expect(onChange).toBeCalledTimes(1);
     expect(onClick).toBeCalledTimes(1);
+  });
+
+  it("checked, onChange props", () => {
+    const TestForm = () => {
+      const [checked, setChecked] = useState(false);
+      const handleChange = () => {
+        setChecked((prev) => !prev);
+      };
+
+      return (
+        <Checkbox checked={checked} onChange={handleChange}>
+          checkbox
+        </Checkbox>
+      );
+    };
+
+    render(<TestForm />);
+
+    expect(screen.getByRole("checkbox")).not.toBeChecked();
+    fireEvent.click(screen.getByText("checkbox"));
+    expect(screen.getByRole("checkbox")).toBeChecked();
   });
 });
