@@ -1,4 +1,5 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
+import { useState } from "react";
 import { Radio } from "../Radio";
 
 describe("Radio", () => {
@@ -33,5 +34,26 @@ describe("Radio", () => {
 
     expect(onChange).toBeCalledTimes(1);
     expect(onClick).toBeCalledTimes(1);
+  });
+
+  it("checked, onChange props", () => {
+    const TestForm = () => {
+      const [checked, setChecked] = useState(false);
+      const handleChange = () => {
+        setChecked((prev) => !prev);
+      };
+
+      return (
+        <Radio checked={checked} onChange={handleChange}>
+          radio
+        </Radio>
+      );
+    };
+
+    render(<TestForm />);
+
+    expect(screen.getByRole("radio")).not.toBeChecked();
+    fireEvent.click(screen.getByText("radio"));
+    expect(screen.getByRole("radio")).toBeChecked();
   });
 });
