@@ -18,6 +18,7 @@ export * from "./Select";
 export * from "./SearchPanel";
 export * from "./StatusLabel";
 export * from "./Steps";
+export * from "./Switch";
 export * from "./Table";
 export * from "./Text";
 export * from "./TextField";
