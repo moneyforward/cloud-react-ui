@@ -5,8 +5,7 @@ export type TooltipProps = {
   message: string;
   placement?: MuiTootipProps["placement"];
   arrow?: boolean;
-  className?: string;
-};
+} & JSX.IntrinsicElements['div'];
 
 export const TooltipContainer: React.FC<TooltipProps> = (props) => {
   return <TooltipPresenter {...props} />;
