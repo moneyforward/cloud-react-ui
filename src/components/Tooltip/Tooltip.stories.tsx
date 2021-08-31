@@ -19,3 +19,4 @@ const Template: Story<Props> = ({ message = "tooltip", ...rest }) => (
 );
 
 export const Default = Template.bind({});
+Default.args = { message: 'tooltip', id: 'tooltip-id' }
