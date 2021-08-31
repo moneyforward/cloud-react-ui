@@ -32,9 +32,10 @@ export const TooltipPresenter: React.FC<TooltipProps> = ({
   arrow = true,
   children,
   className,
+  ...rest
 }) => {
   return (
-    <StyledTooltip arrow={arrow} title={message} placement={placement}>
+    <StyledTooltip arrow={arrow} title={message} placement={placement} {...rest}>
       <div style={{ display: "inline-block" }} className={className}>
         {children}
       </div>
