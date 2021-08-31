@@ -19,7 +19,7 @@ exports[`Modal closed modal with close button 1`] = `
 
 .c0.c0:before,
 .c0.c0:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -35,7 +35,7 @@ exports[`Modal closed modal with close button 1`] = `
 }
 
 .c0.c0:after {
-  content: "";
+  content: '';
   z-index: -2;
   background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
@@ -79,7 +79,7 @@ exports[`Modal opened modal 1`] = `
 
 .c0.c0:before,
 .c0.c0:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -95,7 +95,7 @@ exports[`Modal opened modal 1`] = `
 }
 
 .c0.c0:after {
-  content: "";
+  content: '';
   z-index: -2;
   background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
@@ -139,7 +139,7 @@ exports[`Modal snapshot test 1`] = `
 
 .c0.c0:before,
 .c0.c0:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -155,7 +155,7 @@ exports[`Modal snapshot test 1`] = `
 }
 
 .c0.c0:after {
-  content: "";
+  content: '';
   z-index: -2;
   background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
