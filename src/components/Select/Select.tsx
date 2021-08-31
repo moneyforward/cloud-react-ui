@@ -1,10 +1,10 @@
-import { forwardRef, useMemo } from "react";
-import styled, { css } from "styled-components";
+import { forwardRef, useMemo } from 'react';
+import styled, { css } from 'styled-components';
 import ReactSelect, {
   components,
   Props as ReactSelectProps,
-} from "react-select";
-import { defaultProps } from "../../theme";
+} from 'react-select';
+import { defaultProps } from '../../theme';
 export type GroupOption = {
   label: string;
   options: Option[];
@@ -34,7 +34,7 @@ export type Props = {
 
 export const Styled = css<{ isError?: boolean }>`
   ${({ theme: { select, footer }, isError = false }) => {
-    const colorType = isError ? "error" : "default";
+    const colorType = isError ? 'error' : 'default';
 
     return css`
       display: ${select.display};
@@ -149,9 +149,9 @@ const Select = forwardRef<HTMLInputElement, Props>(
     },
     ref
   ) => {
-    const customComponents: ReactSelectProps["components"] = {};
+    const customComponents: ReactSelectProps['components'] = {};
     if (indicatorImage) {
-      customComponents["DropdownIndicator"] = useMemo(() => {
+      customComponents['DropdownIndicator'] = useMemo(() => {
         const DropdownIndicator = (props: any) => (
           <components.DropdownIndicator {...props}>
             {indicatorImage}
@@ -176,6 +176,6 @@ const Select = forwardRef<HTMLInputElement, Props>(
   }
 );
 
-Select.displayName = "Select";
+Select.displayName = 'Select';
 
 export { Select };

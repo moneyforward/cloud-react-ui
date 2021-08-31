@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   completed?: boolean;
@@ -20,7 +20,7 @@ StepTieWrapper.defaultProps = defaultProps;
 
 const Tie = styled.div<Props>`
   ${({ theme: { steps }, completed = false }) => {
-    const colorType = completed ? "completed" : "waiting";
+    const colorType = completed ? 'completed' : 'waiting';
 
     return css`
       width: ${steps.stepTie.tie.width};
@@ -37,6 +37,6 @@ const StepTie = forwardRef<HTMLDivElement, Props>((props, ref) => (
   </StepTieWrapper>
 ));
 
-StepTie.displayName = "StepTie";
+StepTie.displayName = 'StepTie';
 
 export { StepTie };

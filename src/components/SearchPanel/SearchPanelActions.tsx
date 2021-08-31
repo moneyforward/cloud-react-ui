@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export const SearchPanelActions = styled.div`
   width: 100%;
@@ -13,4 +13,4 @@ export const SearchPanelActions = styled.div`
 `;
 
 SearchPanelActions.defaultProps = defaultProps;
-SearchPanelActions.displayName = "SearchPanel.Actions";
+SearchPanelActions.displayName = 'SearchPanel.Actions';

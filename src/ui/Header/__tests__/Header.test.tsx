@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
-import { Header } from "../Header";
+import { render } from '@testing-library/react';
+import { Header } from '../Header';
 
-describe("Header", () => {
-  it("snapshot test", () => {
+describe('Header', () => {
+  it('snapshot test', () => {
     const { asFragment } = render(
       <Header>
         <Header.Name>
@@ -16,7 +16,7 @@ describe("Header", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("snapshot test (fixed)", () => {
+  it('snapshot test (fixed)', () => {
     const { asFragment } = render(
       <Header fixed>
         <Header.Name>

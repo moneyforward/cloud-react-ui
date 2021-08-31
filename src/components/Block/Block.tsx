@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   border?: boolean;
@@ -26,6 +26,6 @@ const Block = forwardRef<HTMLDivElement, Props>((props, ref) => (
   <StyledBlock ref={ref} {...props} />
 ));
 
-Block.displayName = "Block";
+Block.displayName = 'Block';
 
 export { Block };

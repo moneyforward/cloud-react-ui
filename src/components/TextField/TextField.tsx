@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   error?: boolean;
@@ -8,7 +8,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 
 const StyledInput = styled.input<Props>`
   ${({ theme: { textField }, error = false }) => {
-    const colorType = error ? "error" : "default";
+    const colorType = error ? 'error' : 'default';
 
     return css`
       width: ${textField.width};
@@ -32,11 +32,11 @@ const StyledInput = styled.input<Props>`
 StyledInput.defaultProps = defaultProps;
 
 const TextField = forwardRef<HTMLInputElement, Props>(
-  ({ type = "text", ...rest }, ref) => (
+  ({ type = 'text', ...rest }, ref) => (
     <StyledInput type={type} ref={ref} {...rest} />
   )
 );
 
-TextField.displayName = "TextField";
+TextField.displayName = 'TextField';
 
 export { TextField };

@@ -1,11 +1,11 @@
-import { forwardRef, useContext } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
-import { StepsModeContext } from "./Steps";
+import { forwardRef, useContext } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
+import { StepsModeContext } from './Steps';
 
 export type Props = {
   step: number;
-  stepStatus: "waiting" | "inProgress" | "completed";
+  stepStatus: 'waiting' | 'inProgress' | 'completed';
   title: string;
   className?: string;
 };
@@ -17,7 +17,7 @@ const StepWrapper = styled.div`
 `;
 StepWrapper.defaultProps = defaultProps;
 
-const Title = styled.span<{ stepStatus: Props["stepStatus"] }>`
+const Title = styled.span<{ stepStatus: Props['stepStatus'] }>`
   ${({ theme: { steps }, stepStatus }) => css`
     color: ${steps.step.title.color[stepStatus]};
     position: ${steps.step.title.position};
@@ -32,7 +32,7 @@ const Title = styled.span<{ stepStatus: Props["stepStatus"] }>`
 `;
 Title.defaultProps = defaultProps;
 
-const Circle = styled.div<{ stepStatus: Props["stepStatus"] }>`
+const Circle = styled.div<{ stepStatus: Props['stepStatus'] }>`
   ${({ theme: { steps }, stepStatus }) => css`
     margin-top: ${steps.step.circle.marginTop};
     width: ${steps.step.circle.width};
@@ -95,7 +95,7 @@ const Step = forwardRef<HTMLDivElement, Props>(
         <Title stepStatus={stepStatus}>{title}</Title>
 
         <Circle stepStatus={stepStatus}>
-          {mode === "check" && stepStatus === "completed" ? (
+          {mode === 'check' && stepStatus === 'completed' ? (
             <Check />
           ) : (
             <Count>{step}</Count>
@@ -106,6 +106,6 @@ const Step = forwardRef<HTMLDivElement, Props>(
   }
 );
 
-Step.displayName = "Step";
+Step.displayName = 'Step';
 
 export { Step };

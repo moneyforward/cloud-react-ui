@@ -1,22 +1,22 @@
-import { Story, Meta } from "@storybook/react";
-import { CenterBlockLayout } from "./CenterBlockLayout";
-import { Text, Button } from "../../components";
-import { ThemeProvider, createTheme } from "../../theme";
+import { Story, Meta } from '@storybook/react';
+import { CenterBlockLayout } from './CenterBlockLayout';
+import { Text, Button } from '../../components';
+import { ThemeProvider, createTheme } from '../../theme';
 
 export default {
   component: CenterBlockLayout,
-  title: "Layouts/CenterBlock",
+  title: 'Layouts/CenterBlock',
 } as Meta;
 
 const centerBlockTheme = createTheme({
   centerLayout: {
-    width: "300px",
+    width: '300px',
   },
   block: {
-    width: "300px",
-    margin: "195px 0 100px 0",
-    padding: "30px",
-    textAlign: "center",
+    width: '300px',
+    margin: '195px 0 100px 0',
+    padding: '30px',
+    textAlign: 'center',
   },
 });
 

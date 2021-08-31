@@ -1,7 +1,7 @@
-import { ProgressLabelPresenter } from "./ProgressLabelPresenter";
+import { ProgressLabelPresenter } from './ProgressLabelPresenter';
 
 export type ProgressLabelProps = {
-  status?: "waiting" | "inProgress" | "completed";
+  status?: 'waiting' | 'inProgress' | 'completed';
   className?: string;
 };
 

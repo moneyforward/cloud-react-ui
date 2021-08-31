@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { values, color, zIndex, defaultProps } from "../../theme";
-import { useDropdown } from "./Dropdown";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { values, color, zIndex, defaultProps } from '../../theme';
+import { useDropdown } from './Dropdown';
 
 export type DropdownBodyProps = {
   children?: React.ReactNode;
@@ -9,21 +9,21 @@ export type DropdownBodyProps = {
   ariaLabel?: string;
   width?: string;
   isOpen?: boolean;
-  placement?: "left" | "right";
+  placement?: 'left' | 'right';
 };
 
 const StyledDropdownBody = styled.div.attrs<DropdownBodyProps>(
   ({ isOpen }) => ({
-    "aria-hidden": !isOpen,
+    'aria-hidden': !isOpen,
   })
 )<DropdownBodyProps>`
-  ${({ width = "max-content", placement = "left" }) => css`
+  ${({ width = 'max-content', placement = 'left' }) => css`
     z-index: ${zIndex.dropdown};
     width: ${width};
     position: absolute;
     top: calc(100% + 10px);
-    left: ${placement === "left" && 0};
-    right: ${placement === "right" && 0};
+    left: ${placement === 'left' && 0};
+    right: ${placement === 'right' && 0};
     transform-origin: top ${placement};
     transition: opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -41,7 +41,7 @@ const StyledDropdownBody = styled.div.attrs<DropdownBodyProps>(
       }
     }
 
-    &[aria-hidden="true"] {
+    &[aria-hidden='true'] {
       transform: scale(0.75, 0.5625);
       transition: opacity 299ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         transform 199ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -60,4 +60,4 @@ export const DropdownBody = forwardRef<HTMLDivElement, DropdownBodyProps>(
   }
 );
 
-DropdownBody.displayName = "Dropdown.Body";
+DropdownBody.displayName = 'Dropdown.Body';

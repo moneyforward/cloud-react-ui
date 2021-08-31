@@ -6,9 +6,7 @@
   "eslint.alwaysShowStatus": true,
   "eslint.options": {
     "parserOptions": {
-      "project": [
-        "${workspaceFolder}/tsconfig.json"
-      ],
+      "project": ["${workspaceFolder}/tsconfig.json"]
     }
   },
   "editor.codeActionsOnSave": {
@@ -25,5 +23,5 @@
   },
   "[json]": {
     "editor.formatOnSave": true
-  },
+  }
 }

@@ -1,2 +1,2 @@
-export { SearchPanel } from "./SearchPanel";
-export type { SearchPanelProps } from "./SearchPanel";
+export { SearchPanel } from './SearchPanel';
+export type { SearchPanelProps } from './SearchPanel';

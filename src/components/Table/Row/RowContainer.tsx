@@ -1,4 +1,4 @@
-import { RowPresenter } from "./RowPresenter";
+import { RowPresenter } from './RowPresenter';
 
 export type RowProps = {
   className?: string;

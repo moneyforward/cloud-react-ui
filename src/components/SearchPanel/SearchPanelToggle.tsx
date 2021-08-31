@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
-import { Icon } from "../../components";
-import { MouseEventHandler, forwardRef } from "react";
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
+import { Icon } from '../../components';
+import { MouseEventHandler, forwardRef } from 'react';
 
 const StyledSearchPanelToggle = styled.button.attrs<SearchPanelToggleProps>(
   ({ ariaExpanded }) => ({
-    "aria-expanded": ariaExpanded,
-    "aria-haspopup": true,
+    'aria-expanded': ariaExpanded,
+    'aria-haspopup': true,
   })
 )<SearchPanelToggleProps>`
   ${({ theme: { searchPanel } }) => css`
@@ -50,4 +50,4 @@ export const SearchPanelToggle = forwardRef<
   </StyledSearchPanelToggle>
 ));
 
-SearchPanelToggle.displayName = "SearchPanel.Toggle";
+SearchPanelToggle.displayName = 'SearchPanel.Toggle';

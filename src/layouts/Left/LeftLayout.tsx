@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 const Wrapper = styled.div`
   ${({ theme: { leftLayout } }) => css`

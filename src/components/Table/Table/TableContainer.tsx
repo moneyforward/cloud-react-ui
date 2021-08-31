@@ -1,12 +1,12 @@
-import { createContext } from "react";
-import { TablePresenter } from "./TablePresenter";
+import { createContext } from 'react';
+import { TablePresenter } from './TablePresenter';
 
-export type Group = "head" | "body";
+export type Group = 'head' | 'body';
 export const TableGroupContext = createContext<{ group: Group }>({
-  group: "body",
+  group: 'body',
 });
 
-export type BorderType = "border" | "rowBorder" | undefined;
+export type BorderType = 'border' | 'rowBorder' | undefined;
 export const TableBorderContext = createContext<{ borderType: BorderType }>({
   borderType: undefined,
 });

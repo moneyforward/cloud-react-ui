@@ -1,16 +1,16 @@
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react';
 import {
   Dropdown,
   DropdownProps,
   DropdownToggleButtonProps,
   useDropdown,
-} from "./Dropdown";
-import { Link, Text } from "../../components";
-import styled from "styled-components";
+} from './Dropdown';
+import { Link, Text } from '../../components';
+import styled from 'styled-components';
 
 export default {
   component: Dropdown,
-  title: "Components/Dropdown",
+  title: 'Components/Dropdown',
 } as Meta;
 
 const StyledText = styled(Text)`
@@ -19,8 +19,8 @@ const StyledText = styled(Text)`
 
 const StyledAnchorButton = styled.button.attrs<DropdownToggleButtonProps>(
   ({ isOpen }) => ({
-    "aria-expanded": isOpen,
-    "aria-haspopup": true,
+    'aria-expanded': isOpen,
+    'aria-haspopup': true,
   })
 )<DropdownToggleButtonProps>``;
 
@@ -76,12 +76,12 @@ const Template: Story<DropdownProps> = (args) => {
 };
 
 export const Default = Template.bind({});
-Default.args = { toggleLabel: "ドロップダウン開閉", placement: "left" };
+Default.args = { toggleLabel: 'ドロップダウン開閉', placement: 'left' };
 
 export const Placement = Template.bind({});
 Placement.args = {
   toggleLabel: "ドロップダウン開閉(placement: 'right')",
-  placement: "right",
+  placement: 'right',
 };
 
 const MultipleTemplate: Story<DropdownProps> = (args) => {
@@ -113,7 +113,7 @@ const MultipleTemplate: Story<DropdownProps> = (args) => {
 };
 
 export const MultipleBlock = MultipleTemplate.bind({});
-MultipleBlock.args = { toggleLabel: "ドロップダウン開閉", placement: "left" };
+MultipleBlock.args = { toggleLabel: 'ドロップダウン開閉', placement: 'left' };
 
 const AnchoredTemplate: Story<DropdownProps> = (args) => {
   return (

@@ -1,8 +1,8 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { Backdrop as MuiBackdrop } from "@material-ui/core";
-import { CircularProgress } from "../CircularProgress";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { Backdrop as MuiBackdrop } from '@material-ui/core';
+import { CircularProgress } from '../CircularProgress';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   open?: boolean;
@@ -27,6 +27,6 @@ const Backdrop = forwardRef<HTMLDivElement, Props>(
   )
 );
 
-Backdrop.displayName = "Backdrop";
+Backdrop.displayName = 'Backdrop';
 
 export { Backdrop };

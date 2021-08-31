@@ -1,12 +1,12 @@
-import { forwardRef, useEffect, useState } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps, color } from "../../theme";
+import { forwardRef, useEffect, useState } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps, color } from '../../theme';
 
 export type NotificationProps = {
-  color?: "success" | "warning" | "error";
+  color?: 'success' | 'warning' | 'error';
   className?: string;
   children: React.ReactNode;
-  align?: "center" | "left" | "right" | "start" | "end";
+  align?: 'center' | 'left' | 'right' | 'start' | 'end';
   isOpen?: boolean;
   onClickClose?: () => void;
 };
@@ -14,9 +14,9 @@ export type NotificationProps = {
 const white = color.white;
 
 const StyledNotification = styled.div<
-  Omit<NotificationProps, "align" | "children" | "isOpen" | "onClickClose">
+  Omit<NotificationProps, 'align' | 'children' | 'isOpen' | 'onClickClose'>
 >`
-  ${({ color = "success", theme: { notification } }) => css`
+  ${({ color = 'success', theme: { notification } }) => css`
     width: 100%;
     background-color: ${notification.backgroundColor[color]};
     opacity: 0.9;
@@ -56,7 +56,7 @@ const Action = styled.div`
 
 type ContentProps = {
   children: React.ReactNode;
-  align?: NotificationProps["align"];
+  align?: NotificationProps['align'];
 };
 
 const Content = styled.div<ContentProps>`
@@ -105,6 +105,6 @@ const Notification = forwardRef<HTMLDivElement, NotificationProps>(
   }
 );
 
-Notification.displayName = "Notification";
+Notification.displayName = 'Notification';
 
 export { Notification };

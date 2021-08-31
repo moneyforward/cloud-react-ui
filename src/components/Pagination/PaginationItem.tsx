@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React from "react";
+import styled from 'styled-components';
+import React from 'react';
 
 export type PaginationItemProps = {
   children: React.ReactNode;
@@ -24,4 +24,4 @@ export const PaginationItem = (props: PaginationItemProps): JSX.Element => (
   <StyledPaginationItem {...props} />
 );
 
-PaginationItem.displayName = "Pagination.Item";
+PaginationItem.displayName = 'Pagination.Item';

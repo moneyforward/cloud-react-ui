@@ -4,14 +4,14 @@ import {
   useState,
   useContext,
   MouseEventHandler,
-} from "react";
-import styled from "styled-components";
-import { DropdownItem } from "./DropdownItem";
-import { DropdownActionItem } from "./DropdownActionItem";
-import { DropdownBlock } from "./DropdownBlock";
-import { DropdownBody } from "./DropdownBody";
-import { DropdownToggleButton } from "./DropdownToggleButton";
-import { defaultProps } from "../../theme";
+} from 'react';
+import styled from 'styled-components';
+import { DropdownItem } from './DropdownItem';
+import { DropdownActionItem } from './DropdownActionItem';
+import { DropdownBlock } from './DropdownBlock';
+import { DropdownBody } from './DropdownBody';
+import { DropdownToggleButton } from './DropdownToggleButton';
+import { defaultProps } from '../../theme';
 
 export type DropdownProps = {
   anchor?: JSX.Element;
@@ -20,7 +20,7 @@ export type DropdownProps = {
   ariaLabel?: string;
   width?: string;
   toggleLabel?: string;
-  placement?: "left" | "right";
+  placement?: 'left' | 'right';
 };
 
 interface IDropdownContext {
@@ -42,7 +42,7 @@ export const useDropdown = (): IDropdownContext => {
   const context = useContext(DropdownContext);
   if (!context) {
     throw new Error(
-      "This component must be used within a <Dropdown> component."
+      'This component must be used within a <Dropdown> component.'
     );
   }
   return context;
@@ -50,8 +50,8 @@ export const useDropdown = (): IDropdownContext => {
 
 const StyledOverlay = styled.div.attrs<OverlayProps>(
   ({ isOpen, ariaLabel }) => ({
-    "aria-hidden": !isOpen,
-    "aria-label": ariaLabel,
+    'aria-hidden': !isOpen,
+    'aria-label': ariaLabel,
   })
 )<OverlayProps>`
   position: fixed;
@@ -62,7 +62,7 @@ const StyledOverlay = styled.div.attrs<OverlayProps>(
   display: block;
   background: transparent;
   z-index: -1;
-  &[aria-hidden="true"] {
+  &[aria-hidden='true'] {
     display: none;
   }
 `;
@@ -97,12 +97,12 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(
   }
 );
 
-DropdownRoot.displayName = "Dropdown";
+DropdownRoot.displayName = 'Dropdown';
 
-export type { DropdownToggleButtonProps } from "./DropdownToggleButton";
-export type { DropdownBlockProps } from "./DropdownBlock";
-export type { DropdownItemProps } from "./DropdownItem";
-export type { DropdownActionItemProps } from "./DropdownActionItem";
+export type { DropdownToggleButtonProps } from './DropdownToggleButton';
+export type { DropdownBlockProps } from './DropdownBlock';
+export type { DropdownItemProps } from './DropdownItem';
+export type { DropdownActionItemProps } from './DropdownActionItem';
 export const Dropdown = Object.assign(DropdownRoot, {
   Block: DropdownBlock,
   Item: DropdownItem,

@@ -1,9 +1,9 @@
-import { Story, Meta } from "@storybook/react";
-import { LinkContainer as Link, LinkProps as Props } from "./LinkContainer";
+import { Story, Meta } from '@storybook/react';
+import { LinkContainer as Link, LinkProps as Props } from './LinkContainer';
 
 export default {
   component: Link,
-  title: "components/Link",
+  title: 'components/Link',
 } as Meta;
 
 const Template: Story<Props> = (args) => <Link {...args}>Link</Link>;

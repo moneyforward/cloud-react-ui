@@ -1,9 +1,9 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { Dropdown, DropdownProps, useDropdown } from "../../Dropdown";
-import { Link } from "../../../components";
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { Dropdown, DropdownProps, useDropdown } from '../../Dropdown';
+import { Link } from '../../../components';
 
-describe("Dropdown", () => {
-  describe("Default", () => {
+describe('Dropdown', () => {
+  describe('Default', () => {
     const Template = (args: DropdownProps): JSX.Element => {
       return (
         <Dropdown {...args}>
@@ -22,55 +22,55 @@ describe("Dropdown", () => {
       );
     };
 
-    it("renders", async () => {
+    it('renders', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByText("Label"));
-      expect(screen.getByLabelText("Contents")).toBeVisible();
+      fireEvent.click(screen.getByText('Label'));
+      expect(screen.getByLabelText('Contents')).toBeVisible();
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it("renders with placement", async () => {
+    it('renders with placement', async () => {
       const { asFragment } = render(
         <Template toggleLabel="Label" placement="right" />
       );
-      fireEvent.click(screen.getByText("Label"));
-      expect(screen.getByLabelText("Contents")).toBeVisible();
+      fireEvent.click(screen.getByText('Label'));
+      expect(screen.getByLabelText('Contents')).toBeVisible();
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it("closes with action item", async () => {
+    it('closes with action item', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByText("Label"));
+      fireEvent.click(screen.getByText('Label'));
       await waitFor(() => {
-        fireEvent.click(screen.getAllByText("Link")[0]);
-        expect(screen.queryByLabelText("Contents")).not.toBeVisible();
+        fireEvent.click(screen.getAllByText('Link')[0]);
+        expect(screen.queryByLabelText('Contents')).not.toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it("closes with overlay", async () => {
+    it('closes with overlay', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByText("Label"));
+      fireEvent.click(screen.getByText('Label'));
       await waitFor(() => {
-        fireEvent.click(screen.getByLabelText("閉じる"));
-        expect(screen.queryByLabelText("Contents")).not.toBeVisible();
+        fireEvent.click(screen.getByLabelText('閉じる'));
+        expect(screen.queryByLabelText('Contents')).not.toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it("keeps open with clicking isKeepOpen action item", async () => {
+    it('keeps open with clicking isKeepOpen action item', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByRole("button"));
+      fireEvent.click(screen.getByRole('button'));
       await waitFor(() => {
-        fireEvent.click(screen.getByLabelText("isKeepOpen"));
-        expect(screen.getByLabelText("Contents")).toBeVisible();
+        fireEvent.click(screen.getByLabelText('isKeepOpen'));
+        expect(screen.getByLabelText('Contents')).toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
     });
   });
 
-  describe("Multiple blocks", () => {
-    it("renders", () => {
+  describe('Multiple blocks', () => {
+    it('renders', () => {
       const MultipleTemplate = (args: DropdownProps): JSX.Element => {
         return (
           <Dropdown {...args}>
@@ -96,14 +96,14 @@ describe("Dropdown", () => {
       };
 
       const { asFragment } = render(<MultipleTemplate toggleLabel="Label" />);
-      fireEvent.click(screen.getByRole("button"));
-      expect(screen.getAllByText("Block")).toHaveLength(2);
-      expect(screen.getAllByRole("link")).toHaveLength(3);
+      fireEvent.click(screen.getByRole('button'));
+      expect(screen.getAllByText('Block')).toHaveLength(2);
+      expect(screen.getAllByRole('link')).toHaveLength(3);
       expect(asFragment()).toMatchSnapshot();
     });
   });
 
-  describe("Anchored", () => {
+  describe('Anchored', () => {
     const AnchorButton = (): JSX.Element => {
       const { isActive, setIsActive } = useDropdown();
       const handleClick = () => {
@@ -134,24 +134,24 @@ describe("Dropdown", () => {
       );
     };
 
-    it("renders", async () => {
+    it('renders', async () => {
       const { asFragment } = render(
         <AnchoredTemplate toggleLabel="Label" anchor={<AnchorButton />} />
       );
-      expect(screen.queryByText("Label")).not.toBeInTheDocument();
-      fireEvent.click(screen.getByText("Toggle"));
-      expect(screen.getByLabelText("Contents")).toBeVisible();
+      expect(screen.queryByText('Label')).not.toBeInTheDocument();
+      fireEvent.click(screen.getByText('Toggle'));
+      expect(screen.getByLabelText('Contents')).toBeVisible();
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it("closes with anchored toggle", async () => {
+    it('closes with anchored toggle', async () => {
       const { asFragment } = render(
         <AnchoredTemplate anchor={<AnchorButton />} />
       );
-      fireEvent.click(screen.getByText("Toggle"));
+      fireEvent.click(screen.getByText('Toggle'));
       await waitFor(() => {
-        fireEvent.click(screen.getByText("Toggle"));
-        expect(screen.queryByLabelText("Contents")).not.toBeVisible();
+        fireEvent.click(screen.getByText('Toggle'));
+        expect(screen.queryByLabelText('Contents')).not.toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
     });

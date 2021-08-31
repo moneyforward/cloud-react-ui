@@ -1,9 +1,9 @@
-import { forwardRef } from "react";
+import { forwardRef } from 'react';
 import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
-} from "@material-ui/core/Switch";
-import { makeStyles } from "@material-ui/core/styles";
-import { color } from "../../theme";
+} from '@material-ui/core/Switch';
+import { makeStyles } from '@material-ui/core/styles';
+import { color } from '../../theme';
 
 export type SwitchProps = MuiSwitchProps & {
   className?: string;
@@ -18,10 +18,10 @@ const useStyles = makeStyles(() => ({
   switchBase: {
     color: color.white,
     padding: 2,
-    "&$checked": {
-      transform: "translateX(12px)",
+    '&$checked': {
+      transform: 'translateX(12px)',
       color: color.white,
-      "& + $track": {
+      '& + $track': {
         opacity: 1,
         backgroundColor: color.royalBlue,
         borderColor: color.royalBlue,
@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
   thumb: {
     width: 16,
     height: 16,
-    boxShadow: "0 1px 4px rgba(0, 0, 0, .15)",
+    boxShadow: '0 1px 4px rgba(0, 0, 0, .15)',
   },
   track: {
     borderRadius: 20 / 2,
@@ -61,4 +61,4 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
   }
 );
 
-Switch.displayName = "Switch";
+Switch.displayName = 'Switch';

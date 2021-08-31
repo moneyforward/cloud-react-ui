@@ -1,10 +1,10 @@
-import { Story, Meta } from "@storybook/react";
-import { Select, Props, Option } from "./Select";
-import { AsyncSelect, Props as AsyncProps } from "./AsyncSelect";
+import { Story, Meta } from '@storybook/react';
+import { Select, Props, Option } from './Select';
+import { AsyncSelect, Props as AsyncProps } from './AsyncSelect';
 
 export default {
   component: Select,
-  title: "components/Select",
+  title: 'components/Select',
 } as Meta;
 
 const Indicator = (
@@ -30,12 +30,12 @@ export const Default = Template.bind({});
 Default.args = {
   options: [
     {
-      value: "1",
-      label: "label1",
+      value: '1',
+      label: 'label1',
     },
     {
-      value: "2",
-      label: "label2",
+      value: '2',
+      label: 'label2',
     },
   ],
 };
@@ -44,28 +44,28 @@ export const GroupOption = Template.bind({});
 GroupOption.args = {
   options: [
     {
-      label: "parent1",
+      label: 'parent1',
       options: [
         {
-          label: "child1",
-          value: "child1",
+          label: 'child1',
+          value: 'child1',
         },
         {
-          label: "child2",
-          value: "child2",
+          label: 'child2',
+          value: 'child2',
         },
       ],
     },
     {
-      label: "parent2",
+      label: 'parent2',
       options: [
         {
-          label: "child3",
-          value: "child3",
+          label: 'child3',
+          value: 'child3',
         },
         {
-          label: "child4",
-          value: "child4",
+          label: 'child4',
+          value: 'child4',
         },
       ],
     },

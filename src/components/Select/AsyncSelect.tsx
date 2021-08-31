@@ -1,9 +1,9 @@
-import { forwardRef, useMemo } from "react";
-import styled from "styled-components";
-import AsyncReactSelect from "react-select/async";
-import { components, Props as ReactSelectProps } from "react-select";
-import { defaultProps } from "../../theme";
-import { Styled, Option, Props as SelectProps } from "./Select";
+import { forwardRef, useMemo } from 'react';
+import styled from 'styled-components';
+import AsyncReactSelect from 'react-select/async';
+import { components, Props as ReactSelectProps } from 'react-select';
+import { defaultProps } from '../../theme';
+import { Styled, Option, Props as SelectProps } from './Select';
 
 export type Props = SelectProps & {
   defaultOptions?: Option[] | true;
@@ -29,9 +29,9 @@ const AsyncSelect = forwardRef<HTMLInputElement, Props>(
     },
     ref
   ) => {
-    const customComponents: ReactSelectProps["components"] = {};
+    const customComponents: ReactSelectProps['components'] = {};
     if (indicatorImage) {
-      customComponents["DropdownIndicator"] = useMemo(() => {
+      customComponents['DropdownIndicator'] = useMemo(() => {
         const DropdownIndicator = (props: any) => (
           <components.DropdownIndicator {...props}>
             {indicatorImage}
@@ -58,6 +58,6 @@ const AsyncSelect = forwardRef<HTMLInputElement, Props>(
   }
 );
 
-AsyncSelect.displayName = "AsyncSelect";
+AsyncSelect.displayName = 'AsyncSelect';
 
 export { AsyncSelect };
