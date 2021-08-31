@@ -58,7 +58,7 @@ describe("Notification", () => {
     expect(screen.getByText("Notification")).toHaveStyle("text-align: center;");
   });
 
-  describe("when props.isOpen changed ", () => {
+  describe("when props.isOpen changed", () => {
     it("state.isActive changed too", () => {
       const { rerender } = render(
         <Notification isOpen>Notification</Notification>
