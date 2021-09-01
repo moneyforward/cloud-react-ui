@@ -1,9 +1,9 @@
-import { Story, Meta } from "@storybook/react";
-import { Radio, Props } from "./Radio";
+import { Story, Meta } from '@storybook/react';
+import { Radio, Props } from './Radio';
 
 export default {
   component: Radio,
-  title: "components/Radio",
+  title: 'components/Radio',
 } as Meta;
 
 const Template: Story<Props> = (args) => <Radio {...args}>Radio</Radio>;

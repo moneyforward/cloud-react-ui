@@ -1,10 +1,10 @@
-import { forwardRef } from "react";
-import { Icon } from "../../components";
-import { PaginationLink, PaginationLinkProps } from "./PaginationLink";
+import { forwardRef } from 'react';
+import { Icon } from '../../components';
+import { PaginationLink, PaginationLinkProps } from './PaginationLink';
 
 export type PaginationPrevProps = Pick<
   PaginationLinkProps,
-  "href" | "disabled" | "onClick"
+  'href' | 'disabled' | 'onClick'
 >;
 
 export const PaginationPrev = forwardRef<
@@ -22,4 +22,4 @@ export const PaginationPrev = forwardRef<
   </PaginationLink>
 ));
 
-PaginationPrev.displayName = "Pagination.Prev";
+PaginationPrev.displayName = 'Pagination.Prev';

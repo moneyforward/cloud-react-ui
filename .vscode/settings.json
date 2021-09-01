@@ -6,13 +6,22 @@
   "eslint.alwaysShowStatus": true,
   "eslint.options": {
     "parserOptions": {
-      "project": [
-        "${workspaceFolder}/tsconfig.json"
-      ],
+      "project": ["${workspaceFolder}/tsconfig.json"]
     }
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.markdownlint": true
   },
+  // Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  }
 }

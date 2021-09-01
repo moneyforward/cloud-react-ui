@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { PaginationItem, PaginationItemProps } from "./PaginationItem";
-import { PaginationPrev, PaginationPrevProps } from "./PaginationPrev";
-import { PaginationLink, PaginationLinkProps } from "./PaginationLink";
-import { PaginationNext, PaginationNextProps } from "./PaginationNext";
+import styled from 'styled-components';
+import { PaginationItem, PaginationItemProps } from './PaginationItem';
+import { PaginationPrev, PaginationPrevProps } from './PaginationPrev';
+import { PaginationLink, PaginationLinkProps } from './PaginationLink';
+import { PaginationNext, PaginationNextProps } from './PaginationNext';
 
 type PaginationProps = {
   children?: React.ReactNode;
@@ -20,7 +20,7 @@ const PaginationList = styled.ul`
 
 const BasePagination = ({
   children,
-  ariaLabel = "pagination",
+  ariaLabel = 'pagination',
   ...rest
 }: PaginationProps): JSX.Element => (
   <StyledPagination aria-label={ariaLabel} {...rest}>

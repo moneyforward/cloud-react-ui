@@ -1,2 +1,2 @@
-export { FlashMessage } from "./FlashMessage";
-export type { Props as FlashMessageProps } from "./FlashMessage";
+export { FlashMessage } from './FlashMessage';
+export type { Props as FlashMessageProps } from './FlashMessage';

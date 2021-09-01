@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
-import { IconButton as MuiIconButton } from "@material-ui/core";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
+import { IconButton as MuiIconButton } from '@material-ui/core';
 
 export type ModalHeaderProps = {
   handleClose?: VoidFunction;
@@ -69,6 +69,6 @@ const ModalHeader = forwardRef<HTMLDivElement, ModalHeaderProps>(
   )
 );
 
-ModalHeader.displayName = "Modal.Header";
+ModalHeader.displayName = 'Modal.Header';
 
 export { ModalHeader };

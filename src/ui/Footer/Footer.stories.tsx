@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import { Story, Meta } from "@storybook/react";
-import { Footer, Props } from "./Footer";
-import { Link, Text } from "../../components";
+import styled from 'styled-components';
+import { Story, Meta } from '@storybook/react';
+import { Footer, Props } from './Footer';
+import { Link, Text } from '../../components';
 
 export default {
   component: Footer,
-  title: "ui/Footer",
+  title: 'ui/Footer',
 } as Meta;
 
 const StyledText = styled(Text)`

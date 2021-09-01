@@ -1,9 +1,9 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
-  color: "gray" | "red" | "green" | "orange" | "blue";
+  color: 'gray' | 'red' | 'green' | 'orange' | 'blue';
   bold?: boolean;
   outline?: boolean;
   className?: string;
@@ -13,11 +13,11 @@ export type Props = {
 const StyledStatusLabel = styled.span<Props>`
   ${({ color, bold = false, outline = false, theme: { statusLabel } }) => css`
     display: ${statusLabel.display};
-    height: ${statusLabel.height[outline ? "outline" : "default"]};
-    padding: ${statusLabel.padding[outline ? "outline" : "default"]};
+    height: ${statusLabel.height[outline ? 'outline' : 'default']};
+    padding: ${statusLabel.padding[outline ? 'outline' : 'default']};
     line-height: ${statusLabel.lineHeight};
     background-color: ${statusLabel.backgroundColor[
-      outline ? "outline" : color
+      outline ? 'outline' : color
     ]};
     border-width: ${statusLabel.borderWidth};
     border-style: ${statusLabel.borderStyle};
@@ -27,7 +27,7 @@ const StyledStatusLabel = styled.span<Props>`
       ? statusLabel.borderColor[color]
       : statusLabel.color[color]};
     font-size: ${statusLabel.fontSize};
-    font-weight: ${statusLabel.fontWeight[bold ? "bold" : "normal"]};
+    font-weight: ${statusLabel.fontWeight[bold ? 'bold' : 'normal']};
     box-sizing: border-box;
   `}
 `;
@@ -37,6 +37,6 @@ const StatusLabel = forwardRef<HTMLDivElement, Props>((props, ref) => (
   <StyledStatusLabel ref={ref} {...props} />
 ));
 
-StatusLabel.displayName = "StatusLabel";
+StatusLabel.displayName = 'StatusLabel';
 
 export { StatusLabel };

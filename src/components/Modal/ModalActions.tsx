@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type ModalActionsProps = {
   children?: React.ReactNode;
@@ -28,6 +28,6 @@ const ModalActions = forwardRef<HTMLDivElement, ModalActionsProps>(
   (props, ref) => <StyledModalActions ref={ref} {...props} />
 );
 
-ModalActions.displayName = "Modal.Actions";
+ModalActions.displayName = 'Modal.Actions';
 
 export { ModalActions };

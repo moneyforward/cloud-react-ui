@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchPanelButtonGroup = styled.div`
   width: 100%;
@@ -11,4 +11,4 @@ export const SearchPanelButtonGroup = styled.div`
   }
 `;
 
-SearchPanelButtonGroup.displayName = "SearchPanel.ButtonGroup";
+SearchPanelButtonGroup.displayName = 'SearchPanel.ButtonGroup';

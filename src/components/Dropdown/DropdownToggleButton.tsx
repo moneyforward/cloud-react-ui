@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Icon } from "../../components";
-import { forwardRef } from "react";
-import { values, color, defaultProps } from "../../theme";
-import { useDropdown } from "./Dropdown";
+import styled from 'styled-components';
+import { Icon } from '../../components';
+import { forwardRef } from 'react';
+import { values, color, defaultProps } from '../../theme';
+import { useDropdown } from './Dropdown';
 
 export type DropdownToggleButtonProps = {
   children: React.ReactNode;
@@ -13,8 +13,8 @@ export type DropdownToggleButtonProps = {
 
 const StyledToggleButton = styled.button.attrs<DropdownToggleButtonProps>(
   ({ isOpen }) => ({
-    "aria-expanded": isOpen,
-    "aria-haspopup": true,
+    'aria-expanded': isOpen,
+    'aria-haspopup': true,
   })
 )<DropdownToggleButtonProps>`
   font-size: ${values.text.size.middle};
@@ -50,4 +50,4 @@ export const DropdownToggleButton = forwardRef<
   );
 });
 
-DropdownToggleButton.displayName = "Dropdown.ToggleButton";
+DropdownToggleButton.displayName = 'Dropdown.ToggleButton';

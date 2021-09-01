@@ -1,8 +1,8 @@
-import { Pagination, PaginationProps } from "./Pagination";
+import { Pagination, PaginationProps } from './Pagination';
 
 export default {
   component: Pagination,
-  title: "components/Pagination",
+  title: 'components/Pagination',
 };
 
 export const Default = (): JSX.Element => {
@@ -54,7 +54,7 @@ export const OnClickProps = (): JSX.Element => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            console.log("prev");
+            console.log('prev');
           }}
           disabled={!hasPrev(current)}
         />

@@ -1,23 +1,23 @@
-import { Story, Meta } from "@storybook/react";
-import { LeftLayout } from "./LeftLayout";
-import { Block, Text, Button } from "../../components";
-import { ThemeProvider, createTheme } from "../../theme";
+import { Story, Meta } from '@storybook/react';
+import { LeftLayout } from './LeftLayout';
+import { Block, Text, Button } from '../../components';
+import { ThemeProvider, createTheme } from '../../theme';
 
 export default {
   component: LeftLayout,
-  title: "Layouts/Left",
+  title: 'Layouts/Left',
 } as Meta;
 
 const centerBoxTheme = createTheme({
   leftLayout: {
-    width: "500px",
-    margin: "20px",
+    width: '500px',
+    margin: '20px',
   },
   block: {
-    width: "100%",
-    margin: "20px 0",
-    padding: "30px",
-    textAlign: "center",
+    width: '100%',
+    margin: '20px 0',
+    padding: '30px',
+    textAlign: 'center',
   },
 });
 

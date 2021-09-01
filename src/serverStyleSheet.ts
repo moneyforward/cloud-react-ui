@@ -1,5 +1,5 @@
-import { ServerStyleSheet as StyledServerStyleSheet } from "styled-components";
-import { ServerStyleSheets as MuiServerStyleSheets } from "@material-ui/core";
+import { ServerStyleSheet as StyledServerStyleSheet } from 'styled-components';
+import { ServerStyleSheets as MuiServerStyleSheets } from '@material-ui/core';
 
 export class ServerStyleSheet {
   private styledSss: StyledServerStyleSheet;

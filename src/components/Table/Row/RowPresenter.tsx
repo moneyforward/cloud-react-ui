@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { RowProps } from "./RowContainer";
-import { defaultProps } from "../../../theme";
+import styled, { css } from 'styled-components';
+import { RowProps } from './RowContainer';
+import { defaultProps } from '../../../theme';
 
 const StyledTableRow = styled.tr`
   ${({ theme: { table } }) => css`

@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   fixed?: boolean;
@@ -34,13 +34,13 @@ const Name = styled.div`
   display: flex;
   align-items: center;
 `;
-Name.displayName = "Header.Name";
+Name.displayName = 'Header.Name';
 
 const Item = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
 `;
-Item.displayName = "Header.Item";
+Item.displayName = 'Header.Item';
 
 export const Header = Object.assign(StyledHeader, { Name, Item });

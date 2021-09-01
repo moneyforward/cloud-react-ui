@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   name?: string;
@@ -137,6 +137,6 @@ const Radio = forwardRef<HTMLInputElement, Props>(
   )
 );
 
-Radio.displayName = "Radio";
+Radio.displayName = 'Radio';
 
 export { Radio };

@@ -41,7 +41,7 @@ exports[`Pagination default 1`] = `
   background-color: #3B7DE9;
 }
 
-.c2[aria-disabled="true"] {
+.c2[aria-disabled='true'] {
   pointer-events: none;
   cursor: auto;
   color: #d8dade;

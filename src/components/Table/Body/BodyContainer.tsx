@@ -1,5 +1,5 @@
-import { BodyPresenter } from "./BodyPresenter";
-import { TableGroupContext } from "../Table/TableContainer";
+import { BodyPresenter } from './BodyPresenter';
+import { TableGroupContext } from '../Table/TableContainer';
 
 export type BodyProps = {
   className?: string;
@@ -7,7 +7,7 @@ export type BodyProps = {
 
 export const BodyContainer: React.FC<BodyProps> = (props) => {
   return (
-    <TableGroupContext.Provider value={{ group: "body" }}>
+    <TableGroupContext.Provider value={{ group: 'body' }}>
       <BodyPresenter {...props} />
     </TableGroupContext.Provider>
   );

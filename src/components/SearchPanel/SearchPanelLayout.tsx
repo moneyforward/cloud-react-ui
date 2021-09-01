@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchPanelColumn = styled.div``;
 
-SearchPanelColumn.displayName = "SearchPanel.Column";
+SearchPanelColumn.displayName = 'SearchPanel.Column';
 
 // gapの一貫性を保つために指定できる数値を型で限定している
 type SearchPanelRowProps = {
@@ -21,4 +21,4 @@ export const SearchPanelRow = styled.div<SearchPanelRowProps>`
   }
 `;
 
-SearchPanelRow.displayName = "SearchPanel.Row";
+SearchPanelRow.displayName = 'SearchPanel.Row';

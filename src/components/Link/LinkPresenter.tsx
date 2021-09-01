@@ -1,15 +1,15 @@
-import styled, { css } from "styled-components";
-import { LinkProps } from "./LinkContainer";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { LinkProps } from './LinkContainer';
+import { defaultProps } from '../../theme';
 
 type LinkPresenterProps = Omit<
   LinkProps,
-  "remoteModal" | "method" | "isEnabledOnlyOnceClick"
+  'remoteModal' | 'method' | 'isEnabledOnlyOnceClick'
 > & {
   rel?: string;
-  "data-remote"?: boolean;
-  "data-type"?: string;
-  "data-method"?: LinkProps["method"];
+  'data-remote'?: boolean;
+  'data-type'?: string;
+  'data-method'?: LinkProps['method'];
   disabled: boolean;
 };
 

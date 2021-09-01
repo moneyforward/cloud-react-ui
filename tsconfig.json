@@ -3,17 +3,13 @@
     "outDir": "./lib",
     "target": "es5",
     "module": "commonjs",
-    "lib": [
-      "es6",
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es6", "es2017", "dom"],
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "declaration": true,
+    "declaration": true
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*"]

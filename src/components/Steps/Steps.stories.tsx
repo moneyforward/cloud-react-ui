@@ -1,11 +1,11 @@
-import { Story, Meta } from "@storybook/react";
-import { Steps, Props } from "./Steps";
-import { Step } from "./Step";
-import { StepTie } from "./StepTie";
+import { Story, Meta } from '@storybook/react';
+import { Steps, Props } from './Steps';
+import { Step } from './Step';
+import { StepTie } from './StepTie';
 
 export default {
   component: Steps,
-  title: "components/Steps",
+  title: 'components/Steps',
 } as Meta;
 
 const Template: Story<Props> = ({ mode }) => (
@@ -19,7 +19,7 @@ const Template: Story<Props> = ({ mode }) => (
 );
 
 export const Checked = Template.bind({});
-Checked.args = { mode: "check" };
+Checked.args = { mode: 'check' };
 
 export const Number = Template.bind({});
-Number.args = { mode: "number" };
+Number.args = { mode: 'number' };

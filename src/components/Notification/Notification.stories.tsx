@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { Story, Meta, Args } from "@storybook/react";
-import { Notification, NotificationProps } from "./Notification";
+import styled from 'styled-components';
+import { Story, Meta, Args } from '@storybook/react';
+import { Notification, NotificationProps } from './Notification';
 
 export default {
   component: Notification,
-  title: "components/Notification",
+  title: 'components/Notification',
 } as Meta;
 
 const Wrapper = styled.div`
@@ -21,8 +21,8 @@ const Template: Story = ({ text, ...rest }: Args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  text: "dummy text",
+  text: 'dummy text',
   isOpen: true,
-  color: "success",
-  align: "center",
+  color: 'success',
+  align: 'center',
 };

@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { Story, Meta } from "@storybook/react";
-import { Modal } from "./Modal";
-import { Button } from "../Button";
-import { Text } from "../Text";
+import { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
+import { Modal } from './Modal';
+import { Button } from '../Button';
+import { Text } from '../Text';
 
 export default {
   component: Modal,
-  title: "components/Modal",
+  title: 'components/Modal',
 } as Meta;
 
 const Template: Story = () => {

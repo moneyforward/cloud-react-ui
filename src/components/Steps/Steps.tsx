@@ -1,10 +1,10 @@
-import { createContext, forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { createContext, forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
-export type Mode = "number" | "check";
+export type Mode = 'number' | 'check';
 export const StepsModeContext = createContext<{ mode: Mode }>({
-  mode: "check",
+  mode: 'check',
 });
 
 export type Props = {
@@ -22,13 +22,13 @@ const StyledSteps = styled.div<Props>`
 StyledSteps.defaultProps = defaultProps;
 
 const Steps = forwardRef<HTMLDivElement, Props>(
-  ({ mode = "check", ...rest }, ref) => (
+  ({ mode = 'check', ...rest }, ref) => (
     <StepsModeContext.Provider value={{ mode }}>
       <StyledSteps ref={ref} {...rest} />
     </StepsModeContext.Provider>
   )
 );
 
-Steps.displayName = "Steps";
+Steps.displayName = 'Steps';
 
 export { Steps };

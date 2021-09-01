@@ -28,7 +28,7 @@ exports[`SearchPanel default 1`] = `
 
 .c7.c7:before,
 .c7.c7:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -44,7 +44,7 @@ exports[`SearchPanel default 1`] = `
 }
 
 .c7.c7:after {
-  content: "";
+  content: '';
   z-index: -2;
   background: linear-gradient(to bottom,#ECF2FD,#FFFFFF);
   border-radius: 4px;
@@ -78,7 +78,7 @@ exports[`SearchPanel default 1`] = `
 
 .c8.c8:before,
 .c8.c8:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -94,7 +94,7 @@ exports[`SearchPanel default 1`] = `
 }
 
 .c8.c8:after {
-  content: "";
+  content: '';
   z-index: -2;
   background: linear-gradient(to bottom,#0054AC,#3B7DE9);
   border-radius: 4px;
@@ -146,7 +146,7 @@ exports[`SearchPanel default 1`] = `
   max-height: calc(var(--height-actions) + var(--height-filters));
 }
 
-.c1[aria-hidden="true"] {
+.c1[aria-hidden='true'] {
   border-bottom: none;
   visibility: hidden;
   max-height: 0;

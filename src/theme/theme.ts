@@ -1,5 +1,5 @@
-import { color } from "./color";
-import { values } from "./values";
+import { color } from './color';
+import { values } from './values';
 
 export const componentsTheme = {
   // Backdrop
@@ -8,32 +8,32 @@ export const componentsTheme = {
   },
   // Block
   block: {
-    width: "",
-    margin: "",
-    padding: "",
+    width: '',
+    margin: '',
+    padding: '',
     background: color.white,
-    borderRadius: "4px",
+    borderRadius: '4px',
     border: `solid 1px ${color.linkWater}`,
-    textAlign: "",
+    textAlign: '',
   },
   // Button
   button: {
-    borderRadius: "4px",
+    borderRadius: '4px',
     size: {
       small: {
-        height: "28px",
-        padding: "0 16px",
-        fontSize: "14px",
+        height: '28px',
+        padding: '0 16px',
+        fontSize: '14px',
       },
       medium: {
-        height: "32px",
-        padding: "0 12px",
-        fontSize: "14px",
+        height: '32px',
+        padding: '0 12px',
+        fontSize: '14px',
       },
       large: {
-        height: "42px",
-        padding: "0 52px",
-        fontSize: "14px",
+        height: '42px',
+        padding: '0 52px',
+        fontSize: '14px',
       },
     },
     default: {
@@ -45,7 +45,7 @@ export const componentsTheme = {
         background: `linear-gradient(to bottom, ${color.solitude}, ${color.white})`,
       },
       active: {
-        boxShadow: "0 0 0 2px rgba(212, 216, 221, 0.3)",
+        boxShadow: '0 0 0 2px rgba(212, 216, 221, 0.3)',
       },
     },
     danger: {
@@ -57,7 +57,7 @@ export const componentsTheme = {
         background: `linear-gradient(to bottom, ${color.solitude}, ${color.white})`,
       },
       active: {
-        boxShadow: "0 0 2px rgba(212, 216, 221, 0.3)",
+        boxShadow: '0 0 2px rgba(212, 216, 221, 0.3)',
       },
     },
     primary: {
@@ -69,7 +69,7 @@ export const componentsTheme = {
         background: `linear-gradient(to bottom, ${color.cobalt}, ${color.royalBlue})`,
       },
       active: {
-        boxShadow: "0 0 2px rgba(212, 216, 221, 0.3)",
+        boxShadow: '0 0 2px rgba(212, 216, 221, 0.3)',
       },
     },
     settings: {
@@ -81,7 +81,7 @@ export const componentsTheme = {
         background: `linear-gradient(to bottom, ${color.solitude}, ${color.white})`,
       },
       active: {
-        boxShadow: "0 0 2px rgba(212, 216, 221, 0.3)",
+        boxShadow: '0 0 2px rgba(212, 216, 221, 0.3)',
       },
     },
     disabled: {
@@ -93,20 +93,20 @@ export const componentsTheme = {
         background: color.linkWater,
       },
       active: {
-        boxShadow: "0 0 2px rgba(212, 216, 221, 0.3)",
+        boxShadow: '0 0 2px rgba(212, 216, 221, 0.3)',
       },
     },
   },
   // Checkbox
   checkbox: {
-    width: "16px",
-    height: "16px",
+    width: '16px',
+    height: '16px',
     backgroundColor: {
       unchecked: color.white,
       checked: color.royalBlue,
       disabled: color.linkWater,
     },
-    borderRadius: "4px",
+    borderRadius: '4px',
     borderWidth: {
       unchecked: values.border.width.thin,
       checked: values.border.width.thin,
@@ -119,12 +119,12 @@ export const componentsTheme = {
     },
     borderColor: {
       unchecked: color.linkWater,
-      checked: "rgba(0, 0, 0, 0.15)",
+      checked: 'rgba(0, 0, 0, 0.15)',
       disabled: color.linkWater,
     },
     icon: {
-      width: "10px",
-      height: "8px",
+      width: '10px',
+      height: '8px',
       color: color.white,
     },
   },
@@ -134,16 +134,16 @@ export const componentsTheme = {
   },
   // FlashMessage
   flashMessage: {
-    width: "100%",
-    padding: "12px",
+    width: '100%',
+    padding: '12px',
     backgroundColor: {
       success: color.solitude,
       warning: color.cornSilk,
       error: color.mistyRose,
     },
-    borderWidth: "1px",
-    borderStyle: "solid",
-    borderRadius: "4px",
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderRadius: '4px',
     borderColor: {
       success: color.royalBlue,
       warning: color.ecru,
@@ -173,36 +173,36 @@ export const componentsTheme = {
     },
     fontSize: values.text.size,
     fontWeight: {
-      light: "normal",
-      default: "bold",
+      light: 'normal',
+      default: 'bold',
     },
   },
   // Link
   link: {
-    display: "",
-    alignItems: "",
-    width: "",
-    minHeight: "",
-    padding: "",
-    backgroundColor: "",
+    display: '',
+    alignItems: '',
+    width: '',
+    minHeight: '',
+    padding: '',
+    backgroundColor: '',
     color: color.royalBlue,
     fontSize: values.text.size.middle,
-    textDecoration: "none",
+    textDecoration: 'none',
     hover: {
       color: color.royalBlue,
-      textDecoration: "underline",
+      textDecoration: 'underline',
     },
     active: {
       color: color.royalBlue,
-      textDecoration: "none",
+      textDecoration: 'none',
     },
     focus: {
       color: color.royalBlue,
-      textDecoration: "none",
+      textDecoration: 'none',
     },
     visited: {
       color: color.royalBlue,
-      textDecoration: "none",
+      textDecoration: 'none',
     },
     disabled: {
       color: color.nobel,
@@ -210,18 +210,18 @@ export const componentsTheme = {
   },
   // Steps
   steps: {
-    display: "flex",
-    alignItems: "flex-end",
+    display: 'flex',
+    alignItems: 'flex-end',
     step: {
-      position: "relative",
+      position: 'relative',
       circle: {
-        marginTop: "26px",
-        width: "34px",
-        height: "34px",
-        borderRadius: "50%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        marginTop: '26px',
+        width: '34px',
+        height: '34px',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: {
           waiting: color.linkWater,
           inProgress: color.white,
@@ -240,10 +240,10 @@ export const componentsTheme = {
           completed: color.white,
         },
         count: {
-          position: "relative",
-          top: "-1px",
+          position: 'relative',
+          top: '-1px',
           fontSize: values.text.size.xxlarge,
-          letterSpacing: "-0.5px",
+          letterSpacing: '-0.5px',
         },
       },
       title: {
@@ -252,30 +252,30 @@ export const componentsTheme = {
           inProgress: color.dimGray,
           completed: color.royalBlue,
         },
-        position: "absolute",
-        top: "0%",
-        left: "50%",
-        transform: "translateX(-50%)",
-        minWidth: "110px",
-        textAlign: "center",
+        position: 'absolute',
+        top: '0%',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        minWidth: '110px',
+        textAlign: 'center',
         fontSize: values.text.size.middle,
         fontWeight: values.font.weight.bold,
       },
       check: {
-        width: "18px",
-        height: "14px",
+        width: '18px',
+        height: '14px',
         color: color.white,
       },
     },
     stepTie: {
-      width: "110px",
-      height: "36px",
-      margin: "0 6px",
-      display: "flex",
-      alignItems: "center",
+      width: '110px',
+      height: '36px',
+      margin: '0 6px',
+      display: 'flex',
+      alignItems: 'center',
       tie: {
-        width: "100%",
-        height: "2px",
+        width: '100%',
+        height: '2px',
         background: {
           waiting: color.linkWater,
           completed: color.royalBlue,
@@ -287,48 +287,48 @@ export const componentsTheme = {
   modal: {
     color: color.black,
     header: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
       background: color.whiteSmoke,
-      padding: "8px 16px",
-      minHeight: "48px",
-      fontSize: "16px",
-      fontWeight: "bold",
-      wordBreak: "break-all",
+      padding: '8px 16px',
+      minHeight: '48px',
+      fontSize: '16px',
+      fontWeight: 'bold',
+      wordBreak: 'break-all',
       button: {
-        flex: "0 0 auto",
+        flex: '0 0 auto',
         icon: {
-          width: "24px",
-          height: "24px",
+          width: '24px',
+          height: '24px',
           color: color.lightSlateGrey,
         },
       },
     },
     content: {
-      flex: "1 1 auto",
-      padding: "16px",
-      overflowY: "auto",
+      flex: '1 1 auto',
+      padding: '16px',
+      overflowY: 'auto',
     },
     actions: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "16px",
-      flex: "0 0 auto",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '16px',
+      flex: '0 0 auto',
       borderTopStyle: values.border.style.solid,
       borderTopWidth: values.border.width.thin,
       borderTopColor: color.linkWater,
       children: {
-        margin: "0 8px",
+        margin: '0 8px',
       },
     },
   },
   // ProgressLabel
   progressLabel: {
-    display: "inline-block",
-    width: "80px",
-    padding: "5px 9px 6px",
+    display: 'inline-block',
+    width: '80px',
+    padding: '5px 9px 6px',
     backgroundColor: {
       waiting: color.white,
       inProgress: color.royalBlue,
@@ -341,25 +341,25 @@ export const componentsTheme = {
       inProgress: color.royalBlue,
       completed: color.lightSlateGrey,
     },
-    borderRadius: "20px",
+    borderRadius: '20px',
     fontSize: values.text.size.small,
     color: {
       waiting: color.lightSlateGrey,
       inProgress: color.white,
       completed: color.white,
     },
-    letterSpacing: "0.18px",
+    letterSpacing: '0.18px',
   },
   // Radio
   radio: {
-    width: "16px",
-    height: "16px",
+    width: '16px',
+    height: '16px',
     backgroundColor: {
       unchecked: color.white,
       checked: color.royalBlue,
       disabled: color.linkWater,
     },
-    borderRadius: "8px",
+    borderRadius: '8px',
     borderWidth: {
       unchecked: values.border.width.thin,
       checked: values.border.width.thin,
@@ -372,20 +372,20 @@ export const componentsTheme = {
     },
     borderColor: {
       unchecked: color.linkWater,
-      checked: "rgba(0, 0, 0, 0.15)",
+      checked: 'rgba(0, 0, 0, 0.15)',
       disabled: color.linkWater,
     },
     icon: {
-      width: "6px",
-      height: "6px",
+      width: '6px',
+      height: '6px',
       color: color.white,
     },
   },
   // Select
   select: {
-    display: "inline-block",
-    width: "100%",
-    height: "34px",
+    display: 'inline-block',
+    width: '100%',
+    height: '34px',
     backgroundColor: {
       default: color.white,
       error: color.redSnow,
@@ -422,14 +422,14 @@ export const componentsTheme = {
   },
   // StatusLabel
   statusLabel: {
-    display: "inline-block",
+    display: 'inline-block',
     height: {
-      default: "18px",
-      outline: "20px",
+      default: '18px',
+      outline: '20px',
     },
     padding: {
-      default: "2px 3px",
-      outline: "3px 6px",
+      default: '2px 3px',
+      outline: '3px 6px',
     },
     backgroundColor: {
       gray: color.nobel,
@@ -439,9 +439,9 @@ export const componentsTheme = {
       blue: color.royalBlue,
       outline: color.white,
     },
-    borderWidth: "1px",
-    borderStyle: "solid",
-    borderRadius: "4px",
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderRadius: '4px',
     borderColor: {
       gray: color.nobel,
       red: color.sunsetOrange,
@@ -458,8 +458,8 @@ export const componentsTheme = {
     },
     fontSize: values.text.size.small,
     fontWeight: {
-      normal: "normal",
-      bold: "bold",
+      normal: 'normal',
+      bold: 'bold',
     },
     lineHeight: values.text.size.small,
   },
@@ -469,25 +469,25 @@ export const componentsTheme = {
   },
   // Table
   table: {
-    width: "100%",
-    borderCollapse: "separate",
+    width: '100%',
+    borderCollapse: 'separate',
     borderSpacing: 0,
-    borderRadius: "4px",
+    borderRadius: '4px',
     borderWidth: values.border.width.thin,
     borderStyle: values.border.style.solid,
     borderColor: color.linkWater,
-    nonBorder: "0",
+    nonBorder: '0',
     th: {
-      padding: "10px 15px",
+      padding: '10px 15px',
       backgroundColor: color.solitude,
-      textAlign: "left",
+      textAlign: 'left',
       fontSize: values.text.size.middle,
       fontWeight: values.font.weight.bold,
     },
     td: {
-      padding: "10px 17px",
+      padding: '10px 17px',
       backgroundColor: color.white,
-      textAlign: "left",
+      textAlign: 'left',
       fontSize: values.text.size.middle,
       fontWeight: {
         normal: values.font.weight.normal,
@@ -499,14 +499,14 @@ export const componentsTheme = {
   text: values.text,
   // TextField
   textField: {
-    width: "100%",
-    height: "34px",
-    padding: "10px 5px",
+    width: '100%',
+    height: '34px',
+    padding: '10px 5px',
     backgroundColor: {
       default: color.white,
       error: color.mistyRose,
     },
-    borderRadius: "4px",
+    borderRadius: '4px',
     borderWidth: values.border.width.thin,
     borderStyle: values.border.style.solid,
     borderColor: {
@@ -519,10 +519,10 @@ export const componentsTheme = {
   },
   // Tooltip
   tooltip: {
-    height: "",
-    padding: "8px 11px 6px 10px",
-    backgroundColor: "rgba(51, 51, 51, 0.9)",
-    borderRadius: "4px",
+    height: '',
+    padding: '8px 11px 6px 10px',
+    backgroundColor: 'rgba(51, 51, 51, 0.9)',
+    borderRadius: '4px',
     fontSize: values.text.size.small,
     color: color.white,
   },
@@ -538,16 +538,16 @@ export const componentsTheme = {
 export const uiTheme = {
   // Footer
   footer: {
-    height: "35px",
-    padding: "9px 20px 10px",
+    height: '35px',
+    padding: '9px 20px 10px',
     backgroundColor: color.cloudGrey,
     borderTop: `1px solid ${color.linkWater}`,
     zIndex: 100,
   },
   // Header
   header: {
-    height: "40px",
-    padding: "10px 20px 10px 10px",
+    height: '40px',
+    padding: '10px 20px 10px 10px',
     backgroundColor: color.white,
     borderBottom: `1px solid ${color.linkWater}`,
     zIndex: 100,
@@ -557,11 +557,11 @@ export const uiTheme = {
 export const layoutTheme = {
   // Center
   centerLayout: {
-    width: "600px",
+    width: '600px',
   },
   // Left
   leftLayout: {
-    width: "600px",
-    margin: "20px",
+    width: '600px',
+    margin: '20px',
   },
 };

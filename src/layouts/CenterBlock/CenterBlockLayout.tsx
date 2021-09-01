@@ -1,5 +1,5 @@
-import { CenterLayout } from "../Center";
-import { Block } from "../../components";
+import { CenterLayout } from '../Center';
+import { Block } from '../../components';
 
 export const CenterBlockLayout: React.FC = ({ children }) => {
   return (

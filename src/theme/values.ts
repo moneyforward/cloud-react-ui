@@ -1,43 +1,43 @@
-import { color } from "./color";
+import { color } from './color';
 
 export const values = {
   font: {
-    noto: "Noto Sans JP",
+    noto: 'Noto Sans JP',
     weight: {
-      normal: "normal",
-      bold: "bold",
+      normal: 'normal',
+      bold: 'bold',
     },
   },
   text: {
     size: {
-      xSmall: "10px",
-      small: "12px",
-      middle: "13px",
-      large: "14px",
-      xlarge: "16px",
-      xxlarge: "18px",
-      xxxLarge: "20px",
-      xxxxLarge: "24px",
+      xSmall: '10px',
+      small: '12px',
+      middle: '13px',
+      large: '14px',
+      xlarge: '16px',
+      xxlarge: '18px',
+      xxxLarge: '20px',
+      xxxxLarge: '24px',
     },
     color: {
       default: color.nightRider,
       notes: color.nobel,
-      inherit: "inherit",
+      inherit: 'inherit',
     },
   },
   line: {
     weight: {
-      thin: "1px",
-      bold: "2px",
+      thin: '1px',
+      bold: '2px',
     },
   },
   border: {
     width: {
-      thin: "1px",
-      bold: "2px",
+      thin: '1px',
+      bold: '2px',
     },
     style: {
-      solid: "solid",
+      solid: 'solid',
     },
   },
 } as const;

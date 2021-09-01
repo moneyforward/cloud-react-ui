@@ -1,9 +1,9 @@
-import { TooltipProps as MuiTootipProps } from "@material-ui/core/Tooltip";
-import { TooltipPresenter } from "./TooltipPresenter";
+import { TooltipProps as MuiTootipProps } from '@material-ui/core/Tooltip';
+import { TooltipPresenter } from './TooltipPresenter';
 
 export type TooltipProps = {
   message: string;
-  placement?: MuiTootipProps["placement"];
+  placement?: MuiTootipProps['placement'];
   arrow?: boolean;
 } & JSX.IntrinsicElements['div'];
 

@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   name?: string;
@@ -133,6 +133,6 @@ const Checkbox = forwardRef<HTMLInputElement, Props>(
   )
 );
 
-Checkbox.displayName = "Checkbox";
+Checkbox.displayName = 'Checkbox';
 
 export { Checkbox };

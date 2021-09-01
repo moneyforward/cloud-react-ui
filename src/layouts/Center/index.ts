@@ -1,1 +1,1 @@
-export * from "./CenterLayout";
+export * from './CenterLayout';

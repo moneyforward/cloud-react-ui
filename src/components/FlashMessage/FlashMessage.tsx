@@ -1,15 +1,15 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type Props = {
-  color?: "success" | "warning" | "error";
+  color?: 'success' | 'warning' | 'error';
   className?: string;
   children: React.ReactNode;
 };
 
 const StyledFlashMessage = styled.div<Props>`
-  ${({ color = "success", theme: { flashMessage } }) => css`
+  ${({ color = 'success', theme: { flashMessage } }) => css`
     width: ${flashMessage.width};
     padding: ${flashMessage.padding};
     background-color: ${flashMessage.backgroundColor[color]};
@@ -27,6 +27,6 @@ const FlashMessage = forwardRef<HTMLDivElement, Props>((props, ref) => (
   <StyledFlashMessage ref={ref} {...props} />
 ));
 
-FlashMessage.displayName = "FlashMessage";
+FlashMessage.displayName = 'FlashMessage';
 
 export { FlashMessage };

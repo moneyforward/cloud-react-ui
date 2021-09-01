@@ -1,12 +1,12 @@
-import { useState } from "react";
-import styled from "styled-components";
-import { defaultProps } from "../../theme";
-import { SearchPanelToggle } from "./SearchPanelToggle";
-import { SearchPanelBody } from "./SearchPanelBody";
-import { SearchPanelFilters } from "./SearchPanelFilters";
-import { SearchPanelRow, SearchPanelColumn } from "./SearchPanelLayout";
-import { SearchPanelActions } from "./SearchPanelActions";
-import { SearchPanelButtonGroup } from "./SearchPanelButtonGroup";
+import { useState } from 'react';
+import styled from 'styled-components';
+import { defaultProps } from '../../theme';
+import { SearchPanelToggle } from './SearchPanelToggle';
+import { SearchPanelBody } from './SearchPanelBody';
+import { SearchPanelFilters } from './SearchPanelFilters';
+import { SearchPanelRow, SearchPanelColumn } from './SearchPanelLayout';
+import { SearchPanelActions } from './SearchPanelActions';
+import { SearchPanelButtonGroup } from './SearchPanelButtonGroup';
 
 const StyledSearchPanel = styled.div`
   width: 100%;

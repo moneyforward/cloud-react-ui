@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { CircularProgress as MuiCircularProgress } from "@material-ui/core";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { CircularProgress as MuiCircularProgress } from '@material-ui/core';
+import { defaultProps } from '../../theme';
 
 export type Props = {
   className?: string;
@@ -20,6 +20,6 @@ const CircularProgress = forwardRef<HTMLDivElement, Props>((props, ref) => (
   <StyledCircularProgress ref={ref} {...props} />
 ));
 
-CircularProgress.displayName = "CircularProgress";
+CircularProgress.displayName = 'CircularProgress';
 
 export { CircularProgress };

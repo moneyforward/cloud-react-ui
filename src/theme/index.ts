@@ -1,12 +1,12 @@
-import merge from "deepmerge";
+import merge from 'deepmerge';
 
-export { color } from "./color";
-export { zIndex } from "./zIndex";
-export { values } from "./values";
+export { color } from './color';
+export { zIndex } from './zIndex';
+export { values } from './values';
 
-import { componentsTheme, uiTheme, layoutTheme } from "./theme";
+import { componentsTheme, uiTheme, layoutTheme } from './theme';
 
-export { ThemeProvider } from "styled-components";
+export { ThemeProvider } from 'styled-components';
 
 const theme = { ...componentsTheme, ...uiTheme, ...layoutTheme };
 export { theme };

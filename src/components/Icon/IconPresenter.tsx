@@ -1,21 +1,21 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
-import { IconProps, IconTypes } from "./IconContainer";
-import { defaultProps } from "../../theme";
+} from '@fortawesome/react-fontawesome';
+import { IconProps, IconTypes } from './IconContainer';
+import { defaultProps } from '../../theme';
 
 const FontAwesomeConverter: {
-  [key in IconTypes]: FontAwesomeIconProps["icon"];
+  [key in IconTypes]: FontAwesomeIconProps['icon'];
 } = {
-  bell: "bell",
-  bullhorn: "bullhorn",
-  caretUp: "caret-up",
-  chevronUp: "chevron-up",
-  plus: "plus",
-  question: "question-circle",
-  envelope: "envelope",
+  bell: 'bell',
+  bullhorn: 'bullhorn',
+  caretUp: 'caret-up',
+  chevronUp: 'chevron-up',
+  plus: 'plus',
+  question: 'question-circle',
+  envelope: 'envelope',
 };
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`

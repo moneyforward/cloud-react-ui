@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 export type PaginationLinkProps = {
   href?: string;
@@ -11,8 +11,8 @@ export type PaginationLinkProps = {
 
 export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
   ({ disabled, current, href, onClick }) => ({
-    "aria-current": current && "page",
-    "aria-disabled": disabled,
+    'aria-current': current && 'page',
+    'aria-disabled': disabled,
     tabIndex: disabled ? -1 : 0,
     href: disabled ? undefined : href,
     onClick,
@@ -37,7 +37,7 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
       `}
   }
 
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     pointer-events: none;
     cursor: auto;
     color: #d8dade;
@@ -57,4 +57,4 @@ export const PaginationLink = styled.a.attrs<PaginationLinkProps>(
 `;
 
 PaginationLink.defaultProps = defaultProps;
-PaginationLink.displayName = "Pagination.Link";
+PaginationLink.displayName = 'Pagination.Link';

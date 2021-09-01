@@ -1,12 +1,12 @@
-import { Story, Meta } from "@storybook/react";
-import { SearchPanel } from "./SearchPanel";
-import type { SearchPanelProps } from "./SearchPanel";
-import { Button, TextField, Checkbox } from "../../components";
-import styled from "styled-components";
+import { Story, Meta } from '@storybook/react';
+import { SearchPanel } from './SearchPanel';
+import type { SearchPanelProps } from './SearchPanel';
+import { Button, TextField, Checkbox } from '../../components';
+import styled from 'styled-components';
 
 export default {
   component: SearchPanel,
-  title: "components/SearchPanel",
+  title: 'components/SearchPanel',
 } as Meta;
 
 const Fieldset = styled.fieldset`

@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { CellPresenter } from "./CellPresenter";
-import { TableGroupContext, TableBorderContext } from "../Table/TableContainer";
+import { useContext } from 'react';
+import { CellPresenter } from './CellPresenter';
+import { TableGroupContext, TableBorderContext } from '../Table/TableContainer';
 
 export type CellProps = {
   rowSpan?: number;

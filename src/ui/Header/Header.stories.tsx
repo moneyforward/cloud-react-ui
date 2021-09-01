@@ -1,10 +1,10 @@
-import { Story, Meta } from "@storybook/react";
-import { Header, Props } from "./Header";
-import { Link, Dropdown } from "../../components";
+import { Story, Meta } from '@storybook/react';
+import { Header, Props } from './Header';
+import { Link, Dropdown } from '../../components';
 
 export default {
   component: Header,
-  title: "ui/Header",
+  title: 'ui/Header',
 } as Meta;
 
 const Logo = () => (
@@ -24,7 +24,7 @@ const Logo = () => (
   </svg>
 );
 
-const Content = () => <div style={{ height: "1000px" }} />;
+const Content = () => <div style={{ height: '1000px' }} />;
 
 const Template: Story<Props> = (args) => (
   <>

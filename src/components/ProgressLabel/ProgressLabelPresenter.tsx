@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
-import { ProgressLabelProps } from "./ProgressLabelContainer";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { ProgressLabelProps } from './ProgressLabelContainer';
+import { defaultProps } from '../../theme';
 
 const StyledProgressLabel = styled.div<ProgressLabelProps>`
-  ${({ theme: { progressLabel }, status = "inProgress" }) => css`
+  ${({ theme: { progressLabel }, status = 'inProgress' }) => css`
     display: ${progressLabel.display};
     width: ${progressLabel.width};
     padding: ${progressLabel.padding};

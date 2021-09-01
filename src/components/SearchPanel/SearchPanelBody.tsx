@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { defaultProps } from "../../theme";
+import styled, { css } from 'styled-components';
+import { defaultProps } from '../../theme';
 
 type SearchPanelBodyProps = {
   children?: React.ReactNode;
@@ -9,7 +9,7 @@ type SearchPanelBodyProps = {
 
 export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
   ({ ariaHidden }) => ({
-    "aria-hidden": ariaHidden,
+    'aria-hidden': ariaHidden,
   })
 )<SearchPanelBodyProps>`
   width: 100%;
@@ -33,7 +33,7 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
     var(--height-filters-total-gaps);
   max-height: calc(var(--height-actions) + var(--height-filters));
 
-  &[aria-hidden="true"] {
+  &[aria-hidden='true'] {
     border-bottom: none;
     visibility: hidden;
     max-height: 0;
@@ -42,4 +42,4 @@ export const SearchPanelBody = styled.div.attrs<SearchPanelBodyProps>(
 `;
 
 SearchPanelBody.defaultProps = defaultProps;
-SearchPanelBody.displayName = "SearchPanel.Body";
+SearchPanelBody.displayName = 'SearchPanel.Body';

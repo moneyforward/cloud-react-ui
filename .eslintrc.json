@@ -4,7 +4,8 @@
     "moneyforward/rules/react",
     "moneyforward/rules/typescript",
     "moneyforward/rules/jest",
-    "moneyforward/rules/testing-library/react"
+    "moneyforward/rules/testing-library/react",
+    "moneyforward/rules/prettier"
   ],
   "rules": {
     "react/prop-types": "off",

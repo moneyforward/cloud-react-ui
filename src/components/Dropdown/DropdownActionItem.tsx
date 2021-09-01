@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
-import styled from "styled-components";
-import { color, values, defaultProps } from "../../theme";
-import { useDropdown } from "./Dropdown";
+import { forwardRef } from 'react';
+import styled from 'styled-components';
+import { color, values, defaultProps } from '../../theme';
+import { useDropdown } from './Dropdown';
 
 export type DropdownActionItemProps = {
   children?: React.ReactNode;
@@ -55,4 +55,4 @@ export const DropdownActionItem = forwardRef<
   );
 });
 
-DropdownActionItem.displayName = "Dropdown.ActionItem";
+DropdownActionItem.displayName = 'Dropdown.ActionItem';

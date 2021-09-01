@@ -1,24 +1,24 @@
-import { forwardRef } from "react";
-import styled, { css } from "styled-components";
-import { Icon, IconTypes } from "../Icon";
-import { defaultProps } from "../../theme";
+import { forwardRef } from 'react';
+import styled, { css } from 'styled-components';
+import { Icon, IconTypes } from '../Icon';
+import { defaultProps } from '../../theme';
 
 export type Props = {
-  size?: "small" | "medium" | "large";
-  color?: "default" | "danger" | "primary" | "settings";
+  size?: 'small' | 'medium' | 'large';
+  color?: 'default' | 'danger' | 'primary' | 'settings';
   disabled?: boolean;
-  type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
+  type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
   icon?: IconTypes;
-  iconPlacement?: "start" | "end";
+  iconPlacement?: 'start' | 'end';
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   children?: React.ReactNode;
   className?: string;
 };
 
 const StyledButton = styled.button<Props>`
-  ${({ theme: { button }, size = "medium", color = "default", disabled }) => {
+  ${({ theme: { button }, size = 'medium', color = 'default', disabled }) => {
     const buttonSize = button.size[size];
-    const buttonColor = button[disabled ? "disabled" : color];
+    const buttonColor = button[disabled ? 'disabled' : color];
 
     return css`
       && {
@@ -31,14 +31,14 @@ const StyledButton = styled.button<Props>`
         border: ${buttonColor.border};
         color: ${buttonColor.textColor};
         background: transparent;
-        cursor: ${disabled ? "not-allowed" : "pointer"};
+        cursor: ${disabled ? 'not-allowed' : 'pointer'};
         position: relative;
         z-index: 0;
       }
 
       &&:before,
       &&:after {
-        content: "";
+        content: '';
         width: 100%;
         height: 100%;
         position: absolute;
@@ -51,7 +51,7 @@ const StyledButton = styled.button<Props>`
         transition: opacity 0.2s ease-in-out;
       }
       &&:after {
-        content: "";
+        content: '';
         z-index: -2;
         background: ${buttonColor.hover.background};
         border-radius: ${button.borderRadius};
@@ -75,14 +75,14 @@ StyledButton.defaultProps = defaultProps;
 const StyledIcon = styled(({ iconPlacement, ...props }) => <Icon {...props} />)`
   ${({
     theme: { button },
-    iconPlacement = "start",
-    color = "default",
+    iconPlacement = 'start',
+    color = 'default',
     disabled,
   }) => css`
       && {
-        padding-${iconPlacement === "start" ? "right" : "left"}: 4px;
+        padding-${iconPlacement === 'start' ? 'right' : 'left'}: 4px;
         width: 10px;
-        color: ${button[disabled ? "disabled" : color].iconColor};
+        color: ${button[disabled ? 'disabled' : color].iconColor};
       }
     `}
 `;
@@ -102,14 +102,14 @@ const Button = forwardRef<HTMLButtonElement, Props>(
         ref={ref}
         {...rest}
       >
-        {icon && iconPlacement === "start" && ButtonIcon}
+        {icon && iconPlacement === 'start' && ButtonIcon}
         {children}
-        {icon && iconPlacement === "end" && ButtonIcon}
+        {icon && iconPlacement === 'end' && ButtonIcon}
       </StyledButton>
     );
   }
 );
 
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 export { Button };
