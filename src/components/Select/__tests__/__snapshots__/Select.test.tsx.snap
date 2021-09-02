@@ -172,6 +172,172 @@ exports[`Select default 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Select error props 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: inline-block;
+  width: 100%;
+}
+
+.c0 .react-select__control {
+  width: 100%;
+  height: 34px;
+  background-color: #FFF4F4;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D37677;
+  color: #333333;
+  font-size: 13px;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c0 .react-select__control:hover {
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  border-color: #D37677;
+}
+
+.c0 .react-select__control--is-disabled {
+  cursor: not-allowed;
+  pointer-events: auto;
+  background-color: #EEEEEE;
+}
+
+.c0 .react-select__placeholder {
+  color: #999999;
+}
+
+.c0 .react-select__value-container {
+  height: 100%;
+}
+
+.c0 .react-select__menu {
+  width: calc(100% - 2px);
+  top: calc(100% - 3px);
+  left: 1px;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  font-size: 13px;
+  z-index: 101;
+}
+
+.c0 .react-select__menu-list {
+  padding: 0;
+}
+
+.c0 .react-select__option--is-focused {
+  color: #333333;
+  background-color: #EDF5FE;
+}
+
+.c0 .react-select__option--is-selected {
+  color: #333333;
+  background-color: #F5FAFF;
+}
+
+.c0 .react-select__option--is-disabled {
+  color: #CCC;
+}
+
+.c0 .react-select__option:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.c0 .react-select__indicator-separator {
+  display: none;
+}
+
+.c0 .react-select__clear-indicator {
+  padding-right: 0;
+}
+
+.c0 .react-select__clear-indicator svg {
+  width: 17px;
+  height: 17px;
+}
+
+.c0 .react-select__clear-indicator:hover {
+  color: #D0021B;
+}
+
+.c0 .react-select__dropdown-indicator {
+  padding-left: 3px;
+}
+
+.c0 .react-select__dropdown-indicator svg {
+  width: 16px;
+  height: 16px;
+}
+
+<div
+    class="c0 css-2b097c-container"
+  >
+    <div
+      class="react-select__control css-yk16xz-control"
+    >
+      <div
+        class="react-select__value-container css-g1d714-ValueContainer"
+      >
+        <div
+          class="react-select__placeholder css-1wa3eu0-placeholder"
+        >
+          Select...
+        </div>
+        <div
+          class="css-b8ldur-Input"
+        >
+          <div
+            class="react-select__input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="react-select-4-input"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="react-select__indicators css-1hb7zxy-IndicatorsContainer"
+      >
+        <span
+          class="react-select__indicator-separator css-1okebmr-indicatorSeparator"
+        />
+        <div
+          aria-hidden="true"
+          class="react-select__indicator react-select__dropdown-indicator css-tlfecz-indicatorContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="css-tj5bde-Svg"
+            focusable="false"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Select with indicatorImage props 1`] = `
 <DocumentFragment>
   .c0 {
