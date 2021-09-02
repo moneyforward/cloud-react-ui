@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import { AsyncSelect } from '../AsyncSelect';
 
 describe('AsyncSelect', () => {
@@ -21,10 +21,8 @@ describe('AsyncSelect', () => {
         );
       });
 
-    const { getByRole } = render(
-      <AsyncSelect options={options} onInputChange={handleInputChange} />
-    );
-    fireEvent.input(getByRole('textbox'), '2');
+    render(<AsyncSelect options={options} onInputChange={handleInputChange} />);
+    fireEvent.input(screen.getByRole('textbox'), '2');
 
     // TODO: not called...
     expect(handleInputChange).toBeCalledWith(1);
