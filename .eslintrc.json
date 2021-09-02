@@ -17,7 +17,6 @@
     "jest/no-test-prefixes": "off",
     "jest/no-disabled-tests": "off",
     "jest-dom/prefer-enabled-disabled": "off",
-    "testing-library/prefer-screen-queries": "off",
     "testing-library/no-node-access": "off",
     "testing-library/no-container": "off"
   }
