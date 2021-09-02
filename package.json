@@ -57,7 +57,7 @@
     "eslint-config-moneyforward": "^1.0.0",
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.5",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.2",
     "ts-jest": "^26.5.6"
   }
 }
