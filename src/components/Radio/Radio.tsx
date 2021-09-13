@@ -64,7 +64,6 @@ const IconWrapper = styled.span`
     display: inline-block;
     width: ${radio.icon.width};
     height: ${radio.icon.height};
-    /* pointer-events: none; */
 
     & > svg {
       vertical-align: top;
@@ -99,6 +98,11 @@ const Label = styled.label`
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+
+  ${Input}:disabled + & {
+    cursor: not-allowed;
+    color: #999;
+  }
 `;
 
 const LabelText = styled.span``;
