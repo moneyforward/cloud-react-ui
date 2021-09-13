@@ -39,28 +39,21 @@ const RadioButton = styled.span`
   margin-right: 4px;
 
   ${({ theme: { radio } }) => css`
+    --radio-bg-color: ${radio.backgroundColor.unchecked};
+
     width: 16px;
     height: 16px;
     border-radius: ${radio.borderRadius};
-    background-color: ${radio.backgroundColor.unchecked};
-    border-width: ${radio.borderWidth.unchecked};
-    border-style: ${radio.borderStyle.unchecked};
-    border-color: ${radio.borderColor.unchecked};
-    /* pointer-events: none; */
+    background-color: var(--radio-bg-color);
+    border: 1px solid var(--radio-bg-color);
     box-sizing: border-box;
 
     ${Input}:checked + ${Label} > & {
-      background-color: ${radio.backgroundColor.checked};
-      border-width: ${radio.borderWidth.checked};
-      border-style: ${radio.borderStyle.checked};
-      border-color: ${radio.borderColor.checked};
+      --radio-bg-color: ${radio.backgroundColor.checked};
     }
 
     ${Input}:disabled + ${Label} > & {
-      background-color: ${radio.backgroundColor.disabled};
-      border-width: ${radio.borderWidth.disabled};
-      border-style: ${radio.borderStyle.disabled};
-      border-color: ${radio.borderColor.disabled};
+      --radio-bg-color: ${radio.backgroundColor.disabled};
     }
   `}
 `;
