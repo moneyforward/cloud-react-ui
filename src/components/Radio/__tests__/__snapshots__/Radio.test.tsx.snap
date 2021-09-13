@@ -2,127 +2,88 @@
 
 exports[`Radio default 1`] = `
 <DocumentFragment>
-  .c1 {
-  position: relative;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-top: 2px;
-  margin-right: 4px;
+  .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c2 {
-  opacity: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c2:checked + .c3 {
-  background-color: #3B7DE9;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(0,0,0,0.15);
-}
-
-.c2:disabled + .c3 {
-  background-color: #D4D8DD;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #D4D8DD;
-}
-
-.c4 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  background-color: #FFFFFF;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #D4D8DD;
-  pointer-events: none;
-  box-sizing: border-box;
-}
-
-.c5 {
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  pointer-events: none;
-}
-
-.c5 > svg {
-  vertical-align: top;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .c6 {
-  width: 6px;
-  height: 6px;
+  display: grid;
+  place-items: center;
+  margin-right: 4px;
+  --radio-state-color: #FFFFFF;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 5px solid var(--radio-state-color);
 }
 
-.c6 > circle {
-  fill: #FFFFFF;
+.c1:checked + .c3 > .c5 {
+  --radio-state-color: #3B7DE9;
 }
 
-.c0 {
+.c1:disabled + .c3 > .c5 {
+  --radio-state-color: #D4D8DD;
+}
+
+.c4 {
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-<label
+.c1:disabled + .c3 {
+  cursor: not-allowed;
+  color: #999;
+}
+
+<div
     class="c0"
   >
-    <span
-      class="c1"
+    <input
+      class="c1 c2"
+      id="radio-1"
+      type="radio"
+      value=""
+    />
+    <label
+      class="c3 c4"
+      for="radio-1"
     >
-      <input
-        class="c2"
-        type="radio"
+      <span
+        class="c5 c6"
       />
       <span
-        class="c3 c4"
-      />
-      <span
-        class="c5"
+        class=""
       >
-        <svg
-          class="c6"
-          viewBox="0 0 6 6"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="102"
-            cy="546"
-            fill-rule="evenodd"
-            r="3"
-            transform="translate(-99 -543)"
-          />
-        </svg>
+        radio
       </span>
-    </span>
-    <span
-      class=""
-    >
-      radio
-    </span>
-  </label>
+    </label>
+  </div>
 </DocumentFragment>
 `;

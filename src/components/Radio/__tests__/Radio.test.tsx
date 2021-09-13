@@ -4,7 +4,7 @@ import { Radio } from '../Radio';
 
 describe('Radio', () => {
   it('default', () => {
-    const { asFragment } = render(<Radio>radio</Radio>);
+    const { asFragment } = render(<Radio id="radio-1">radio</Radio>);
     expect(asFragment()).toMatchSnapshot();
 
     const radio = screen.getByRole('radio');
@@ -13,12 +13,20 @@ describe('Radio', () => {
   });
 
   it('defaultChecked props', () => {
-    render(<Radio defaultChecked={true}>radio</Radio>);
+    render(
+      <Radio id="radio-1" defaultChecked={true}>
+        radio
+      </Radio>
+    );
     expect(screen.getByRole('radio')).toBeChecked();
   });
 
   it('disabled props', () => {
-    render(<Radio disabled={true}>radio</Radio>);
+    render(
+      <Radio id="radio-1" disabled={true}>
+        radio
+      </Radio>
+    );
     expect(screen.getByRole('radio')).toBeDisabled();
   });
 
@@ -26,7 +34,7 @@ describe('Radio', () => {
     const onChange = jest.fn();
     const onClick = jest.fn();
     render(
-      <Radio onChange={onChange} onClick={onClick}>
+      <Radio id="radio-1" onChange={onChange} onClick={onClick}>
         radio
       </Radio>
     );
@@ -44,7 +52,7 @@ describe('Radio', () => {
       };
 
       return (
-        <Radio checked={checked} onChange={handleChange}>
+        <Radio id="radio-1" checked={checked} onChange={handleChange}>
           radio
         </Radio>
       );
