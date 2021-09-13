@@ -8,11 +8,12 @@ export default {
 
 const Template: Story<Props> = (args) => <Radio {...args}>Radio</Radio>;
 
-export const Default = Template.bind({
+export const Default = Template.bind({});
+Default.args = {
   id: 'radio-1',
   name: 'default',
   value: 'value-1',
-});
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = { disabled: true, id: 'radio-2', name: 'disabled' };
