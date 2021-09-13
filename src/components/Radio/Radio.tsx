@@ -92,7 +92,7 @@ const Radio = forwardRef<HTMLInputElement, Props>(
         {...rest}
       />
       <Label htmlFor={id}>
-        <RadioButton />
+        <RadioButton aria-hidden="true" />
         <LabelText>{children}</LabelText>
       </Label>
     </RadioWrapper>
