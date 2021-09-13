@@ -12,6 +12,7 @@ export type Props = {
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
   children?: React.ReactNode;
   className?: string;
+  id: string;
 };
 
 const RadioWrapper = styled.span`
@@ -28,23 +29,23 @@ RadioWrapper.defaultProps = defaultProps;
 
 const Input = styled.input`
   ${({ theme: { radio } }) => css`
-    opacity: 0;
+    /* opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
-    cursor: pointer;
+    cursor: pointer; */
 
-    :checked + ${Box} {
+    :checked + ${RadioButton} {
       background-color: ${radio.backgroundColor.checked};
       border-width: ${radio.borderWidth.checked};
       border-style: ${radio.borderStyle.checked};
       border-color: ${radio.borderColor.checked};
     }
 
-    :disabled + ${Box} {
+    :disabled + ${RadioButton} {
       background-color: ${radio.backgroundColor.disabled};
       border-width: ${radio.borderWidth.disabled};
       border-style: ${radio.borderStyle.disabled};
@@ -54,21 +55,21 @@ const Input = styled.input`
 `;
 Input.defaultProps = defaultProps;
 
-const Box = styled.span`
+const RadioButton = styled.span`
   ${({ theme: { radio } }) => css`
-    position: absolute;
+    /* position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     border-radius: ${radio.borderRadius};
     background-color: ${radio.backgroundColor.unchecked};
     border-width: ${radio.borderWidth.unchecked};
     border-style: ${radio.borderStyle.unchecked};
     border-color: ${radio.borderColor.unchecked};
-    pointer-events: none;
+    /* pointer-events: none; */
     box-sizing: border-box;
   `}
 `;
-Box.defaultProps = defaultProps;
+RadioButton.defaultProps = defaultProps;
 
 const IconWrapper = styled.span`
   ${({ theme: { radio } }) => css`
@@ -79,7 +80,7 @@ const IconWrapper = styled.span`
     width: ${radio.icon.width};
     height: ${radio.icon.height};
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    /* pointer-events: none; */
 
     & > svg {
       vertical-align: top;
@@ -123,17 +124,27 @@ const Label = styled.label`
 const LabelText = styled.span``;
 
 const Radio = forwardRef<HTMLInputElement, Props>(
-  ({ children, className, ...rest }, ref) => (
-    <Label>
-      <RadioWrapper className={className}>
-        <Input type="radio" ref={ref} {...rest} />
-        <Box />
+  ({ children, className, id, ...rest }, ref) => (
+    // <Label>
+    //   <RadioWrapper className={className}>
+    //     <Input type="radio" ref={ref} {...rest} />
+    //     <Box />
+    //     <IconWrapper>
+    //       <Icon />
+    //     </IconWrapper>
+    //   </RadioWrapper>
+    //   <LabelText>{children}</LabelText>
+    // </Label>
+    <div>
+      <Input type="radio" id={id} ref={ref} {...rest} />
+      <Label htmlFor={id}>
+        <RadioButton />
         <IconWrapper>
           <Icon />
         </IconWrapper>
-      </RadioWrapper>
-      <LabelText>{children}</LabelText>
-    </Label>
+        <LabelText>{children}</LabelText>
+      </Label>
+    </div>
   )
 );
 
