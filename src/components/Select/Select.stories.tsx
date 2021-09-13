@@ -96,3 +96,15 @@ Async.args = {
       );
     }),
 };
+
+export const CustomNoOptionsMessage = Template.bind({});
+CustomNoOptionsMessage.args = {
+  noOptionsMessage: ({ inputValue }) =>
+    inputValue ? 'Could not find option' : 'Please type to begin searching',
+};
+
+export const CustomLoadingMessage = AsyncTemplate.bind({});
+CustomLoadingMessage.args = {
+  ...Async.args,
+  loadingMessage: ({ inputValue }) => 'custom loading message',
+};
