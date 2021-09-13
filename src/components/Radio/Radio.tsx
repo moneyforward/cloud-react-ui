@@ -1,19 +1,10 @@
-import { forwardRef } from 'react';
+import { forwardRef, ComponentPropsWithRef } from 'react';
 import styled, { css } from 'styled-components';
 import { defaultProps } from '../../theme';
 
 export type Props = {
-  name?: string;
-  checked?: boolean;
-  defaultChecked?: boolean;
-  value?: string;
-  disabled?: boolean;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
-  children?: React.ReactNode;
-  className?: string;
   id: string;
-};
+} & ComponentPropsWithRef<'input'>;
 
 const RadioWrapper = styled.div`
   display: inline-flex;
@@ -23,6 +14,7 @@ RadioWrapper.defaultProps = defaultProps;
 
 const Input = styled.input`
   /* visually-hidden */
+  /* TODO: Should extract visually-hidden style as a utility style */
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -43,10 +35,9 @@ const RadioButton = styled.span`
 
     width: 16px;
     height: 16px;
-    border-radius: ${radio.borderRadius};
     background-color: #fff;
+    border-radius: ${radio.borderRadius};
     border: 5px solid var(--radio-state-color);
-    box-sizing: border-box;
 
     ${Input}:checked + ${Label} > & {
       --radio-state-color: ${radio.backgroundColor.checked};
@@ -73,9 +64,34 @@ const Label = styled.label`
 const LabelText = styled.span``;
 
 const Radio = forwardRef<HTMLInputElement, Props>(
-  ({ children, className, id, ...rest }, ref) => (
+  (
+    {
+      children,
+      className,
+      id,
+      name,
+      value,
+      disabled,
+      defaultChecked,
+      onClick,
+      onChange,
+      ...rest
+    },
+    ref
+  ) => (
     <RadioWrapper>
-      <Input type="radio" id={id} ref={ref} {...rest} />
+      <Input
+        type="radio"
+        id={id}
+        ref={ref}
+        name={name}
+        value={value}
+        disabled={disabled}
+        defaultChecked={defaultChecked}
+        onClick={onClick}
+        onChange={onChange}
+        {...rest}
+      />
       <Label htmlFor={id}>
         <RadioButton />
         <LabelText>{children}</LabelText>
@@ -83,7 +99,6 @@ const Radio = forwardRef<HTMLInputElement, Props>(
     </RadioWrapper>
   )
 );
-
 Radio.displayName = 'Radio';
 
 export { Radio };
