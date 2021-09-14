@@ -63,7 +63,6 @@ const Radio = forwardRef<HTMLInputElement, Props>(
   (
     {
       children,
-      className,
       id,
       name,
       value,
