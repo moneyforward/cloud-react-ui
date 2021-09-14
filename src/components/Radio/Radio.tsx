@@ -2,9 +2,7 @@ import { forwardRef, ComponentPropsWithRef } from 'react';
 import styled, { css } from 'styled-components';
 import { defaultProps } from '../../theme';
 
-export type Props = {
-  id: string;
-} & ComponentPropsWithRef<'input'>;
+export type Props = ComponentPropsWithRef<'input'>;
 
 const RadioWrapper = styled.div`
   display: inline-flex;
@@ -25,7 +23,7 @@ const Input = styled.input`
 `;
 Input.defaultProps = defaultProps;
 
-const Label = styled.label`
+const InputContainer = styled.div`
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -44,7 +42,7 @@ const Label = styled.label`
     }
   `}
 `;
-Label.defaultProps = defaultProps;
+InputContainer.defaultProps = defaultProps;
 
 const RadioButton = styled.span`
   display: grid;
@@ -78,22 +76,24 @@ const Radio = forwardRef<HTMLInputElement, Props>(
     ref
   ) => (
     <RadioWrapper>
-      <Input
-        type="radio"
-        id={id}
-        ref={ref}
-        name={name}
-        value={value}
-        disabled={disabled}
-        defaultChecked={defaultChecked}
-        onClick={onClick}
-        onChange={onChange}
-        {...rest}
-      />
-      <Label htmlFor={id}>
-        <RadioButton aria-hidden="true" />
-        <span>{children}</span>
-      </Label>
+      <label htmlFor={id}>
+        <Input
+          type="radio"
+          id={id}
+          ref={ref}
+          name={name}
+          value={value}
+          disabled={disabled}
+          defaultChecked={defaultChecked}
+          onClick={onClick}
+          onChange={onChange}
+          {...rest}
+        />
+        <InputContainer>
+          <RadioButton aria-hidden="true" />
+          <span>{children}</span>
+        </InputContainer>
+      </label>
     </RadioWrapper>
   )
 );
