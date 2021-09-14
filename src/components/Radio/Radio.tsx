@@ -5,8 +5,7 @@ import { defaultProps } from '../../theme';
 export type Props = ComponentPropsWithRef<'input'>;
 
 const RadioWrapper = styled.div`
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
 `;
 RadioWrapper.defaultProps = defaultProps;
 
