@@ -25,26 +25,6 @@ exports[`Radio default 1`] = `
   width: 1px;
 }
 
-.c6 {
-  display: grid;
-  place-items: center;
-  margin-right: 4px;
-  --radio-state-color: #FFFFFF;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border-radius: 8px;
-  border: 5px solid var(--radio-state-color);
-}
-
-.c1:checked + .c3 > .c5 {
-  --radio-state-color: #3B7DE9;
-}
-
-.c1:disabled + .c3 > .c5 {
-  --radio-state-color: #D4D8DD;
-}
-
 .c4 {
   cursor: pointer;
   display: -webkit-inline-box;
@@ -55,34 +35,53 @@ exports[`Radio default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  --radio-state-color: #FFFFFF;
+}
+
+.c1:checked + .c3 {
+  --radio-state-color: #3B7DE9;
 }
 
 .c1:disabled + .c3 {
   cursor: not-allowed;
   color: #999;
+  --radio-state-color: #D4D8DD;
+}
+
+.c5 {
+  display: grid;
+  place-items: center;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 5px solid var(--radio-state-color);
 }
 
 <div
     class="c0"
   >
-    <input
-      class="c1 c2"
-      id="radio-1"
-      type="radio"
-      value=""
-    />
     <label
-      class="c3 c4"
       for="radio-1"
     >
-      <span
-        class="c5 c6"
+      <input
+        class="c1 c2"
+        id="radio-1"
+        type="radio"
+        value=""
       />
-      <span
-        class=""
+      <div
+        class="c3 c4"
       >
-        radio
-      </span>
+        <span
+          aria-hidden="true"
+          class="c5"
+        />
+        <span>
+          radio
+        </span>
+      </div>
     </label>
   </div>
 </DocumentFragment>
