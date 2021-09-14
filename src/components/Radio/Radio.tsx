@@ -25,42 +25,41 @@ const Input = styled.input`
 `;
 Input.defaultProps = defaultProps;
 
+const Label = styled.label`
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+
+  ${({ theme: { radio } }) => css`
+    --radio-state-color: ${radio.backgroundColor.unchecked};
+
+    ${Input}:checked + & {
+      --radio-state-color: ${radio.backgroundColor.checked};
+    }
+
+    ${Input}:disabled + & {
+      cursor: not-allowed;
+      color: #999;
+      --radio-state-color: ${radio.backgroundColor.disabled};
+    }
+  `}
+`;
+Label.defaultProps = defaultProps;
+
 const RadioButton = styled.span`
   display: grid;
   place-items: center;
   margin-right: 4px;
 
   ${({ theme: { radio } }) => css`
-    --radio-state-color: ${radio.backgroundColor.unchecked};
-
     width: 16px;
     height: 16px;
     background-color: #fff;
     border-radius: ${radio.borderRadius};
     border: 5px solid var(--radio-state-color);
-
-    ${Input}:checked + ${Label} > & {
-      --radio-state-color: ${radio.backgroundColor.checked};
-    }
-
-    ${Input}:disabled + ${Label} > & {
-      --radio-state-color: ${radio.backgroundColor.disabled};
-    }
   `}
 `;
 RadioButton.defaultProps = defaultProps;
-
-const Label = styled.label`
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-
-  ${Input}:disabled + & {
-    cursor: not-allowed;
-    color: #999;
-  }
-`;
-const LabelText = styled.span``;
 
 const Radio = forwardRef<HTMLInputElement, Props>(
   (
@@ -93,7 +92,7 @@ const Radio = forwardRef<HTMLInputElement, Props>(
       />
       <Label htmlFor={id}>
         <RadioButton aria-hidden="true" />
-        <LabelText>{children}</LabelText>
+        <span>{children}</span>
       </Label>
     </RadioWrapper>
   )
