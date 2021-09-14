@@ -9,6 +9,11 @@ export default {
     onClick: { action: 'clicked' },
     onChange: { action: 'changed' },
   },
+  parameters: {
+    backgrounds: {
+      disable: true,
+    },
+  },
 } as Meta;
 
 const Wrapper = styled.div`
