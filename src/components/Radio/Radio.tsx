@@ -29,16 +29,17 @@ const InputContainer = styled.div`
   align-items: center;
 
   ${({ theme: { radio } }) => css`
-    --radio-state-color: ${radio.backgroundColor.unchecked};
+    --radio-background-color: ${radio.backgroundColor.unchecked};
+    --radio-border-color: ${radio.borderColor.unchecked};
 
     ${Input}:checked + & {
-      --radio-state-color: ${radio.backgroundColor.checked};
+      --radio-background-color: ${radio.backgroundColor.checked};
+      --radio-border-color: ${radio.borderColor.checked};
     }
 
     ${Input}:disabled + & {
       cursor: not-allowed;
       color: #999;
-      --radio-state-color: ${radio.backgroundColor.disabled};
     }
   `}
 `;
@@ -48,16 +49,20 @@ const RadioButton = styled.span`
   display: grid;
   place-items: center;
   margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--radio-border-color);
+  background-color: var(--radio-background-color);
 
-  ${({ theme: { radio } }) => css`
-    width: 16px;
-    height: 16px;
+  > span {
+    border-radius: inherit;
     background-color: #fff;
-    border-radius: ${radio.borderRadius};
-    border: 5px solid var(--radio-state-color);
-  `}
+    display: block;
+    width: 6px;
+    height: 6px;
+  }
 `;
-RadioButton.defaultProps = defaultProps;
 
 const Radio = forwardRef<HTMLInputElement, Props>(
   (
@@ -89,7 +94,9 @@ const Radio = forwardRef<HTMLInputElement, Props>(
           {...rest}
         />
         <InputContainer>
-          <RadioButton aria-hidden="true" />
+          <RadioButton aria-hidden="true">
+            <span />
+          </RadioButton>
           <span>{children}</span>
         </InputContainer>
       </label>
