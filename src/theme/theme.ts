@@ -249,7 +249,7 @@ export const componentsTheme = {
       title: {
         color: {
           waiting: color.dimGray,
-          inProgress: color.dimGray,
+          inProgress: color.royalBlue,
           completed: color.royalBlue,
         },
         position: 'absolute',
