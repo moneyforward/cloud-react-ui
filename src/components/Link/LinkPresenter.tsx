@@ -71,7 +71,7 @@ export const LinkPresenter: React.FC<LinkPresenterProps> = ({
     <StyledLink
       tag="a"
       href={href}
-      terget={target}
+      target={target}
       className={className}
       {...rest}
     >
