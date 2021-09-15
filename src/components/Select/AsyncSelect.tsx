@@ -8,7 +8,7 @@ import { Styled, Option, Props as SelectProps } from './Select';
 export type Props = SelectProps & {
   defaultOptions?: Option[] | true;
   onInputChange?: (input: string) => Promise<Option[]>;
-};
+} & Pick<ReactSelectProps, 'loadingMessage' | 'noOptionsMessage'>;
 
 export const StyledAsyncSelect = styled(AsyncReactSelect)`
   ${Styled}

@@ -30,7 +30,7 @@ export type Props = {
   error?: boolean;
   className?: string;
   indicatorImage?: JSX.Element;
-} & Pick<ReactSelectProps, 'loadingMessage' | 'noOptionsMessage'>;
+};
 
 export const Styled = css<{ isError?: boolean }>`
   ${({ theme: { select, footer }, isError = false }) => {
