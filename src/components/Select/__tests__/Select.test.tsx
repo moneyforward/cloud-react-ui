@@ -34,22 +34,4 @@ describe('Select', () => {
     const { asFragment } = render(<Select error />);
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it('renders custom no option message', () => {
-    const noInputMessage = 'type to start searching';
-    const cannotFindOptionMessage = 'unable to find option';
-    const { asFragment } = render(
-      <Select
-        noOptionsMessage={({ inputValue }) =>
-          inputValue ? cannotFindOptionMessage : noInputMessage
-        }
-      />
-    );
-
-    userEvent.click(screen.getByRole('textbox'));
-    expect(screen.getByText(noInputMessage)).toBeInTheDocument();
-
-    userEvent.type(screen.getByRole('textbox'), 'some option');
-    expect(screen.getByText(cannotFindOptionMessage)).toBeInTheDocument();
-  });
 });

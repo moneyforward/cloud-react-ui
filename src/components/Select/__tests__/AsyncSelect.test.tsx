@@ -37,6 +37,24 @@ describe('AsyncSelect', () => {
     await waitFor(() => expect(changed).toBeCalled());
   });
 
+  it('renders custom no option message', () => {
+    const noInputMessage = 'type to start searching';
+    const cannotFindOptionMessage = 'unable to find option';
+    const { asFragment } = render(
+      <AsyncSelect
+        noOptionsMessage={({ inputValue }) =>
+          inputValue ? cannotFindOptionMessage : noInputMessage
+        }
+      />
+    );
+
+    userEvent.click(screen.getByRole('textbox'));
+    expect(screen.getByText(noInputMessage)).toBeInTheDocument();
+
+    userEvent.type(screen.getByRole('textbox'), 'some option');
+    expect(screen.getByText(cannotFindOptionMessage)).toBeInTheDocument();
+  });
+
   it('renders custom loading message', async () => {
     const changed = jest.fn();
     const options: Option[] = [
