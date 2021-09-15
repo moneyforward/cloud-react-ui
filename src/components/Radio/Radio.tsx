@@ -1,142 +1,107 @@
-import { forwardRef } from 'react';
+import { forwardRef, ComponentPropsWithRef } from 'react';
 import styled, { css } from 'styled-components';
 import { defaultProps } from '../../theme';
 
-export type Props = {
-  name?: string;
-  checked?: boolean;
-  defaultChecked?: boolean;
-  value?: string;
-  disabled?: boolean;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
-  children?: React.ReactNode;
-  className?: string;
-};
+export type Props = ComponentPropsWithRef<'input'>;
 
-const RadioWrapper = styled.span`
-  ${({ theme: { radio } }) => css`
-    position: relative;
-    display: inline-block;
-    width: ${radio.width};
-    height: ${radio.height};
-    margin-top: 2px;
-    margin-right: 4px;
-  `}
+const RadioWrapper = styled.div`
+  display: inline-block;
 `;
 RadioWrapper.defaultProps = defaultProps;
 
 const Input = styled.input`
-  ${({ theme: { radio } }) => css`
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    cursor: pointer;
-
-    :checked + ${Box} {
-      background-color: ${radio.backgroundColor.checked};
-      border-width: ${radio.borderWidth.checked};
-      border-style: ${radio.borderStyle.checked};
-      border-color: ${radio.borderColor.checked};
-    }
-
-    :disabled + ${Box} {
-      background-color: ${radio.backgroundColor.disabled};
-      border-width: ${radio.borderWidth.disabled};
-      border-style: ${radio.borderStyle.disabled};
-      border-color: ${radio.borderColor.disabled};
-    }
-  `}
+  /* visually-hidden */
+  /* TODO: Should extract visually-hidden style as a utility style */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 `;
 Input.defaultProps = defaultProps;
 
-const Box = styled.span`
-  ${({ theme: { radio } }) => css`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: ${radio.borderRadius};
-    background-color: ${radio.backgroundColor.unchecked};
-    border-width: ${radio.borderWidth.unchecked};
-    border-style: ${radio.borderStyle.unchecked};
-    border-color: ${radio.borderColor.unchecked};
-    pointer-events: none;
-    box-sizing: border-box;
-  `}
-`;
-Box.defaultProps = defaultProps;
-
-const IconWrapper = styled.span`
-  ${({ theme: { radio } }) => css`
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-    width: ${radio.icon.width};
-    height: ${radio.icon.height};
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-
-    & > svg {
-      vertical-align: top;
-    }
-  `}
-`;
-IconWrapper.defaultProps = defaultProps;
-
-const Icon = styled(({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 6 6"
-    className={className}
-  >
-    <circle
-      cx="102"
-      cy="546"
-      r="3"
-      fillRule="evenodd"
-      transform="translate(-99 -543)"
-    />
-  </svg>
-))`
-  ${({ theme: { radio } }) => css`
-    width: ${radio.icon.width};
-    height: ${radio.icon.height};
-
-    & > circle {
-      fill: ${radio.icon.color};
-    }
-  `}
-`;
-Icon.defaultProps = defaultProps;
-
-const Label = styled.label`
+const InputContainer = styled.div`
   cursor: pointer;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
+
+  ${({ theme: { radio } }) => css`
+    --radio-background-color: ${radio.backgroundColor.unchecked};
+    --radio-border-color: ${radio.borderColor.unchecked};
+
+    ${Input}:checked + & {
+      --radio-background-color: ${radio.backgroundColor.checked};
+      --radio-border-color: ${radio.borderColor.checked};
+    }
+
+    ${Input}:disabled + & {
+      cursor: not-allowed;
+      color: #999;
+    }
+  `}
+`;
+InputContainer.defaultProps = defaultProps;
+
+const RadioButton = styled.span`
+  display: grid;
+  place-items: center;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--radio-border-color);
+  background-color: var(--radio-background-color);
+
+  > span {
+    border-radius: inherit;
+    background-color: #fff;
+    display: block;
+    width: 6px;
+    height: 6px;
+  }
 `;
 
-const LabelText = styled.span``;
-
 const Radio = forwardRef<HTMLInputElement, Props>(
-  ({ children, className, ...rest }, ref) => (
-    <Label>
-      <RadioWrapper className={className}>
-        <Input type="radio" ref={ref} {...rest} />
-        <Box />
-        <IconWrapper>
-          <Icon />
-        </IconWrapper>
-      </RadioWrapper>
-      <LabelText>{children}</LabelText>
-    </Label>
+  (
+    {
+      children,
+      id,
+      name,
+      value,
+      disabled,
+      defaultChecked,
+      onClick,
+      onChange,
+      ...rest
+    },
+    ref
+  ) => (
+    <RadioWrapper>
+      <label htmlFor={id}>
+        <Input
+          type="radio"
+          id={id}
+          ref={ref}
+          name={name}
+          value={value}
+          disabled={disabled}
+          defaultChecked={defaultChecked}
+          onClick={onClick}
+          onChange={onChange}
+          {...rest}
+        />
+        <InputContainer>
+          <RadioButton aria-hidden="true">
+            <span />
+          </RadioButton>
+          <span>{children}</span>
+        </InputContainer>
+      </label>
+    </RadioWrapper>
   )
 );
-
 Radio.displayName = 'Radio';
 
 export { Radio };
