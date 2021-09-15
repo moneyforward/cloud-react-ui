@@ -97,7 +97,7 @@ Async.args = {
     }),
 };
 
-export const CustomNoOptionsMessage = Template.bind({});
+export const CustomNoOptionsMessage = AsyncTemplate.bind({});
 CustomNoOptionsMessage.args = {
   noOptionsMessage: ({ inputValue }) =>
     inputValue ? 'Could not find option' : 'Please type to begin searching',
