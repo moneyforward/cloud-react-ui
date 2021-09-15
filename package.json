@@ -28,7 +28,7 @@
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "storybook": "start-storybook -c .storybook/ --quiet",
-    "storybook:build": "build-storybook -o storybook-static"
+    "storybook:deploy": "storybook-to-ghpages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
