@@ -30,3 +30,6 @@ ColorSettings.args = { color: 'settings' };
 
 export const Disabled = Template.bind({});
 Disabled.args = { disabled: true };
+
+export const Link = Template.bind({});
+Link.args = { as: 'a', href: '#' };

@@ -13,6 +13,7 @@ export type Props = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   children?: React.ReactNode;
   className?: string;
+  as?: 'a' | 'button';
 };
 
 const StyledButton = styled.button<Props>`
@@ -69,6 +70,10 @@ const StyledButton = styled.button<Props>`
       }
     `;
   }}
+
+  a& {
+    text-decoration: none;
+  }
 `;
 StyledButton.defaultProps = defaultProps;
 
