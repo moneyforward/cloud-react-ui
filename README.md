@@ -6,7 +6,7 @@ UI components for Money Forward Cloud built with React.
 
 ## Component Catalog(Storybook)
 
-<http://cloud-react-ui.s3-website-ap-northeast-1.amazonaws.com/>
+<https://moneyforward.github.io/cloud-react-ui/>
 
 ## Contributing
 
