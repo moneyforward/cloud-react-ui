@@ -5,6 +5,7 @@ import { defaultProps } from '../../theme';
 
 export type Props = {
   className?: string;
+  size?: number | string;
 };
 
 const StyledCircularProgress = styled(MuiCircularProgress)`
