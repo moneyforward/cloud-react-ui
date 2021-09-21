@@ -1,5 +1,6 @@
 html {
-  font-family: "Noto Sans JP";
+  
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, Helvetica, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-serif;
   box-sizing: border-box;
 }
 

@@ -2,7 +2,8 @@ import { color } from './color';
 
 export const values = {
   font: {
-    noto: 'Noto Sans JP',
+    family:
+      '"Noto Sans JP", -apple-system, BlinkMacSystemFont, Helvetica, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-serif',
     weight: {
       normal: 'normal',
       bold: 'bold',
