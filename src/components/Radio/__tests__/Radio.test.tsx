@@ -9,7 +9,7 @@ describe('Radio', () => {
 
     const radio = screen.getByRole('radio');
     expect(radio).not.toBeChecked();
-    expect(radio).not.toBeDisabled();
+    expect(radio).toBeEnabled();
   });
 
   it('defaultChecked props', () => {

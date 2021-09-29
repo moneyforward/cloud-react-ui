@@ -8,7 +8,7 @@ describe('Switch', () => {
 
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).not.toBeChecked();
-    expect(checkbox).not.toBeDisabled();
+    expect(checkbox).toBeEnabled();
   });
 
   it('defaultChecked props', () => {
