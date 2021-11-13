@@ -20,7 +20,6 @@
   "scripts": {
     "clean": "rm -rf lib/",
     "build": "tsc",
-    "prepare": "tsc",
     "lint": "prettier --check '**/*.{ts,tsx,json}' && eslint src/ --ext .ts,.tsx",
     "fmt": "prettier --write '**/*.{ts,tsx,json}' && eslint src/ --ext .ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
