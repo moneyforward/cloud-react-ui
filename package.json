@@ -33,7 +33,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@material-ui/core": "^4.12.3",
     "deepmerge": "^4.2.2",
     "react": "^17.0.2",
@@ -46,7 +46,7 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@storybook/storybook-deployer": "^2.8.10",
-    "@testing-library/dom": "^8.10.1",
+    "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
