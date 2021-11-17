@@ -28,3 +28,9 @@ Plus.args = { icon: 'plus' };
 
 export const Question = Template.bind({});
 Question.args = { icon: 'question' };
+
+export const Download = Template.bind({});
+Download.args = { icon: 'download' };
+
+export const Upload = Template.bind({});
+Upload.args = { icon: 'upload' };

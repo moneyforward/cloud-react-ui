@@ -7,6 +7,8 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
+import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload';
 import { IconPresenter } from './IconPresenter';
 
 library.add(
@@ -17,7 +19,9 @@ library.add(
   faChevronUp,
   faPlus,
   faQuestionCircle,
-  faEnvelope
+  faEnvelope,
+  faDownload,
+  faUpload
 );
 
 export const Icons = [
@@ -28,6 +32,8 @@ export const Icons = [
   'plus',
   'question',
   'envelope',
+  'download',
+  'upload',
 ] as const;
 
 export type IconTypes = typeof Icons[number];
