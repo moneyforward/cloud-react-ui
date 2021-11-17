@@ -16,6 +16,8 @@ const FontAwesomeConverter: {
   plus: 'plus',
   question: 'question-circle',
   envelope: 'envelope',
+  download: 'download',
+  upload: 'upload',
 };
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
