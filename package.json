@@ -28,7 +28,7 @@
     "test:update": "jest --updateSnapshot",
     "storybook": "start-storybook -c .storybook/ --quiet",
     "storybook:deploy": "storybook-to-ghpages",
-    "release": "npm run clean && npm run build && npm publish --access=public"
+    "release": "semantic-release"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -63,6 +63,7 @@
     "jest": "^27.3.1",
     "jest-styled-components": "^7.0.6",
     "prettier": "^2.4.1",
+    "semantic-release": "^18.0.0",
     "ts-jest": "^27.0.7",
     "typescript": "^4.4.4"
   }
