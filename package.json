@@ -27,7 +27,8 @@
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "storybook": "start-storybook -c .storybook/ --quiet",
-    "storybook:deploy": "storybook-to-ghpages"
+    "storybook:deploy": "storybook-to-ghpages",
+    "release": "npm run clean && npm run build && npm publish --access=public"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
