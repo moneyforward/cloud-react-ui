@@ -1,5 +1,6 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import { useState } from 'react';
+import userEvent from '@testing-library/user-event';
+import React, { useState } from 'react';
 import { Checkbox } from '../Checkbox';
 
 describe('Checkbox', () => {
@@ -55,5 +56,28 @@ describe('Checkbox', () => {
     expect(screen.getByRole('checkbox')).not.toBeChecked();
     fireEvent.click(screen.getByText('checkbox'));
     expect(screen.getByRole('checkbox')).toBeChecked();
+  });
+
+  it('value prop', () => {
+    const onSubmit = jest.fn();
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      const formData = new FormData(e.currentTarget);
+      onSubmit(formData.get('checkbox'));
+    };
+    const value = 'value';
+    render(
+      <form onSubmit={handleSubmit}>
+        <Checkbox value={value} name="checkbox">
+          checkbox
+        </Checkbox>
+        <input type="submit" />
+      </form>
+    );
+
+    userEvent.click(screen.getByRole('checkbox', { name: 'checkbox' }));
+    userEvent.click(screen.getByRole('button', { name: 'Submit' }));
+
+    expect(onSubmit).toBeCalledWith(value);
   });
 });

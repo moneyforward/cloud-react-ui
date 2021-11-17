@@ -11,7 +11,7 @@ export type Props = {
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
   children?: React.ReactNode;
   className?: string;
-};
+} & Pick<React.InputHTMLAttributes<HTMLInputElement>, 'value'>;
 
 const CheckboxWrapper = styled.span`
   ${({ theme: { checkbox } }) => css`
