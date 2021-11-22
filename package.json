@@ -61,7 +61,7 @@
     "eslint-config-moneyforward": "^1.0.0",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
-    "jest-styled-components": "^7.0.6",
+    "jest-styled-components": "^7.0.7",
     "prettier": "^2.4.1",
     "semantic-release": "^18.0.0",
     "ts-jest": "^27.0.7",
