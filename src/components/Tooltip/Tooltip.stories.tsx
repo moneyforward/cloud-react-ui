@@ -1,7 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { Tooltip, TooltipProps as Props } from './Tooltip';
 import { Icon } from '../Icon';
-import styled from 'styled-components';
 
 export default {
   component: Tooltip,
@@ -30,4 +29,5 @@ Custom.args = {
   ),
   id: 'tooltip-id',
   placement: 'top',
+  textAlign: 'center',
 };

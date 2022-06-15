@@ -7,15 +7,20 @@ import { defaultProps } from '../../theme';
 export type TooltipProps = Pick<
   MuiTootipProps,
   'id' | 'title' | 'placement' | 'arrow' | 'className' | 'children' | 'classes'
->;
+> & {
+  textAlign: 'left' | 'center' | 'right';
+  maxWidth: string;
+};
 
-const StyledTooltip = styled(({ theme, className, ...rest }) => (
-  <MuiTooltip
-    classes={{ popper: className, tooltip: 'tooltip', arrow: 'arrow' }}
-    {...rest}
-  />
-))<TooltipProps>`
-  ${({ theme: { tooltip } }) => css`
+const StyledTooltip = styled(
+  ({ theme, className, textAlign = 'left', maxWidth = '300px', ...rest }) => (
+    <MuiTooltip
+      classes={{ popper: className, tooltip: 'tooltip', arrow: 'arrow' }}
+      {...rest}
+    />
+  )
+)<TooltipProps>`
+  ${({ theme: { tooltip }, textAlign, maxWidth }) => css`
     .tooltip {
       margin: ${tooltip.margin};
       padding: ${tooltip.padding};
@@ -23,6 +28,8 @@ const StyledTooltip = styled(({ theme, className, ...rest }) => (
       border-radius: ${tooltip.borderRadius};
       font-size: ${tooltip.fontSize};
       color: ${tooltip.color};
+      text-align: ${textAlign};
+      max-width: ${maxWidth};
     }
 
     .arrow {
