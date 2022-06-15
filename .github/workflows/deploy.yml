@@ -8,11 +8,16 @@ jobs:
     name: Upload to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          cache: npm
-      - run: npm ci
-      - run: npm run storybook:deploy -- --ci
+          node-version: '16'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Deploy Storybook
+        run: npm run storybook:deploy -- --ci
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
