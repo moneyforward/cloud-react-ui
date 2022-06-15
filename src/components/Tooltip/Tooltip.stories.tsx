@@ -1,8 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import {
-  TooltipContainer as Tooltip,
-  TooltipProps as Props,
-} from './TooltipContainer';
+import { Tooltip, TooltipProps as Props } from './Tooltip';
 import { Icon } from '../Icon';
 
 export default {
@@ -10,13 +7,27 @@ export default {
   title: 'components/Tooltip',
 } as Meta;
 
-const Template: Story<Props> = ({ message = 'tooltip', ...rest }) => (
+const Template: Story<Props> = ({ title = 'tooltip', ...rest }) => (
   <div style={{ marginTop: '100px', marginLeft: '100px' }}>
-    <Tooltip message={message} {...rest}>
+    <Tooltip title={title} {...rest}>
       <Icon icon="bell" />
     </Tooltip>
   </div>
 );
 
 export const Default = Template.bind({});
-Default.args = { message: 'tooltip', id: 'tooltip-id' };
+Default.args = { title: 'tooltip', id: 'tooltip-id' };
+
+export const Custom = Template.bind({});
+Custom.args = {
+  title: (
+    <span>
+      hello
+      <br />
+      tooltip
+    </span>
+  ),
+  id: 'tooltip-id',
+  placement: 'top',
+  textAlign: 'center',
+};

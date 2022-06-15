@@ -519,8 +519,8 @@ export const componentsTheme = {
   },
   // Tooltip
   tooltip: {
-    height: '',
-    padding: '8px 11px 6px 10px',
+    margin: '8px 0',
+    padding: '6px 10px',
     backgroundColor: 'rgba(51, 51, 51, 0.9)',
     borderRadius: '4px',
     fontSize: values.text.size.small,
