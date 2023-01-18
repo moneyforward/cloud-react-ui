@@ -57,7 +57,7 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
-    "eslint": "^7.32.0",
+    "eslint": "^8.32.0",
     "eslint-config-moneyforward": "^2.0.0",
     "eslint-plugin-jest": "^27.2.1",
     "husky": "^8.0.3",
