@@ -11,6 +11,6 @@ describe('Backdrop', () => {
     const onClick = jest.fn();
     render(<Backdrop open onClick={onClick} data-testid="testid" />);
     fireEvent.click(screen.getByTestId('testid'));
-    expect(onClick).toBeCalledTimes(1);
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

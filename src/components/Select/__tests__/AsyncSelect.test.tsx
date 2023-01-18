@@ -34,7 +34,7 @@ describe('AsyncSelect', () => {
     render(<AsyncSelect options={options} onInputChange={handleInputChange} />);
     userEvent.type(screen.getByRole('textbox'), 'test1');
 
-    await waitFor(() => expect(changed).toBeCalled());
+    await waitFor(() => expect(changed).toHaveBeenCalled());
   });
 
   it('renders custom no option message', () => {
@@ -88,6 +88,6 @@ describe('AsyncSelect', () => {
     userEvent.type(screen.getByRole('textbox'), 'test1');
 
     expect(screen.getByText(customLoadingMessage)).toBeInTheDocument();
-    await waitFor(() => expect(changed).toBeCalled());
+    await waitFor(() => expect(changed).toHaveBeenCalled());
   });
 });
