@@ -1,6 +1,7 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { Dropdown, DropdownProps, useDropdown } from '../../Dropdown';
 import { Link } from '../../../components';
+import userEvent from '@testing-library/user-event';
 
 describe('Dropdown', () => {
   describe('Default', () => {
@@ -24,7 +25,7 @@ describe('Dropdown', () => {
 
     it('renders', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByText('Label'));
+      userEvent.click(screen.getByText('Label'));
       expect(screen.getByLabelText('Contents')).toBeVisible();
       expect(asFragment()).toMatchSnapshot();
     });
@@ -33,16 +34,16 @@ describe('Dropdown', () => {
       const { asFragment } = render(
         <Template toggleLabel="Label" placement="right" />
       );
-      fireEvent.click(screen.getByText('Label'));
+      userEvent.click(screen.getByText('Label'));
       expect(screen.getByLabelText('Contents')).toBeVisible();
       expect(asFragment()).toMatchSnapshot();
     });
 
     it('closes with action item', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByText('Label'));
+      userEvent.click(screen.getByText('Label'));
+      userEvent.click(screen.getAllByText('Link')[0]);
       await waitFor(() => {
-        fireEvent.click(screen.getAllByText('Link')[0]);
         expect(screen.queryByLabelText('Contents')).not.toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
@@ -50,9 +51,9 @@ describe('Dropdown', () => {
 
     it('closes with overlay', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByText('Label'));
+      userEvent.click(screen.getByText('Label'));
+      userEvent.click(screen.getByLabelText('閉じる'));
       await waitFor(() => {
-        fireEvent.click(screen.getByLabelText('閉じる'));
         expect(screen.queryByLabelText('Contents')).not.toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
@@ -60,9 +61,9 @@ describe('Dropdown', () => {
 
     it('keeps open with clicking isKeepOpen action item', async () => {
       const { asFragment } = render(<Template toggleLabel="Label" />);
-      fireEvent.click(screen.getByRole('button'));
+      userEvent.click(screen.getByRole('button'));
+      userEvent.click(screen.getByLabelText('isKeepOpen'));
       await waitFor(() => {
-        fireEvent.click(screen.getByLabelText('isKeepOpen'));
         expect(screen.getByLabelText('Contents')).toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();
@@ -96,7 +97,7 @@ describe('Dropdown', () => {
       };
 
       const { asFragment } = render(<MultipleTemplate toggleLabel="Label" />);
-      fireEvent.click(screen.getByRole('button'));
+      userEvent.click(screen.getByRole('button'));
       expect(screen.getAllByText('Block')).toHaveLength(2);
       expect(screen.getAllByRole('link')).toHaveLength(3);
       expect(asFragment()).toMatchSnapshot();
@@ -139,7 +140,7 @@ describe('Dropdown', () => {
         <AnchoredTemplate toggleLabel="Label" anchor={<AnchorButton />} />
       );
       expect(screen.queryByText('Label')).not.toBeInTheDocument();
-      fireEvent.click(screen.getByText('Toggle'));
+      userEvent.click(screen.getByText('Toggle'));
       expect(screen.getByLabelText('Contents')).toBeVisible();
       expect(asFragment()).toMatchSnapshot();
     });
@@ -148,9 +149,9 @@ describe('Dropdown', () => {
       const { asFragment } = render(
         <AnchoredTemplate anchor={<AnchorButton />} />
       );
-      fireEvent.click(screen.getByText('Toggle'));
+      userEvent.click(screen.getByText('Toggle'));
+      userEvent.click(screen.getByText('Toggle'));
       await waitFor(() => {
-        fireEvent.click(screen.getByText('Toggle'));
         expect(screen.queryByLabelText('Contents')).not.toBeVisible();
       });
       expect(asFragment()).toMatchSnapshot();

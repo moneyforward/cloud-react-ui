@@ -46,7 +46,7 @@ describe('Pagination.Link', () => {
     render(<Pagination.Link onClick={onClick}>Link</Pagination.Link>);
 
     fireEvent.click(screen.getByText('Link'));
-    expect(onClick).toBeCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 });
 

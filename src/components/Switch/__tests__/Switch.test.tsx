@@ -27,7 +27,7 @@ describe('Switch', () => {
     render(<Switch onChange={onChange} onClick={onClick} />);
     fireEvent.click(screen.getByRole('checkbox'));
 
-    expect(onChange).toBeCalledTimes(1);
-    expect(onClick).toBeCalledTimes(1);
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

@@ -63,7 +63,7 @@ describe('Notification', () => {
       const { rerender } = render(
         <Notification isOpen>Notification</Notification>
       );
-      expect(screen.queryByRole('alert')).toBeInTheDocument();
+      expect(screen.getByRole('alert')).toBeInTheDocument();
 
       rerender(<Notification isOpen={false}>Notification</Notification>);
       expect(screen.queryByRole('alert')).not.toBeInTheDocument();
@@ -71,21 +71,15 @@ describe('Notification', () => {
   });
 
   describe('when CloseButton is clicked', () => {
-    const onClickClose = jest.fn();
-    beforeEach(() => {
+    it('should not be render', () => {
+      const onClickClose = jest.fn();
       render(
         <Notification isOpen onClickClose={onClickClose}>
           Notification
         </Notification>
       );
       fireEvent.click(screen.getByRole('button', { name: '閉じる' }));
-    });
-
-    it('props.onClickClose is called', () => {
-      expect(onClickClose).toBeCalled();
-    });
-
-    it('should not be render', () => {
+      expect(onClickClose).toHaveBeenCalled();
       expect(screen.queryByRole('alert')).not.toBeInTheDocument();
     });
   });

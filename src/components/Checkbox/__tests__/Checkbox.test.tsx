@@ -33,8 +33,8 @@ describe('Checkbox', () => {
     );
     fireEvent.click(screen.getByText('checkbox'));
 
-    expect(onChange).toBeCalledTimes(1);
-    expect(onClick).toBeCalledTimes(1);
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 
   it('checked, onChange props', () => {
@@ -78,6 +78,6 @@ describe('Checkbox', () => {
     userEvent.click(screen.getByRole('checkbox', { name: 'checkbox' }));
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
 
-    expect(onSubmit).toBeCalledWith(value);
+    expect(onSubmit).toHaveBeenCalledWith(value);
   });
 });
