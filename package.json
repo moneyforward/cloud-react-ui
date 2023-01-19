@@ -62,7 +62,7 @@
     "eslint-plugin-jest": "^27.2.1",
     "husky": "^8.0.3",
     "jest": "^27.3.1",
-    "jest-styled-components": "^7.0.8",
+    "jest-styled-components": "^7.1.1",
     "prettier": "^2.4.1",
     "semantic-release": "^19.0.3",
     "ts-jest": "^27.0.7",
